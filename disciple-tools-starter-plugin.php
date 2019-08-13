@@ -1,9 +1,8 @@
 <?php
 /**
- * Plugin Name: Disciple Tools - Dashboard Plugin
+ * Plugin Name: Disciple Tools - Multiplier Dashboard Plugin
  * Plugin URI: https://github.com/DiscipleTools/disciple-tools-dashboard-plugin
- * Description: Disciple Tools - Dashboard Plugin is intended to help developers and integrator jumpstart their extension
- * of the Disciple Tools system.
+ * The multiplier dashboard upgrades the multipliers experience as soon as they log into the system.
  * Version:  0.1.0
  * Author URI: https://github.com/DiscipleTools
  * GitHub Plugin URI: https://github.com/DiscipleTools/disciple-tools-dashboard-plugin
