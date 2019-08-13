@@ -1,0 +1,74 @@
+/**
+ * Dashboard
+ */
+.dashboard-page .dash-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.dashboard-page .dash-cards .item {
+    padding: 10px;
+}
+.dashboard-page .dash-cards .item .card {
+    margin: 10px;
+    border: 1px solid #E6E6E6;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background-color: white;
+    height: 100%;
+}
+.dashboard-page .count-square {
+    border-radius: 5px;
+    display: inline-block;
+    line-height: 0px;
+}
+.dashboard-page .count-square span {
+    display: inline-block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.dashboard-page .card-title {
+    margin-left: 10px;
+    font-size: 1.66667rem;
+    vertical-align: middle;
+}
+.dashboard-page .view-all {
+    text-align: center;
+}
+.dashboard-page .view-all button {
+    margin-bottom: 0;
+}
+.dashboard-page .numberCircle {
+    background-color: #3f729b;
+    color: white;
+    display: inline-block;
+    border-radius: 50%;
+    border: 2px solid;
+    line-height: 0px;
+    font-size: 4rem;
+}
+.dashboard-page .numberCircle:before, .dashboard-page .numberCircle:after {
+    content: '\200B';
+    display: inline-block;
+    line-height: 0px;
+    padding-top: 50%;
+    padding-bottom: 50%;
+}
+.dashboard-page .numberCircle:before {
+    padding-left: 8px;
+}
+.dashboard-page .numberCircle:after {
+    padding-right: 8px;
+}
+@media screen and (max-width: 640px) {
+    .dashboard-page .dash-cards .item {
+        flex-basis: 100% !important;
+    }
+    .dashboard-page #benchmarks .card div {
+        flex-basis: 100% !important;
+    }
+}
