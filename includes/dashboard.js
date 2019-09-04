@@ -71,13 +71,7 @@ jQuery(document).ready(function($) {
     if ( name ){
       let selected = $(`.status-button[name=${name}]`)
       selected.removeClass("hollow")
-      if ( name === 'active' ){
-        selected.css('background-color', '#4caf50')
-      } else if ( name === 'existing'){
-        selected.css('background-color', '#ff9800')
-      } else if ( name === 'too_many'){
-        selected.css('background-color', '#F43636')
-      }
+      selected.css('background-color', _.get(wpApiDashboard, `workload_status_options.${name}.color`))
       selected.blur()
     }
   }

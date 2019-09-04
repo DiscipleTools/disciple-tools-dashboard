@@ -66,7 +66,8 @@ class DT_Dashboard_Plugin_Functions
                 'template_dir'          => get_template_directory_uri(),
                 'translations'          => DT_Dashboard_Plugin_Endpoints::instance()->translations(),
                 'data'                  => DT_Dashboard_Plugin_Endpoints::instance()->get_data(),
-                'workload_status'       => get_user_option( 'workload_status', get_current_user_id() )
+                'workload_status'       => get_user_option( 'workload_status', get_current_user_id() ),
+                'workload_status_options' => dt_get_site_custom_lists()["user_workload_status"] ?? []
             )
         );
     }

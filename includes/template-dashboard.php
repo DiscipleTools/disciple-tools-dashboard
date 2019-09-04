@@ -81,10 +81,11 @@ get_header();
                             </span>
                         </div>
                         <p><?php esc_html_e( "Choose an option to let the dispatcher(s) know if you are ready for new contacts", 'disciple_tools' ) ?></p>
-                        <button class="button hollow status-button" name="active"><?php esc_html_e( "Accepting new contacts", 'disciple_tools' ) ?></button>
-                        <button class="button hollow status-button" name="existing"><?php esc_html_e( "I'm only investing in existing contacts", 'disciple_tools' ) ?></button>
-                        <button class="button hollow status-button" name="too_many"><?php esc_html_e( "I have too many contacts", 'disciple_tools' ) ?></button>
-                        <a href=""><?php esc_html_e( "Set travel/unavailability", 'disciple_tools' ) ?></a>
+                        <?php $options = dt_get_site_custom_lists()["user_workload_status"] ?? [];
+                        foreach ( $options as $option_key => $option_val ) : ?>
+                        <button class="button hollow status-button" name="<?php echo esc_html( $option_key ) ?>"><?php echo esc_html( $option_val["label"] )?></button>
+                        <?php endforeach; ?>
+<!--                        <a href="">--><?php //esc_html_e( "Set travel/unavailability", 'disciple_tools' ) ?><!--</a>-->
                     </div>
                 </div>
 
