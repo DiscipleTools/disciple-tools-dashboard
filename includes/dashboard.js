@@ -8,8 +8,7 @@ jQuery(document).ready(function($) {
   let needs_accepting_list = ``
   data.accept_needed.contacts.slice(0, 3).forEach( contact =>{
     needs_accepting_list += `<div style="margin-top:10px; display: flex">
-        <div style="display: inline-block; vertical-align: middle"><i class="fi-torso large"></i></div>
-        <div style="display: inline-block; margin-left: 10px; vertical-align: middle; flex-grow: 1">
+        <div style="display: inline-block; margin-left: 10px; vertical-align: middle; flex-grow: 1"><i class="fi-torso medium"></i>
             <a style="font-size: 1.1rem" href="${wpApiDashboard.site_url}/contacts/${contact.ID}">${_.escape(
       contact.post_title)}</a>
         </div>
@@ -28,8 +27,7 @@ jQuery(document).ready(function($) {
   let up_list = ``
   data.update_needed.contacts.slice(0, 3).forEach( contact =>{
     let row = `<div style="margin-top:5px">
-        <div style="display: inline-block"><i class="fi-torso large"></i></div>
-        <div style="display: inline-block; margin-left: 10px">
+        <div style="display: inline-block; margin-left: 10px"><i class="fi-torso medium"></i>
             <a style="font-size: 1.1rem" href="${wpApiDashboard.site_url}/contacts/${contact.ID}">${_.escape( contact.post_title ) }</a>
             <br>
             <span style="font-size: 0.9rem">${_.escape(contact.last_modified_msg)}</span>
@@ -58,13 +56,46 @@ jQuery(document).ready(function($) {
       }
   }
   jQuery.ajax(options).then(resp=>{
-    $(".loading-spinner").removeClass("active")
+    $(".stats-spinner").removeClass("active")
     _.merge(data, resp)
     benchmarks_chart()
     seeker_path_chart()
     milestones()
   })
 
+
+  let status_buttons = $('.status-button')
+  let color_workload_buttons = (name) =>{
+    status_buttons.css('background-color', "")
+    status_buttons.addClass("hollow")
+    if ( name ){
+      let selected = $(`.status-button[name=${name}]`)
+      selected.removeClass("hollow")
+      if ( name === 'active' ){
+        selected.css('background-color', '#4caf50')
+      } else if ( name === 'existing'){
+        selected.css('background-color', '#ff9800')
+      } else if ( name === 'too_many'){
+        selected.css('background-color', '#F43636')
+      }
+      selected.blur()
+    }
+  }
+  color_workload_buttons(wpApiDashboard.workload_status )
+  status_buttons.on( 'click', function () {
+    $("#workload-spinner").addClass("active")
+    let name = $(this).attr('name')
+    color_workload_buttons(name)
+    let data = { 'workload_status': name };
+    makeRequest( "post", `user`, data , 'dt-dashboard/v1/')
+    .then(()=>{
+      $("#workload-spinner").removeClass("active")
+    }).fail(()=>{
+      status_buttons.css('background-color', "")
+      $("#workload-spinner").removeClass("active")
+      status_buttons.addClass("hollow")
+    })
+  })
 
 
   function benchmarks_chart() {
