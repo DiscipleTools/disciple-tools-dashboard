@@ -128,62 +128,74 @@ class DT_Dashboard_Plugin_Endpoints
         $sixty_days_ago = $thirty_days_ago - 30 * 24 * 60 * 60;
 
         $contacts_current = $wpdb->get_var( $wpdb->prepare( "
-            SELECT COUNT(DISTINCT(object_id)) FROM $wpdb->dt_activity_log
+            SELECT COUNT(DISTINCT(object_id)) 
+            FROM $wpdb->dt_activity_log a
+            INNER JOIN $wpdb->postmeta as type ON ( object_id = type.post_id AND type.meta_key = 'type' AND type.meta_value != 'user' )
             WHERE object_type = 'contacts' 
-            AND meta_key = 'assigned_to'
+            AND a.meta_key = 'assigned_to'
             AND hist_time >= %s 
-            AND meta_value = %s
+            AND a.meta_value = %s
         ", $thirty_days_ago, "user-" . get_current_user_id() )
         );
 
         $contacts_previous = $wpdb->get_var( $wpdb->prepare( "
-            SELECT COUNT(DISTINCT(object_id)) FROM $wpdb->dt_activity_log
+            SELECT COUNT(DISTINCT(object_id)) 
+            FROM $wpdb->dt_activity_log a
+            INNER JOIN $wpdb->postmeta as type ON ( object_id = type.post_id AND type.meta_key = 'type' AND type.meta_value != 'user' )
             WHERE object_type = 'contacts' 
-            AND meta_key = 'assigned_to'
+            AND a.meta_key = 'assigned_to'
             AND hist_time >= %s 
             AND hist_time < %s 
-            AND meta_value = %s
+            AND a.meta_value = %s
         ", $sixty_days_ago, $thirty_days_ago, "user-" . get_current_user_id() )
         );
 
         $met_current = $wpdb->get_var( $wpdb->prepare( "
-            SELECT COUNT(DISTINCT(object_id)) FROM $wpdb->dt_activity_log
+            SELECT COUNT(DISTINCT(object_id)) 
+            FROM $wpdb->dt_activity_log a
+            INNER JOIN $wpdb->postmeta as type ON ( object_id = type.post_id AND type.meta_key = 'type' AND type.meta_value != 'user' )
             WHERE object_type = 'contacts' 
-            AND meta_key = 'seeker_path'
+            AND a.meta_key = 'seeker_path'
             AND hist_time >= %s 
-            AND meta_value = 'met'
+            AND a.meta_value = 'met'
             AND user_id = %s
         ", $thirty_days_ago, get_current_user_id() )
         );
 
         $met_previous = $wpdb->get_var( $wpdb->prepare( "
-            SELECT COUNT(DISTINCT(object_id)) FROM $wpdb->dt_activity_log
+            SELECT COUNT(DISTINCT(object_id))
+            FROM $wpdb->dt_activity_log a
+            INNER JOIN $wpdb->postmeta as type ON ( object_id = type.post_id AND type.meta_key = 'type' AND type.meta_value != 'user' )
             WHERE object_type = 'contacts' 
-            AND meta_key = 'seeker_path'
+            AND a.meta_key = 'seeker_path'
             AND hist_time >= %s 
             AND hist_time < %s
-            AND meta_value = 'met'
+            AND a.meta_value = 'met'
             AND user_id = %s
         ", $sixty_days_ago, $thirty_days_ago, get_current_user_id() )
         );
 
         $milestones_current = $wpdb->get_var( $wpdb->prepare( "
-            SELECT COUNT(DISTINCT(object_id)) FROM $wpdb->dt_activity_log
+            SELECT COUNT(DISTINCT(object_id)) 
+            FROM $wpdb->dt_activity_log a
+            INNER JOIN $wpdb->postmeta as type ON ( object_id = type.post_id AND type.meta_key = 'type' AND type.meta_value != 'user' )
             WHERE object_type = 'contacts' 
-            AND meta_key = 'milestones'
+            AND a.meta_key = 'milestones'
             AND hist_time >= %s 
-            AND meta_value != 'value_deleted'
+            AND a.meta_value != 'value_deleted'
             AND user_id = %s
         ", $thirty_days_ago, get_current_user_id() )
         );
 
         $milestones_previous = $wpdb->get_var( $wpdb->prepare( "
-            SELECT COUNT(*) FROM $wpdb->dt_activity_log
+            SELECT COUNT(*) 
+            FROM $wpdb->dt_activity_log a
+            INNER JOIN $wpdb->postmeta as type ON ( object_id = type.post_id AND type.meta_key = 'type' AND type.meta_value != 'user' )
             WHERE object_type = 'contacts' 
-            AND meta_key = 'milestones'
+            AND a.meta_key = 'milestones'
             AND hist_time >= %s 
             AND hist_time < %s
-            AND meta_value != 'value_deleted'
+            AND a.meta_value != 'value_deleted'
             AND user_id = %s
         ", $sixty_days_ago, $thirty_days_ago, get_current_user_id() )
         );
@@ -237,12 +249,12 @@ class DT_Dashboard_Plugin_Endpoints
              WHERE a.post_status = 'publish'
               AND a.post_type = 'contacts'
               AND a.ID NOT IN (
-                    SELECT post_id
-                    FROM $wpdb->postmeta
-                    WHERE meta_key = 'corresponds_to_user'
-                      AND meta_value != 0
-                    GROUP BY post_id
-                )
+                SELECT post_id
+                FROM $wpdb->postmeta
+                WHERE meta_key = 'corresponds_to_user'
+                AND meta_value != 0
+                GROUP BY post_id
+            )
              GROUP BY b.meta_value
         ",
         'user-'. $user_id ), ARRAY_A );
