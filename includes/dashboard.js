@@ -7,17 +7,20 @@ jQuery(document).ready(function($) {
   $('#needs_accepting').html(data.accept_needed.total)
   let needs_accepting_list = ``
   data.accept_needed.contacts.slice(0, 3).forEach( contact =>{
-    needs_accepting_list += `<div style="margin-top:10px; display: flex" id="pending-${contact.ID}">
+    needs_accepting_list += `<div style="margin-top:10px; display: flex" id="pending-${_.escape(contact.ID)}">
         <div style="display: inline-block; margin-left: 10px; vertical-align: middle; flex-grow: 1"><i class="fi-torso medium"></i>
-            <a style="font-size: 1.1rem" href="${wpApiDashboard.site_url}/contacts/${contact.ID}">${_.escape(
+            <a style="font-size: 1.1rem" href="${wpApiDashboard.site_url}/contacts/${_.escape( contact.ID )}">${_.escape(
       contact.post_title)}</a>
         </div>
         <div>
-            <button class="button small dt-green accept_contact_button" data-id="${contact.ID}" data-action="accept" style="color: white; margin-bottom: 0">${_.escape(wpApiDashboard.translations.accept)}</button>
-            <button class="button small accept_contact_button" data-id="${contact.ID}" data-action="decline" style="background-color: #f43636; color: white; margin-bottom: 0">${_.escape(wpApiDashboard.translations.decline)}</button>
+            <button class="button small dt-green accept_contact_button" data-id="${c_.escape( ontact.ID )}" data-action="accept" style="color: white; margin-bottom: 0">${_.escape(wpApiDashboard.translations.accept)}</button>
+            <button class="button small accept_contact_button" data-id="${_.escape( contact.ID )}" data-action="decline" style="background-color: #f43636; color: white; margin-bottom: 0">${_.escape(wpApiDashboard.translations.decline)}</button>
         </div>
     </div>`
   })
+  if ( !needs_accepting_list ){
+    needs_accepting_list = `<p style="margin-top:40px; font-size: 1.1rem; text-align: center">${_.escape(wpApiDashboard.translations.caught_up)}</p>`
+  }
   $('#needs_accepting_list').html( needs_accepting_list )
 
 
@@ -41,13 +44,16 @@ jQuery(document).ready(function($) {
   data.update_needed.contacts.slice(0, 3).forEach( contact =>{
     let row = `<div style="margin-top:5px">
         <div style="display: inline-block; margin-left: 10px"><i class="fi-torso medium"></i>
-            <a style="font-size: 1.1rem" href="${wpApiDashboard.site_url}/contacts/${contact.ID}">${_.escape( contact.post_title ) }</a>
+            <a style="font-size: 1.1rem" href="${wpApiDashboard.site_url}/contacts/${_.escape(contact.ID)}">${_.escape( contact.post_title ) }</a>
             <br>
             <span style="font-size: 0.9rem">${_.escape(contact.last_modified_msg)}</span>
         </div>
     </div>`
     up_list += row
   })
+  if ( !up_list ){
+    up_list = `<p style="margin-top:40px; font-size: 1.1rem; text-align: center">${_.escape(wpApiDashboard.translations.caught_up)}</p>`
+  }
   $('#update_needed_list').html( up_list)
 
   $('#view_updated_needed_button').on( "click", function () {

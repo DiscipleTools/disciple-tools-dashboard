@@ -399,6 +399,7 @@ class DT_Dashboard_Plugin_Endpoints
             "number_contacts_assigned" => __( "# Contacts Assigned", 'disciple_tools' ),
             "number_meetings" => __( "# First Meetings", 'disciple_tools' ),
             "number_milestones" => __( "# Faith milestones", 'disciple_tools' ),
+            "caught_up" => __( "Hurray! You are caught up.", 'disciple_tools' )
         ];
     }
 
