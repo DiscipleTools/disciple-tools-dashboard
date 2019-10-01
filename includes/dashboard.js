@@ -13,7 +13,7 @@ jQuery(document).ready(function($) {
       contact.post_title)}</a>
         </div>
         <div>
-            <button class="button small dt-green accept_contact_button" data-id="${c_.escape( ontact.ID )}" data-action="accept" style="color: white; margin-bottom: 0">${_.escape(wpApiDashboard.translations.accept)}</button>
+            <button class="button small dt-green accept_contact_button" data-id="${_.escape( contact.ID )}" data-action="accept" style="color: white; margin-bottom: 0">${_.escape(wpApiDashboard.translations.accept)}</button>
             <button class="button small accept_contact_button" data-id="${_.escape( contact.ID )}" data-action="decline" style="background-color: #f43636; color: white; margin-bottom: 0">${_.escape(wpApiDashboard.translations.decline)}</button>
         </div>
     </div>`
