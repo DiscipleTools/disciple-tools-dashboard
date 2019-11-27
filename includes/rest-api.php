@@ -102,23 +102,24 @@ class DT_Dashboard_Plugin_Endpoints
         global $wpdb;
         $my_active_contacts = $wpdb->get_var( $wpdb->prepare( "
             SELECT count(a.ID)
-              FROM $wpdb->posts as a
-              INNER JOIN $wpdb->postmeta as assigned_to
-                ON a.ID=assigned_to.post_id
-                  AND assigned_to.meta_key = 'assigned_to'
-                  AND assigned_to.meta_value = CONCAT( 'user-', %s )
-                JOIN $wpdb->postmeta as b
-                  ON a.ID=b.post_id
-                     AND b.meta_key = 'overall_status'
-                         AND b.meta_value = 'active'
-                INNER JOIN $wpdb->postmeta as e
-                  ON a.ID=e.post_id
-                     AND (( e.meta_key = 'type'
-                            AND ( e.meta_value = 'media' OR e.meta_value = 'next_gen' ) )
-                          OR e.meta_key IS NULL)
-              WHERE a.post_status = 'publish'
-              AND post_type = 'contacts'
-              ", get_current_user_id() ) );
+            FROM $wpdb->posts as a
+            INNER JOIN $wpdb->postmeta as assigned_to
+            ON a.ID=assigned_to.post_id
+              AND assigned_to.meta_key = 'assigned_to'
+              AND assigned_to.meta_value = CONCAT( 'user-', %s )
+            JOIN $wpdb->postmeta as b
+              ON a.ID=b.post_id
+                 AND b.meta_key = 'overall_status'
+                     AND b.meta_value = 'active'
+            WHERE a.post_status = 'publish'
+            AND post_type = 'contacts'
+            AND a.ID NOT IN (
+                SELECT post_id
+                FROM $wpdb->postmeta
+                WHERE meta_key = 'corresponds_to_user' AND meta_value != 0
+                GROUP BY post_id
+            )
+        ", get_current_user_id() ) );
         return $my_active_contacts;
     }
 
