@@ -114,9 +114,8 @@ class DT_Dashboard_Plugin_Endpoints
             WHERE a.post_status = 'publish'
             AND post_type = 'contacts'
             AND a.ID NOT IN (
-                SELECT post_id
-                FROM $wpdb->postmeta
-                WHERE meta_key = 'corresponds_to_user' AND meta_value != 0
+                SELECT post_id FROM $wpdb->postmeta
+                WHERE meta_key = 'type' AND meta_value = 'user'
                 GROUP BY post_id
             )
         ", get_current_user_id() ) );
@@ -250,10 +249,8 @@ class DT_Dashboard_Plugin_Endpoints
              WHERE a.post_status = 'publish'
               AND a.post_type = 'contacts'
               AND a.ID NOT IN (
-                SELECT post_id
-                FROM $wpdb->postmeta
-                WHERE meta_key = 'corresponds_to_user'
-                AND meta_value != 0
+                SELECT post_id FROM $wpdb->postmeta
+                WHERE meta_key = 'type' AND meta_value = 'user'
                 GROUP BY post_id
             )
              GROUP BY b.meta_value
@@ -302,10 +299,8 @@ class DT_Dashboard_Plugin_Endpoints
              WHERE a.post_status = 'publish'
                 AND a.post_type = 'contacts'
                 AND a.ID NOT IN (
-                    SELECT post_id
-                    FROM $wpdb->postmeta
-                    WHERE meta_key = 'corresponds_to_user'
-                      AND meta_value != 0
+                    SELECT post_id FROM $wpdb->postmeta
+                    WHERE meta_key = 'type' AND meta_value = 'user'
                     GROUP BY post_id
                 )
              GROUP BY b.meta_value
@@ -360,10 +355,8 @@ class DT_Dashboard_Plugin_Endpoints
              WHERE a.post_status = 'publish'
                 AND a.post_type = 'contacts'
                 AND a.ID NOT IN (
-                    SELECT post_id
-                    FROM $wpdb->postmeta
-                    WHERE meta_key = 'corresponds_to_user'
-                    AND meta_value != 0
+                    SELECT post_id FROM $wpdb->postmeta
+                    WHERE meta_key = 'type' AND meta_value = 'user'
                     GROUP BY post_id
                 )
              GROUP BY b.meta_value
