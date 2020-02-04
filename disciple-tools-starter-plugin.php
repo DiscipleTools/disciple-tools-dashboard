@@ -16,33 +16,6 @@
  *          https://www.gnu.org/licenses/gpl-2.0.html
  */
 
-/*******************************************************************
- * Using the Dashboard Plugin
- * The Disciple Tools dashboard plugin is intended to accelerate integrations and extensions to the Disciple Tools system.
- * This basic plugin dashboard has some of the basic elements to quickly launch and extension project in the pattern of
- * the Disciple Tools system.
- */
-
-/**
- * Refactoring (renaming) this plugin as your own:
- * 1. Refactor all occurrences of the name DT_Dashboard, dt_dashboard, dt-dashboard and Dashboard Plugin with you're own
- * name for the `disciple-tools-dashboard-plugin.php and menu-and-tabs.php files.
- * 2. Update the README.md and LICENSE
- * 3. Update the default.pot file if you intend to make your plugin multilingual. Use a tool like POEdit
- * 4. Change the translation domain to in the phpcs.xml your plugin's domain: @todo
- * 5 Replace 'sample' in this and the rest-api.php files
- */
-
-/**
- * The dashboard plugin is equipped with:
- * 1. Wordpress style requirements
- * 2. Travis Continuous Integration
- * 3. Disciple Tools Theme presence check
- * 4. Remote upgrade system for ongoing updates outside the Wordpress Directory
- * 5. Multilingual ready
- * 6. PHP Code Sniffer support (composer) @use /vendor/bin/phpcs and /vendor/bin/phpcbf
- * 7. Dashboard Admin menu and options page with tabs.
- */
 
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
@@ -54,7 +27,7 @@ $dt_dashboard_required_dt_theme_version = '0.19.0';
  *
  * @since  0.1
  * @access public
- * @return object
+ * @return object|bool
  */
 function dt_dashboard_plugin() {
     global $dt_dashboard_required_dt_theme_version;
@@ -65,9 +38,12 @@ function dt_dashboard_plugin() {
      */
     $is_theme_dt = strpos( $wp_theme->get_template(), "disciple-tools-theme" ) !== false || $wp_theme->name === "Disciple Tools";
     if ( !$is_theme_dt || version_compare( $version, $dt_dashboard_required_dt_theme_version, "<" ) ) {
-        add_action( 'admin_notices', 'dt_dashboard_plugin_hook_admin_notice' );
-        add_action( 'wp_ajax_dismissed_notice_handler', 'dt_hook_ajax_notice_handler' );
-        return new WP_Error( 'current_theme_not_dt', 'Disciple Tools Theme not active or not latest version.' );
+        if ( ! is_multisite() ) {
+            add_action('admin_notices', 'dt_dashboard_plugin_hook_admin_notice');
+            add_action('wp_ajax_dismissed_notice_handler', 'dt_hook_ajax_notice_handler');
+        }
+
+        return false;
     }
     /**
      * Load useful function from the theme
