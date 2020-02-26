@@ -160,15 +160,40 @@ get_header();
                 </div>
 
             </div>
+
+
+
+            <div class="dash-cards">
+                <div class="item" style="flex-basis: 50%">
+                    <div class="card">
+                        <span class="card-title" style="text-align: center; margin-bottom: 15px">
+                            <?php echo esc_html__( 'Quick Actions', 'disciple_tools' ) ?>
+                             <div style="display: inline-block" class="stats-spinner loading-spinner active"></div>
+                        </span>
+<!--                        <p style="text-align: center; margin-bottom: 30px">--><?php //esc_html_e( "Milestones on your active contacts", 'disciple_tools' ) ?><!--</p>-->
+                        <div >
+                            <div style="display: flex; flex-wrap: wrap" id="milestones">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item" style="flex-basis: 50%">
+                    <div class="card">
+                        <span class="card-title" style="text-align: center; margin-bottom: 15px">
+                            <?php esc_html_e( "Tasks", 'disciple_tools' ) ?>
+                            <div id="tasks-spinner" style="display: inline-block" class="stats-spinner loading-spinner active">
+                            </div>
+                        </span>
+                        <ul class="existing-tasks"></ul>
+
+                    </div>
+                </div>
+
+            </div>
         </div>
 
     </div>
-
-    <script>
-        jQuery(function($) {
-
-        });
-    </script>
 
 
 <?php

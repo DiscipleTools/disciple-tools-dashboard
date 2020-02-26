@@ -1,4 +1,4 @@
-jQuery(document).ready(function($) {
+(function($, wpApiDashboard) {
   let data = wpApiDashboard.data
 
   // update_needed();
@@ -69,17 +69,18 @@ jQuery(document).ready(function($) {
       type: 'GET',
       contentType: 'application/json; charset=utf-8',
       dataType: 'json',
-      url: `${wpApiShare.root}dt-dashboard/v1/stats`,
+      url: `${window.wpApiShare.root}dt-dashboard/v1/stats`,
       beforeSend: xhr => {
-          xhr.setRequestHeader('X-WP-Nonce', wpApiShare.nonce);
+          xhr.setRequestHeader('X-WP-Nonce', window.wpApiShare.nonce);
       }
   }
-  jQuery.ajax(options).then(resp=>{
+  $.ajax(options).then(resp=>{
     $(".stats-spinner").removeClass("active")
     _.merge(data, resp)
     benchmarks_chart()
     seeker_path_chart()
     milestones()
+    build_tasks()
   })
 
 
@@ -145,7 +146,7 @@ jQuery(document).ready(function($) {
 
 
 
-    let  valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+    let valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
     valueAxis.min = 0;
     // valueAxis.title.text = "Expenditure (M)";
     valueAxis.renderer.grid.template.disabled = true;
@@ -248,4 +249,63 @@ jQuery(document).ready(function($) {
 
   }
 
-})
+  function build_tasks() {
+    let tasks = _.sortBy(data.tasks || [], ['date'])
+    let html = ``
+      tasks.forEach(task=>{
+        let task_done = ( task.category === "reminder" && task.value.notification === 'notification_sent' )
+          || ( task.category !== "reminder" && task.value.status === 'task_complete' )
+        let show_complete_button = task.category !== "reminder" && task.value.status !== 'task_complete'
+        let task_row = `
+            <a href="/${_.escape(task.post_type)}/${_.escape(task.post_id)}">${_.escape(task.post_title)}</a> -
+            <strong>${_.escape( moment(task.date).format("MMM D YYYY") )}</strong> - 
+        `
+        if ( task.category === "reminder" ){
+          task_row += _.escape( wpApiDashboard.translations.reminder )
+          task_row += ' - '
+          if ( task.value.note ){
+            task_row += ' ' + _.escape(task.value.note) + ' - '
+          }
+        } else {
+          task_row += _.escape(task.value.note || wpApiDashboard.translations.no_note ) + ' - '
+        }
+        html += `<li>
+        <span style="${task_done ? 'text-decoration:line-through' : ''}">
+        ${task_row}  
+        ${ show_complete_button ? `<button type="button" data-id="${_.escape(task.id)}" class="existing-task-action complete-task">${_.escape(wpApiDashboard.translations.complete)}</button>` : '' }
+        <button type="button" data-id="${_.escape(task.id)}" class="existing-task-action remove-task" style="color: red;">${_.escape(wpApiDashboard.translations.remove)}</button>
+      </li>`
+      })
+      if (!html ){
+        $('.existing-tasks').html(`<li>${_.escape(wpApiDashboard.translations.no_tasks)}</li>`)
+      } else {
+        $('.existing-tasks').html(html)
+      }
+
+      $('.complete-task').on("click", function () {
+        $('#tasks-spinner').addClass('active')
+        let id = $(this).data('id').toString()
+        let task = _.find(data.tasks, {id})
+        API.update_post(task.post_type, task.post_id, {
+          "tasks": { values: [ { id, value: {status: 'task_complete'}, } ] }
+        }).then(() => {
+          _.pullAllBy( data.tasks, [{id}], 'id' )
+          build_tasks()
+          $('#tasks-spinner').removeClass('active')
+        })
+      })
+      $('.remove-task').on("click", function () {
+        $('#tasks-spinner').addClass('active')
+        let id = $(this).data('id').toString()
+        let task = _.find(data.tasks, {id})
+        API.update_post(task.post_type, task.post_id, {
+          "tasks": { values: [ { id, delete: true } ] }
+        }).then(() => {
+          _.pullAllBy( data.tasks, [{id}], 'id' )
+          build_tasks()
+          $('#tasks-spinner').removeClass('active')
+        })
+      })
+  }
+
+})(window.jQuery, window.wpApiDashboard)

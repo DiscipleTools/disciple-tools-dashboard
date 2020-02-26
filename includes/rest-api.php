@@ -94,7 +94,8 @@ class DT_Dashboard_Plugin_Endpoints
         return [
             "benchmarks" => $personal_benchmarks,
             "seeker_path_personal" => $seeker_path_personal,
-            "milestones" => $milestones
+            "milestones" => $milestones,
+            "tasks" => self::get_tasks(),
         ];
     }
 
@@ -386,6 +387,26 @@ class DT_Dashboard_Plugin_Endpoints
         return $return;
     }
 
+    private function get_tasks(){
+        global $wpdb;
+        $user_id = get_current_user_id();
+        $task_results = $wpdb->get_results($wpdb->prepare( "
+            SELECT pum.*, p.post_title, p.post_type
+            FROM $wpdb->dt_post_user_meta pum
+            INNER JOIN $wpdb->posts p ON p.ID = pum.post_id
+            WHERE pum.user_id = %s 
+                AND meta_key = 'tasks'
+                AND meta_value NOT LIKE %s
+                AND meta_value NOT LIKE %s
+            ORDER BY pum.date ASC
+            LIMIT 30
+        ", $user_id, '%notification_sent%', '%task_complete%' ), ARRAY_A );
+        foreach ( $task_results as &$task ){
+            $task["value"] = maybe_unserialize( $task["meta_value"] );
+        }
+        return $task_results;
+    }
+
     public static function translations(){
         return [
             "accept" => __( "Accept", 'disciple_tools' ),
@@ -393,7 +414,12 @@ class DT_Dashboard_Plugin_Endpoints
             "number_contacts_assigned" => __( "# Contacts Assigned", 'disciple_tools' ),
             "number_meetings" => __( "# First Meetings", 'disciple_tools' ),
             "number_milestones" => __( "# Faith milestones", 'disciple_tools' ),
-            "caught_up" => __( "Hurray! You are caught up.", 'disciple_tools' )
+            "caught_up" => __( "Hurray! You are caught up.", 'disciple_tools' ),
+            'remove' => __( 'remove', 'disciple_tools' ),
+            'complete' => __( 'mark as complete', 'disciple_tools' ),
+            'no_tasks' => __( 'No task created', 'disciple_tools' ),
+            'reminder' => __( 'Reminder', 'disciple_tools' ),
+            'no_note' => __( 'No note set', 'disciple_tools' ),
         ];
     }
 
