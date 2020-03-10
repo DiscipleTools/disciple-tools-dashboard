@@ -37,12 +37,12 @@ function dt_dashboard_plugin() {
      * Check if the Disciple.Tools theme is loaded and is the latest required version
      */
     $is_theme_dt = strpos( $wp_theme->get_template(), "disciple-tools-theme" ) !== false || $wp_theme->name === "Disciple Tools";
-    if ( !$is_theme_dt || version_compare( $version, $dt_dashboard_required_dt_theme_version, "<" ) ) {
-        if ( ! is_multisite() ) {
-            add_action('admin_notices', 'dt_dashboard_plugin_hook_admin_notice');
-            add_action('wp_ajax_dismissed_notice_handler', 'dt_hook_ajax_notice_handler');
-        }
-
+    if ( $is_theme_dt && version_compare( $version, $dt_dashboard_required_dt_theme_version, "<" ) ) {
+        add_action( 'admin_notices', 'dt_dashboard_plugin_hook_admin_notice' );
+        add_action( 'wp_ajax_dismissed_notice_handler', 'dt_hook_ajax_notice_handler' );
+        return false;
+    }
+    if ( !$is_theme_dt ){
         return false;
     }
     /**
@@ -55,7 +55,7 @@ function dt_dashboard_plugin() {
      * Don't load the plugin on every rest request. Only those with the 'sample' namespace
      */
     $is_rest = dt_is_rest();
-    if ( !$is_rest || strpos( dt_get_url_path(), 'dashboard' ) != false ){
+    if ( !$is_rest || strpos( dt_get_url_path(), 'dashboard' ) !== false ){
         return DT_Dashboard_Plugin::get_instance();
     }
 }
