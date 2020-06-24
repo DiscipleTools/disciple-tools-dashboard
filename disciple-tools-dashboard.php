@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Disciple Tools - Dashboard
- * Plugin URI: https://github.com/DiscipleTools/disciple-tools-dashboard-plugin
+ * Plugin URI: https://github.com/DiscipleTools/disciple-tools-dashboard
  * The multiplier dashboard upgrades the multipliers experience as soon as they log into the system.
  * Version:  0.1.0
  * Author URI: https://github.com/DiscipleTools
- * GitHub Plugin URI: https://github.com/DiscipleTools/disciple-tools-dashboard-plugin
+ * GitHub Plugin URI: https://github.com/DiscipleTools/disciple-tools-dashboard
  * Requires at least: 4.7.0
  * (Requires 4.7+ because of the integration of the REST API at 4.7 and the security requirements of this milestone version.)
  * Tested up to: 4.9
@@ -39,8 +39,8 @@ function dt_dashboard_plugin() {
     $is_theme_dt = strpos( $wp_theme->get_template(), "disciple-tools-theme" ) !== false || $wp_theme->name === "Disciple Tools";
     if ( !$is_theme_dt || version_compare( $version, $dt_dashboard_required_dt_theme_version, "<" ) ) {
         if ( ! is_multisite() ) {
-            add_action('admin_notices', 'dt_dashboard_plugin_hook_admin_notice');
-            add_action('wp_ajax_dismissed_notice_handler', 'dt_hook_ajax_notice_handler');
+            add_action( 'admin_notices', 'dt_dashboard_plugin_hook_admin_notice' );
+            add_action( 'wp_ajax_dismissed_notice_handler', 'dt_hook_ajax_notice_handler' );
         }
 
         return false;
@@ -176,12 +176,12 @@ class DT_Dashboard_Plugin {
              * @see https://github.com/DiscipleTools/disciple-tools-version-control/wiki/How-to-Update-the-Dashboard-Plugin
              */
 //            @todo enable this section with your own hosted file
-//            $hosted_json = "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-version-control/master/disciple-tools-dashboard-plugin-version-control.json";
-//            Puc_v4_Factory::buildUpdateChecker(
-//                $hosted_json,
-//                __FILE__,
-//                'disciple-tools-dashboard-plugin'
-//            );
+            $hosted_json = "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-version-control/master/disciple-tools-dashboard-version-control.json";
+            Puc_v4_Factory::buildUpdateChecker(
+                $hosted_json,
+                __FILE__,
+                'disciple-tools-dashboard'
+            );
         }
 
         // Internationalize the text strings used.
