@@ -6,7 +6,7 @@
   $('#active_contacts').html(data.active_contacts)
   $('#needs_accepting').html(data.accept_needed.total)
   let needs_accepting_list = ``
-  data.accept_needed.contacts.slice(0, 3).forEach( contact =>{
+  data.accept_needed.posts.slice(0, 3).forEach( contact =>{
     needs_accepting_list += `<div style="margin-top:10px; display: flex" id="pending-${_.escape(contact.ID)}">
         <div style="display: inline-block; margin-left: 10px; vertical-align: middle; flex-grow: 1"><i class="fi-torso medium"></i>
             <a style="font-size: 1.1rem" href="${wpApiDashboard.site_url}/contacts/${_.escape( contact.ID )}">${_.escape(
@@ -41,7 +41,7 @@
    */
   $('#update_needed').html(data.update_needed.total)
   let up_list = ``
-  data.update_needed.contacts.slice(0, 3).forEach( contact =>{
+  data.update_needed.posts.slice(0, 3).forEach( contact =>{
     let row = `<div style="margin-top:5px">
         <div style="display: inline-block; margin-left: 10px"><i class="fi-torso medium"></i>
             <a style="font-size: 1.1rem" href="${wpApiDashboard.site_url}/contacts/${_.escape(contact.ID)}">${_.escape( contact.post_title ) }</a>
@@ -258,7 +258,7 @@
         let show_complete_button = task.category !== "reminder" && task.value.status !== 'task_complete'
         let task_row = `
             <a href="/${_.escape(task.post_type)}/${_.escape(task.post_id)}">${_.escape(task.post_title)}</a> -
-            <strong>${_.escape( moment(task.date).format("MMM D YYYY") )}</strong> - 
+            <strong>${_.escape( moment(task.date).format("MMM D YYYY") )}</strong> -
         `
         if ( task.category === "reminder" ){
           task_row += _.escape( wpApiDashboard.translations.reminder )
@@ -271,7 +271,7 @@
         }
         html += `<li>
         <span style="${task_done ? 'text-decoration:line-through' : ''}">
-        ${task_row}  
+        ${task_row}
         ${ show_complete_button ? `<button type="button" data-id="${_.escape(task.id)}" class="existing-task-action complete-task">${_.escape(wpApiDashboard.translations.complete)}</button>` : '' }
         <button type="button" data-id="${_.escape(task.id)}" class="existing-task-action remove-task" style="color: red;">${_.escape(wpApiDashboard.translations.remove)}</button>
       </li>`

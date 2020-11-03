@@ -54,22 +54,22 @@ class DT_Dashboard_Plugin_Endpoints
 
     public static function get_data(){
 
-        $to_accept = Disciple_Tools_Contacts::search_viewable_contacts( [
+        $to_accept = DT_Posts::search_viewable_post( "contacts", [
             'overall_status' => [ 'assigned' ],
             'assigned_to'    => [ 'me' ]
         ] );
-        $update_needed = Disciple_Tools_Contacts::search_viewable_contacts( [
+        $update_needed = DT_Posts::search_viewable_post( "contacts", [
             'requires_update' => [ "true" ],
             'assigned_to'     => [ 'me' ],
             'overall_status' => [ '-closed' ]
         ] );
-        if ( sizeof( $update_needed["contacts"] ) > 5 ) {
-            $update_needed["contacts"] = array_slice( $update_needed["contacts"], 0, 5 );
+        if ( sizeof( $update_needed["posts"] ) > 5 ) {
+            $update_needed["posts"] = array_slice( $update_needed["posts"], 0, 5 );
         }
-        if ( sizeof( $to_accept["contacts"] ) > 5 ) {
-            $to_accept["contacts"] = array_slice( $to_accept["contacts"], 0, 5 );
+        if ( sizeof( $to_accept["posts"] ) > 5 ) {
+            $to_accept["posts"] = array_slice( $to_accept["posts"], 0, 5 );
         }
-        foreach ( $update_needed["contacts"] as &$contact ){
+        foreach ( $update_needed["posts"] as &$contact ){
             $now = time();
             $last_modified = get_post_meta( $contact->ID, "last_modified", true );
             $days_different = (int) round( ( $now - (int) $last_modified ) / ( 60 * 60 * 24 ) );
@@ -129,35 +129,35 @@ class DT_Dashboard_Plugin_Endpoints
         $sixty_days_ago = $thirty_days_ago - 30 * 24 * 60 * 60;
 
         $contacts_current = $wpdb->get_var( $wpdb->prepare( "
-            SELECT COUNT(DISTINCT(object_id)) 
+            SELECT COUNT(DISTINCT(object_id))
             FROM $wpdb->dt_activity_log a
             INNER JOIN $wpdb->postmeta as type ON ( object_id = type.post_id AND type.meta_key = 'type' AND type.meta_value != 'user' )
-            WHERE object_type = 'contacts' 
+            WHERE object_type = 'contacts'
             AND a.meta_key = 'assigned_to'
-            AND hist_time >= %s 
+            AND hist_time >= %s
             AND a.meta_value = %s
         ", $thirty_days_ago, "user-" . get_current_user_id() )
         );
 
         $contacts_previous = $wpdb->get_var( $wpdb->prepare( "
-            SELECT COUNT(DISTINCT(object_id)) 
+            SELECT COUNT(DISTINCT(object_id))
             FROM $wpdb->dt_activity_log a
             INNER JOIN $wpdb->postmeta as type ON ( object_id = type.post_id AND type.meta_key = 'type' AND type.meta_value != 'user' )
-            WHERE object_type = 'contacts' 
+            WHERE object_type = 'contacts'
             AND a.meta_key = 'assigned_to'
-            AND hist_time >= %s 
-            AND hist_time < %s 
+            AND hist_time >= %s
+            AND hist_time < %s
             AND a.meta_value = %s
         ", $sixty_days_ago, $thirty_days_ago, "user-" . get_current_user_id() )
         );
 
         $met_current = $wpdb->get_var( $wpdb->prepare( "
-            SELECT COUNT(DISTINCT(object_id)) 
+            SELECT COUNT(DISTINCT(object_id))
             FROM $wpdb->dt_activity_log a
             INNER JOIN $wpdb->postmeta as type ON ( object_id = type.post_id AND type.meta_key = 'type' AND type.meta_value != 'user' )
-            WHERE object_type = 'contacts' 
+            WHERE object_type = 'contacts'
             AND a.meta_key = 'seeker_path'
-            AND hist_time >= %s 
+            AND hist_time >= %s
             AND a.meta_value = 'met'
             AND user_id = %s
         ", $thirty_days_ago, get_current_user_id() )
@@ -167,9 +167,9 @@ class DT_Dashboard_Plugin_Endpoints
             SELECT COUNT(DISTINCT(object_id))
             FROM $wpdb->dt_activity_log a
             INNER JOIN $wpdb->postmeta as type ON ( object_id = type.post_id AND type.meta_key = 'type' AND type.meta_value != 'user' )
-            WHERE object_type = 'contacts' 
+            WHERE object_type = 'contacts'
             AND a.meta_key = 'seeker_path'
-            AND hist_time >= %s 
+            AND hist_time >= %s
             AND hist_time < %s
             AND a.meta_value = 'met'
             AND user_id = %s
@@ -177,24 +177,24 @@ class DT_Dashboard_Plugin_Endpoints
         );
 
         $milestones_current = $wpdb->get_var( $wpdb->prepare( "
-            SELECT COUNT(DISTINCT(object_id)) 
+            SELECT COUNT(DISTINCT(object_id))
             FROM $wpdb->dt_activity_log a
             INNER JOIN $wpdb->postmeta as type ON ( object_id = type.post_id AND type.meta_key = 'type' AND type.meta_value != 'user' )
-            WHERE object_type = 'contacts' 
+            WHERE object_type = 'contacts'
             AND a.meta_key = 'milestones'
-            AND hist_time >= %s 
+            AND hist_time >= %s
             AND a.meta_value != 'value_deleted'
             AND user_id = %s
         ", $thirty_days_ago, get_current_user_id() )
         );
 
         $milestones_previous = $wpdb->get_var( $wpdb->prepare( "
-            SELECT COUNT(*) 
+            SELECT COUNT(*)
             FROM $wpdb->dt_activity_log a
             INNER JOIN $wpdb->postmeta as type ON ( object_id = type.post_id AND type.meta_key = 'type' AND type.meta_value != 'user' )
-            WHERE object_type = 'contacts' 
+            WHERE object_type = 'contacts'
             AND a.meta_key = 'milestones'
-            AND hist_time >= %s 
+            AND hist_time >= %s
             AND hist_time < %s
             AND a.meta_value != 'value_deleted'
             AND user_id = %s
@@ -224,7 +224,7 @@ class DT_Dashboard_Plugin_Endpoints
         }
 
         $defaults = [];
-        $contact_fields = Disciple_Tools_Contact_Post_Type::instance()->get_custom_fields_settings();
+        $contact_fields = DT_Posts::get_post_field_settings( "contacts" );
         $seeker_path_options = $contact_fields["seeker_path"]["default"];
         foreach ( $seeker_path_options as $key => $option ) {
             $defaults[$key] = [
@@ -309,7 +309,7 @@ class DT_Dashboard_Plugin_Endpoints
 
         $query_results = [];
 
-        $contact_fields = Disciple_Tools_Contact_Post_Type::instance()->get_custom_fields_settings();
+        $contact_fields = DT_Posts::get_post_field_settings( "contacts" );
         $seeker_path_options = $contact_fields["seeker_path"]["default"];
 
         foreach ( $seeker_path_options as $seeker_path_key => $seeker_path_option ){
@@ -364,7 +364,7 @@ class DT_Dashboard_Plugin_Endpoints
         ",
         'user-'. $user_id ), ARRAY_A );
 
-        $field_settings = Disciple_Tools_Contact_Post_Type::instance()->get_custom_fields_settings();
+        $field_settings = DT_Posts::get_post_field_settings( "contacts" );
         $milestones_options = $field_settings["milestones"]["default"];
         $milestones_data = [];
 
@@ -394,7 +394,7 @@ class DT_Dashboard_Plugin_Endpoints
             SELECT pum.*, p.post_title, p.post_type
             FROM $wpdb->dt_post_user_meta pum
             INNER JOIN $wpdb->posts p ON p.ID = pum.post_id
-            WHERE pum.user_id = %s 
+            WHERE pum.user_id = %s
                 AND meta_key = 'tasks'
                 AND meta_value NOT LIKE %s
                 AND meta_value NOT LIKE %s
