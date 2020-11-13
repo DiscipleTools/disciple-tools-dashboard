@@ -3,7 +3,7 @@
  * Plugin Name: Disciple Tools - Dashboard
  * Plugin URI: https://github.com/DiscipleTools/disciple-tools-dashboard
  * Description: The multiplier dashboard upgrades the multipliers experience as soon as they log into the system giving them a landing page with stats.
- * Version:  0.1.0
+ * Version:  0.2
  * Author URI: https://github.com/DiscipleTools
  * GitHub Plugin URI: https://github.com/DiscipleTools/disciple-tools-dashboard
  * Requires at least: 4.7.0
@@ -148,7 +148,7 @@ class DT_Dashboard_Plugin {
 
         // Admin and settings variables
         $this->token             = 'dt_dashboard_plugin';
-        $this->version             = '0.1';
+        $this->version             = '0.2';
 
         // sample rest api class
         require_once( 'includes/rest-api.php' );
