@@ -33,9 +33,9 @@ class DT_Dashboard_Plugin_Functions
         /**
          * Add Navigation Menu
          */
-        add_action( 'dt_top_nav_desktop', [$this, 'nav_menu'], 10 );
-        add_action( 'dt_off_canvas_nav', [$this, 'nav_menu'], 10 );
-        
+        add_action( 'dt_top_nav_desktop', [ $this, 'nav_menu' ], 10 );
+        add_action( 'dt_off_canvas_nav', [ $this, 'nav_menu' ], 10 );
+
     }
 
     public function my_theme_redirect() {
@@ -84,7 +84,7 @@ class DT_Dashboard_Plugin_Functions
         return site_url( '/dashboard/' );
     }
 
-    public function nav_menu( ){
+    public function nav_menu(){
         ?>
         <li><a href="<?php echo esc_url( site_url( '/dashboard/' ) ); ?>"><?php esc_html_e( "Dashboard" ); ?></a></li>
         <?php
