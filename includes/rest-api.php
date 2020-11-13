@@ -63,6 +63,9 @@ class DT_Dashboard_Plugin_Endpoints
             'assigned_to'     => [ 'me' ],
             'overall_status' => [ '-closed' ]
         ] );
+        if ( is_wp_error( $update_needed ) ){
+            return $update_needed; // @todo handle potential wp error response
+        }
         if ( sizeof( $update_needed["posts"] ) > 5 ) {
             $update_needed["posts"] = array_slice( $update_needed["posts"], 0, 5 );
         }
