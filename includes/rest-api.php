@@ -56,7 +56,8 @@ class DT_Dashboard_Plugin_Endpoints
 
         $to_accept = DT_Posts::search_viewable_post( "contacts", [
             'overall_status' => [ 'assigned' ],
-            'assigned_to'    => [ 'me' ]
+            'assigned_to'    => [ 'me' ],
+            'type' => [ "access" ]
         ] );
         $update_needed = DT_Posts::search_viewable_post( "contacts", [
             'requires_update' => [ "true" ],
