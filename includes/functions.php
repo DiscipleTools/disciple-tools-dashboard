@@ -24,17 +24,12 @@ class DT_Dashboard_Plugin_Functions
 
         add_filter( 'desktop_navbar_menu_options', [ $this, 'nav_menu' ] );
         add_filter( 'off_canvas_menu_options', [ $this, 'nav_menu' ] );
+
         $url_path = dt_get_url_path();
         add_action( "template_redirect", [ $this, 'my_theme_redirect' ] );
         if ( strpos( $url_path, 'dashboard' ) !== false ) {
             add_action( 'wp_enqueue_scripts', [ $this, 'scripts' ], 99 );
         }
-
-        /**
-         * Add Navigation Menu
-         */
-        add_action( 'dt_top_nav_desktop', [ $this, 'nav_menu' ], 10 );
-        add_action( 'dt_off_canvas_nav', [ $this, 'nav_menu' ], 10 );
 
     }
 
