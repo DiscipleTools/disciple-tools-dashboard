@@ -70,3 +70,9 @@
         flex-basis: 100% !important;
     }
 }
+
+.existing-task-action {
+    font-size: 10px;
+    color: #1779ba;
+    margin: 0 5px;
+}

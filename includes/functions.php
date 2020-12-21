@@ -21,13 +21,16 @@ class DT_Dashboard_Plugin_Functions
     public function __construct() {
         $this->namespace = $this->context . "/v" . intval( $this->version );
         add_filter( 'dt_front_page', [ $this, 'front_page' ] );
+
         add_filter( 'desktop_navbar_menu_options', [ $this, 'nav_menu' ] );
         add_filter( 'off_canvas_menu_options', [ $this, 'nav_menu' ] );
+
         $url_path = dt_get_url_path();
         add_action( "template_redirect", [ $this, 'my_theme_redirect' ] );
         if ( strpos( $url_path, 'dashboard' ) !== false ) {
             add_action( 'wp_enqueue_scripts', [ $this, 'scripts' ], 99 );
         }
+
     }
 
     public function my_theme_redirect() {
@@ -76,12 +79,10 @@ class DT_Dashboard_Plugin_Functions
         return site_url( '/dashboard/' );
     }
 
-    public function nav_menu( $tabs ){
-        array_unshift( $tabs, [
-            "link" => site_url( '/dashboard/' ),
-            "label" => __( "Dashboard", 'disciple_tools' )
-        ] );
-        return $tabs;
+    public function nav_menu(){
+        ?>
+        <li><a href="<?php echo esc_url( site_url( '/dashboard/' ) ); ?>"><?php esc_html_e( "Dashboard" ); ?></a></li>
+        <?php
     }
 
 }

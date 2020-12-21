@@ -3,7 +3,7 @@
  * Plugin Name: Disciple Tools - Dashboard
  * Plugin URI: https://github.com/DiscipleTools/disciple-tools-dashboard
  * Description: The multiplier dashboard upgrades the multipliers experience as soon as they log into the system giving them a landing page with stats.
- * Version:  0.1.0
+ * Version:  0.2
  * Author URI: https://github.com/DiscipleTools
  * GitHub Plugin URI: https://github.com/DiscipleTools/disciple-tools-dashboard
  * Requires at least: 4.7.0
@@ -20,7 +20,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 }
-$dt_dashboard_required_dt_theme_version = '0.28.0';
+$dt_dashboard_required_dt_theme_version = '1.0.0';
 
 /**
  * Gets the instance of the `DT_Dashboard_Plugin` class.
@@ -37,6 +37,7 @@ function dt_dashboard_plugin() {
      * Check if the Disciple.Tools theme is loaded and is the latest required version
      */
     $is_theme_dt = strpos( $wp_theme->get_template(), "disciple-tools-theme" ) !== false || $wp_theme->name === "Disciple Tools";
+
     if ( !$is_theme_dt || version_compare( $version, $dt_dashboard_required_dt_theme_version, "<" ) ) {
         if ( ! is_multisite() ) {
             add_action( 'admin_notices', 'dt_dashboard_plugin_hook_admin_notice' );
@@ -55,9 +56,11 @@ function dt_dashboard_plugin() {
      * Don't load the plugin on every rest request. Only those with the 'sample' namespace
      */
     $is_rest = dt_is_rest();
-    if ( !$is_rest || strpos( dt_get_url_path(), 'dashboard' ) != false ){
+    if ( !$is_rest || strpos( dt_get_url_path(), 'dashboard' ) !== false ){
         return DT_Dashboard_Plugin::get_instance();
     }
+
+    return false;
 }
 add_action( 'plugins_loaded', 'dt_dashboard_plugin' );
 
@@ -145,7 +148,7 @@ class DT_Dashboard_Plugin {
 
         // Admin and settings variables
         $this->token             = 'dt_dashboard_plugin';
-        $this->version             = '0.1';
+        $this->version             = '0.2';
 
         // sample rest api class
         require_once( 'includes/rest-api.php' );
@@ -168,14 +171,7 @@ class DT_Dashboard_Plugin {
             if ( ! class_exists( 'Puc_v4_Factory' ) ) {
                 require( get_template_directory() . '/dt-core/libraries/plugin-update-checker/plugin-update-checker.php' );
             }
-            /**
-             * Below is the publicly hosted .json file that carries the version information. This file can be hosted
-             * anywhere as long as it is publicly accessible. You can download the version file listed below and use it as
-             * a template.
-             * Also, see the instructions for version updating to understand the steps involved.
-             * @see https://github.com/DiscipleTools/disciple-tools-version-control/wiki/How-to-Update-the-Dashboard-Plugin
-             */
-//            @todo enable this section with your own hosted file
+
             $hosted_json = "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-version-control/master/disciple-tools-dashboard-version-control.json";
             Puc_v4_Factory::buildUpdateChecker(
                 $hosted_json,
