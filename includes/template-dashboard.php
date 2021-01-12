@@ -29,9 +29,9 @@ get_header();
                                 <a class="button dt-green" style="margin-bottom:0" href="<?php echo esc_url( home_url( '/' ) ) . "contacts/new" ?>">
                                     <?php esc_html_e( "Add a contact", 'disciple-tools-dashboard' ) ?>
                                 </a>
-                                <a class="button" style="margin-bottom:0; margin-left: 10px" href="<?php echo esc_url( home_url( '/' ) ) . "contacts?list-tab=active" ?>">
-                                    <?php esc_html_e( "View Contacts List", 'disciple-tools-dashboard' ) ?>
-                                </a>
+<!--                                <a class="button" style="margin-bottom:0; margin-left: 10px" href="--><?php //echo esc_url( home_url( '/' ) ) . "contacts?list-tab=active" ?><!--">-->
+<!--                                    --><?php //esc_html_e( "View Contacts List", 'disciple-tools-dashboard' ) ?>
+<!--                                </a>-->
                             </div>
                         </div>
                     </div>
@@ -48,9 +48,9 @@ get_header();
                                 </span>
                             </div>
                             <div id="needs_accepting_list"  style="flex-grow: 1"></div>
-                            <div style="flex-shrink: 1" class="view-all">
-                                <button class="button" id="view_needs_accepted_button"><?php esc_html_e( "View All", 'disciple-tools-dashboard' ) ?></button>
-                            </div>
+<!--                            <div style="flex-shrink: 1" class="view-all">-->
+<!--                                <button class="button" id="view_needs_accepted_button">--><?php //esc_html_e( "View All", 'disciple-tools-dashboard' ) ?><!--</button>-->
+<!--                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -66,9 +66,9 @@ get_header();
                                 </span>
                             </div>
                             <div id="update_needed_list" style="flex-grow: 1"></div>
-                            <div class="view-all" style="flex-shrink: 1">
-                                <button class="button" id="view_updated_needed_button"><?php esc_html_e( "View All", 'disciple-tools-dashboard' ) ?></button>
-                            </div>
+<!--                            <div class="view-all" style="flex-shrink: 1">-->
+<!--                                <button class="button" id="view_updated_needed_button">--><?php //esc_html_e( "View All", 'disciple-tools-dashboard' ) ?><!--</button>-->
+<!--                            </div>-->
                         </div>
                     </div>
                 </div>
