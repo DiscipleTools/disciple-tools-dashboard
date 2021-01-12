@@ -29,7 +29,7 @@
     let data = {accept: $(this).data('action') === 'accept'}
     makeRequestOnPosts( "POST", `contacts/${contact_id}/accept`, data)
       .then(function (resp) {
-        $(`#pending-${contact_id}`).remove()
+        $(`#pending-${_.escape( contact_id )}`).remove()
         let total_pending_html = $('#needs_accepting')
         let total = parseInt( total_pending_html.html() ) - 1;
         total_pending_html.html(total)
@@ -62,8 +62,6 @@
   $('#view_needs_accepted_button').on( "click", function () {
     document.location = `${wpApiDashboard.site_url}/contacts?list-tab=needs_accepted`
   })
-
-
 
   const options = {
       type: 'GET',

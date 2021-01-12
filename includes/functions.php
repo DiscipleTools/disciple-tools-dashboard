@@ -81,7 +81,7 @@ class DT_Dashboard_Plugin_Functions
 
     public function nav_menu(){
         ?>
-        <li><a href="<?php echo esc_url( site_url( '/dashboard/' ) ); ?>"><?php esc_html_e( "Dashboard" ); ?></a></li>
+        <li><a href="<?php echo esc_url( site_url( '/dashboard/' ) ); ?>"><?php esc_html_e( "Dashboard", "disciple-tools-dashboard" ); ?></a></li>
         <?php
     }
 

@@ -13,7 +13,6 @@ if ( ! current_user_can( 'access_contacts' ) ) {
 get_header();
 
 ?>
-
     <div id="content" class="dashboard-page">
         <div id="inner-content">
             <div class="dash-cards">
@@ -21,23 +20,22 @@ get_header();
                     <div class="card" style="height: 100%">
                         <div style="display: flex; flex-direction: column; height: 100%">
                             <div style="text-align: center">
-                                <span class="card-title"><?php esc_html_e( "Active Contacts", 'disciple_tools' ) ?></span>
+                                <span class="card-title"><?php esc_html_e( "Active Contacts", 'disciple-tools-dashboard' ) ?></span>
                             </div>
                             <div style="text-align: center; flex-grow: 1; margin-top: 20px">
                                 <span class="numberCircle">&nbsp;<span id="active_contacts">-</span>&nbsp;</span>
                             </div>
                             <div class="view-all" style="flex-shrink: 1">
                                 <a class="button dt-green" style="margin-bottom:0" href="<?php echo esc_url( home_url( '/' ) ) . "contacts/new" ?>">
-                                    <?php esc_html_e( "Add a contact", 'disciple_tools' ) ?>
+                                    <?php esc_html_e( "Add a contact", 'disciple-tools-dashboard' ) ?>
                                 </a>
                                 <a class="button" style="margin-bottom:0; margin-left: 10px" href="<?php echo esc_url( home_url( '/' ) ) . "contacts?list-tab=active" ?>">
-                                    <?php esc_html_e( "View Contacts List", 'disciple_tools' ) ?>
+                                    <?php esc_html_e( "View Contacts List", 'disciple-tools-dashboard' ) ?>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <div class="item" style="flex-basis: 25%;">
                     <div class="card">
                         <div style="display: flex; flex-direction: column; height: 100%">
@@ -46,12 +44,12 @@ get_header();
                                     <span id="needs_accepting"></span>
                                 </div>
                                 <span class="card-title">
-                                    <?php esc_html_e( "Pending Contacts", 'disciple_tools' ) ?>
+                                    <?php esc_html_e( "Pending Contacts", 'disciple-tools-dashboard' ) ?>
                                 </span>
                             </div>
                             <div id="needs_accepting_list"  style="flex-grow: 1"></div>
                             <div style="flex-shrink: 1" class="view-all">
-                                <button class="button" id="view_needs_accepted_button"><?php esc_html_e( "View All", 'disciple_tools' ) ?></button>
+                                <button class="button" id="view_needs_accepted_button"><?php esc_html_e( "View All", 'disciple-tools-dashboard' ) ?></button>
                             </div>
                         </div>
                     </div>
@@ -64,12 +62,12 @@ get_header();
                                     <span id="update_needed"></span>
                                 </div>
                                 <span class="card-title">
-                                    <?php esc_html_e( "Update Needed", 'disciple_tools' ) ?>
+                                    <?php esc_html_e( "Update Needed", 'disciple-tools-dashboard' ) ?>
                                 </span>
                             </div>
                             <div id="update_needed_list" style="flex-grow: 1"></div>
                             <div class="view-all" style="flex-shrink: 1">
-                                <button class="button" id="view_updated_needed_button"><?php esc_html_e( "View All", 'disciple_tools' ) ?></button>
+                                <button class="button" id="view_updated_needed_button"><?php esc_html_e( "View All", 'disciple-tools-dashboard' ) ?></button>
                             </div>
                         </div>
                     </div>
@@ -78,11 +76,11 @@ get_header();
                     <div class="card">
                         <div style="text-align: center">
                             <span class="card-title">
-                                <?php esc_html_e( "Contact Workload", 'disciple_tools' ) ?>
+                                <?php esc_html_e( "Contact Workload", 'disciple-tools-dashboard' ) ?>
                                 <div id="workload-spinner" style="display: inline-block" class="loading-spinner"></div>
                             </span>
                         </div>
-                        <p><?php esc_html_e( "Choose an option to let the dispatcher(s) know if you are ready for new contacts", 'disciple_tools' ) ?></p>
+                        <p><?php esc_html_e( "Choose an option to let the dispatcher(s) know if you are ready for new contacts", 'disciple-tools-dashboard' ) ?></p>
                         <?php $options = dt_get_site_custom_lists()["user_workload_status"] ?? [];
                         foreach ( $options as $option_key => $option_val ) :
                             $icon = $option_key === "active" ? "play" : ( $option_key === "existing" ? "pause" : "stop" ); ?>
@@ -92,7 +90,7 @@ get_header();
                         <?php endforeach; ?>
                         <a href="<?php echo esc_html( site_url( 'settings/#availability' ) ) ?>">
                             <i class="fi-clock"></i>
-                            <?php esc_html_e( "Set travel or dates unavailable", 'disciple_tools' ) ?>
+                            <?php esc_html_e( "Set travel or dates unavailable", 'disciple-tools-dashboard' ) ?>
                         </a>
                     </div>
                 </div>
@@ -100,15 +98,12 @@ get_header();
             </div>
 
 
-
-
-
             <div class="dash-cards" id="benchmarks">
                 <div class="item" style="flex-basis: 100%">
                 <div class="card">
                     <div style="display: flex; flex-wrap: wrap">
                         <div style="flex-basis: 40%">
-                            <h2 style="margin:50px; display: inline-block"><?php esc_html_e( "Personal Benchmarks", 'disciple_tools' ) ?>
+                            <h2 style="margin:50px; display: inline-block"><?php esc_html_e( "Personal Benchmarks", 'disciple-tools-dashboard' ) ?>
                                 <div style="display: inline-block" class="stats-spinner loading-spinner active"></div>
                             </h2>
 
@@ -133,15 +128,14 @@ get_header();
             </div>
 
 
-
             <div class="dash-cards">
                 <div class="item" style="flex-basis: 50%">
                     <div class="card">
                         <span class="card-title" style="text-align: center; margin-bottom: 15px">
-                            <?php echo esc_html__( 'Faith Milestone Totals', 'disciple_tools' ) ?>
+                            <?php echo esc_html__( 'Faith Milestone Totals', 'disciple-tools-dashboard' ) ?>
                              <div style="display: inline-block" class="stats-spinner loading-spinner active"></div>
                         </span>
-                        <p style="text-align: center; margin-bottom: 30px"><?php esc_html_e( "Milestones on your active contacts", 'disciple_tools' ) ?></p>
+                        <p style="text-align: center; margin-bottom: 30px"><?php esc_html_e( "Milestones on your active contacts", 'disciple-tools-dashboard' ) ?></p>
                         <div >
                             <div style="display: flex; flex-wrap: wrap" id="milestones">
 
@@ -152,37 +146,22 @@ get_header();
                 <div class="item" style="flex-basis: 50%">
                     <div class="card">
                         <span class="card-title" style="text-align: center; margin-bottom: 15px">
-                            <?php esc_html_e( "Seeker Path Progress", 'disciple_tools' ) ?>
+                            <?php esc_html_e( "Seeker Path Progress", 'disciple-tools-dashboard' ) ?>
                              <div style="display: inline-block" class="stats-spinner loading-spinner active"></div>
                         </span>
-                        <p style="text-align: center; display: none" id="empty_seeker_path"><strong><?php esc_html_e( "No data to show yet. You have no active contacts", 'disciple_tools' ) ?></strong></p>
+                        <p style="text-align: center; display: none" id="empty_seeker_path"><strong><?php esc_html_e( "No data to show yet. You have no active contacts", 'disciple-tools-dashboard' ) ?></strong></p>
                         <div id="seeker_path_chart" style="height:400px; width;200px; padding-left: 10px; padding-right: 10px"></div>
 
                     </div>
                 </div>
-
             </div>
 
 
-
             <div class="dash-cards">
-<!--                <div class="item" style="flex-basis: 50%">-->
-<!--                    <div class="card">-->
-<!--                        <span class="card-title" style="text-align: center; margin-bottom: 15px">-->
-<!--                            --><?php //echo esc_html__( 'Quick Actions', 'disciple_tools' ) ?>
-<!--                             <div style="display: inline-block" class="stats-spinner loading-spinner active"></div>-->
-<!--                        </span>-->
-<!--                        <div >-->
-<!--                            <div style="display: flex; flex-wrap: wrap" id="milestones">-->
-<!---->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
                 <div class="item" style="flex-basis: 50%">
                     <div class="card">
                         <span class="card-title" style="text-align: center; margin-bottom: 15px">
-                            <?php esc_html_e( "Tasks", 'disciple_tools' ) ?>
+                            <?php esc_html_e( "Tasks", 'disciple-tools-dashboard' ) ?>
                             <div id="tasks-spinner" style="display: inline-block" class="stats-spinner loading-spinner active">
                             </div>
                         </span>

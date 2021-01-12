@@ -77,7 +77,7 @@ class DT_Dashboard_Plugin_Endpoints
             $now = time();
             $last_modified = get_post_meta( $contact->ID, "last_modified", true );
             $days_different = (int) round( ( $now - (int) $last_modified ) / ( 60 * 60 * 24 ) );
-            $contact->last_modified_msg = esc_attr( sprintf( __( '%s days since last update', 'disciple_tools' ), $days_different ), 'disciple_tools' );
+            $contact->last_modified_msg = esc_attr( sprintf( __( '%s days since last update', 'disciple-tools-dashboard' ), $days_different ), 'disciple_tools' );
         }
         $my_active_contacts = self::get_active_contacts();
 
@@ -413,17 +413,17 @@ class DT_Dashboard_Plugin_Endpoints
 
     public static function translations(){
         return [
-            "accept" => __( "Accept", 'disciple_tools' ),
-            "decline" => __( "Decline", 'disciple_tools' ),
-            "number_contacts_assigned" => __( "# Contacts Assigned", 'disciple_tools' ),
-            "number_meetings" => __( "# First Meetings", 'disciple_tools' ),
-            "number_milestones" => __( "# Faith milestones", 'disciple_tools' ),
-            "caught_up" => __( "Hurray! You are caught up.", 'disciple_tools' ),
-            'remove' => __( 'remove', 'disciple_tools' ),
-            'complete' => __( 'mark as complete', 'disciple_tools' ),
-            'no_tasks' => __( 'No task created', 'disciple_tools' ),
-            'reminder' => __( 'Reminder', 'disciple_tools' ),
-            'no_note' => __( 'No note set', 'disciple_tools' ),
+            "accept" => __( "Accept", 'disciple-tools-dashboard' ),
+            "decline" => __( "Decline", 'disciple-tools-dashboard' ),
+            "number_contacts_assigned" => __( "# Contacts Assigned", 'disciple-tools-dashboard' ),
+            "number_meetings" => __( "# First Meetings", 'disciple-tools-dashboard' ),
+            "number_milestones" => __( "# Faith milestones", 'disciple-tools-dashboard' ),
+            "caught_up" => __( "Hurray! You are caught up.", 'disciple-tools-dashboard' ),
+            'remove' => __( 'remove', 'disciple-tools-dashboard' ),
+            'complete' => __( 'mark as complete', 'disciple-tools-dashboard' ),
+            'no_tasks' => __( 'No task created', 'disciple-tools-dashboard' ),
+            'reminder' => __( 'Reminder', 'disciple-tools-dashboard' ),
+            'no_note' => __( 'No note set', 'disciple-tools-dashboard' ),
         ];
     }
 

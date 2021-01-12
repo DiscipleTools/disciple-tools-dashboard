@@ -29,7 +29,7 @@ $dt_dashboard_required_dt_theme_version = '1.0.0';
  * @access public
  * @return object|bool
  */
-function dt_dashboard_plugin() {
+add_action( 'after_setup_theme', function() {
     global $dt_dashboard_required_dt_theme_version;
     $wp_theme = wp_get_theme();
     $version = $wp_theme->version;
@@ -61,8 +61,7 @@ function dt_dashboard_plugin() {
     }
 
     return false;
-}
-add_action( 'plugins_loaded', 'dt_dashboard_plugin' );
+}, 50 );
 
 /**
  * Singleton class for setting up the plugin.
@@ -124,7 +123,13 @@ class DT_Dashboard_Plugin {
      * @return void
      */
     private function includes() {
-        require_once( 'includes/admin/admin-menu-and-tabs.php' );
+
+        require_once( 'includes/rest-api.php' );
+        DT_Dashboard_Plugin_Endpoints::instance();
+
+
+        require_once( 'includes/functions.php' );
+        DT_Dashboard_Plugin_Functions::instance();
     }
 
     /**
@@ -140,21 +145,11 @@ class DT_Dashboard_Plugin {
         $this->dir_path     = trailingslashit( plugin_dir_path( __FILE__ ) );
         $this->dir_uri      = trailingslashit( plugin_dir_url( __FILE__ ) );
 
-        // Plugin directory paths.
-        $this->includes_path      = trailingslashit( $this->dir_path . 'includes' );
-
-        // Plugin directory URIs.
-        $this->img_uri      = trailingslashit( $this->dir_uri . 'img' );
 
         // Admin and settings variables
         $this->token             = 'dt_dashboard_plugin';
         $this->version             = '0.2';
 
-        // sample rest api class
-        require_once( 'includes/rest-api.php' );
-        DT_Dashboard_Plugin_Endpoints::instance();
-        require_once( 'includes/functions.php' );
-        DT_Dashboard_Plugin_Functions::instance();
     }
 
     /**
@@ -181,7 +176,7 @@ class DT_Dashboard_Plugin {
         }
 
         // Internationalize the text strings used.
-        add_action( 'plugins_loaded', array( $this, 'i18n' ), 2 );
+        add_action( 'after_setup_theme', array( $this, 'i18n' ), 51 );
     }
 
     /**
@@ -221,7 +216,19 @@ class DT_Dashboard_Plugin {
      * @return void
      */
     public function i18n() {
-        load_plugin_textdomain( 'dt_dashboard_plugin', false, trailingslashit( dirname( plugin_basename( __FILE__ ) ) ). 'languages' );
+        $domain = 'disciple-tools-dashboard';
+        $locale = apply_filters(
+            'plugin_locale',
+            ( is_admin() && function_exists( 'get_user_locale' ) ) ? get_user_locale() : get_locale(),
+            $domain
+        );
+
+        $mo_file = $domain . '-' . $locale . '.mo';
+        $path = realpath( dirname( __FILE__ ) . '/languages' );
+
+        if ($path && file_exists( $path )) {
+            load_textdomain( $domain, $path . '/' . $mo_file );
+        }
     }
 
     /**
@@ -232,7 +239,7 @@ class DT_Dashboard_Plugin {
      * @return string
      */
     public function __toString() {
-        return 'dt_dashboard_plugin';
+        return 'disciple-tools-dashboard';
     }
 
     /**
@@ -243,7 +250,7 @@ class DT_Dashboard_Plugin {
      * @return void
      */
     public function __clone() {
-        _doing_it_wrong( __FUNCTION__, esc_html__( 'Whoah, partner!', 'dt_dashboard_plugin' ), '0.1' );
+        _doing_it_wrong( __FUNCTION__, esc_html__( 'Whoah, partner!', 'disciple-tools-dashboard' ), '0.1' );
     }
 
     /**
@@ -254,7 +261,7 @@ class DT_Dashboard_Plugin {
      * @return void
      */
     public function __wakeup() {
-        _doing_it_wrong( __FUNCTION__, esc_html__( 'Whoah, partner!', 'dt_dashboard_plugin' ), '0.1' );
+        _doing_it_wrong( __FUNCTION__, esc_html__( 'Whoah, partner!', 'disciple-tools-dashboard' ), '0.1' );
     }
 
     /**
@@ -266,7 +273,7 @@ class DT_Dashboard_Plugin {
      */
     public function __call( $method = '', $args = array() ) {
         // @codingStandardsIgnoreLine
-        _doing_it_wrong( "dt_dashboard_plugin::{$method}", esc_html__( 'Method does not exist.', 'dt_dashboard_plugin' ), '0.1' );
+        _doing_it_wrong( "dt_dashboard_plugin::{$method}", esc_html__( 'Method does not exist.', 'disciple-tools-dashboard' ), '0.1' );
         unset( $method, $args );
         return null;
     }
@@ -281,9 +288,9 @@ function dt_dashboard_plugin_hook_admin_notice() {
     global $dt_dashboard_required_dt_theme_version;
     $wp_theme = wp_get_theme();
     $current_version = $wp_theme->version;
-    $message = __( "'Disciple Tools - Dashboard' plugin requires 'Disciple Tools' theme to work. Please activate 'Disciple Tools' theme or make sure it is latest version.", "dt_dashboard_plugin" );
+    $message = "'Disciple Tools - Dashboard' plugin requires 'Disciple Tools' theme to work. Please activate 'Disciple Tools' theme or make sure it is latest version.";
     if ( $wp_theme->get_template() === "disciple-tools-theme" ){
-        $message .= ' ' . sprintf( esc_html__( 'Current Disciple Tools version: %1$s, required version: %2$s', 'dt_dashboard_plugin' ), esc_html( $current_version ), esc_html( $dt_dashboard_required_dt_theme_version ) );
+        $message .= ' ' . sprintf( esc_html( 'Current Disciple Tools version: %1$s, required version: %2$s' ), esc_html( $current_version ), esc_html( $dt_dashboard_required_dt_theme_version ) );
     }
     // Check if it's been dismissed...
     if ( ! get_option( 'dismissed-dt-dashboard', false ) ) { ?>
