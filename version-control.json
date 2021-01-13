@@ -1,0 +1,29 @@
+{
+  "name": "Disciple Tools - Dashboard",
+  "version": "0.2",
+  "last_updated": "2021-01",
+  "author": "Disciple Tools",
+  "author_homepage": "https://disciple.tools",
+  "git_owner": "DiscipleTools",
+  "git_repo": "disciple-tools-dashboard",
+  "download_url": "https://github.com/DiscipleTools/disciple-tools-dashboard/releases/latest/download/disciple-tools-dashboard.zip",
+  "homepage": "https://github.com/DiscipleTools/disciple-tools-dashboard",
+  "issues_url": "https://github.com/DiscipleTools/disciple-tools-dashboard/issues",
+  "projects_url": "https://github.com/DiscipleTools/disciple-tools-dashboard/projects",
+  "discussions_url": "https://github.com/DiscipleTools/disciple-tools-dashboard/discussions",
+  "wiki_url": "https://github.com/DiscipleTools/disciple-tools-dashboard/wiki",
+  "license_url": "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-dashboard/master/LICENSE",
+  "readme_url": "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-dashboard/master/README.md",
+  "requires": "4.7",
+  "tested": "5.6",
+  "upgrade_notice": "Here's why you should upgrade...",
+  "banners": {
+    "low": "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-version-control/master/images/dt-placeholder-772x250.jpg",
+    "high": "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-version-control/master/images/dt-placeholder-1544x500.jpg"
+  },
+  "sections": {
+    "description": "Disciple Tools - Dashboard",
+    "installation": "(Required) You must have Disciple.Tools Theme installed before using this plugin. Once Disciple.Tools is installed, you can use the normal Plugin system to install the plugin.",
+    "changelog": ""
+  }
+}
