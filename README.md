@@ -4,5 +4,5 @@
 
 This plugin adds a dashboard to the Disciple Tools system for an active follow-up worker.
 
-![screenshot.png](https://raw.githubusercontent.com/DiscipleTools/disciple-tools-dashboard/blob/master/screenshot.png)
+![screenshot.png](https://raw.githubusercontent.com/DiscipleTools/disciple-tools-dashboard/master/screenshot.png)
 
