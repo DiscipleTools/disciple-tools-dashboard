@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Disciple Tools - Dashboard\n"
-"POT-Creation-Date: 2021-01-12 11:23-0700\n"
+"POT-Creation-Date: 2021-01-13 06:04-0700\n"
 "PO-Revision-Date: 2021-01-12 11:06-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -103,16 +103,8 @@ msgstr ""
 msgid "Add a contact"
 msgstr ""
 
-#: includes/template-dashboard.php:33
-msgid "View Contacts List"
-msgstr ""
-
 #: includes/template-dashboard.php:47
 msgid "Pending Contacts"
-msgstr ""
-
-#: includes/template-dashboard.php:52 includes/template-dashboard.php:70
-msgid "View All"
 msgstr ""
 
 #: includes/template-dashboard.php:65
