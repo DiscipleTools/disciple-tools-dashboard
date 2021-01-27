@@ -167,7 +167,7 @@ class DT_Dashboard_Plugin {
                 require( get_template_directory() . '/dt-core/libraries/plugin-update-checker/plugin-update-checker.php' );
             }
 
-            $hosted_json = "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-version-control/master/disciple-tools-dashboard-version-control.json";
+            $hosted_json = "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-dashboard/master/version-control.json";
             Puc_v4_Factory::buildUpdateChecker(
                 $hosted_json,
                 __FILE__,
