@@ -41,12 +41,18 @@ class DT_Dashboard_Plugin_Endpoints
             $this->namespace, '/stats', [
                 'methods'  => 'GET',
                 'callback' => [ $this, 'get_other_stats' ],
+                'permission_callback' => function( WP_REST_Request $request ) {
+                    return $this->has_permission();
+                },
             ]
         );
         register_rest_route(
             $this->namespace, '/user', [
                 'methods'  => 'POST',
                 'callback' => [ $this, 'update_user' ],
+                'permission_callback' => function( WP_REST_Request $request ) {
+                    return $this->has_permission();
+                },
             ]
         );
     }
@@ -89,9 +95,6 @@ class DT_Dashboard_Plugin_Endpoints
     }
 
     public function get_other_stats(){
-        if ( !$this->has_permission() ){
-            return new WP_Error( __FUNCTION__, "Missing Permissions", [ 'status' => 400 ] );
-        }
         $seeker_path_personal = self::query_my_contacts_progress();
         $milestones = self::milestones();
         $personal_benchmarks = self::get_personal_benchmarks();
@@ -428,9 +431,6 @@ class DT_Dashboard_Plugin_Endpoints
     }
 
     public function update_user( WP_REST_Request $request ){
-        if ( !$this->has_permission() ){
-            return new WP_Error( __FUNCTION__, "Missing Permissions", [ 'status' => 400 ] );
-        }
         $get_params = $request->get_params();
         $body = $request->get_json_params();
         $user = wp_get_current_user();
