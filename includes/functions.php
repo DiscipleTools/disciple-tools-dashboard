@@ -22,7 +22,7 @@ class DT_Dashboard_Plugin_Functions
         $this->namespace = $this->context . "/v" . intval( $this->version );
         add_filter( 'dt_front_page', [ $this, 'front_page' ] );
 
-        add_filter( 'desktop_navbar_menu_options', [ $this, 'nav_menu' ], 1, 10 );
+        add_filter( 'desktop_navbar_menu_options', [ $this, 'nav_menu' ], 10, 1 );
         add_filter( 'off_canvas_menu_options', [ $this, 'nav_menu' ] );
 
         $url_path = dt_get_url_path();
@@ -79,7 +79,7 @@ class DT_Dashboard_Plugin_Functions
         return site_url( '/dashboard/' );
     }
 
-    public function nav_menu(){
+    public function nav_menu( $tabs ){
         $tabs['dashboard'] = [
             "link" => site_url( '/dashboard/' ),
             "label" => __( "Dashboard", "disciple-tools-dashboard" )
