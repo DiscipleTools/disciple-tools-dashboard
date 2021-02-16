@@ -3,7 +3,7 @@
  * Plugin Name: Disciple Tools - Dashboard
  * Plugin URI: https://github.com/DiscipleTools/disciple-tools-dashboard
  * Description: The multiplier dashboard upgrades the multipliers experience as soon as they log into the system giving them a landing page with stats.
- * Version:  0.2.1
+ * Version:  0.3
  * Author URI: https://github.com/DiscipleTools
  * GitHub Plugin URI: https://github.com/DiscipleTools/disciple-tools-dashboard
  * Requires at least: 4.7.0
@@ -160,21 +160,6 @@ class DT_Dashboard_Plugin {
      * @return void
      */
     private function setup_actions() {
-
-        if ( is_admin() ){
-            // Check for plugin updates
-            if ( ! class_exists( 'Puc_v4_Factory' ) ) {
-                require( get_template_directory() . '/dt-core/libraries/plugin-update-checker/plugin-update-checker.php' );
-            }
-
-            $hosted_json = "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-dashboard/master/version-control.json";
-            Puc_v4_Factory::buildUpdateChecker(
-                $hosted_json,
-                __FILE__,
-                'disciple-tools-dashboard'
-            );
-        }
-
         // Internationalize the text strings used.
         add_action( 'after_setup_theme', array( $this, 'i18n' ), 51 );
     }
@@ -327,3 +312,27 @@ if ( !function_exists( "dt_hook_ajax_notice_handler" )){
         }
     }
 }
+
+
+/**
+ * Check for plugin updates even when the active theme is not Disciple.Tools
+ * This enables updates on multisites where the active theme is not Disciple.Tools
+ */
+add_action( 'plugins_loaded', function (){
+    if ( is_admin() ){
+        // Check for plugin updates
+        if ( ! class_exists( 'Puc_v4_Factory' ) ) {
+            if ( file_exists( get_template_directory() . '/dt-core/libraries/plugin-update-checker/plugin-update-checker.php' )){
+                require( get_template_directory() . '/dt-core/libraries/plugin-update-checker/plugin-update-checker.php' );
+            }
+        }
+        if ( class_exists( 'Puc_v4_Factory' ) ){
+            Puc_v4_Factory::buildUpdateChecker(
+                'https://raw.githubusercontent.com/DiscipleTools/disciple-tools-dashboard/master/version-control.json',
+                __FILE__,
+                'disciple-tools-dashboard'
+            );
+
+        }
+    }
+} );
