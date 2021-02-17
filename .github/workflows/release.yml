@@ -23,7 +23,7 @@ jobs:
     - name: Build project
       run: |
         mkdir disciple-tools-dashboard-master |
-        cp -r disciple-tools-dashboard.php LICENSE tile languages disciple-tools-dashboard-master/ |
+        cp -r disciple-tools-dashboard.php LICENSE includes languages disciple-tools-dashboard-master/ |
         zip -r disciple-tools-dashboard.zip disciple-tools-dashboard-master
     - name: Create Release
       id: create_release
