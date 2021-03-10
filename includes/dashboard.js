@@ -7,19 +7,19 @@
   $('#needs_accepting').html(data.accept_needed.total)
   let needs_accepting_list = ``
   data.accept_needed.posts.slice(0, 3).forEach( contact =>{
-    needs_accepting_list += `<div style="margin-top:10px; display: flex" id="pending-${_.escape(contact.ID)}">
+    needs_accepting_list += `<div style="margin-top:10px; display: flex" id="pending-${window.lodash.escape(contact.ID)}">
         <div style="display: inline-block; margin-left: 10px; vertical-align: middle; flex-grow: 1"><i class="fi-torso medium"></i>
-            <a style="font-size: 1.1rem" href="${wpApiDashboard.site_url}/contacts/${_.escape( contact.ID )}">${_.escape(
+            <a style="font-size: 1.1rem" href="${wpApiDashboard.site_url}/contacts/${window.lodash.escape( contact.ID )}">${window.lodash.escape(
       contact.post_title)}</a>
         </div>
         <div>
-            <button class="button small dt-green accept_contact_button" data-id="${_.escape( contact.ID )}" data-action="accept" style="color: white; margin-bottom: 0">${_.escape(wpApiDashboard.translations.accept)}</button>
-            <button class="button small accept_contact_button" data-id="${_.escape( contact.ID )}" data-action="decline" style="background-color: #f43636; color: white; margin-bottom: 0">${_.escape(wpApiDashboard.translations.decline)}</button>
+            <button class="button small dt-green accept_contact_button" data-id="${window.lodash.escape( contact.ID )}" data-action="accept" style="color: white; margin-bottom: 0">${window.lodash.escape(wpApiDashboard.translations.accept)}</button>
+            <button class="button small accept_contact_button" data-id="${window.lodash.escape( contact.ID )}" data-action="decline" style="background-color: #f43636; color: white; margin-bottom: 0">${window.lodash.escape(wpApiDashboard.translations.decline)}</button>
         </div>
     </div>`
   })
   if ( !needs_accepting_list ){
-    needs_accepting_list = `<p style="margin-top:40px; font-size: 1.1rem; text-align: center">${_.escape(wpApiDashboard.translations.caught_up)}</p>`
+    needs_accepting_list = `<p style="margin-top:40px; font-size: 1.1rem; text-align: center">${window.lodash.escape(wpApiDashboard.translations.caught_up)}</p>`
   }
   $('#needs_accepting_list').html( needs_accepting_list )
 
@@ -29,7 +29,7 @@
     let data = {accept: $(this).data('action') === 'accept'}
     makeRequestOnPosts( "POST", `contacts/${contact_id}/accept`, data)
       .then(function (resp) {
-        $(`#pending-${_.escape( contact_id )}`).remove()
+        $(`#pending-${window.lodash.escape( contact_id )}`).remove()
         let total_pending_html = $('#needs_accepting')
         let total = parseInt( total_pending_html.html() ) - 1;
         total_pending_html.html(total)
@@ -44,15 +44,15 @@
   data.update_needed.posts.slice(0, 3).forEach( contact =>{
     let row = `<div style="margin-top:5px">
         <div style="display: inline-block; margin-left: 10px"><i class="fi-torso medium"></i>
-            <a style="font-size: 1.1rem" href="${wpApiDashboard.site_url}/contacts/${_.escape(contact.ID)}">${_.escape( contact.post_title ) }</a>
+            <a style="font-size: 1.1rem" href="${wpApiDashboard.site_url}/contacts/${window.lodash.escape(contact.ID)}">${window.lodash.escape( contact.post_title ) }</a>
             <br>
-            <span style="font-size: 0.9rem">${_.escape(contact.last_modified_msg)}</span>
+            <span style="font-size: 0.9rem">${window.lodash.escape(contact.last_modified_msg)}</span>
         </div>
     </div>`
     up_list += row
   })
   if ( !up_list ){
-    up_list = `<p style="margin-top:40px; font-size: 1.1rem; text-align: center">${_.escape(wpApiDashboard.translations.caught_up)}</p>`
+    up_list = `<p style="margin-top:40px; font-size: 1.1rem; text-align: center">${window.lodash.escape(wpApiDashboard.translations.caught_up)}</p>`
   }
   $('#update_needed_list').html( up_list)
 
@@ -74,7 +74,7 @@
   }
   $.ajax(options).then(resp=>{
     $(".stats-spinner").removeClass("active")
-    _.merge(data, resp)
+    window.lodash.merge(data, resp)
     benchmarks_chart()
     seeker_path_chart()
     milestones()
@@ -89,7 +89,7 @@
     if ( name ){
       let selected = $(`.status-button[name=${name}]`)
       selected.removeClass("hollow")
-      selected.css('background-color', _.get(wpApiDashboard, `workload_status_options.${name}.color`))
+      selected.css('background-color', window.lodash.get(wpApiDashboard, `workload_status_options.${name}.color`))
       selected.blur()
     }
   }
@@ -120,15 +120,15 @@
     let chart = am4core.create("benchmark_chart", am4charts.XYChart);
 
     chart.data = [ {
-      "year": _.escape(wpApiDashboard.translations.number_contacts_assigned),
+      "year": window.lodash.escape(wpApiDashboard.translations.number_contacts_assigned),
       "previous": data.benchmarks.contacts.previous,
       "current": data.benchmarks.contacts.current
     }, {
-      "year": _.escape(wpApiDashboard.translations.number_meetings),
+      "year": window.lodash.escape(wpApiDashboard.translations.number_meetings),
       "previous": data.benchmarks.meetings.previous,
       "current": data.benchmarks.meetings.current
     }, {
-      "year": _.escape(wpApiDashboard.translations.number_milestones),
+      "year": window.lodash.escape(wpApiDashboard.translations.number_milestones),
       "previous": data.benchmarks.milestones.previous,
       "current": data.benchmarks.milestones.current
     } ];
@@ -183,9 +183,9 @@
     let chart = am4core.create("seeker_path_chart", am4charts.PieChart);
     chart.hiddenState.properties.opacity = 0; // this makes initial fade in effect
     //remove empty values
-    _.pullAllBy( data.seeker_path_personal, [{ value: 0 }], "value" )
+    window.lodash.pullAllBy( data.seeker_path_personal, [{ value: 0 }], "value" )
     chart.data = data.seeker_path_personal
-    if ( _.isEmpty( chart.data ) ){
+    if ( window.lodash.isEmpty( chart.data ) ){
       $('#empty_seeker_path').show()
     }
 
@@ -239,8 +239,8 @@
 
     data.milestones.forEach( m=>{
       milestones += `<div class="group-progress-button-wrapper" style="flex-basis: 33%">
-        <button style="color: white" class="group-progress-button"> ${_.escape( m.value )} </button>
-        <p>${_.escape( m.milestones )}</p>
+        <button style="color: white" class="group-progress-button"> ${window.lodash.escape( m.value )} </button>
+        <p>${window.lodash.escape( m.milestones )}</p>
       </div>`
     })
     $("#milestones").html(milestones)
@@ -248,34 +248,34 @@
   }
 
   function build_tasks() {
-    let tasks = _.sortBy(data.tasks || [], ['date'])
+    let tasks = window.lodash.sortBy(data.tasks || [], ['date'])
     let html = ``
       tasks.forEach(task=>{
         let task_done = ( task.category === "reminder" && task.value.notification === 'notification_sent' )
           || ( task.category !== "reminder" && task.value.status === 'task_complete' )
         let show_complete_button = task.category !== "reminder" && task.value.status !== 'task_complete'
         let task_row = `
-            <a href="/${_.escape(task.post_type)}/${_.escape(task.post_id)}">${_.escape(task.post_title)}</a> -
-            <strong>${_.escape( moment(task.date).format("MMM D YYYY") )}</strong> -
+            <a href="/${window.lodash.escape(task.post_type)}/${window.lodash.escape(task.post_id)}">${window.lodash.escape(task.post_title)}</a> -
+            <strong>${window.lodash.escape( moment(task.date).format("MMM D YYYY") )}</strong> -
         `
         if ( task.category === "reminder" ){
-          task_row += _.escape( wpApiDashboard.translations.reminder )
+          task_row += window.lodash.escape( wpApiDashboard.translations.reminder )
           task_row += ' - '
           if ( task.value.note ){
-            task_row += ' ' + _.escape(task.value.note) + ' - '
+            task_row += ' ' + window.lodash.escape(task.value.note) + ' - '
           }
         } else {
-          task_row += _.escape(task.value.note || wpApiDashboard.translations.no_note ) + ' - '
+          task_row += window.lodash.escape(task.value.note || wpApiDashboard.translations.no_note ) + ' - '
         }
         html += `<li>
         <span style="${task_done ? 'text-decoration:line-through' : ''}">
         ${task_row}
-        ${ show_complete_button ? `<button type="button" data-id="${_.escape(task.id)}" class="existing-task-action complete-task">${_.escape(wpApiDashboard.translations.complete)}</button>` : '' }
-        <button type="button" data-id="${_.escape(task.id)}" class="existing-task-action remove-task" style="color: red;">${_.escape(wpApiDashboard.translations.remove)}</button>
+        ${ show_complete_button ? `<button type="button" data-id="${window.lodash.escape(task.id)}" class="existing-task-action complete-task">${window.lodash.escape(wpApiDashboard.translations.complete)}</button>` : '' }
+        <button type="button" data-id="${window.lodash.escape(task.id)}" class="existing-task-action remove-task" style="color: red;">${window.lodash.escape(wpApiDashboard.translations.remove)}</button>
       </li>`
       })
       if (!html ){
-        $('.existing-tasks').html(`<li>${_.escape(wpApiDashboard.translations.no_tasks)}</li>`)
+        $('.existing-tasks').html(`<li>${window.lodash.escape(wpApiDashboard.translations.no_tasks)}</li>`)
       } else {
         $('.existing-tasks').html(html)
       }
@@ -283,11 +283,11 @@
       $('.complete-task').on("click", function () {
         $('#tasks-spinner').addClass('active')
         let id = $(this).data('id').toString()
-        let task = _.find(data.tasks, {id})
+        let task = window.lodash.find(data.tasks, {id})
         API.update_post(task.post_type, task.post_id, {
           "tasks": { values: [ { id, value: {status: 'task_complete'}, } ] }
         }).then(() => {
-          _.pullAllBy( data.tasks, [{id}], 'id' )
+          window.lodash.pullAllBy( data.tasks, [{id}], 'id' )
           build_tasks()
           $('#tasks-spinner').removeClass('active')
         })
@@ -295,11 +295,11 @@
       $('.remove-task').on("click", function () {
         $('#tasks-spinner').addClass('active')
         let id = $(this).data('id').toString()
-        let task = _.find(data.tasks, {id})
+        let task = window.lodash.find(data.tasks, {id})
         API.update_post(task.post_type, task.post_id, {
           "tasks": { values: [ { id, delete: true } ] }
         }).then(() => {
-          _.pullAllBy( data.tasks, [{id}], 'id' )
+          window.lodash.pullAllBy( data.tasks, [{id}], 'id' )
           build_tasks()
           $('#tasks-spinner').removeClass('active')
         })
