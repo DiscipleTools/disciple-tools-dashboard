@@ -111,10 +111,11 @@
 
 
   function benchmarks_chart() {
+    const formatDate = window.SHAREDFUNCTIONS.formatDate
     let thirty_days_ago = moment().add( -30, "days")
     let sixty_days_ago = moment().add( -60, "days")
-    $('#benchmarks_current').html(`${thirty_days_ago.format("MMMM D, YYYY")} to ${moment().format("MMMM D, YYYY")}`)
-    $('#benchmarks_previous').html(`${sixty_days_ago.format("MMMM D, YYYY")} to ${thirty_days_ago.format("MMMM D, YYYY")}`)
+    $('#benchmarks_current').html(`${formatDate(thirty_days_ago.unix())} to ${formatDate(moment().unix())}`)
+    $('#benchmarks_previous').html(`${formatDate(sixty_days_ago.unix())} to ${formatDate(thirty_days_ago.unix())}`)
 
     am4core.useTheme(am4themes_animated);
     let chart = am4core.create("benchmark_chart", am4charts.XYChart);
