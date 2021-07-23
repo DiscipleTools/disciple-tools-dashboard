@@ -87,5 +87,4 @@ class DT_Dashboard_Plugin_Functions
         return $tabs;
 
     }
-
 }

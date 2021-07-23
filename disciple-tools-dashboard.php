@@ -15,7 +15,7 @@
  * @license GPL-2.0 or later
  *          https://www.gnu.org/licenses/gpl-2.0.html
  */
-
+require_once( 'includes/cards.php' );
 
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
@@ -84,6 +84,7 @@ class DT_Dashboard_Plugin {
     public $dir_uri = '';
     public $img_uri = '';
     public $includes_path;
+    static $cards;
 
     /**
      * Returns the instance.
@@ -95,12 +96,14 @@ class DT_Dashboard_Plugin {
     public static function get_instance() {
 
         static $instance = null;
+        self::$cards = new DT_Dashboard_Plugin_Cards();
 
         if ( is_null( $instance ) ) {
             $instance = new dt_dashboard_plugin();
             $instance->setup();
             $instance->includes();
             $instance->setup_actions();
+            $instance->register_cards();
         }
         return $instance;
     }
@@ -116,6 +119,26 @@ class DT_Dashboard_Plugin {
     }
 
     /**
+     * Get the plugin directory.
+     *
+     * @since 0.3.3
+     * @return string
+     */
+    static function dir() {
+        return __DIR__ . '/';
+    }
+
+    /**
+     * Get the plugin directory.
+     *
+     * @since 0.3.3
+     * @return string
+     */
+    static function includes_dir() {
+        return self::dir() . 'includes/';
+    }
+
+    /**
      * Loads files needed by the plugin.
      *
      * @since  0.1
@@ -123,13 +146,22 @@ class DT_Dashboard_Plugin {
      * @return void
      */
     private function includes() {
-
         require_once( 'includes/rest-api.php' );
         DT_Dashboard_Plugin_Endpoints::instance();
 
 
         require_once( 'includes/functions.php' );
         DT_Dashboard_Plugin_Functions::instance();
+
+        require_once( 'includes/cards/card.php' );
+        require_once( 'includes/cards/active-contact.php' );
+        require_once( 'includes/cards/contact-workload.php' );
+        require_once( 'includes/cards/faith-milestone-totals.php' );
+        require_once( 'includes/cards/pending-contacts.php' );
+        require_once( 'includes/cards/personal-benchmarks.php' );
+        require_once( 'includes/cards/speaker-path-progress.php' );
+        require_once( 'includes/cards/tasks.php' );
+        require_once( 'includes/cards/update-needed.php' );
     }
 
     /**
@@ -162,6 +194,17 @@ class DT_Dashboard_Plugin {
     private function setup_actions() {
         // Internationalize the text strings used.
         add_action( 'after_setup_theme', array( $this, 'i18n' ), 51 );
+    }
+
+    private function register_cards() {
+        self::$cards->register('dt_dashboard_plugin_active_contact', new DT_Dashboard_Plugin_Active_Contact());
+        self::$cards->register('dt_dashboard_plugin_contact_workload', new DT_Dashboard_Plugin_Contact_Workload());
+        self::$cards->register('dt_dashboard_plugin_faith_milestone_totals', new DT_Dashboard_Plugin_Faith_Milestone_Totals());
+        self::$cards->register('dt_dashboard_plugin_pending_contacts', new DT_Dashboard_Plugin_Pending_Contacts());
+        self::$cards->register('dt_dashboard_plugin_personal_benchmarks', new DT_Dashboard_Plugin_Personal_Benchmarks());
+        self::$cards->register('dt_dashboard_plugin_speaker_path_progress', new DT_Dashboard_Plugin_Speaker_Path_Progress());
+        self::$cards->register('dt_dashboard_plugin_tasks', new DT_Dashboard_Plugin_Tasks());
+        self::$cards->register('dt_dashboard_plugin_update_needed', new DT_Dashboard_Plugin_Update_Needed());
     }
 
     /**
@@ -214,6 +257,20 @@ class DT_Dashboard_Plugin {
         if ($path && file_exists( $path )) {
             load_textdomain( $domain, $path . '/' . $mo_file );
         }
+    }
+
+
+    /**
+     * Register a card
+     *
+     * @since  0.3.3
+     * @access public
+     * @return void
+     */
+    public static function register_card($handle, $name) {
+        self::$cards[] = [
+
+        ];
     }
 
     /**
