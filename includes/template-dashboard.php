@@ -16,7 +16,7 @@ get_header();
         <div id="inner-content">
             <div class="dash-cards">
                 <?php
-                    foreach (DT_Dashboard_Plugin_Cards::$cards as $card) {
+                    foreach ($cards as $card) {
                         $card->render();
                     }
                 ?>

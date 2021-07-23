@@ -84,7 +84,6 @@ class DT_Dashboard_Plugin {
     public $dir_uri = '';
     public $img_uri = '';
     public $includes_path;
-    static $cards;
 
     /**
      * Returns the instance.
@@ -96,7 +95,6 @@ class DT_Dashboard_Plugin {
     public static function get_instance() {
 
         static $instance = null;
-        self::$cards = new DT_Dashboard_Plugin_Cards();
 
         if ( is_null( $instance ) ) {
             $instance = new dt_dashboard_plugin();
@@ -197,14 +195,15 @@ class DT_Dashboard_Plugin {
     }
 
     private function register_cards() {
-        self::$cards->register('dt_dashboard_plugin_active_contact', new DT_Dashboard_Plugin_Active_Contact());
-        self::$cards->register('dt_dashboard_plugin_contact_workload', new DT_Dashboard_Plugin_Contact_Workload());
-        self::$cards->register('dt_dashboard_plugin_faith_milestone_totals', new DT_Dashboard_Plugin_Faith_Milestone_Totals());
-        self::$cards->register('dt_dashboard_plugin_pending_contacts', new DT_Dashboard_Plugin_Pending_Contacts());
-        self::$cards->register('dt_dashboard_plugin_personal_benchmarks', new DT_Dashboard_Plugin_Personal_Benchmarks());
-        self::$cards->register('dt_dashboard_plugin_speaker_path_progress', new DT_Dashboard_Plugin_Speaker_Path_Progress());
-        self::$cards->register('dt_dashboard_plugin_tasks', new DT_Dashboard_Plugin_Tasks());
-        self::$cards->register('dt_dashboard_plugin_update_needed', new DT_Dashboard_Plugin_Update_Needed());
+        $cards = new DT_Dashboard_Plugin_Cards();
+        $cards->register('dt_dashboard_plugin_active_contact', new DT_Dashboard_Plugin_Active_Contact());
+        $cards->register('dt_dashboard_plugin_pending_contacts', new DT_Dashboard_Plugin_Pending_Contacts());
+        $cards->register('dt_dashboard_plugin_update_needed', new DT_Dashboard_Plugin_Update_Needed());
+        $cards->register('dt_dashboard_plugin_contact_workload', new DT_Dashboard_Plugin_Contact_Workload());
+        $cards->register('dt_dashboard_plugin_personal_benchmarks', new DT_Dashboard_Plugin_Personal_Benchmarks());
+        $cards->register('dt_dashboard_plugin_speaker_path_progress', new DT_Dashboard_Plugin_Speaker_Path_Progress());
+        $cards->register('dt_dashboard_plugin_faith_milestone_totals', new DT_Dashboard_Plugin_Faith_Milestone_Totals());
+        $cards->register('dt_dashboard_plugin_tasks', new DT_Dashboard_Plugin_Tasks());
     }
 
     /**
@@ -257,20 +256,6 @@ class DT_Dashboard_Plugin {
         if ($path && file_exists( $path )) {
             load_textdomain( $domain, $path . '/' . $mo_file );
         }
-    }
-
-
-    /**
-     * Register a card
-     *
-     * @since  0.3.3
-     * @access public
-     * @return void
-     */
-    public static function register_card($handle, $name) {
-        self::$cards[] = [
-
-        ];
     }
 
     /**
