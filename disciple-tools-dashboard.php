@@ -107,16 +107,6 @@ class DT_Dashboard_Plugin {
     }
 
     /**
-     * Constructor method.
-     *
-     * @since  0.1
-     * @access private
-     * @return void
-     */
-    private function __construct() {
-    }
-
-    /**
      * Get the plugin directory.
      *
      * @since 0.3.3
@@ -137,6 +127,16 @@ class DT_Dashboard_Plugin {
     }
 
     /**
+     * Get the plugin directory.
+     *
+     * @since 0.3.3
+     * @return string
+     */
+    static function path() {
+        return plugin_dir_url( __FILE__ );
+    }
+
+    /**
      * Loads files needed by the plugin.
      *
      * @since  0.1
@@ -144,6 +144,8 @@ class DT_Dashboard_Plugin {
      * @return void
      */
     private function includes() {
+        require_once( 'includes/admin/admin-menu-and-tabs.php' );
+
         require_once( 'includes/rest-api.php' );
         DT_Dashboard_Plugin_Endpoints::instance();
 

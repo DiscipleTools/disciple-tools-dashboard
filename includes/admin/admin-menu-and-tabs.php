@@ -50,7 +50,9 @@ class DT_Dashboard_Plugin_Menu {
     public function __construct() {
 
         add_action( "admin_menu", array( $this, "register_menu" ) );
-
+        add_action( 'admin_enqueue_scripts', function() {
+            $this->scripts();
+        }, 1 );
     } // End __construct()
 
 
@@ -59,13 +61,23 @@ class DT_Dashboard_Plugin_Menu {
      * @since 0.1
      */
     public function register_menu() {
-        add_submenu_page( 'dt_extensions', __( 'Dashboard Plugin', 'dt_dashboard_plugin' ), __( 'Dashboard Plugin', 'dt_dashboard_plugin' ), 'manage_dt', $this->token, [ $this, 'content' ] );
+        add_submenu_page( 'dt_extensions', __( 'Dashboard', 'dt_dashboard_plugin' ), __( 'Dashboard', 'dt_dashboard_plugin' ), 'manage_dt', $this->token, [ $this, 'content' ] );
     }
 
     /**
      * Menu stub. Replaced when Disciple Tools Theme fully loads.
      */
     public function extensions_menu() {}
+
+    public function scripts() {
+        wp_enqueue_script('jquery');
+        wp_register_script('jquery-ui','https://code.jquery.com/ui/1.12.1/jquery-ui.min.js',array('jquery'));
+        wp_enqueue_script('jquery-ui');
+        wp_enqueue_script( 'dt-admin', DT_Dashboard_Plugin::path() . 'includes/admin.js', [
+            'jquery',
+            'jquery-ui',
+        ], filemtime( DT_Dashboard_Plugin::dir() . 'includes/admin.js' ), true );
+    }
 
     /**
      * Builds page contents
@@ -78,13 +90,27 @@ class DT_Dashboard_Plugin_Menu {
             wp_die( esc_attr__( 'You do not have sufficient permissions to access this page.' ) );
         }
 
-        ?>
-        <div class="wrap">
-            <h2><?php esc_attr_e( 'Dashboard', 'dt_dashboard_plugin' ) ?></h2>
-            <hr style="border-top:1px solid darkgray">
-            <span>&#x2705; Installed</span>
+        $this->update();
 
-        </div><!-- End wrap -->
-        <?php
+        include DT_Dashboard_Plugin::includes_dir() . 'template-admin.php';
+    }
+
+    /**
+     * Make updates before displaing.
+     */
+    public function update() {
+        $cards = new DT_Dashboard_Plugin_Cards();
+
+        if ( isset( $_POST["show_card"] ) ) {
+            $cards->show($_POST["show_card"]);
+        }
+
+        if ( isset( $_POST["hide_card"] ) ) {
+            $cards->hide($_POST["hide_card"]);
+        }
+
+        if ( isset( $_POST["card_sort"] ) ) {
+            $cards->sort($_POST["card_sort"]);
+        }
     }
 }

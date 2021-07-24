@@ -26,11 +26,11 @@ class DT_Dashboard_Plugin_Functions
         add_filter( 'off_canvas_menu_options', [ $this, 'nav_menu' ] );
 
         $url_path = dt_get_url_path();
+
         add_action( "template_redirect", [ $this, 'my_theme_redirect' ] );
         if ( strpos( $url_path, 'dashboard' ) !== false ) {
             add_action( 'wp_enqueue_scripts', [ $this, 'scripts' ], 99 );
         }
-
     }
 
     public function my_theme_redirect() {
