@@ -18,8 +18,7 @@
             <i class="fi-clock"></i>
             <?php esc_html_e( "Set travel or dates unavailable", 'disciple-tools-dashboard' ) ?>
         </a>
+        <?php include __dir__ . '/remove.php' ?>
     </div>
-    <?php
-    include __dir__ . '/remove.php'
-    ?>
+
 </div>

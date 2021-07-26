@@ -27,8 +27,8 @@
                      style="height: 300px"></div>
             </div>
         </div>
+        <?php include __dir__ . '/remove.php' ?>
+
     </div>
-    <?php
-    include __dir__ . '/remove.php'
-    ?>
+
 </div>

@@ -10,8 +10,7 @@
 
             </div>
         </div>
+        <?php include __dir__ . '/remove.php' ?>
     </div>
-    <?php
-    include __dir__ . '/remove.php'
-    ?>
+
 </div>

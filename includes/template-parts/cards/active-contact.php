@@ -17,9 +17,7 @@
                 <!--                                    --><?php //esc_html_e( "View Contacts List", 'disciple-tools-dashboard' ) ?>
                 <!--                                </a>-->
             </div>
+            <?php include __dir__ . '/remove.php' ?>
         </div>
-        <?php
-        include __dir__ . '/remove.php'
-        ?>
     </div>
 </div>

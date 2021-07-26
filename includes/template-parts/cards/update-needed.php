@@ -14,8 +14,9 @@
             <!--                                <button class="button" id="view_updated_needed_button">--><?php //esc_html_e( "View All", 'disciple-tools-dashboard' ) ?><!--</button>-->
             <!--                            </div>-->
         </div>
+        <?php
+        include __dir__ . '/remove.php'
+        ?>
     </div>
-    <?php
-    include __dir__ . '/remove.php'
-    ?>
+
 </div>
