@@ -305,6 +305,51 @@
           $('#tasks-spinner').removeClass('active')
         })
       })
+
+      $( document ).on('click', '.card-toggle', function () {
+        $.ajax({
+          url: window.wpApiShare.root + 'dt-dashboard/v1/user/cards/toggle',
+          type: 'POST',
+          data: {
+            card_handle: $(this).data('cardHandle')
+          },
+          beforeSend: xhr => {
+            xhr.setRequestHeader('X-WP-Nonce', window.wpApiShare.nonce);
+          },
+        }).done(function( data ) {
+          location.reload();
+        });
+      })
+
+    $( document ).on('click', '.card-show', function () {
+      $.ajax({
+        url: window.wpApiShare.root + 'dt-dashboard/v1/user/cards/show',
+        type: 'POST',
+        data: {
+          card_handle: $(this).data('cardHandle')
+        },
+        beforeSend: xhr => {
+          xhr.setRequestHeader('X-WP-Nonce', window.wpApiShare.nonce);
+        },
+      }).done(function( data ) {
+        location.reload();
+      });
+    })
+
+    $( document ).on('click', '.card-hide', function () {
+      $.ajax({
+        url: window.wpApiShare.root + 'dt-dashboard/v1/user/cards/hide',
+        type: 'POST',
+        data: {
+          card_handle: $(this).data('cardHandle')
+        },
+        beforeSend: xhr => {
+          xhr.setRequestHeader('X-WP-Nonce', window.wpApiShare.nonce);
+        },
+      }).done(function( data ) {
+        location.reload();
+      });
+    })
   }
 
 })(window.jQuery, window.wpApiDashboard)

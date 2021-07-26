@@ -19,7 +19,7 @@ $hidden_cards =$dt_cards->hidden();
                     <?php foreach($shown_cards as $handle => $card): ?>
                         <tr class="card" data-card-handle="<?php echo $handle; ?>">
                             <td class="handle" width="20"><span class="dashicons dashicons-move"></span></td>
-                            <td><?php echo $card->label(); ?></td>
+                            <td><?php echo $card->label; ?></td>
                             <td align="right">
                                 <form method="POST">
                                     <input type="hidden" name="hide_card" value="<?php echo $handle; ?>">
@@ -41,7 +41,7 @@ $hidden_cards =$dt_cards->hidden();
                     <tbody>
                     <?php foreach($hidden_cards as $handle => $card): ?>
                         <tr>
-                            <td><?php echo $card->label(); ?></td>
+                            <td><?php echo $card->label; ?></td>
                             <td align="right">
                                 <form method="POST">
                                     <input type="hidden" name="show_card" value="<?php echo $handle; ?>">

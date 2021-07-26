@@ -55,6 +55,42 @@ class DT_Dashboard_Plugin_Endpoints
                 },
             ]
         );
+        register_rest_route(
+            $this->namespace, '/cards/sort', [
+                'methods'  => 'PUT',
+                'callback' => [ $this, 'update_card_sort' ],
+                'permission_callback' => function( WP_REST_Request $request ) {
+                    return $this->has_permission();
+                },
+            ]
+        );
+        register_rest_route(
+            $this->namespace, '/user/cards/toggle', [
+                'methods'  => 'POST',
+                'callback' => [ $this, 'user_cards_toggle' ],
+                'permission_callback' => function( WP_REST_Request $request ) {
+                    return $this->has_permission();
+                },
+            ]
+        );
+        register_rest_route(
+            $this->namespace, '/user/cards/show', [
+                'methods'  => 'POST',
+                'callback' => [ $this, 'user_cards_show' ],
+                'permission_callback' => function( WP_REST_Request $request ) {
+                    return $this->has_permission();
+                },
+            ]
+        );
+        register_rest_route(
+            $this->namespace, '/user/cards/hide', [
+                'methods'  => 'POST',
+                'callback' => [ $this, 'user_cards_hide' ],
+                'permission_callback' => function( WP_REST_Request $request ) {
+                    return $this->has_permission();
+                },
+            ]
+        );
     }
 
 
@@ -438,6 +474,38 @@ class DT_Dashboard_Plugin_Endpoints
             update_user_option( $user->ID, 'workload_status', $body["workload_status"] );
         }
 
+        return true;
+    }
+
+    public function update_card_sort( WP_REST_Request $request ){
+        $get_params = $request->get_params();
+        $body = $request->get_body_params();
+        $cards = new DT_Dashboard_Plugin_Cards();
+        $cards->sort($body["card_sort"]);
+        return true;
+    }
+
+    public function user_cards_toggle( WP_REST_Request $request ){
+        $get_params = $request->get_params();
+        $body = $request->get_body_params();
+        $cards = new DT_Dashboard_Plugin_User_Cards();
+        $cards->toggle($body["card_handle"]);
+        return true;
+    }
+
+    public function user_cards_show( WP_REST_Request $request ){
+        $get_params = $request->get_params();
+        $body = $request->get_body_params();
+        $cards = new DT_Dashboard_Plugin_User_Cards();
+        $cards->show($body["card_handle"]);
+        return true;
+    }
+
+    public function user_cards_hide( WP_REST_Request $request ){
+        $get_params = $request->get_params();
+        $body = $request->get_body_params();
+        $cards = new DT_Dashboard_Plugin_User_Cards();
+        $cards->hide($body["card_handle"]);
         return true;
     }
 }

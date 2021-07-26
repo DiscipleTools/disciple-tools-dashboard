@@ -19,4 +19,7 @@
             <?php esc_html_e( "Set travel or dates unavailable", 'disciple-tools-dashboard' ) ?>
         </a>
     </div>
+    <?php
+    include __dir__ . '/remove.php'
+    ?>
 </div>

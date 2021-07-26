@@ -2,7 +2,9 @@
     <div class="card" style="height: 100%">
         <div style="display: flex; flex-direction: column; height: 100%">
             <div style="text-align: center">
-                <span class="card-title"><?php esc_html_e( "Active Contacts", 'disciple-tools-dashboard' ) ?></span>
+                <span class="card-title">
+                    <?php esc_html_e( "Active Contacts", 'disciple-tools-dashboard' ) ?>
+                </span>
             </div>
             <div style="text-align: center; flex-grow: 1; margin-top: 20px">
                 <span class="numberCircle">&nbsp;<span id="active_contacts">-</span>&nbsp;</span>
@@ -16,5 +18,8 @@
                 <!--                                </a>-->
             </div>
         </div>
+        <?php
+        include __dir__ . '/remove.php'
+        ?>
     </div>
 </div>

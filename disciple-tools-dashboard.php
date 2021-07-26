@@ -15,7 +15,8 @@
  * @license GPL-2.0 or later
  *          https://www.gnu.org/licenses/gpl-2.0.html
  */
-require_once( 'includes/cards.php' );
+require_once('includes/cards/cards.php');
+require_once('includes/cards/cards-user.php');
 
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
@@ -154,14 +155,6 @@ class DT_Dashboard_Plugin {
         DT_Dashboard_Plugin_Functions::instance();
 
         require_once( 'includes/cards/card.php' );
-        require_once( 'includes/cards/active-contact.php' );
-        require_once( 'includes/cards/contact-workload.php' );
-        require_once( 'includes/cards/faith-milestone-totals.php' );
-        require_once( 'includes/cards/pending-contacts.php' );
-        require_once( 'includes/cards/personal-benchmarks.php' );
-        require_once( 'includes/cards/speaker-path-progress.php' );
-        require_once( 'includes/cards/tasks.php' );
-        require_once( 'includes/cards/update-needed.php' );
     }
 
     /**
@@ -198,14 +191,14 @@ class DT_Dashboard_Plugin {
 
     private function register_cards() {
         $cards = new DT_Dashboard_Plugin_Cards();
-        $cards->register('dt_dashboard_plugin_active_contact', new DT_Dashboard_Plugin_Active_Contact());
-        $cards->register('dt_dashboard_plugin_pending_contacts', new DT_Dashboard_Plugin_Pending_Contacts());
-        $cards->register('dt_dashboard_plugin_update_needed', new DT_Dashboard_Plugin_Update_Needed());
-        $cards->register('dt_dashboard_plugin_contact_workload', new DT_Dashboard_Plugin_Contact_Workload());
-        $cards->register('dt_dashboard_plugin_personal_benchmarks', new DT_Dashboard_Plugin_Personal_Benchmarks());
-        $cards->register('dt_dashboard_plugin_speaker_path_progress', new DT_Dashboard_Plugin_Speaker_Path_Progress());
-        $cards->register('dt_dashboard_plugin_faith_milestone_totals', new DT_Dashboard_Plugin_Faith_Milestone_Totals());
-        $cards->register('dt_dashboard_plugin_tasks', new DT_Dashboard_Plugin_Tasks());
+        $cards->register(new DT_Dashboard_Plugin_Card('DT_Dashboard_Plugin_Active_Contact', 'Active Contacts'));
+        $cards->register(new DT_Dashboard_Plugin_Card('DT_Dashboard_Plugin_Update_Needed', 'Update Needed'));
+        $cards->register(new DT_Dashboard_Plugin_Card('DT_Dashboard_Plugin_Pending_Contacts', 'Pending Contacts'));
+        $cards->register(new DT_Dashboard_Plugin_Card('DT_Dashboard_Plugin_Contact_Workload', 'Contact Workload'));
+        $cards->register(new DT_Dashboard_Plugin_Card('DT_Dashboard_Plugin_Personal_Benchmarks', 'Personal Benchmarks'));
+        $cards->register(new DT_Dashboard_Plugin_Card('DT_Dashboard_Plugin_Speaker_Path_Progress', 'Speaker Path Progress'));
+        $cards->register(new DT_Dashboard_Plugin_Card('DT_Dashboard_Plugin_Faith_Milestone_Totals', 'Faith Milestone Totals'));
+        $cards->register(new DT_Dashboard_Plugin_Card('DT_Dashboard_Plugin_Tasks', 'Tasks'));
     }
 
     /**

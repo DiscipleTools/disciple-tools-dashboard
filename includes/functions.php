@@ -38,8 +38,6 @@ class DT_Dashboard_Plugin_Functions
         if ( strpos( $url, "dashboard" ) !== false ){
             $plugin_dir = dirname( __FILE__ );
             $path = $plugin_dir . '/template-dashboard.php';
-            $dt_cards = new DT_Dashboard_Plugin_Cards();
-            $cards = $dt_cards->all();
             include( $path );
             die();
         }

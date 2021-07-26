@@ -11,4 +11,7 @@
             </div>
         </div>
     </div>
+    <?php
+    include __dir__ . '/remove.php'
+    ?>
 </div>

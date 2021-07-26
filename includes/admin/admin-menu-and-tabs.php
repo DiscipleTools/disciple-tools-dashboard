@@ -70,10 +70,15 @@ class DT_Dashboard_Plugin_Menu {
     public function extensions_menu() {}
 
     public function scripts() {
+        wp_localize_script( 'wp-api', 'dashboardWPApiShare', array(
+            'nonce' => wp_create_nonce( 'wp_rest' ),
+            'root' => esc_url_raw( rest_url() ) . 'dt-dashboard'
+        ));
         wp_enqueue_script('jquery');
         wp_register_script('jquery-ui','https://code.jquery.com/ui/1.12.1/jquery-ui.min.js',array('jquery'));
         wp_enqueue_script('jquery-ui');
         wp_enqueue_script( 'dt-admin', DT_Dashboard_Plugin::path() . 'includes/admin.js', [
+            'wp-api',
             'jquery',
             'jquery-ui',
         ], filemtime( DT_Dashboard_Plugin::dir() . 'includes/admin.js' ), true );

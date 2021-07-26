@@ -8,4 +8,7 @@
         <div id="seeker_path_chart" style="height:400px; width;200px; padding-left: 10px; padding-right: 10px"></div>
 
     </div>
+    <?php
+    include __dir__ . '/remove.php'
+    ?>
 </div>
