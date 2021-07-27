@@ -1,7 +1,6 @@
 <?php
 
-
-class DT_Dashboard_Plugin_Card
+abstract class DT_Dashboard_Card
 {
     public $handle;
     public $label;
@@ -17,18 +16,31 @@ class DT_Dashboard_Plugin_Card
      * @return mixed
      */
     public function setup() {
-        //Do anything needed on setup.
-        //Can be used by extended custom cards.
+
     }
 
     /**
      * Return the card html.
      */
-    public function render() {
-        $handle = $this->handle;
-        $label = $this->label;
-        $card = $this;
-        $template_file = str_replace('_', '-', str_replace('DT_Dashboard_Plugin_', '', $handle)) . '.php';
-        include (DT_Dashboard_Plugin::includes_dir() . "template-parts/cards/" . $template_file);
+    abstract public function render();
+
+    public function asHtml() {
+        ob_start();
+        $this->render();
+        $html = ob_get_contents();
+        ob_end_clean();
+        return $html;
+    }
+
+    public function toArray() {
+        return [
+            'handle' => $this->handle,
+            'label' => $this->label,
+            'template' => $this->asHtml()
+        ];
+    }
+
+    public function toJson() {
+        return json_encode($this->toArray());
     }
 }

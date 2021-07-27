@@ -155,6 +155,7 @@ class DT_Dashboard_Plugin {
         DT_Dashboard_Plugin_Functions::instance();
 
         require_once( 'includes/cards/card.php' );
+        require_once( 'includes/cards/plugin-card.php' );
     }
 
     /**

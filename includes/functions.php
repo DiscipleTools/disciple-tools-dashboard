@@ -29,7 +29,7 @@ class DT_Dashboard_Plugin_Functions
 
         add_action( "template_redirect", [ $this, 'my_theme_redirect' ] );
         if ( strpos( $url_path, 'dashboard' ) !== false ) {
-            add_action( 'wp_enqueue_scripts', [ $this, 'scripts' ], 99 );
+            add_action( 'wp_enqueue_scripts', [ $this, 'scripts' ] );
         }
     }
 
@@ -50,7 +50,9 @@ class DT_Dashboard_Plugin_Functions
         wp_register_script( 'amcharts-core', 'https://www.amcharts.com/lib/4/core.js', false, '4' );
         wp_register_script( 'amcharts-charts', 'https://www.amcharts.com/lib/4/charts.js', false, '4' );
         wp_register_script( 'amcharts-animated', 'https://www.amcharts.com/lib/4/themes/animated.js', false, '4' );
-        wp_enqueue_script( 'dt-dashboard', plugin_dir_url( __FILE__ ) . '/dashboard.js', [
+        wp_enqueue_script( 'dt-dashboard-plugin', plugin_dir_url( __FILE__ ) . 'plugin.js', filemtime( plugin_dir_path( __FILE__ ) . '/plugin.js' ), false);
+        wp_enqueue_script( 'dt-dashboard', plugin_dir_url( __FILE__ ) . 'dashboard.js', [
+            'dt-dashboard-plugin',
             'jquery',
             'jquery-ui',
             'lodash',

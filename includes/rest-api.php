@@ -47,6 +47,42 @@ class DT_Dashboard_Plugin_Endpoints
             ]
         );
         register_rest_route(
+            $this->namespace, '/benchmarks', [
+                'methods'  => 'GET',
+                'callback' => [ $this, 'get_benchmarks' ],
+                'permission_callback' => function( WP_REST_Request $request ) {
+                    return $this->has_permission();
+                },
+            ]
+        );
+        register_rest_route(
+            $this->namespace, '/seeker_path_personal', [
+                'methods'  => 'GET',
+                'callback' => [ $this, 'get_seeker_path_personal' ],
+                'permission_callback' => function( WP_REST_Request $request ) {
+                    return $this->has_permission();
+                },
+            ]
+        );
+        register_rest_route(
+            $this->namespace, '/milestones', [
+                'methods'  => 'GET',
+                'callback' => [ $this, 'get_milestones' ],
+                'permission_callback' => function( WP_REST_Request $request ) {
+                    return $this->has_permission();
+                },
+            ]
+        );
+         register_rest_route(
+             $this->namespace, '/tasks', [
+                 'methods'  => 'GET',
+                 'callback' => [ $this, 'get_tasks' ],
+                 'permission_callback' => function( WP_REST_Request $request ) {
+                     return $this->has_permission();
+                 },
+             ]
+         );
+        register_rest_route(
             $this->namespace, '/user', [
                 'methods'  => 'POST',
                 'callback' => [ $this, 'update_user' ],
@@ -68,6 +104,15 @@ class DT_Dashboard_Plugin_Endpoints
             $this->namespace, '/user/cards/toggle', [
                 'methods'  => 'POST',
                 'callback' => [ $this, 'user_cards_toggle' ],
+                'permission_callback' => function( WP_REST_Request $request ) {
+                    return $this->has_permission();
+                },
+            ]
+        );
+        register_rest_route(
+            $this->namespace, '/card', [
+                'methods'  => 'GET',
+                'callback' => [ $this, 'get_card' ],
                 'permission_callback' => function( WP_REST_Request $request ) {
                     return $this->has_permission();
                 },
@@ -130,7 +175,7 @@ class DT_Dashboard_Plugin_Endpoints
         ];
     }
 
-    public function get_other_stats(){
+    public function get_other_stats() {
         $seeker_path_personal = self::query_my_contacts_progress();
         $milestones = self::milestones();
         $personal_benchmarks = self::get_personal_benchmarks();
@@ -138,8 +183,24 @@ class DT_Dashboard_Plugin_Endpoints
             "benchmarks" => $personal_benchmarks,
             "seeker_path_personal" => $seeker_path_personal,
             "milestones" => $milestones,
-            "tasks" => self::get_tasks(),
+            "tasks" => self::query_tasks(),
         ];
+    }
+
+    public function get_benchmarks() {
+        return self::get_personal_benchmarks();
+    }
+
+    public function get_seeker_path_personal() {
+        return self::query_my_contacts_progress();
+    }
+
+    public function get_milestones() {
+        return self::milestones();
+    }
+
+    public function get_tasks() {
+        return self::query_tasks();
     }
 
     private static function get_active_contacts(){
@@ -430,7 +491,7 @@ class DT_Dashboard_Plugin_Endpoints
         return $return;
     }
 
-    private function get_tasks(){
+    private function query_tasks(){
         global $wpdb;
         $user_id = get_current_user_id();
         $task_results = $wpdb->get_results($wpdb->prepare( "
@@ -507,5 +568,11 @@ class DT_Dashboard_Plugin_Endpoints
         $cards = new DT_Dashboard_Plugin_User_Cards();
         $cards->hide($body["card_handle"]);
         return true;
+    }
+
+    public function get_card( WP_REST_Request $request ){
+        $cards = new DT_Dashboard_Plugin_Cards();
+        $params = $request->get_query_params();
+        return $cards->find($params["card_handle"])->toJson();
     }
 }

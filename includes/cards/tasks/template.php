@@ -10,9 +10,5 @@
             </div>
         </span>
         <ul class="existing-tasks"></ul>
-        <?php
-        include __dir__ . '/remove.php'
-        ?>
     </div>
-
 </div>

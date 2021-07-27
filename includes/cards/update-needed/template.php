@@ -10,13 +10,6 @@
                                 </span>
             </div>
             <div id="update_needed_list" style="flex-grow: 1"></div>
-            <!--                            <div class="view-all" style="flex-shrink: 1">-->
-            <!--                                <button class="button" id="view_updated_needed_button">--><?php //esc_html_e( "View All", 'disciple-tools-dashboard' ) ?><!--</button>-->
-            <!--                            </div>-->
         </div>
-        <?php
-        include __dir__ . '/remove.php'
-        ?>
     </div>
-
 </div>

@@ -57,7 +57,9 @@ class DT_Dashboard_Plugin_Cards
      */
     public function register(DT_Dashboard_Plugin_Card $card)
     {
-        $this->setup_card($card);
+        add_action( 'wp_enqueue_scripts', function() use ($card) {
+            $this->setup_card($card);
+        }, 999 );
 
         //Register the card
         static::$cards[$card->handle] = $card;
@@ -118,7 +120,7 @@ class DT_Dashboard_Plugin_Cards
      * @param $slug
      * @param $card
      */
-    protected function setup_card($card)
+    public function setup_card($card)
     {
         $setup_action = 'dt_dashboard_setup_card_' . $card->handle;
         do_action($setup_action, $card);
