@@ -205,9 +205,9 @@ class DT_Dashboard_Plugin {
         $cards->register(new DT_Dashboard_Plugin_Card('DT_Dashboard_Plugin_Update_Needed', __('Update Needed',  'disciple-tools-dashboard')));
         $cards->register(new DT_Dashboard_Plugin_Card('DT_Dashboard_Plugin_Pending_Contacts', __('Pending Contacts', 'disciple-tools-dashboard')));
         $cards->register(new DT_Dashboard_Plugin_Card('DT_Dashboard_Plugin_Contact_Workload', __('Contact Workload', 'disciple-tools-dashboard')));
-        $cards->register(new DT_Dashboard_Plugin_Card('DT_Dashboard_Plugin_Personal_Benchmarks', __('Personal Benchmarks', 'disciple-tools-dashboard'), 4));
-        $cards->register(new DT_Dashboard_Plugin_Card('DT_Dashboard_Plugin_Speaker_Path_Progress', __('Speaker Path Progress', 'disciple-tools-dashboard'), 2));
-        $cards->register(new DT_Dashboard_Plugin_Card('DT_Dashboard_Plugin_Faith_Milestone_Totals', __('Faith Milestone Totals', 'disciple-tools-dashboard'), 2));
+        $cards->register(new DT_Dashboard_Plugin_Card('DT_Dashboard_Plugin_Personal_Benchmarks', __('Personal Benchmarks', 'disciple-tools-dashboard'), ['span' => 4]));
+        $cards->register(new DT_Dashboard_Plugin_Card('DT_Dashboard_Plugin_Speaker_Path_Progress', __('Speaker Path Progress', 'disciple-tools-dashboard'), ['span' => 2]));
+        $cards->register(new DT_Dashboard_Plugin_Card('DT_Dashboard_Plugin_Faith_Milestone_Totals', __('Faith Milestone Totals', 'disciple-tools-dashboard'), ['span' => 2]));
         $cards->register(new DT_Dashboard_Plugin_Card('DT_Dashboard_Plugin_Tasks', __('Tasks', 'disciple-tools-dashboard')));
     }
 
