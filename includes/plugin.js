@@ -1,32 +1,103 @@
+/**
+ * The dashboard js plugin. Loads in the head so it's available for other scripts.
+ *
+ * @type {{container(): Element | null, moveForward: (function(*=): undefined), cards: [], renderAddMenu(): undefined, cardsEls(): NodeListOf<Element>, storeSort(): void, findEl: (function(*): Element), isActive(*=): void, onAdd: Window.dt_dashboard.onAdd, remove: Window.dt_dashboard.remove, find: (function(*): *), root(): Element | null, initialized: boolean, cardContext: (function(*=): {wpApiDashboard: *, element: *}), add: (function(*=): undefined), init(): void, initCards(): void, moveBack: (function(*=): undefined), fireOnAdd(*=): void, addCardEl(): Element | null, inactiveCards(): *, addCardHtml(*=, *=): undefined, fireOnRemove(*=): void, onRemove: Window.dt_dashboard.onRemove, activeCards(): *}}
+ */
 window.dt_dashboard = {
+  /**
+   * Has the dashboard been initialized?
+   */
   initialized: false,
+
+  /**
+   * An array of card objects
+   *
+   * [{
+   *    element, //The DOM element for the card
+   *    onAdd, //An array of callbacks for after cards are added to the dashboard
+   *    onRemove, //An array of callbacks for after cards are removed from the dashboard
+   *  }]
+   */
   cards: [],
+
+  /**
+   * Init the plugin. Should be called after the dom is ready
+   */
   init() {
+    //Build up the cards array
     this.cards = JSON.parse(this.root().dataset.cards).map(function(card) {
       card.element = this.findEl(card.handle);
       card.onAdd = []
       card.onRemove = []
       return card
     }.bind(this))
+
     this.initCards()
     this.renderAddMenu()
     this.initalized = true
   },
+
+  /**
+   * The root dom element
+   * @returns {Element}
+   */
   root() {
     return document.querySelector('#dashboard')
   },
+
+  /**
+   * The card container element
+   * @returns {Element}
+   */
   container() {
     return document.querySelector('.dash-cards')
   },
+
+  /**
+   * All the card elements (excluding the dynamically  generated add card should it exist)
+   * @returns {NodeListOf<Element>}
+   */
   cardsEls() {
     return document.querySelectorAll('.dash-card:not(.add-card)')
   },
+
+  /**
+   * The add card element. May not exist in the case that there are no hidden cards
+   * @returns {Element}
+   */
   addCardEl() {
     return document.querySelector('#add-card')
   },
+
+  /**
+   * Find a card object by handle
+   * @param handle
+   * @returns {*}
+   */
+  find: function(handle) {
+    return this.cards.find(function(card) {
+      return card.handle === handle
+    })
+  },
+
+  /**
+   * Query for a card element by handle
+   * @param handle
+   * @returns {Element}
+   */
   findEl: function(handle) {
     return document.querySelector('#dash-card--' + handle)
   },
+
+  /**
+   * The context object passed to card events
+   * {
+   *   wpApiDashboard,
+   *   element
+   * }
+   * @param handle
+   * @returns {{wpApiDashboard, element}}
+   */
   cardContext: function(handle) {
     const card = this.find(handle)
     return {
@@ -34,37 +105,56 @@ window.dt_dashboard = {
       element: card.element
     }
   },
+
+  /**
+   * Get all the active cards
+   * @returns {*[]}
+   */
   activeCards() {
     return this.cards.filter(function(card) {
       return !!card.element
     })
   },
+
+  /**
+   * Get all the inactive cards
+   * @returns {*[]}
+   */
   inactiveCards() {
     return this.cards.filter(function(card) {
       return !card.element
     })
   },
+
+  /**
+   * Fire the add events for all cards. This will cause the javascript for individual cards to execute.
+   */
   initCards() {
     this.activeCards().forEach(function(card) {
       this.fireOnAdd(card.handle)
     }.bind(this))
   },
-  find: function(handle) {
-    return this.cards.find(function(card) {
-      return card.handle === handle
-    })
-  },
+
+  /**
+   * Is a card active?
+   * @param handle
+   */
   isActive(handle) {
     !!this.find(handle).element
   },
+
+  /**
+   * Add a card to the dashboard
+   * @param handle
+   */
   add: function(handle) {
     if (this.isActive(handle)) {
       return
     }
 
+    //Tell the server that the card is now active for the user
     let body = new URLSearchParams()
     body.append('card_handle', handle)
-
     fetch('/wp-json/dt-dashboard/v1/user/cards/show', {
       method: 'POST',
       headers: {
@@ -73,6 +163,7 @@ window.dt_dashboard = {
       body: body,
     })
 
+    //Fetch the card HTML
     fetch('/wp-json/dt-dashboard/v1/card?' + body.toString(), {
       method: 'GET',
       headers: {
@@ -87,6 +178,11 @@ window.dt_dashboard = {
         this.storeSort()
       }.bind(this))
   },
+
+  /**
+   * Fire any add callbacks for a card
+   * @param handle
+   */
   fireOnAdd(handle) {
     window.setTimeout(function() {
       const card = this.find(handle)
@@ -95,6 +191,11 @@ window.dt_dashboard = {
       }.bind(this))
     }.bind(this), 1)
   },
+
+  /**
+   * Fire any remove callbacks for a card
+   * @param handle
+   */
   fireOnRemove(handle) {
     window.setTimeout(function() {
       const card = this.find(handle)
@@ -103,6 +204,12 @@ window.dt_dashboard = {
       }.bind(this))
     }.bind(this), 1)
   },
+
+  /**
+   * Add card HTML to the dashboard
+   * @param handle
+   * @param html
+   */
   addCardHtml(handle, html = null) {
     if (this.findEl(handle)) {
       return
@@ -112,6 +219,11 @@ window.dt_dashboard = {
     card.element = this.findEl(handle)
     this.fireOnAdd(handle)
   },
+
+  /**
+   * Remove a card from the dashboard
+   * @param handle
+   */
   remove: function(handle) {
     const card = this.find(handle)
     card.element.remove()
@@ -120,6 +232,7 @@ window.dt_dashboard = {
     let body = new URLSearchParams()
     body.append('card_handle', handle)
 
+    //Tell the server about it
     fetch('/wp-json/dt-dashboard/v1/user/cards/hide', {
       method: 'POST',
       headers: {
@@ -131,6 +244,12 @@ window.dt_dashboard = {
     this.renderAddMenu()
     this.storeSort()
   },
+
+  /**
+   * Add an add callback to a card
+   * @param handle
+   * @param callback
+   */
   onAdd: function(handle, callback) {
     const card = this.find(handle)
     card.onAdd.push(callback)
@@ -138,9 +257,19 @@ window.dt_dashboard = {
       callback(this.cardContext(card.handle))
     }
   },
+
+  /**
+   * Add a remove callback to a card
+   * @param handle
+   * @param callback
+   */
   onRemove: function(handle, callback) {
     this.find(handle).onRemove.push(callback)
   },
+
+  /**
+   * Render the add menu. If there are no active cards, it will remove it.
+   */
   renderAddMenu() {
     let addCardContainer = this.addCardEl()
 
@@ -186,6 +315,11 @@ window.dt_dashboard = {
       addMenu.appendChild(menuItem)
     }.bind(this))
   },
+
+  /**
+   * Move a card forward in the DOM
+   * @param handle
+   */
   moveForward: function(handle) {
     const cardEl = this.findEl(handle)
     if (!cardEl) {
@@ -198,18 +332,29 @@ window.dt_dashboard = {
     nextEl.after(cardEl)
     this.storeSort()
   },
+
+  /**
+   * Move a card back in the DOM
+   * @param handle
+   */
   moveBack: function(handle) {
     const cardEl = this.findEl(handle)
     if (!cardEl) {
       return
     }
     const prevEl = cardEl.previousElementSibling
+
+    //The add card is also in the container, so we need to ignore it.
     if (!prevEl || prevEl === this.addCardEl()) {
       return
     }
     prevEl.before(cardEl)
     this.storeSort()
   },
+
+  /**
+   * Store the sort on the server
+   */
   storeSort() {
     const sort = Array.from(this.cardsEls()).map(function(el) {
       return el.dataset.cardHandle

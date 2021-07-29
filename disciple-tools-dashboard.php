@@ -190,6 +190,13 @@ class DT_Dashboard_Plugin {
         add_action( 'after_setup_theme', array( $this, 'i18n' ), 51 );
     }
 
+    /**
+     * Register the dashboard cards
+     *
+     * @since  1.0
+     * @access private
+     * @return void
+     */
     private function register_cards() {
         $cards = new DT_Dashboard_Plugin_Cards();
         $cards->register(new DT_Dashboard_Plugin_Card('DT_Dashboard_Plugin_Active_Contact', 'Active Contacts'));

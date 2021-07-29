@@ -77,7 +77,7 @@ class DT_Dashboard_Plugin_Cards
     }
 
     public function set_card_visibility($handle, $visibility) {
-        update_option(static::CARD_VISIBLE_OPTION_PREFIX . $handle, $visibility ? 1 : 0);
+        update_option(static::CARD_VISIBLE_OPTION_PREFIX . $handle, $visibility ? '1' : '0');
     }
 
     /**

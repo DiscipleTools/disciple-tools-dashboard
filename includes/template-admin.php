@@ -1,13 +1,14 @@
 <?php
 $dt_cards = new DT_Dashboard_Plugin_Cards();
 $shown_cards = $dt_cards->shown();
-$hidden_cards =$dt_cards->hidden();
+$hidden_cards = $dt_cards->hidden();
 ?>
 <div class="wrap">
     <h2><?php esc_attr_e( 'DISCIPLE TOOLS - DASHBOARD', 'disciple-tools-dashboard' ) ?></h2>
     <div id="poststuff">
         <div id="post-body" class="metabox-holder columns-2">
             <div id="post-body-content">
+                <p>Choose the default dashboard layout for new users.</p>
                 <table class="widefat striped">
                     <thead>
                     <tr>
@@ -34,7 +35,7 @@ $hidden_cards =$dt_cards->hidden();
                 <table class="widefat striped">
                     <thead>
                     <tr>
-                        <th><?php esc_html_e( "INACTIVE CARDS", 'disciple-tools-dashboard' ) ?></th>
+                        <th><?php esc_html_e( "HIDDEN CARDS", 'disciple-tools-dashboard' ) ?></th>
                         <th></th>
                     </tr>
                     </thead>
