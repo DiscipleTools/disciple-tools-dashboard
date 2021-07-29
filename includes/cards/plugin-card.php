@@ -5,10 +5,10 @@ class DT_Dashboard_Plugin_Card extends DT_Dashboard_Card
 {
     private $template_folder = '';
 
-    public function __construct($handle, $label)
+    public function __construct($handle, $label, $span = 1)
     {
         $this->template_folder = strtolower(str_replace('_', '-', str_replace('DT_Dashboard_Plugin_', '', $handle)));
-        parent::__construct($handle, $label);
+        parent::__construct($handle, $label, $span);
     }
 
     /**

@@ -1,5 +1,5 @@
 (function($) {
-  window.dt_dashboard.onAdd('DT_Dashboard_Plugin_Pending_Contacts', function (context) {
+  window.dt_dashboard.onAdd('DT_Dashboard_Plugin_Contact_Workload', function (context) {
     let status_buttons =  $(context.element).find('.status-button')
     let color_workload_buttons = (name) =>{
       status_buttons.css('background-color', "")

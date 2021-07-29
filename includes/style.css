@@ -2,10 +2,15 @@
  * Dashboard
  */
 .dashboard-page .dash-cards {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: stretch;
 }
+
+.dashboard-page .dash-card {
+    grid-column: var(--dashboard-card-column, span 1);
+}
+
 .dashboard-page .dash-cards .item {
     padding: 10px;
 }

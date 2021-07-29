@@ -1,3 +1,4 @@
-(function($, wpApiDashboard) {
+(function($) {
   window.dt_dashboard.init()
-})(window.jQuery, window.wpApiDashboard)
+
+})(window.jQuery)

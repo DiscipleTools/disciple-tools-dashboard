@@ -1,5 +1,6 @@
 (function($) {
   window.dt_dashboard.onAdd('DT_Dashboard_Plugin_Pending_Contacts', function (context) {
+    console.log('here')
     let data = context.wpApiDashboard.data
     $(context.element).find('#needs_accepting').html(data.accept_needed.total)
     let needs_accepting_list = ``
@@ -21,7 +22,7 @@
     $(context.element).find('#needs_accepting_list').html( needs_accepting_list )
 
 
-    $( document ).on('click', $(context.element).find('.accept_contact_button'), function () {
+    $(context.element).find('.accept_contact_button').on('click', function () {
       let contact_id = $(this).data('id')
       let data = {accept: $(this).data('action') === 'accept'}
       makeRequestOnPosts( "POST", `contacts/${contact_id}/accept`, data)

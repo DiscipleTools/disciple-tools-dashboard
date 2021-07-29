@@ -20,10 +20,10 @@ class DT_Dashboard_Plugin_User_Cards extends DT_Dashboard_Plugin_Cards
     }
 
     protected function get_card_sort_option() {
-        $options =  get_user_meta(get_current_user_id());
-        if (!isset($options[static::CARD_SORT_OPTION])) {
+        $sort = get_user_option(static::CARD_SORT_OPTION, get_current_user_id());
+        if (!$sort) {
             return parent::get_card_sort_option();
         }
-        return get_user_option(static::CARD_SORT_OPTION, get_current_user_id());
+        return $sort;
     }
 }

@@ -101,6 +101,15 @@ class DT_Dashboard_Plugin_Endpoints
             ]
         );
         register_rest_route(
+            $this->namespace, '/user/cards/sort', [
+                'methods'  => 'PUT',
+                'callback' => [ $this, 'update_user_card_sort' ],
+                'permission_callback' => function( WP_REST_Request $request ) {
+                    return $this->has_permission();
+                },
+            ]
+        );
+        register_rest_route(
             $this->namespace, '/user/cards/toggle', [
                 'methods'  => 'POST',
                 'callback' => [ $this, 'user_cards_toggle' ],
@@ -551,6 +560,14 @@ class DT_Dashboard_Plugin_Endpoints
         $body = $request->get_body_params();
         $cards = new DT_Dashboard_Plugin_User_Cards();
         $cards->toggle($body["card_handle"]);
+        return true;
+    }
+
+    public function update_user_card_sort( WP_REST_Request $request ){
+        $get_params = $request->get_params();
+        $body = $request->get_body_params();
+        $cards = new DT_Dashboard_Plugin_User_Cards();
+        $cards->sort(json_decode($body["card_sort"], 1));
         return true;
     }
 
