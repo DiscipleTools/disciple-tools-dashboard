@@ -8,7 +8,7 @@ $hidden_cards = $dt_cards->hidden();
     <div id="poststuff">
         <div id="post-body" class="metabox-holder columns-2">
             <div id="post-body-content">
-                <p>Choose the default dashboard layout for new users.</p>
+                <p><?php echo esc_html_e( "Choose the default dashboard layout for new users.", 'disciple-tools-dashboard' ); ?></p>
                 <table class="widefat striped">
                     <thead>
                     <tr>

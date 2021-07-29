@@ -1,6 +1,6 @@
 <div style="text-align: center">
                             <span class="card-title">
-                                <?php esc_html_e("Contact Workload", 'disciple-tools-dashboard') ?>
+                                <?php echo $card->label ?>
                                 <div id="workload-spinner"
                                      style="display: inline-block"
                                      class="loading-spinner"></div>

@@ -1,6 +1,6 @@
 <span class="card-title"
       style="text-align: center; margin-bottom: 15px">
-                            <?php echo esc_html__('Faith Milestone Totals', 'disciple-tools-dashboard') ?>
+                            <?php echo $card->label ?>
                              <div style="display: inline-block"
                                   class="stats-spinner loading-spinner active"></div>
                         </span>

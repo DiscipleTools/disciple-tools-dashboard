@@ -4,7 +4,7 @@
             <span id="update_needed"></span>
         </div>
         <span class="card-title">
-                                    <?php esc_html_e( "Update Needed", 'disciple-tools-dashboard' ) ?>
+                                     <?php echo $card->label ?>
                                 </span>
     </div>
     <div id="update_needed_list" style="flex-grow: 1"></div>

@@ -5,7 +5,7 @@
             <span id="needs_accepting"></span>
         </div>
         <span class="card-title">
-                                    <?php esc_html_e("Pending Contacts", 'disciple-tools-dashboard') ?>
+                                    <?php echo $card->label ?>
                                 </span>
     </div>
     <div id="needs_accepting_list"

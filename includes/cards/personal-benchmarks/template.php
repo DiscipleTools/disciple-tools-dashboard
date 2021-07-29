@@ -1,6 +1,6 @@
 <div style="display: flex; flex-wrap: wrap">
     <div style="flex-basis: 40%">
-        <h2 style="margin:50px; display: inline-block"><?php esc_html_e("Personal Benchmarks", 'disciple-tools-dashboard') ?>
+        <h2 style="margin:50px; display: inline-block"> <?php echo $card->label ?>
             <div style="display: inline-block"
                  class="stats-spinner loading-spinner active"></div>
         </h2>
