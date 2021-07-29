@@ -38,6 +38,7 @@ class DT_Dashboard_Plugin_Functions
         if ( strpos( $url, "dashboard" ) !== false ){
             $plugin_dir = dirname( __FILE__ );
             $path = $plugin_dir . '/template-dashboard.php';
+            status_header(200);
             include( $path );
             die();
         }

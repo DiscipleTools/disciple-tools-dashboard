@@ -95,7 +95,10 @@ class DT_Dashboard_Plugin_Menu {
             wp_die( esc_attr__( 'You do not have sufficient permissions to access this page.' ) );
         }
 
+        status_header(200);
+
         $this->update();
+
 
         include DT_Dashboard_Plugin::includes_dir() . 'template-admin.php';
     }
