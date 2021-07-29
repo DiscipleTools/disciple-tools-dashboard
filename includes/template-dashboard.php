@@ -16,10 +16,10 @@ if ( ! current_user_can( 'access_contacts' ) ) {
 get_header();
 
 ?>
-    <div id="dashboard" data-cards='<?php echo wp_json_encode(array_values($cards)); ?>'>
+    <div id="dashboard">
         <div id="content" class="dashboard-page">
             <div id="inner-content">
-                <div class="dash-cards lt-container lt-xs-h-6" id="dash-cards">
+                <div class="dash-cards" id="dash-cards">
                     <?php foreach($shown_cards as $card): ?>
                         <?php include __DIR__ . '/template-parts/card.php'; ?>
                     <?php endforeach; ?>

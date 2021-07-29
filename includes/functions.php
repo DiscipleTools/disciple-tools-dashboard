@@ -44,12 +44,26 @@ class DT_Dashboard_Plugin_Functions
     }
 
     public function scripts() {
-
         wp_enqueue_style( 'dashboard-css', plugin_dir_url( __FILE__ ) . '/style.css', array(), filemtime( plugin_dir_path( __FILE__ ) . 'style.css' ) );
         wp_register_script( 'amcharts-core', 'https://www.amcharts.com/lib/4/core.js', false, '4' );
         wp_register_script( 'amcharts-charts', 'https://www.amcharts.com/lib/4/charts.js', false, '4' );
         wp_register_script( 'amcharts-animated', 'https://www.amcharts.com/lib/4/themes/animated.js', false, '4' );
         wp_enqueue_script( 'dt-dashboard-plugin', plugin_dir_url( __FILE__ ) . 'plugin.js', filemtime( plugin_dir_path( __FILE__ ) . '/plugin.js' ), false);
+        wp_localize_script(
+            'dt-dashboard-plugin', 'wpApiDashboard', array(
+                'root'                  => esc_url_raw( rest_url() ),
+                'site_url'              => get_site_url(),
+                'nonce'                 => wp_create_nonce( 'wp_rest' ),
+                'current_user_login'    => wp_get_current_user()->user_login,
+                'current_user_id'       => get_current_user_id(),
+                'template_dir'          => get_template_directory_uri(),
+                'translations'          => DT_Dashboard_Plugin_Endpoints::instance()->translations(),
+                'data'                  => DT_Dashboard_Plugin_Endpoints::instance()->get_data(),
+                'workload_status'       => get_user_option( 'workload_status', get_current_user_id() ),
+                'workload_status_options' => dt_get_site_custom_lists()["user_workload_status"] ?? [],
+                'cards'                 => DT_Dashboard_Plugin_Cards::instance()->all()
+            )
+        );
         wp_enqueue_script( 'dt-dashboard', plugin_dir_url( __FILE__ ) . 'dashboard.js', [
             'dt-dashboard-plugin',
             'jquery',
@@ -60,20 +74,6 @@ class DT_Dashboard_Plugin_Functions
             'amcharts-animated',
             'moment'
         ], filemtime( plugin_dir_path( __FILE__ ) . '/dashboard.js' ), true );
-        wp_localize_script(
-            'dt-dashboard', 'wpApiDashboard', array(
-                'root'                  => esc_url_raw( rest_url() ),
-                'site_url'              => get_site_url(),
-                'nonce'                 => wp_create_nonce( 'wp_rest' ),
-                'current_user_login'    => wp_get_current_user()->user_login,
-                'current_user_id'       => get_current_user_id(),
-                'template_dir'          => get_template_directory_uri(),
-                'translations'          => DT_Dashboard_Plugin_Endpoints::instance()->translations(),
-                'data'                  => DT_Dashboard_Plugin_Endpoints::instance()->get_data(),
-                'workload_status'       => get_user_option( 'workload_status', get_current_user_id() ),
-                'workload_status_options' => dt_get_site_custom_lists()["user_workload_status"] ?? []
-            )
-        );
     }
 
     public function front_page( $page ){

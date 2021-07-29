@@ -145,6 +145,7 @@ class DT_Dashboard_Plugin {
      * @return void
      */
     private function includes() {
+        require_once( 'includes/helpers.php' );
         require_once( 'includes/admin/admin-menu-and-tabs.php' );
 
         require_once( 'includes/rest-api.php' );
@@ -156,6 +157,7 @@ class DT_Dashboard_Plugin {
 
         require_once( 'includes/cards/card.php' );
         require_once( 'includes/cards/plugin-card.php' );
+        require_once( 'includes/cards/callback-card.php' );
     }
 
     /**
@@ -198,7 +200,7 @@ class DT_Dashboard_Plugin {
      * @return void
      */
     private function register_cards() {
-        $cards = new DT_Dashboard_Plugin_Cards();
+        $cards = DT_Dashboard_Plugin_Cards::instance();
         $cards->register(new DT_Dashboard_Plugin_Card('DT_Dashboard_Plugin_Active_Contact', __('Active Contacts', 'disciple-tools-dashboard')));
         $cards->register(new DT_Dashboard_Plugin_Card('DT_Dashboard_Plugin_Update_Needed', __('Update Needed',  'disciple-tools-dashboard')));
         $cards->register(new DT_Dashboard_Plugin_Card('DT_Dashboard_Plugin_Pending_Contacts', __('Pending Contacts', 'disciple-tools-dashboard')));

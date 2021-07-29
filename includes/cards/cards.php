@@ -5,6 +5,14 @@ class DT_Dashboard_Plugin_Cards
 {
     const CARD_SORT_OPTION = 'dt_dashboard_card_sort';
     const CARD_VISIBLE_OPTION_PREFIX = 'dt_dashboard_card_';
+    private static $_instance = null;
+
+    public static function instance() {
+        if ( is_null( self::$_instance ) ) {
+            self::$_instance = new self();
+        }
+        return self::$_instance;
+    }
 
     static $cards = [];
 
@@ -17,11 +25,9 @@ class DT_Dashboard_Plugin_Cards
         return static::$cards;
     }
 
-
     public function is_card_visible($handle) {
         return get_option(static::CARD_VISIBLE_OPTION_PREFIX . $handle) !== '0';
     }
-
 
     public function hidden()
     {
@@ -53,9 +59,9 @@ class DT_Dashboard_Plugin_Cards
      * Register a card.
      *
      * @param $slug
-     * @param DT_Dashboard_Plugin_Card $card
+     * @param DT_Dashboard_Card $card
      */
-    public function register(DT_Dashboard_Plugin_Card $card)
+    public function register(DT_Dashboard_Card $card)
     {
         add_action( 'wp_enqueue_scripts', function() use ($card) {
             $this->setup_card($card);
@@ -76,7 +82,8 @@ class DT_Dashboard_Plugin_Cards
         unset(static::$cards[$handle]);
     }
 
-    public function set_card_visibility($handle, $visibility) {
+    public function set_card_visibility($handle, $visibility)
+    {
         update_option(static::CARD_VISIBLE_OPTION_PREFIX . $handle, $visibility ? '1' : '0');
     }
 
@@ -129,7 +136,8 @@ class DT_Dashboard_Plugin_Cards
         }
     }
 
-    protected function get_card_sort_option() {
+    protected function get_card_sort_option()
+    {
         return get_option(static::CARD_SORT_OPTION);
     }
 

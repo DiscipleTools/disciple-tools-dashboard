@@ -25,15 +25,15 @@ window.dt_dashboard = {
    */
   init() {
     //Build up the cards array
-    this.cards = JSON.parse(this.root().dataset.cards).map(function(card) {
+    this.cards = Object.values(wpApiDashboard.cards).map(function(card) {
       card.element = this.findEl(card.handle);
       card.onAdd = []
       card.onRemove = []
       return card
     }.bind(this))
-
     this.initCards()
     this.renderAddMenu()
+    this.refreshClasses()
     this.initalized = true
   },
 
@@ -57,7 +57,7 @@ window.dt_dashboard = {
    * All the card elements (excluding the dynamically  generated add card should it exist)
    * @returns {NodeListOf<Element>}
    */
-  cardsEls() {
+  cardEls() {
     return document.querySelectorAll('.dash-card:not(.add-card)')
   },
 
@@ -87,6 +87,29 @@ window.dt_dashboard = {
    */
   findEl: function(handle) {
     return document.querySelector('#dash-card--' + handle)
+  },
+
+  canMoveBack: function(handle) {
+    const cardEl = this.findEl(handle)
+    if (!cardEl) {
+      return false
+    }
+    const prevEl = cardEl.previousElementSibling
+
+    //The add card is also in the container, so we need to ignore it.
+    if (!prevEl || prevEl === this.addCardEl()) {
+      return false
+    }
+
+    return true
+  },
+
+  canMoveForward: function(handle) {
+    const cardEl = this.findEl(handle)
+    if (!cardEl) {
+      return false
+    }
+    return !!cardEl.nextElementSibling
   },
 
   /**
@@ -176,6 +199,7 @@ window.dt_dashboard = {
         this.addCardHtml(handle, response.template)
         this.renderAddMenu()
         this.storeSort()
+        this.refreshClasses()
       }.bind(this))
   },
 
@@ -286,7 +310,7 @@ window.dt_dashboard = {
       addCardContainer.classList.add('dash-card', 'add-card', 'item')
       addCardContainer.setAttribute('id', 'add-card')
       addCardContainer.style.order = this.cards.length + 1
-      this.container().appendChild(addCardContainer)
+      this.container().prepend(addCardContainer)
 
       addCardEl = document.createElement('div')
       addCardEl.classList.add('card')
@@ -321,16 +345,14 @@ window.dt_dashboard = {
    * @param handle
    */
   moveForward: function(handle) {
+    if (!this.canMoveForward(handle)) {
+      return
+    }
     const cardEl = this.findEl(handle)
-    if (!cardEl) {
-      return
-    }
     const nextEl = cardEl.nextElementSibling
-    if (!nextEl) {
-      return
-    }
     nextEl.after(cardEl)
     this.storeSort()
+    this.refreshClasses()
   },
 
   /**
@@ -338,25 +360,21 @@ window.dt_dashboard = {
    * @param handle
    */
   moveBack: function(handle) {
+    if (!this.canMoveBack(handle)) {
+      return
+    }
     const cardEl = this.findEl(handle)
-    if (!cardEl) {
-      return
-    }
     const prevEl = cardEl.previousElementSibling
-
-    //The add card is also in the container, so we need to ignore it.
-    if (!prevEl || prevEl === this.addCardEl()) {
-      return
-    }
     prevEl.before(cardEl)
     this.storeSort()
+    this.refreshClasses()
   },
 
   /**
    * Store the sort on the server
    */
   storeSort() {
-    const sort = Array.from(this.cardsEls()).map(function(el) {
+    const sort = Array.from(this.cardEls()).map(function(el) {
       return el.dataset.cardHandle
     })
 
@@ -370,5 +388,30 @@ window.dt_dashboard = {
       },
       body: body,
     })
+  },
+
+  /**
+   * Add css classes depending on state
+   */
+  refreshClasses() {
+    if (this.inactiveCards().length) {
+      this.root().classList.add('dash-cards--has-inactive')
+    } else {
+      this.root().classList.remove('dash-cards--has-inactive')
+    }
+
+    Array.from(this.cardEls()).forEach(function(cardEl) {
+      if (this.canMoveBack(cardEl.dataset.cardHandle)) {
+        cardEl.classList.remove('data-card--first')
+      } else {
+        cardEl.classList.add('data-card--first')
+      }
+
+      if (this.canMoveForward(cardEl.dataset.cardHandle)) {
+        cardEl.classList.remove('data-card--last')
+      } else {
+        cardEl.classList.add('data-card--last')
+      }
+    }.bind(this))
   }
 }
