@@ -48,7 +48,7 @@ dt_dashboard_register_card(
     'Your_Custom_Card',                     //handle
     __('Custom Card Label', 'your-plugin'), //label
     function() {                            //Register any assets the card needs or do anything else needed on registration.
-        wp_enqueue_script( $this->handle, 'path-t0-your-cards-script.js', [], null, true);
+        wp_enqueue_script( $this->handle, 'path-to-your-cards-script.js', [], null, true);
     },
     function() {                            //Render the card
         get_template_part( 'whatever-slug', 'whatever-file', [
