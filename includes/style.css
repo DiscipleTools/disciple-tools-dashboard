@@ -15,29 +15,66 @@
     padding: 10px;
 }
 .dashboard-page .dash-cards .item .card {
-    border: 1px solid #E6E6E6;
-    padding: 10px;
+    /* border: 1px solid #E6E6E6;
+    padding: 10px; */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     background-color: white;
     height: 100%;
 }
 .dashboard-page .count-square {
-    border-radius: 5px;
-    display: inline-block;
-    line-height: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: transparent linear-gradient(149deg, #277CBF 0%, #1464A5 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 6px 12px #00000026;
+    width: 55px;
+    height: 55px;
+    margin-right: 20px;
+    margin-top: 40px;
 }
 .dashboard-page .count-square span {
-    display: inline-block;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    margin-left: 8px;
-    margin-right: 8px;
+    font-size: 1.5em;
 }
-.dashboard-page .card-title {
-    margin-left: 10px;
+.card-container{
+    display: flex; 
+    flex-direction: column; 
+    height: 100%
+}
+.card-body{
+    padding: 10px 40px;
+    flex-grow: 1;
+}
+.button.status-button{
+    width: 100%;
+    border-radius: 25px;
+}
+#personal-benchmarks .card-body{
+    display: flex;
+}
+/* .dashboard-page .card-title, */
+.dashboard-page .card-header {
+    height: 56px;
+    width: 100%;
+    background: transparent linear-gradient(180deg, #09497E 0%, #053358 100%) 0% 0% no-repeat padding-box;
+    color: #fff;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-weight: 800;
+    font-size: 1.3rem;
+    padding: 0 20px;
+
+
+    /* padding-left: 20px;
+    padding: 16px 30px; */
+    /* font: normal normal 800 18px/27px Poppins; */
+
+    /* margin: 0; */
+    /* margin-left: 10px;
     font-size: 1.4rem;
-    vertical-align: middle;
+    vertical-align: middle; */
 }
 .dashboard-page .view-all {
     text-align: center;
@@ -46,13 +83,17 @@
     margin-bottom: 0;
 }
 .dashboard-page .numberCircle {
-    background-color: #3f729b;
+    background: transparent linear-gradient(149deg, #277CBF 0%, #1464A5 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 6px 12px #00000026;
     color: white;
+    font-weight: 900;
     display: inline-block;
     border-radius: 50%;
-    border: 2px solid;
     line-height: 0px;
-    font-size: 4rem;
+    font-size: 5rem;
+    margin-bottom: 20px;
+    height: 150px;
+    width: 150px;;
 }
 .dashboard-page .numberCircle:before, .dashboard-page .numberCircle:after {
     content: '\200B';
@@ -80,4 +121,69 @@
     font-size: 10px;
     color: #1779ba;
     margin: 0 5px;
+}
+
+
+
+/* add cards card */
+#add-card #add-menu{
+    margin: 20px;
+    list-style-type: none;
+    padding: 0;
+    
+}
+#add-card #add-menu li {
+    background: transparent linear-gradient(99deg, #09497E 0%, #053358 100%) 0% 0% no-repeat padding-box;
+    color: #fff;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 10px 20px;
+}
+#add-card #add-menu li:hover{
+    cursor: pointer;
+}
+
+
+/* card footer */
+.card-nav-btn{
+    cursor: pointer;
+}
+.card-footer {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px -3px 6px #00000029;
+    border-radius: 0px 0px 16px 16px;
+    padding: 10px 20px;
+    position: relative;
+}
+.show {
+    display: block !important;
+}
+.card-nav {
+    display: none;
+    cursor: pointer;
+    width: 150px;
+    position: absolute;
+    bottom: 30px;
+    left: 30px
+}
+.card-move-left {
+    border-radius: 8px 8px 0px 0px;
+}
+.card-move-right,
+.card-move-left {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #DBDBDB;
+    color: #626262;
+    font-weight: 800;
+    padding: 5px 10px;
+}
+.card-remove {
+    background: transparent linear-gradient(180deg, #C7002E 0%, #B10029 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 3px #00000029;
+    border-radius: 0px 0px 8px 8px;
+    color: #fff;
+    font-weight: 800;
+    padding: 5px 10px;
 }
