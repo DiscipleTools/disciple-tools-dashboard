@@ -187,3 +187,65 @@
     font-weight: 800;
     padding: 5px 10px;
 }
+
+/* need update card */
+.update-needed-container,
+.pending-contacts-container{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 6px 12px #00000029;
+    border: 1px solid #D6D6D6;
+    margin-top: 20px;
+    border-radius: 16px 16px 16px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.update-needed-icon,
+.pending-contacts-icon{
+    background: #1C6FB0 0% 0% no-repeat padding-box;
+    border-radius: 16px 0px 0px 16px;   
+    color: #fff;
+    padding: 20px;
+}
+.update-needed-info,
+.pending-contacts-info {
+    display: flex;
+    flex-direction: column;
+    
+    padding-left: 10px;
+    flex-grow: 1;
+}
+.update-needed-info a,
+.pending-contacts-info a {
+    /* font: normal normal 800 18px/27px Poppins; */
+    font-size: 18px;
+    letter-spacing: -0.36px;
+    color: #313133;
+    font-weight: 800;
+}
+.update-needed-info span {
+    /* text-align: left;
+    font: italic normal medium 10px/16px Poppins; */
+    letter-spacing: -0.2px;
+    color: #848484;
+    font-size: 12px;
+}
+/* pending contacts */
+.pending-contacts-info {
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+.pending-contacts-btns button {
+    margin: 0;
+    border-radius: 8px;
+    font-weight: 800;
+    padding: 10px 20px;
+}
+.accept-button{
+    background: transparent linear-gradient(180deg, #4CAF50 0%, #3AA03E 100%) 0% 0% no-repeat padding-box;
+}
+
+.decline-button{
+    background: transparent linear-gradient(180deg, #C7002E 0%, #B10029 100%) 0% 0% no-repeat padding-box;
+}
