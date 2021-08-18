@@ -245,7 +245,36 @@
 .accept-button{
     background: transparent linear-gradient(180deg, #4CAF50 0%, #3AA03E 100%) 0% 0% no-repeat padding-box;
 }
-
 .decline-button{
     background: transparent linear-gradient(180deg, #C7002E 0%, #B10029 100%) 0% 0% no-repeat padding-box;
+}
+
+/* contact workload */
+.button.status-button{
+    border-radius: 26px;
+    color: #fff;
+    border: 0;
+}
+.button.status-button.active-btn{
+    background: transparent linear-gradient(180deg, #4CAF50 0%, #3AA03E 100%) 0% 0% no-repeat padding-box;
+}
+.button.status-button.existing-btn{
+    background: transparent linear-gradient(180deg, #FFCE00 0%, #F5C600 100%) 0% 0% no-repeat padding-box;
+    color: #363636;
+}
+.button.status-button.too_many-btn{
+    background: transparent linear-gradient(180deg, #C7002E 0%, #B10029 100%) 0% 0% no-repeat padding-box;
+}
+.button.hollow.status-button, 
+.button.hollow.status-button.disabled, 
+.button.hollow.status-button.disabled:focus, 
+.button.hollow.status-button.disabled:hover, 
+.button.hollow.status-button[disabled], 
+.button.hollow.status-button[disabled]:focus, 
+.button.hollow.status-button[disabled]:hover {
+    border: 1px solid #363636 !important;
+    color: #363636 !important;
+    background: #fff !important;
+    border-radius: 26px;
+
 }
