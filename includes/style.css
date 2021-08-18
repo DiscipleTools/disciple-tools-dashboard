@@ -278,3 +278,24 @@
     border-radius: 26px;
 
 }
+
+/* Active Contacts  */
+#dash-card--DT_Dashboard_Plugin_Active_Contact .card-header {
+    height: 120px;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 20px;
+}
+.numberCircle {
+    margin-top: -100px;
+}
+#dash-card--DT_Dashboard_Plugin_Active_Contact .card-body {
+    
+}
+#dash-card--DT_Dashboard_Plugin_Active_Contact .view-all a.button {
+    background: transparent linear-gradient(180deg, #09497E 0%, #053358 100%) 0% 0% no-repeat padding-box;
+    border-radius: 26px;
+    color: #fff;
+    font-weight: 800;
+    margin: 40px 0;
+}
