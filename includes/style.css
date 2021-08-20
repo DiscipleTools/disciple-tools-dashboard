@@ -331,3 +331,48 @@
     padding: 5px 10px;
     font-weight: 800;
 }
+/* Personal Benchmarks */
+#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .card-body {
+    display: flex;
+}
+#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-chart-keys {
+    flex-basis: 25%;
+    margin-top: 20px;
+}
+.benchmarks-chart-keys li {
+    padding: 10px 0px;
+    display: flex;
+    align-items: center;
+}
+#benchmarks_current,
+#benchmarks_previous {
+    padding: 0 10px;
+    color: #313133;
+    font-size: 12px;
+    font-weight: 800;
+} 
+.benchmarks-previous-block, 
+.benchmarks-current-block{
+    border-radius: 5px; 
+    height: 30px; 
+    width: 30px; 
+    padding-right: 10px;
+    display: inline-block;
+    
+}
+.benchmarks-previous-block{
+    background-color: #C7E3FF; 
+} 
+.benchmarks-current-block{
+    background-color: #3f729b;
+}
+#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .card-body div ul{
+    list-style: none; 
+    margin-left: 50px;
+}
+.benchmark-chart-container {
+    flex-basis: 75%
+}
+#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks #benchmark_chart {
+    height: 300px;
+}
