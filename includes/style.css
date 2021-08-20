@@ -15,8 +15,6 @@
     padding: 10px;
 }
 .dashboard-page .dash-cards .item .card {
-    /* border: 1px solid #E6E6E6;
-    padding: 10px; */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     background-color: white;
@@ -65,16 +63,6 @@
     font-weight: 800;
     font-size: 1.3rem;
     padding: 0 20px;
-
-
-    /* padding-left: 20px;
-    padding: 16px 30px; */
-    /* font: normal normal 800 18px/27px Poppins; */
-
-    /* margin: 0; */
-    /* margin-left: 10px;
-    font-size: 1.4rem;
-    vertical-align: middle; */
 }
 .dashboard-page .view-all {
     text-align: center;
@@ -123,14 +111,11 @@
     margin: 0 5px;
 }
 
-
-
 /* add cards card */
 #add-card #add-menu{
     margin: 20px;
     list-style-type: none;
     padding: 0;
-    
 }
 #add-card #add-menu li {
     background: transparent linear-gradient(99deg, #09497E 0%, #053358 100%) 0% 0% no-repeat padding-box;
@@ -144,7 +129,6 @@
 #add-card #add-menu li:hover{
     cursor: pointer;
 }
-
 
 /* card footer */
 .card-nav-btn{
@@ -211,21 +195,17 @@
 .pending-contacts-info {
     display: flex;
     flex-direction: column;
-    
     padding-left: 10px;
     flex-grow: 1;
 }
 .update-needed-info a,
 .pending-contacts-info a {
-    /* font: normal normal 800 18px/27px Poppins; */
     font-size: 18px;
     letter-spacing: -0.36px;
     color: #313133;
     font-weight: 800;
 }
 .update-needed-info span {
-    /* text-align: left;
-    font: italic normal medium 10px/16px Poppins; */
     letter-spacing: -0.2px;
     color: #848484;
     font-size: 12px;
@@ -298,23 +278,23 @@
 }
 
 /* Faith Milestone Totals */
-#milestones { 
+#dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals #milestones { 
     display: flex; 
     flex-wrap: wrap;
     margin: 50px 0;
 }
-.group-progress-button-wrapper {
+#dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .group-progress-button-wrapper {
     margin: 20px 0;
     flex-basis: 33% !important;
 }
-.group-progress-button { 
+#dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .group-progress-button { 
     background: transparent linear-gradient(149deg, #277CBF 0%, #1464A5 100%) 0% 0% no-repeat padding-box;
     box-shadow: 0px 6px 12px #00000026;
     color: #fff;
     border-radius: 50% !important;
     font-weight: 800;
 }
-.group-progress-button-wrapper p {
+#dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .group-progress-button-wrapper p {
     color: #484848;
     font-weight: 800;
     font-size: 12px;
@@ -339,20 +319,20 @@
     flex-basis: 25%;
     margin-top: 20px;
 }
-.benchmarks-chart-keys li {
+#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-chart-keys li {
     padding: 10px 0px;
     display: flex;
     align-items: center;
 }
-#benchmarks_current,
-#benchmarks_previous {
+#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks #benchmarks_current,
+#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks #benchmarks_previous {
     padding: 0 10px;
     color: #313133;
     font-size: 12px;
     font-weight: 800;
 } 
-.benchmarks-previous-block, 
-.benchmarks-current-block{
+#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-previous-block, 
+#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-current-block{
     border-radius: 5px; 
     height: 30px; 
     width: 30px; 
@@ -360,17 +340,17 @@
     display: inline-block;
     
 }
-.benchmarks-previous-block{
+#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-previous-block{
     background-color: #C7E3FF; 
 } 
-.benchmarks-current-block{
+#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-current-block{
     background-color: #3f729b;
 }
 #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .card-body div ul{
     list-style: none; 
     margin-left: 50px;
 }
-.benchmark-chart-container {
+#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmark-chart-container {
     flex-basis: 75%
 }
 #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks #benchmark_chart {
