@@ -5,12 +5,15 @@
     $(context.element).find('#update_needed').html(data.update_needed.total)
     let up_list = ``
     data.update_needed.posts.slice(0, 3).forEach( contact =>{
-      let row = `<div style="margin-top:5px">
-        <div style="display: inline-block; margin-left: 10px"><i class="fi-torso medium"></i>
-            <a style="font-size: 1.1rem" href="${context.wpApiDashboard.site_url}/contacts/${window.lodash.escape(contact.ID)}">${window.lodash.escape( contact.post_title ) }</a>
-            <br>
-            <span style="font-size: 0.9rem">${window.lodash.escape(contact.last_modified_msg)}</span>
+      let row = `<div class="update-needed-container">
+        <div class="update-needed-icon">
+          <i class="fi-torso medium"></i>
         </div>
+        <div class="update-needed-info">
+          <a href="${context.wpApiDashboard.site_url}/contacts/${window.lodash.escape(contact.ID)}">${window.lodash.escape( contact.post_title ) }</a>
+          <span>${window.lodash.escape(contact.last_modified_msg)}</span>
+        </div>
+
     </div>`
       up_list += row
     })

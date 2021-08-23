@@ -5,14 +5,18 @@
     $(context.element).find('#needs_accepting').html(data.accept_needed.total)
     let needs_accepting_list = ``
     data.accept_needed.posts.slice(0, 3).forEach( contact =>{
-      needs_accepting_list += `<div style="margin-top:10px; display: flex" id="pending-${window.lodash.escape(contact.ID)}">
-        <div style="display: inline-block; margin-left: 10px; vertical-align: middle; flex-grow: 1"><i class="fi-torso medium"></i>
-            <a style="font-size: 1.1rem" href="${context.wpApiDashboard.site_url}/contacts/${window.lodash.escape( contact.ID )}">${window.lodash.escape(
-        contact.post_title)}</a>
+      needs_accepting_list += `<div class="pending-contacts-container" id="pending-${window.lodash.escape(contact.ID)}">
+        <div class="pending-contacts-icon">
+          <i class="fi-torso medium"></i>
         </div>
-        <div>
-            <button class="button small dt-green accept_contact_button" data-id="${window.lodash.escape( contact.ID )}" data-action="accept" style="color: white; margin-bottom: 0">${window.lodash.escape(wpApiDashboard.translations.accept)}</button>
-            <button class="button small accept_contact_button" data-id="${window.lodash.escape( contact.ID )}" data-action="decline" style="background-color: #f43636; color: white; margin-bottom: 0">${window.lodash.escape(wpApiDashboard.translations.decline)}</button>
+
+        <div class="pending-contacts-info">
+          <a href="${context.wpApiDashboard.site_url}/contacts/${window.lodash.escape( contact.ID )}">${window.lodash.escape(
+          contact.post_title)}</a>
+          <div class="pending-contacts-btns">
+            <button class="button small dt-green accept-button accept_contact_button" data-id="${window.lodash.escape( contact.ID )}" data-action="accept">${window.lodash.escape(wpApiDashboard.translations.accept)}</button>
+            <button class="button small decline-button accept_contact_button" data-id="${window.lodash.escape( contact.ID )}" data-action="decline">${window.lodash.escape(wpApiDashboard.translations.decline)}</button>
+          </div>
         </div>
     </div>`
     })

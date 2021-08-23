@@ -323,7 +323,7 @@ window.dt_dashboard = {
 
     let heading = document.createElement('span')
     heading.innerText = 'Add cards'
-    heading.classList.add('card-title')
+    heading.classList.add('card-header')
     addCardEl.appendChild(heading)
 
     let addMenu = document.createElement('ul')
