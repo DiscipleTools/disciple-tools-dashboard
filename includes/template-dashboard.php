@@ -6,7 +6,7 @@ $dt_post_type = explode( "/", $url )[0];
 
 dt_please_log_in();
 
-if ( ! current_user_can( 'access_contacts' ) ) {
+if ( ! current_user_can( 'access_disciple_tools' ) ) {
     wp_die( esc_html( "Permission denied" ), "Permission denied", 403 );
 }
 
