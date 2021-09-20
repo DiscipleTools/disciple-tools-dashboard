@@ -14,48 +14,58 @@
 .dashboard-page .dash-cards .item {
     padding: 10px;
 }
+
 .dashboard-page .dash-cards .item .card {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     background-color: white;
     height: 100%;
 }
+
 .dashboard-page .count-square {
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background: transparent linear-gradient(149deg, #277CBF 0%, #1464A5 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(149deg, #277cbf 0%, #1464a5 100%) 0%
+        0% no-repeat padding-box;
     box-shadow: 0px 6px 12px #00000026;
     width: 55px;
     height: 55px;
     margin-right: 20px;
     margin-top: 40px;
 }
+
 .dashboard-page .count-square span {
     font-size: 1.5em;
 }
-.card-container{
-    display: flex; 
-    flex-direction: column; 
-    height: 100%
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
-.card-body{
+
+.card-body {
     padding: 10px 40px;
     flex-grow: 1;
 }
-.button.status-button{
+
+.button.status-button {
     width: 100%;
     border-radius: 25px;
 }
-#personal-benchmarks .card-body{
+
+#personal-benchmarks .card-body {
     display: flex;
 }
+
 /* .dashboard-page .card-title, */
 .dashboard-page .card-header {
     height: 56px;
     width: 100%;
-    background: transparent linear-gradient(180deg, #09497E 0%, #053358 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(180deg, #09497e 0%, #053358 100%) 0%
+        0% no-repeat padding-box;
     color: #fff;
     display: flex;
     justify-content: left;
@@ -64,14 +74,18 @@
     font-size: 1.3rem;
     padding: 0 20px;
 }
+
 .dashboard-page .view-all {
     text-align: center;
 }
+
 .dashboard-page .view-all button {
     margin-bottom: 0;
 }
+
 .dashboard-page .numberCircle {
-    background: transparent linear-gradient(149deg, #277CBF 0%, #1464A5 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(149deg, #277cbf 0%, #1464a5 100%) 0%
+        0% no-repeat padding-box;
     box-shadow: 0px 6px 12px #00000026;
     color: white;
     font-weight: 900;
@@ -81,21 +95,26 @@
     font-size: 5rem;
     margin-bottom: 20px;
     height: 150px;
-    width: 150px;;
+    width: 150px;
 }
-.dashboard-page .numberCircle:before, .dashboard-page .numberCircle:after {
-    content: '\200B';
+
+.dashboard-page .numberCircle:before,
+.dashboard-page .numberCircle:after {
+    content: "\200B";
     display: inline-block;
     line-height: 0px;
     padding-top: 50%;
     padding-bottom: 50%;
 }
+
 .dashboard-page .numberCircle:before {
     padding-left: 8px;
 }
+
 .dashboard-page .numberCircle:after {
     padding-right: 8px;
 }
+
 @media screen and (max-width: 640px) {
     .dashboard-page .dash-cards .item {
         flex-basis: 100% !important;
@@ -112,13 +131,14 @@
 }
 
 /* add cards card */
-#add-card #add-menu{
+#add-card #add-menu {
     margin: 20px;
     list-style-type: none;
     padding: 0;
 }
 #add-card #add-menu li {
-    background: transparent linear-gradient(99deg, #09497E 0%, #053358 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(99deg, #09497e 0%, #053358 100%) 0%
+        0% no-repeat padding-box;
     color: #fff;
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 16px;
@@ -126,45 +146,57 @@
     margin: 10px 0;
     padding: 10px 20px;
 }
-#add-card #add-menu li:hover{
+
+#add-card #add-menu li:hover {
     cursor: pointer;
 }
 
+#add-card #add-menu li::after {
+    content: "<i class=fi-arrow-left></i>";
+}
+
 /* card footer */
-.card-nav-btn{
+.card-nav-btn {
     cursor: pointer;
 }
+
 .card-footer {
-    background: #FFFFFF 0% 0% no-repeat padding-box;
+    background: #ffffff 0% 0% no-repeat padding-box;
     box-shadow: 0px -3px 6px #00000029;
     border-radius: 0px 0px 16px 16px;
     padding: 10px 20px;
     position: relative;
 }
+
 .show {
     display: block !important;
 }
+
 .card-nav {
     display: none;
     cursor: pointer;
     width: 150px;
     position: absolute;
     bottom: 30px;
-    left: 30px
+    left: 30px;
 }
+
 .card-move-left {
     border-radius: 8px 8px 0px 0px;
 }
+
 .card-move-right,
 .card-move-left {
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    border: 1px solid #DBDBDB;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border: 1px solid #dbdbdb;
     color: #626262;
     font-weight: 800;
     padding: 5px 10px;
 }
+
 .card-remove {
-    background: transparent linear-gradient(180deg, #C7002E 0%, #B10029 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(180deg, #c7002e 0%, #b10029 100%) 0%
+        0% no-repeat padding-box;
     box-shadow: 0px 3px 3px #00000029;
     border-radius: 0px 0px 8px 8px;
     color: #fff;
@@ -174,23 +206,25 @@
 
 /* need update card */
 .update-needed-container,
-.pending-contacts-container{
-    background: #FFFFFF 0% 0% no-repeat padding-box;
+.pending-contacts-container {
+    background: #ffffff 0% 0% no-repeat padding-box;
     box-shadow: 0px 6px 12px #00000029;
-    border: 1px solid #D6D6D6;
+    border: 1px solid #d6d6d6;
     margin-top: 20px;
     border-radius: 16px 16px 16px 16px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .update-needed-icon,
-.pending-contacts-icon{
-    background: #1C6FB0 0% 0% no-repeat padding-box;
-    border-radius: 16px 0px 0px 16px;   
+.pending-contacts-icon {
+    background: #1c6fb0 0% 0% no-repeat padding-box;
+    border-radius: 16px 0px 0px 16px;
     color: #fff;
     padding: 20px;
 }
+
 .update-needed-info,
 .pending-contacts-info {
     display: flex;
@@ -198,6 +232,7 @@
     padding-left: 10px;
     flex-grow: 1;
 }
+
 .update-needed-info a,
 .pending-contacts-info a {
     font-size: 18px;
@@ -205,58 +240,71 @@
     color: #313133;
     font-weight: 800;
 }
+
 .update-needed-info span {
     letter-spacing: -0.2px;
     color: #848484;
     font-size: 12px;
 }
+
 /* pending contacts */
 .pending-contacts-info {
     justify-content: center;
     align-items: center;
     padding: 0;
 }
+
 .pending-contacts-btns button {
     margin: 0;
     border-radius: 8px;
     font-weight: 800;
     padding: 10px 20px;
 }
-.accept-button{
-    background: transparent linear-gradient(180deg, #4CAF50 0%, #3AA03E 100%) 0% 0% no-repeat padding-box;
+
+.accept-button {
+    background: transparent linear-gradient(180deg, #4caf50 0%, #3aa03e 100%) 0%
+        0% no-repeat padding-box;
 }
-.decline-button{
-    background: transparent linear-gradient(180deg, #C7002E 0%, #B10029 100%) 0% 0% no-repeat padding-box;
+
+.decline-button {
+    background: transparent linear-gradient(180deg, #c7002e 0%, #b10029 100%) 0%
+        0% no-repeat padding-box;
 }
 
 /* contact workload */
-.button.status-button{
+.button.status-button {
     border-radius: 26px;
     color: #fff;
     border: 0;
 }
-.button.status-button.active-btn{
-    background: transparent linear-gradient(180deg, #4CAF50 0%, #3AA03E 100%) 0% 0% no-repeat padding-box;
+
+.button.status-button.active-btn {
+    background: transparent linear-gradient(180deg, #4caf50 0%, #3aa03e 100%) 0%
+        0% no-repeat padding-box;
 }
-.button.status-button.existing-btn{
-    background: transparent linear-gradient(180deg, #FFCE00 0%, #F5C600 100%) 0% 0% no-repeat padding-box;
+
+.button.status-button.existing-btn {
+    background: transparent linear-gradient(180deg, #ffce00 0%, #f5c600 100%) 0%
+        0% no-repeat padding-box;
     color: #363636;
 }
-.button.status-button.too_many-btn{
-    background: transparent linear-gradient(180deg, #C7002E 0%, #B10029 100%) 0% 0% no-repeat padding-box;
+
+.button.status-button.too_many-btn {
+    background: transparent linear-gradient(180deg, #c7002e 0%, #b10029 100%) 0%
+        0% no-repeat padding-box;
 }
-.button.hollow.status-button, 
-.button.hollow.status-button.disabled, 
-.button.hollow.status-button.disabled:focus, 
-.button.hollow.status-button.disabled:hover, 
-.button.hollow.status-button[disabled], 
-.button.hollow.status-button[disabled]:focus, 
+
+.button.hollow.status-button,
+.button.hollow.status-button.disabled,
+.button.hollow.status-button.disabled:focus,
+.button.hollow.status-button.disabled:hover,
+.button.hollow.status-button[disabled],
+.button.hollow.status-button[disabled]:focus,
 .button.hollow.status-button[disabled]:hover {
     border: 1px solid #363636 !important;
     color: #363636 !important;
     background: #fff !important;
     border-radius: 26px;
-
 }
 
 /* Active Contacts  */
@@ -266,11 +314,14 @@
     justify-content: center;
     padding-top: 20px;
 }
-#dash-card--DT_Dashboard_Plugin_Active_Contact  .numberCircle {
+
+#dash-card--DT_Dashboard_Plugin_Active_Contact .numberCircle {
     margin-top: -100px;
 }
+
 #dash-card--DT_Dashboard_Plugin_Active_Contact .view-all a.button {
-    background: transparent linear-gradient(180deg, #09497E 0%, #053358 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(180deg, #09497e 0%, #053358 100%) 0%
+        0% no-repeat padding-box;
     border-radius: 26px;
     color: #fff;
     font-weight: 800;
@@ -278,81 +329,165 @@
 }
 
 /* Faith Milestone Totals */
-#dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals #milestones { 
-    display: flex; 
+#dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals #milestones {
+    display: flex;
     flex-wrap: wrap;
     margin: 50px 0;
 }
-#dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .group-progress-button-wrapper {
+
+#dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals
+    .group-progress-button-wrapper {
     margin: 20px 0;
     flex-basis: 33% !important;
 }
-#dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .group-progress-button { 
-    background: transparent linear-gradient(149deg, #277CBF 0%, #1464A5 100%) 0% 0% no-repeat padding-box;
+
+#dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .group-progress-button {
+    background: transparent linear-gradient(149deg, #277cbf 0%, #1464a5 100%) 0%
+        0% no-repeat padding-box;
     box-shadow: 0px 6px 12px #00000026;
     color: #fff;
     border-radius: 50% !important;
     font-weight: 800;
 }
-#dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .group-progress-button-wrapper p {
+
+#dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals
+    .group-progress-button-wrapper
+    p {
     color: #484848;
     font-weight: 800;
     font-size: 12px;
     margin: 10px 0;
-    
 }
+
 #dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .card-body > p {
-    background: #1C6FB0 0% 0% no-repeat padding-box;
+    background: #1c6fb0 0% 0% no-repeat padding-box;
     text-align: center;
-    color: #FFFFFF;
+    color: #ffffff;
     margin-top: -10px;
     margin-left: -40px;
     margin-right: -40px;
     padding: 5px 10px;
     font-weight: 800;
 }
+
 /* Personal Benchmarks */
 #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .card-body {
     display: flex;
 }
+
 #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-chart-keys {
     flex-basis: 25%;
     margin-top: 20px;
 }
+
 #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-chart-keys li {
     padding: 10px 0px;
     display: flex;
     align-items: center;
 }
+
 #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks #benchmarks_current,
 #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks #benchmarks_previous {
     padding: 0 10px;
     color: #313133;
     font-size: 12px;
     font-weight: 800;
-} 
-#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-previous-block, 
-#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-current-block{
-    border-radius: 5px; 
-    height: 30px; 
-    width: 30px; 
+}
+
+#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-previous-block,
+#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-current-block {
+    border-radius: 5px;
+    height: 30px;
+    width: 30px;
     padding-right: 10px;
     display: inline-block;
-    
 }
-#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-previous-block{
-    background-color: #C7E3FF; 
-} 
-#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-current-block{
+
+#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-previous-block {
+    background-color: #c7e3ff;
+}
+
+#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-current-block {
     background-color: #3f729b;
 }
-#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .card-body div ul{
-    list-style: none; 
+
+#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .card-body div ul {
+    list-style: none;
     margin-left: 50px;
 }
+
 #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmark-chart-container {
-    flex-basis: 75%
+    flex-basis: 75%;
 }
+
 #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks #benchmark_chart {
     height: 300px;
+}
+
+/* taasks */
+.existing-tasks {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.existing-tasks li {
+    margin: 20px 0;
+    border-radius: 16px;
+    box-shadow: 0px 6px 12px #00000029;
+    display: flex;
+    flex-direction: column;
+}
+
+.existing-tasks a.task-contact {
+    background: transparent linear-gradient(180deg, #09497e 0%, #053358 100%) 0%
+        0% no-repeat padding-box;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    font-size: 1.2rem;
+    padding: 0 20px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+.existing-tasks .task-date {
+    background: #1c6fb0 0% 0% no-repeat padding-box;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    font-size: 1rem;
+    padding: 0 20px;
+}
+.existing-tasks .task-description {
+    margin: 10px;
+}
+.action-buttons{
+    margin: 10px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+button.existing-task-action {
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 800;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.complete-task {
+    background: transparent linear-gradient(180deg, #4caf50 0%, #3aa03e 100%) 0%
+        0% no-repeat padding-box;
+}
+.remove-task {
+    background: transparent linear-gradient(180deg, #c7002e 0%, #b10029 100%) 0%
+        0% no-repeat padding-box;
 }
