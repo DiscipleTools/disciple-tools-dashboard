@@ -332,7 +332,7 @@ window.dt_dashboard = {
 
     this.inactiveCards().forEach(function(card) {
       const menuItem = document.createElement('li')
-      menuItem.innerText = card.label
+      menuItem.innerHTML = card.label + '<span class="add-card-plus"><i class="fi-plus"></i></span>'
       menuItem.addEventListener('click', function() {
         this.add(card.handle)
       }.bind(this))

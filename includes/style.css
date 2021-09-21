@@ -1,6 +1,16 @@
 /**
  * Dashboard
  */
+
+:root {
+    --green: transparent linear-gradient(180deg, #4caf50 0%, #3aa03e 100%) 0% 0% no-repeat padding-box;
+    --red: transparent linear-gradient(180deg, #c7002e 0%, #b10029 100%) 0% 0% no-repeat padding-box;
+    --dark-blue: transparent linear-gradient(180deg, #09497e 0%, #053358 100%) 0% 0% no-repeat padding-box;
+    --light-blue: transparent linear-gradient(149deg, #277cbf 0%, #1464a5 100%) 0% 0% no-repeat padding-box;
+}
+
+
+
 .dashboard-page .dash-cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -18,7 +28,7 @@
 .dashboard-page .dash-cards .item .card {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
-    background-color: white;
+    background-color: #FFF;
     height: 100%;
 }
 
@@ -27,8 +37,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background: transparent linear-gradient(149deg, #277cbf 0%, #1464a5 100%) 0%
-        0% no-repeat padding-box;
+    background: var(--light-blue);
     box-shadow: 0px 6px 12px #00000026;
     width: 55px;
     height: 55px;
@@ -64,9 +73,8 @@
 .dashboard-page .card-header {
     height: 56px;
     width: 100%;
-    background: transparent linear-gradient(180deg, #09497e 0%, #053358 100%) 0%
-        0% no-repeat padding-box;
-    color: #fff;
+    background: var(--dark-blue);
+    color: #FFF;
     display: flex;
     justify-content: left;
     align-items: center;
@@ -84,10 +92,9 @@
 }
 
 .dashboard-page .numberCircle {
-    background: transparent linear-gradient(149deg, #277cbf 0%, #1464a5 100%) 0%
-        0% no-repeat padding-box;
+    background: var(--light-blue);
     box-shadow: 0px 6px 12px #00000026;
-    color: white;
+    color: #FFF;
     font-weight: 900;
     display: inline-block;
     border-radius: 50%;
@@ -137,9 +144,8 @@
     padding: 0;
 }
 #add-card #add-menu li {
-    background: transparent linear-gradient(99deg, #09497e 0%, #053358 100%) 0%
-        0% no-repeat padding-box;
-    color: #fff;
+    background:  var(--dark-blue);
+    color: #FFF;
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 16px;
     font-weight: bold;
@@ -151,17 +157,13 @@
     cursor: pointer;
 }
 
-#add-card #add-menu li::after {
-    content: "<i class=fi-arrow-left></i>";
-}
-
 /* card footer */
 .card-nav-btn {
     cursor: pointer;
 }
 
 .card-footer {
-    background: #ffffff 0% 0% no-repeat padding-box;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px -3px 6px #00000029;
     border-radius: 0px 0px 16px 16px;
     padding: 10px 20px;
@@ -187,7 +189,7 @@
 
 .card-move-right,
 .card-move-left {
-    background: #ffffff 0% 0% no-repeat padding-box;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 1px solid #dbdbdb;
     color: #626262;
     font-weight: 800;
@@ -195,11 +197,10 @@
 }
 
 .card-remove {
-    background: transparent linear-gradient(180deg, #c7002e 0%, #b10029 100%) 0%
-        0% no-repeat padding-box;
+    background: var(--red);
     box-shadow: 0px 3px 3px #00000029;
     border-radius: 0px 0px 8px 8px;
-    color: #fff;
+    color: #FFF;
     font-weight: 800;
     padding: 5px 10px;
 }
@@ -207,7 +208,7 @@
 /* need update card */
 .update-needed-container,
 .pending-contacts-container {
-    background: #ffffff 0% 0% no-repeat padding-box;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 6px 12px #00000029;
     border: 1px solid #d6d6d6;
     margin-top: 20px;
@@ -221,7 +222,7 @@
 .pending-contacts-icon {
     background: #1c6fb0 0% 0% no-repeat padding-box;
     border-radius: 16px 0px 0px 16px;
-    color: #fff;
+    color: #FFF;
     padding: 20px;
 }
 
@@ -262,27 +263,25 @@
 }
 
 .accept-button {
-    background: transparent linear-gradient(180deg, #4caf50 0%, #3aa03e 100%) 0%
-        0% no-repeat padding-box;
+    background: var(--green);
 }
 
 .decline-button {
-    background: transparent linear-gradient(180deg, #c7002e 0%, #b10029 100%) 0%
-        0% no-repeat padding-box;
+    background: var(--red);
 }
 
 /* contact workload */
 .button.status-button {
     border-radius: 26px;
-    color: #fff;
+    color: #FFF;
     border: 0;
 }
 
 .button.status-button.active-btn {
-    background: transparent linear-gradient(180deg, #4caf50 0%, #3aa03e 100%) 0%
-        0% no-repeat padding-box;
+    background: var(--green);
 }
 
+/* yelllow btn */
 .button.status-button.existing-btn {
     background: transparent linear-gradient(180deg, #ffce00 0%, #f5c600 100%) 0%
         0% no-repeat padding-box;
@@ -290,8 +289,7 @@
 }
 
 .button.status-button.too_many-btn {
-    background: transparent linear-gradient(180deg, #c7002e 0%, #b10029 100%) 0%
-        0% no-repeat padding-box;
+    background: var(--red);
 }
 
 .button.hollow.status-button,
@@ -303,7 +301,7 @@
 .button.hollow.status-button[disabled]:hover {
     border: 1px solid #363636 !important;
     color: #363636 !important;
-    background: #fff !important;
+    background: #FFF !important;
     border-radius: 26px;
 }
 
@@ -320,10 +318,9 @@
 }
 
 #dash-card--DT_Dashboard_Plugin_Active_Contact .view-all a.button {
-    background: transparent linear-gradient(180deg, #09497e 0%, #053358 100%) 0%
-        0% no-repeat padding-box;
+    background: var(--dark-blue);
     border-radius: 26px;
-    color: #fff;
+    color: #FFF;
     font-weight: 800;
     margin: 40px 0;
 }
@@ -342,10 +339,9 @@
 }
 
 #dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .group-progress-button {
-    background: transparent linear-gradient(149deg, #277cbf 0%, #1464a5 100%) 0%
-        0% no-repeat padding-box;
+    background: var(--light-blue);
     box-shadow: 0px 6px 12px #00000026;
-    color: #fff;
+    color: #FFF;
     border-radius: 50% !important;
     font-weight: 800;
 }
@@ -362,7 +358,7 @@
 #dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .card-body > p {
     background: #1c6fb0 0% 0% no-repeat padding-box;
     text-align: center;
-    color: #ffffff;
+    color: #FFFFFF;
     margin-top: -10px;
     margin-left: -40px;
     margin-right: -40px;
@@ -425,13 +421,13 @@
 }
 
 /* taasks */
-.existing-tasks {
+#dash-card--DT_Dashboard_Plugin_Tasks .existing-tasks {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-.existing-tasks li {
+#dash-card--DT_Dashboard_Plugin_Tasks .existing-tasks li {
     margin: 20px 0;
     border-radius: 16px;
     box-shadow: 0px 6px 12px #00000029;
@@ -439,10 +435,9 @@
     flex-direction: column;
 }
 
-.existing-tasks a.task-contact {
-    background: transparent linear-gradient(180deg, #09497e 0%, #053358 100%) 0%
-        0% no-repeat padding-box;
-    color: #fff;
+#dash-card--DT_Dashboard_Plugin_Tasks .existing-tasks a.task-contact {
+    background: var(--dark-blue);
+    color: #FFF;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -452,9 +447,9 @@
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
 }
-.existing-tasks .task-date {
+#dash-card--DT_Dashboard_Plugin_Tasks .existing-tasks .task-date {
     background: #1c6fb0 0% 0% no-repeat padding-box;
-    color: #fff;
+    color: #FFF;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -462,19 +457,16 @@
     font-size: 1rem;
     padding: 0 20px;
 }
-.existing-tasks .task-description {
+#dash-card--DT_Dashboard_Plugin_Tasks .existing-tasks .task-description {
     margin: 10px;
 }
-.action-buttons{
+#dash-card--DT_Dashboard_Plugin_Tasks .action-buttons{
     margin: 10px;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
 }
-button.existing-task-action {
+#dash-card--DT_Dashboard_Plugin_Tasks button.existing-task-action {
     padding: 10px 20px;
     margin-bottom: 10px;
-    color: #fff;
+    color: #FFF;
     border-radius: 8px;
     font-weight: 800;
     width: 95%;
@@ -483,11 +475,31 @@ button.existing-task-action {
     align-items: center;
 }
 
-.complete-task {
-    background: transparent linear-gradient(180deg, #4caf50 0%, #3aa03e 100%) 0%
-        0% no-repeat padding-box;
+#dash-card--DT_Dashboard_Plugin_Tasks .complete-task {
+    background: var(--green);
 }
-.remove-task {
-    background: transparent linear-gradient(180deg, #c7002e 0%, #b10029 100%) 0%
-        0% no-repeat padding-box;
+#dash-card--DT_Dashboard_Plugin_Tasks .remove-task {
+    background: var(--red);
+}
+
+#add-card li {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+#add-card .add-card-plus {
+    background: var(--green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0px 6px 12px #00000026;
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+}
+
+#add-card .fi-plus {
+    font-size: 11px;
+    line-height: 11px;    
 }
