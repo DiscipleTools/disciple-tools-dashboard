@@ -36,7 +36,7 @@ add_action( 'after_setup_theme', function() {
     /*
      * Check if the Disciple.Tools theme is loaded and is the latest required version
      */
-    $is_theme_dt = strpos( $wp_theme->get_template(), "disciple-tools-theme" ) !== false || $wp_theme->name === "Disciple.Tools" || $wp_theme->name === "Disciple.Tools";
+    $is_theme_dt = class_exists( "Disciple_Tools" );
 
     if ( !$is_theme_dt || version_compare( $version, $dt_dashboard_required_dt_theme_version, "<" ) ) {
         if ( ! is_multisite() ) {
