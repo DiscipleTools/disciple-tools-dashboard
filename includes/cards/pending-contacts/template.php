@@ -6,4 +6,6 @@
         <?php echo $card->label ?>
     </span>
 </div>
-<div id="needs_accepting_list" class="card-body"></div>
+<div id="pending-contacts_scrollbar" class="card-body">
+    <div id="needs_accepting_list"></div>
+</div>

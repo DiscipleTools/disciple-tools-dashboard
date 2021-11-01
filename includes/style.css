@@ -1,15 +1,17 @@
 /**
  * Dashboard
  */
+ body {
+    font-family: 'Poppins', sans-serif !important;
+ }
 
 :root {
     --green: transparent linear-gradient(180deg, #4caf50 0%, #3aa03e 100%) 0% 0% no-repeat padding-box;
+    --yellow: transparent linear-gradient(180deg, #ffce00 0%, #f5c600 100%) 0% 0% no-repeat padding-box;
     --red: transparent linear-gradient(180deg, #c7002e 0%, #b10029 100%) 0% 0% no-repeat padding-box;
     --dark-blue: transparent linear-gradient(180deg, #09497e 0%, #053358 100%) 0% 0% no-repeat padding-box;
     --light-blue: transparent linear-gradient(149deg, #277cbf 0%, #1464a5 100%) 0% 0% no-repeat padding-box;
 }
-
-
 
 .dashboard-page .dash-cards {
     display: grid;
@@ -30,6 +32,7 @@
     border-radius: 10px;
     background-color: #FFF;
     height: 100%;
+    /* height: 300px; */
 }
 
 .dashboard-page .count-square {
@@ -43,6 +46,7 @@
     height: 55px;
     margin-right: 20px;
     margin-top: 40px;
+    z-index: 10;
 }
 
 .dashboard-page .count-square span {
@@ -55,9 +59,27 @@
     height: 100%;
 }
 
+/* #add-card #add-menu, */
 .card-body {
     padding: 10px 40px;
     flex-grow: 1;
+    height: 150px;
+}
+
+#faith-milestone-totals_scrollbar,
+#pending-contacts_scrollbar,
+#update-needed_scrollbar,
+#tasks_scrollbar,
+#seeker-path-progress_scrollbar,
+#personal-benchmarks_scrollbar,
+#contact-workload_scrollbar,
+#add-card #add-menu {
+    /* height: 200px; */
+    overflow: auto;
+}
+.scrollbar-track.scrollbar-track-y {
+    width: 4px;
+    background-color: #fff;
 }
 
 .button.status-button {
@@ -81,6 +103,7 @@
     font-weight: 800;
     font-size: 1.3rem;
     padding: 0 20px;
+    /* margin-bottom: 30px; */
 }
 
 .dashboard-page .view-all {
@@ -91,6 +114,9 @@
     margin-bottom: 0;
 }
 
+#dash-card--DT_Dashboard_Plugin_Active_Contact .card-body{
+    overflow: visible;
+}
 .dashboard-page .numberCircle {
     background: var(--light-blue);
     box-shadow: 0px 6px 12px #00000026;
@@ -134,27 +160,7 @@
 .existing-task-action {
     font-size: 10px;
     color: #1779ba;
-    margin: 0 5px;
-}
-
-/* add cards card */
-#add-card #add-menu {
-    margin: 20px;
-    list-style-type: none;
-    padding: 0;
-}
-#add-card #add-menu li {
-    background:  var(--dark-blue);
-    color: #FFF;
-    box-shadow: 0px 3px 6px #00000029;
-    border-radius: 16px;
-    font-weight: bold;
-    margin: 10px 0;
-    padding: 10px 20px;
-}
-
-#add-card #add-menu li:hover {
-    cursor: pointer;
+    /* margin: 0 5px; */
 }
 
 /* card footer */
@@ -206,6 +212,7 @@
 }
 
 /* need update card */
+/* 1312 */
 .update-needed-container,
 .pending-contacts-container {
     background: #FFFFFF 0% 0% no-repeat padding-box;
@@ -280,14 +287,10 @@
 .button.status-button.active-btn {
     background: var(--green);
 }
-
-/* yelllow btn */
 .button.status-button.existing-btn {
-    background: transparent linear-gradient(180deg, #ffce00 0%, #f5c600 100%) 0%
-        0% no-repeat padding-box;
+    background: var(--yellow);
     color: #363636;
 }
-
 .button.status-button.too_many-btn {
     background: var(--red);
 }
@@ -332,8 +335,7 @@
     margin: 50px 0;
 }
 
-#dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals
-    .group-progress-button-wrapper {
+#dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .group-progress-button-wrapper {
     margin: 20px 0;
     flex-basis: 33% !important;
 }
@@ -420,7 +422,7 @@
     height: 300px;
 }
 
-/* taasks */
+/* tasks */
 #dash-card--DT_Dashboard_Plugin_Tasks .existing-tasks {
     list-style-type: none;
     padding: 0;
@@ -435,7 +437,7 @@
     flex-direction: column;
 }
 
-#dash-card--DT_Dashboard_Plugin_Tasks .existing-tasks a.task-contact {
+#dash-card--DT_Dashboard_Plugin_Tasks .existing-tasks .task-contact {
     background: var(--dark-blue);
     color: #FFF;
     display: flex;
@@ -443,7 +445,7 @@
     align-items: center;
     font-weight: 800;
     font-size: 1.2rem;
-    padding: 0 20px;
+    line-height: 3rem;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
 }
@@ -454,11 +456,13 @@
     justify-content: center;
     align-items: center;
     font-weight: 800;
-    font-size: 1rem;
-    padding: 0 20px;
+    font-size: .8rem;
+    line-height: 2.5rem;
+    margin-bottom: 10px;
 }
 #dash-card--DT_Dashboard_Plugin_Tasks .existing-tasks .task-description {
     margin: 10px;
+    margin-top: 100px !important;
 }
 #dash-card--DT_Dashboard_Plugin_Tasks .action-buttons{
     margin: 10px;
@@ -469,10 +473,11 @@
     color: #FFF;
     border-radius: 8px;
     font-weight: 800;
-    width: 95%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 12px;
 }
 
 #dash-card--DT_Dashboard_Plugin_Tasks .complete-task {
@@ -482,11 +487,30 @@
     background: var(--red);
 }
 
-#add-card li {
-    display: flex;
-    justify-content: left;
-    align-items: center;
+/* add cards card */
+#add-card #add-menu {
+    margin: 20px;
+    list-style-type: none;
+    padding: 0;
 }
+#add-card #add-menu li {
+    /* background:  var(--dark-blue); */
+    background: transparent linear-gradient(99deg, #09497E 0%, #053358 100%) 0% 0% no-repeat padding-box;
+    color: #FFF;
+    box-shadow: 0px 3px 6px #00000029;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 10px 20px;
+}
+
+#add-card #add-menu li:hover {
+    cursor: pointer;
+}
+
 #add-card .add-card-plus {
     background: var(--green);
     display: flex;

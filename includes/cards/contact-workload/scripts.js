@@ -11,6 +11,7 @@
         selected.blur()
       }
     }
+
     color_workload_buttons(context.wpApiDashboard.workload_status )
     status_buttons.on( 'click', function () {
       $(context.element).find("#workload-spinner").addClass("active")
@@ -26,8 +27,10 @@
         status_buttons.addClass("hollow")
       })
     })
+
+    // smooth scrollbar
+    let Scrollbar = window.Scrollbar
+    Scrollbar.init(document.querySelector('#contact-workload_scrollbar'))
+   
   })
 })(window.jQuery)
-
-
-

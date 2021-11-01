@@ -3,7 +3,7 @@
     <div style="display: inline-block"
         class="stats-spinner loading-spinner active"></div>
 </div>
-<div class="card-body">
+<div id="personal-benchmarks_scrollbar" class="card-body">
     <div class="benchmarks-chart-keys">
         <ul>
             <li>
