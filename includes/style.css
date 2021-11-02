@@ -61,22 +61,16 @@
 
 /* #add-card #add-menu, */
 .card-body {
-    padding: 10px 40px;
+    padding: 20px 40px 50px;
     flex-grow: 1;
     height: 150px;
 }
 
-#faith-milestone-totals_scrollbar,
-#pending-contacts_scrollbar,
-#update-needed_scrollbar,
-#tasks_scrollbar,
-#seeker-path-progress_scrollbar,
-#personal-benchmarks_scrollbar,
-#contact-workload_scrollbar,
-#add-card #add-menu {
-    /* height: 200px; */
+/* .card-body--scroll {
+    height: 200px;
     overflow: auto;
-}
+    width: 100
+} */
 .scrollbar-track.scrollbar-track-y {
     width: 4px;
     background-color: #fff;
@@ -87,9 +81,9 @@
     border-radius: 25px;
 }
 
-#personal-benchmarks .card-body {
+/* #personal-benchmarks .card-body {
     display: flex;
-}
+} */
 
 /* .dashboard-page .card-title, */
 .dashboard-page .card-header {
@@ -104,10 +98,12 @@
     font-size: 1.3rem;
     padding: 0 20px;
     /* margin-bottom: 30px; */
+    box-shadow: 0px 6px 12px #00000029;
 }
 
 .dashboard-page .view-all {
     text-align: center;
+    margin-top: -40px;
 }
 
 .dashboard-page .view-all button {
@@ -332,7 +328,12 @@
 #dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals #milestones {
     display: flex;
     flex-wrap: wrap;
-    margin: 50px 0;
+    margin: 20px 80px;
+}
+
+#dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .card-body {
+    padding-top: 10px;
+    height: auto;
 }
 
 #dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .group-progress-button-wrapper {
@@ -357,7 +358,7 @@
     margin: 10px 0;
 }
 
-#dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .card-body > p {
+#dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .card-body > .scroll-content > p {
     background: #1c6fb0 0% 0% no-repeat padding-box;
     text-align: center;
     color: #FFFFFF;
@@ -370,7 +371,12 @@
 
 /* Personal Benchmarks */
 #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .card-body {
+    height: auto;
+}
+#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .card-body .amchart-container{
+    width: 100%;
     display: flex;
+    height: auto;
 }
 
 #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-chart-keys {
@@ -389,7 +395,7 @@
     padding: 0 10px;
     color: #313133;
     font-size: 12px;
-    font-weight: 800;
+    font-weight: 500;
 }
 
 #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-previous-block,
@@ -527,3 +533,26 @@
     font-size: 11px;
     line-height: 11px;    
 }
+
+
+/* Seeker Path Progress */
+#dash-card--DT_Dashboard_Plugin_Seeker_Path_Progress .amcharts-Container{
+    display: flex;
+}
+/* chart */
+#dash-card--DT_Dashboard_Plugin_Seeker_Path_Progress .amcharts-Sprite-group .amcharts-Container-group {
+    flex-basis: 50%;
+ }
+/* keys */
+#dash-card--DT_Dashboard_Plugin_Seeker_Path_Progress .amcharts-Sprite-group .amcharts-Container-group .amcharts-Component-group .amcharts-Legend-group{
+    flex-basis: 50%;
+}
+
+
+
+/* mobile */
+@media only screen and (max-width: 320px) {
+    .dashboard-page .dash-cards {
+        display: block;
+    }
+  }

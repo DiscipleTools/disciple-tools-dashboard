@@ -3,7 +3,7 @@
      <div style="display: inline-block"
           class="stats-spinner loading-spinner active"></div>
 </div>
-<div id="faith-milestone-totals_scrollbar" class="card-body">
+<div class="card-body card-body--scroll">
      <p><?php esc_html_e("Milestones on your active contacts", 'disciple-tools-dashboard') ?></p>
      <div id="milestones"></div>
 </div>

@@ -27,10 +27,5 @@
         status_buttons.addClass("hollow")
       })
     })
-
-    // smooth scrollbar
-    let Scrollbar = window.Scrollbar
-    Scrollbar.init(document.querySelector('#contact-workload_scrollbar'))
-   
   })
 })(window.jQuery)

@@ -209,6 +209,7 @@ window.dt_dashboard = {
    */
   fireOnAdd(handle) {
     window.setTimeout(function() {
+      this.registerScrollbar(handle)
       const card = this.find(handle)
       card.onAdd.forEach(function (callback) {
         callback(this.cardContext(card.handle))
@@ -268,7 +269,16 @@ window.dt_dashboard = {
     this.renderAddMenu()
     this.storeSort()
   },
-
+  
+  registerScrollbar:function(handle) {
+    const cardEl = this.findEl(handle)
+    const cardBody = cardEl.querySelector('.card-body--scroll')
+    if (!cardBody) {
+      return
+     }
+    let Scrollbar = window.Scrollbar
+    Scrollbar.init(cardBody)
+  },
   /**
    * Add an add callback to a card
    * @param handle

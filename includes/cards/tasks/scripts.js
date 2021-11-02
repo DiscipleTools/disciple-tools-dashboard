@@ -118,9 +118,5 @@
         });
     }
 
-    // smooth scrollbar
-    var Scrollbar = window.Scrollbar;
-    Scrollbar.init(document.querySelector('#tasks_scrollbar'), options);
-
   });
 })(window.jQuery);

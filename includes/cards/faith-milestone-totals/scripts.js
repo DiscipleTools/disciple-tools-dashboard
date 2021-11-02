@@ -30,9 +30,5 @@
       $(context.element).find("#milestones").html(milestones)
     }
 
-    // smooth scrollbar
-    let Scrollbar = window.Scrollbar
-    Scrollbar.init(document.querySelector('#faith-milestone-totals_scrollbar'))
-
   })
 })(window.jQuery)

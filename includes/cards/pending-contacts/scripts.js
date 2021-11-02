@@ -37,10 +37,6 @@
           total_pending_html.html(total)
         })
     })
-
-    // smooth scrollbar
-    let Scrollbar = window.Scrollbar
-    Scrollbar.init(document.querySelector('#pending-contacts_scrollbar'))
   })
 })(window.jQuery)
 

@@ -97,10 +97,6 @@
       createSeries("previous", "Previous", false);
       createSeries("current", "Current", false);
     }
-
-    // smooth scrollbar
-    let Scrollbar = window.Scrollbar
-    Scrollbar.init(document.querySelector('#personal-benchmarks_scrollbar'))
   })
 })(window.jQuery)
 

@@ -75,10 +75,6 @@
       chart.legend.labels.template.text = "[font-size: 10px]{category}: {value}[/]";
 
     }
-
-    // smooth scrollbar
-    let Scrollbar = window.Scrollbar
-    Scrollbar.init(document.querySelector('#seeker-path-progress_scrollbar'))
     
   })
 })(window.jQuery)
