@@ -72,9 +72,7 @@
 
       chart.legend = new am4charts.Legend();
       chart.legend.valueLabels.template.text = "";
-      chart.legend.labels.template.text = "[font-size: 10px]{category}: {value}[/]";
-
+      chart.legend.labels.template.text = "[font-size: 10px]{category}: {value}[/]"
     }
-    
   })
 })(window.jQuery)
