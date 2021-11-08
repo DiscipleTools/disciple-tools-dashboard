@@ -8,7 +8,7 @@
           <?php $card->render(); ?>
           <div class="card-footer">
                <span class="card-nav-btn" onclick="toggleCardNav('<?php echo $card->handle; ?>')">
-                    <i class="fas fa-ellipsis-v"></i>...
+               <svg height="20" viewBox="0 0 4 20" width="20" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="2"/><circle cx="2" cy="10" r="2"/><circle cx="2" cy="18" r="2"/></svg>
                </span>
                
                <div class="card-nav" id="card-nav-<?php echo $card->handle; ?>">
@@ -22,6 +22,11 @@
                         <i class="fi-x"></i> Remove Tile
                     </div>
                </div>
+
+
+               
+               
+
           </div>
      </div>
 </div>
@@ -30,5 +35,16 @@
      function toggleCardNav($id) {
           var element = document.getElementById("card-nav-" + $id);
           element.classList.toggle("show");
+          
+          var blank = document.getElementById("blank");
+          blank.classList.toggle("show");
+          console.log("blankkk");
+
+
+          blank.onclick = function(){
+               element.classList.toggle("show");
+               blank.classList.toggle("show");
+          };
+
      }
 </script>

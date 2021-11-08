@@ -61,7 +61,7 @@
 .card-body {
     padding: 20px 40px 50px;
     flex-grow: 1;
-    height: 150px;
+    height: 250px;
 }
 
 .scrollbar-track.scrollbar-track-y {
@@ -148,16 +148,32 @@
 }
 
 /* card footer */
-.card-nav-btn {
-    cursor: pointer;
-}
-
 .card-footer {
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px -3px 6px #00000029;
     border-radius: 0px 0px 16px 16px;
-    padding: 10px 20px;
+    padding-top: 5px;
     position: relative;
+    display: flex;
+}
+.card-footer .card-nav-btn {
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 5px;
+}
+.card-footer .card-nav-btn svg {
+    fill: #626262;
+}
+
+#blank {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 99;
 }
 
 .show {
@@ -171,6 +187,7 @@
     position: absolute;
     bottom: 30px;
     left: 30px;
+    z-index: 100;
 }
 
 .card-move-left {
@@ -196,7 +213,6 @@
 }
 
 /* need update card */
-/* 1312 */
 .update-needed-container,
 .pending-contacts-container {
     background: #FFFFFF 0% 0% no-repeat padding-box;
@@ -245,9 +261,12 @@
     justify-content: center;
     align-items: center;
     padding: 0;
+    /* padding-left: 5px; */
 }
 
 .pending-contacts-btns button {
+    justify-content: center;
+    align-items: center;
     margin: 0;
     border-radius: 8px;
     font-weight: 800;
@@ -319,7 +338,7 @@
 #dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals #milestones {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    margin: 20px 80px;
+    margin: 20px 60px;
 }
 
 #dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .card-body {
@@ -546,7 +565,7 @@
 
 
 
-/* mobile - iphone */
+/* mobile - phone */
 @media only screen and (max-width: 700px) {
     #content {
         max-width: 300px;
@@ -569,7 +588,6 @@
         flex-basis: 100%;
         width: 100%;
     }
-    /* TODO: fix bar chart labels */
 
     #dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals #milestones {
         grid-template-columns: 1fr 1fr;
@@ -583,7 +601,6 @@
 
 /* mobile - ipad */
 @media only screen and (max-width: 972px) {
-    
 
     .card-body {
         padding: 10px;
@@ -602,13 +619,11 @@
     }
 
     /* seeker */
-    /* #dash-card--DT_Dashboard_Plugin_Seeker_Path_Progress {
+    #dash-card--DT_Dashboard_Plugin_Seeker_Path_Progress {
         --dashboard-card-column: span 4 !important;
-    } */
-
+    }
 
     /* personal benchmarks  */
-
     .amchart-container{
         flex-direction: column;
     }
@@ -618,30 +633,20 @@
         flex-basis: 100%;
         width: 100%;
     }
-    /* TODO: fix bar chart labels */
-
-
-    /* Faith Milestone Totals */
-    /* #dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals #milestones {
-        grid-template-columns: 50% 50%;
-        margin: 0;
-    } */
 
     /* Active_Contact */
-
     #dash-card--DT_Dashboard_Plugin_Active_Contact .card-body {
         height: auto;
     }
+    
 }
 
-/* 1080 */
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 1348px) {
     #content {
         max-width: 760px;
     }
-
-    /* cards */
+    
     .dashboard-page .dash-cards {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 2fr 2fr;
     }
 }
