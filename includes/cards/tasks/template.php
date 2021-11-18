@@ -5,6 +5,6 @@
           class="stats-spinner loading-spinner active">
      </div>
 </div>
-<div class="card-body">
+<div class="card-body card-body--scroll">
      <ul class="existing-tasks"></ul>
 </div>

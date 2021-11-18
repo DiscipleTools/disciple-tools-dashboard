@@ -1,6 +1,18 @@
 /**
  * Dashboard
  */
+ body {
+    font-family: 'Poppins', sans-serif !important;
+ }
+
+:root {
+    --green: transparent linear-gradient(180deg, #4caf50 0%, #3aa03e 100%) 0% 0% no-repeat padding-box;
+    --yellow: transparent linear-gradient(180deg, #ffce00 0%, #f5c600 100%) 0% 0% no-repeat padding-box;
+    --red: transparent linear-gradient(180deg, #c7002e 0%, #b10029 100%) 0% 0% no-repeat padding-box;
+    --dark-blue: transparent linear-gradient(180deg, #09497e 0%, #053358 100%) 0% 0% no-repeat padding-box;
+    --light-blue: transparent linear-gradient(149deg, #277cbf 0%, #1464a5 100%) 0% 0% no-repeat padding-box;
+}
+
 .dashboard-page .dash-cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -14,78 +26,86 @@
 .dashboard-page .dash-cards .item {
     padding: 10px;
 }
+
 .dashboard-page .dash-cards .item .card {
-    /* border: 1px solid #E6E6E6;
-    padding: 10px; */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
-    background-color: white;
-    height: 100%;
+    background-color: #FFF;
 }
+
 .dashboard-page .count-square {
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background: transparent linear-gradient(149deg, #277CBF 0%, #1464A5 100%) 0% 0% no-repeat padding-box;
+    background: var(--light-blue);
     box-shadow: 0px 6px 12px #00000026;
     width: 55px;
     height: 55px;
     margin-right: 20px;
     margin-top: 40px;
+    z-index: 10;
 }
+
 .dashboard-page .count-square span {
     font-size: 1.5em;
 }
-.card-container{
-    display: flex; 
-    flex-direction: column; 
-    height: 100%
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
-.card-body{
-    padding: 10px 40px;
+
+/* #add-card #add-menu, */
+.card-body {
+    padding: 20px 40px 50px;
     flex-grow: 1;
+    height: 250px;
 }
-.button.status-button{
+
+.scrollbar-track.scrollbar-track-y {
+    width: 4px;
+    background-color: #fff;
+}
+
+.button.status-button {
     width: 100%;
     border-radius: 25px;
 }
-#personal-benchmarks .card-body{
-    display: flex;
-}
+
 /* .dashboard-page .card-title, */
 .dashboard-page .card-header {
     height: 56px;
     width: 100%;
-    background: transparent linear-gradient(180deg, #09497E 0%, #053358 100%) 0% 0% no-repeat padding-box;
-    color: #fff;
+    background: var(--dark-blue);
+    color: #FFF;
     display: flex;
     justify-content: left;
     align-items: center;
     font-weight: 800;
     font-size: 1.3rem;
     padding: 0 20px;
-
-
-    /* padding-left: 20px;
-    padding: 16px 30px; */
-    /* font: normal normal 800 18px/27px Poppins; */
-
-    /* margin: 0; */
-    /* margin-left: 10px;
-    font-size: 1.4rem;
-    vertical-align: middle; */
+    box-shadow: 0px 6px 12px #00000029;
 }
+
 .dashboard-page .view-all {
     text-align: center;
+    margin-top: -40px;
 }
+
 .dashboard-page .view-all button {
     margin-bottom: 0;
 }
+
+#dash-card--DT_Dashboard_Plugin_Active_Contact .card-body{
+    overflow: visible;
+}
+
 .dashboard-page .numberCircle {
-    background: transparent linear-gradient(149deg, #277CBF 0%, #1464A5 100%) 0% 0% no-repeat padding-box;
+    background: var(--light-blue);
     box-shadow: 0px 6px 12px #00000026;
-    color: white;
+    color: #FFF;
     font-weight: 900;
     display: inline-block;
     border-radius: 50%;
@@ -93,21 +113,26 @@
     font-size: 5rem;
     margin-bottom: 20px;
     height: 150px;
-    width: 150px;;
+    width: 150px;
 }
-.dashboard-page .numberCircle:before, .dashboard-page .numberCircle:after {
-    content: '\200B';
+
+.dashboard-page .numberCircle:before,
+.dashboard-page .numberCircle:after {
+    content: "\200B";
     display: inline-block;
     line-height: 0px;
     padding-top: 50%;
     padding-bottom: 50%;
 }
+
 .dashboard-page .numberCircle:before {
     padding-left: 8px;
 }
+
 .dashboard-page .numberCircle:after {
     padding-right: 8px;
 }
+
 @media screen and (max-width: 640px) {
     .dashboard-page .dash-cards .item {
         flex-basis: 100% !important;
@@ -120,163 +145,173 @@
 .existing-task-action {
     font-size: 10px;
     color: #1779ba;
-    margin: 0 5px;
 }
-
-
-
-/* add cards card */
-#add-card #add-menu{
-    margin: 20px;
-    list-style-type: none;
-    padding: 0;
-    
-}
-#add-card #add-menu li {
-    background: transparent linear-gradient(99deg, #09497E 0%, #053358 100%) 0% 0% no-repeat padding-box;
-    color: #fff;
-    box-shadow: 0px 3px 6px #00000029;
-    border-radius: 16px;
-    font-weight: bold;
-    margin: 10px 0;
-    padding: 10px 20px;
-}
-#add-card #add-menu li:hover{
-    cursor: pointer;
-}
-
 
 /* card footer */
-.card-nav-btn{
-    cursor: pointer;
-}
 .card-footer {
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px -3px 6px #00000029;
     border-radius: 0px 0px 16px 16px;
-    padding: 10px 20px;
+    padding-top: 5px;
     position: relative;
+    display: flex;
 }
+.card-footer .card-nav-btn {
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 5px;
+}
+.card-footer .card-nav-btn svg {
+    fill: #626262;
+}
+
+#blank {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 99;
+}
+
 .show {
     display: block !important;
 }
+
 .card-nav {
     display: none;
     cursor: pointer;
     width: 150px;
     position: absolute;
     bottom: 30px;
-    left: 30px
+    left: 30px;
+    z-index: 100;
 }
+
 .card-move-left {
     border-radius: 8px 8px 0px 0px;
 }
+
 .card-move-right,
 .card-move-left {
     background: #FFFFFF 0% 0% no-repeat padding-box;
-    border: 1px solid #DBDBDB;
+    border: 1px solid #dbdbdb;
     color: #626262;
     font-weight: 800;
     padding: 5px 10px;
 }
+
 .card-remove {
-    background: transparent linear-gradient(180deg, #C7002E 0%, #B10029 100%) 0% 0% no-repeat padding-box;
+    background: var(--red);
     box-shadow: 0px 3px 3px #00000029;
     border-radius: 0px 0px 8px 8px;
-    color: #fff;
+    color: #FFF;
     font-weight: 800;
     padding: 5px 10px;
 }
 
 /* need update card */
 .update-needed-container,
-.pending-contacts-container{
+.pending-contacts-container {
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 6px 12px #00000029;
-    border: 1px solid #D6D6D6;
+    border: 1px solid #d6d6d6;
     margin-top: 20px;
     border-radius: 16px 16px 16px 16px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .update-needed-icon,
-.pending-contacts-icon{
-    background: #1C6FB0 0% 0% no-repeat padding-box;
-    border-radius: 16px 0px 0px 16px;   
-    color: #fff;
+.pending-contacts-icon {
+    background: #1c6fb0 0% 0% no-repeat padding-box;
+    border-radius: 16px 0px 0px 16px;
+    color: #FFF;
     padding: 20px;
+    margin: 0px;
 }
+
 .update-needed-info,
 .pending-contacts-info {
     display: flex;
     flex-direction: column;
-    
     padding-left: 10px;
     flex-grow: 1;
 }
+
 .update-needed-info a,
 .pending-contacts-info a {
-    /* font: normal normal 800 18px/27px Poppins; */
     font-size: 18px;
     letter-spacing: -0.36px;
     color: #313133;
     font-weight: 800;
 }
+
 .update-needed-info span {
-    /* text-align: left;
-    font: italic normal medium 10px/16px Poppins; */
     letter-spacing: -0.2px;
     color: #848484;
     font-size: 12px;
 }
+
 /* pending contacts */
 .pending-contacts-info {
     justify-content: center;
     align-items: center;
     padding: 0;
+    /* padding-left: 5px; */
 }
+
 .pending-contacts-btns button {
+    justify-content: center;
+    align-items: center;
     margin: 0;
     border-radius: 8px;
     font-weight: 800;
     padding: 10px 20px;
 }
-.accept-button{
-    background: transparent linear-gradient(180deg, #4CAF50 0%, #3AA03E 100%) 0% 0% no-repeat padding-box;
+
+.accept-button {
+    background: var(--green);
 }
-.decline-button{
-    background: transparent linear-gradient(180deg, #C7002E 0%, #B10029 100%) 0% 0% no-repeat padding-box;
+
+.decline-button {
+    background: var(--red);
 }
 
 /* contact workload */
-.button.status-button{
+.button.status-button {
     border-radius: 26px;
-    color: #fff;
+    color: #FFF;
     border: 0;
 }
-.button.status-button.active-btn{
-    background: transparent linear-gradient(180deg, #4CAF50 0%, #3AA03E 100%) 0% 0% no-repeat padding-box;
+
+.button.status-button.active-btn {
+    background: var(--green);
 }
-.button.status-button.existing-btn{
-    background: transparent linear-gradient(180deg, #FFCE00 0%, #F5C600 100%) 0% 0% no-repeat padding-box;
+
+.button.status-button.existing-btn {
+    background: var(--yellow);
     color: #363636;
 }
-.button.status-button.too_many-btn{
-    background: transparent linear-gradient(180deg, #C7002E 0%, #B10029 100%) 0% 0% no-repeat padding-box;
+
+.button.status-button.too_many-btn {
+    background: var(--red);
 }
-.button.hollow.status-button, 
-.button.hollow.status-button.disabled, 
-.button.hollow.status-button.disabled:focus, 
-.button.hollow.status-button.disabled:hover, 
-.button.hollow.status-button[disabled], 
-.button.hollow.status-button[disabled]:focus, 
+
+.button.hollow.status-button,
+.button.hollow.status-button.disabled,
+.button.hollow.status-button.disabled:focus,
+.button.hollow.status-button.disabled:hover,
+.button.hollow.status-button[disabled],
+.button.hollow.status-button[disabled]:focus,
 .button.hollow.status-button[disabled]:hover {
     border: 1px solid #363636 !important;
     color: #363636 !important;
-    background: #fff !important;
+    background: #FFF !important;
     border-radius: 26px;
-
 }
 
 /* Active Contacts  */
@@ -286,16 +321,332 @@
     justify-content: center;
     padding-top: 20px;
 }
-.numberCircle {
+
+#dash-card--DT_Dashboard_Plugin_Active_Contact .numberCircle {
     margin-top: -100px;
 }
-#dash-card--DT_Dashboard_Plugin_Active_Contact .card-body {
-    
-}
+
 #dash-card--DT_Dashboard_Plugin_Active_Contact .view-all a.button {
-    background: transparent linear-gradient(180deg, #09497E 0%, #053358 100%) 0% 0% no-repeat padding-box;
+    background: var(--dark-blue);
     border-radius: 26px;
-    color: #fff;
+    color: #FFF;
     font-weight: 800;
     margin: 40px 0;
+}
+
+/* Faith Milestone Totals */
+#dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals #milestones {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 20px 60px;
+}
+
+#dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .card-body {
+    padding-top: 10px;
+    height: auto;
+}
+
+#dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .group-progress-button-wrapper {
+    margin: 20px 0;
+    flex-basis: 33% !important;
+}
+
+#dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .group-progress-button {
+    background: var(--light-blue);
+    box-shadow: 0px 6px 12px #00000026;
+    color: #FFF;
+    border-radius: 50% !important;
+    font-weight: 800;
+}
+
+#dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals
+    .group-progress-button-wrapper
+    p {
+    color: #484848;
+    font-weight: 800;
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+#dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .card-body > .scroll-content > p {
+    background: #1c6fb0 0% 0% no-repeat padding-box;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: -10px;
+    margin-left: -40px;
+    margin-right: -40px;
+    padding: 5px 10px;
+    font-weight: 800;
+}
+
+/* Personal Benchmarks */
+#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .card-body {
+    height: auto;
+}
+#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .card-body .amchart-container{
+    width: 100%;
+    display: flex;
+    height: auto;
+}
+
+#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-chart-keys {
+    flex-basis: 25%;
+    margin-top: 20px;
+}
+
+#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-chart-keys li {
+    padding: 10px 0px;
+    display: flex;
+    align-items: center;
+}
+
+#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks #benchmarks_current,
+#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks #benchmarks_previous {
+    padding: 0 10px;
+    color: #313133;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-previous-block,
+#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-current-block {
+    border-radius: 5px;
+    height: 30px;
+    width: 30px;
+    padding-right: 10px;
+    display: inline-block;
+}
+
+#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-previous-block {
+    background-color: #c7e3ff;
+}
+
+#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-current-block {
+    background-color: #3f729b;
+}
+
+#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .card-body div ul {
+    list-style: none;
+    margin-left: 50px;
+}
+
+#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmark-chart-container {
+    flex-basis: 75%;
+}
+
+#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks #benchmark_chart {
+    height: 300px;
+}
+
+/* tasks */
+#dash-card--DT_Dashboard_Plugin_Tasks .existing-tasks {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#dash-card--DT_Dashboard_Plugin_Tasks .existing-tasks li {
+    margin: 20px 0;
+    border-radius: 16px;
+    box-shadow: 0px 6px 12px #00000029;
+    display: flex;
+    flex-direction: column;
+}
+
+#dash-card--DT_Dashboard_Plugin_Tasks .existing-tasks .task-contact {
+    background: var(--dark-blue);
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    font-size: 1.2rem;
+    line-height: 3rem;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+#dash-card--DT_Dashboard_Plugin_Tasks .existing-tasks .task-date {
+    background: #1c6fb0 0% 0% no-repeat padding-box;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    font-size: .8rem;
+    line-height: 2.5rem;
+    margin-bottom: 10px;
+}
+
+#dash-card--DT_Dashboard_Plugin_Tasks .existing-tasks .task-description {
+    margin: 10px;
+    margin-top: 100px !important;
+}
+
+#dash-card--DT_Dashboard_Plugin_Tasks .action-buttons{
+    margin: 10px;
+}
+
+#dash-card--DT_Dashboard_Plugin_Tasks button.existing-task-action {
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    color: #FFF;
+    border-radius: 8px;
+    font-weight: 800;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+#dash-card--DT_Dashboard_Plugin_Tasks .complete-task {
+    background: var(--green);
+}
+
+#dash-card--DT_Dashboard_Plugin_Tasks .remove-task {
+    background: var(--red);
+}
+
+/* add cards card */
+#add-card #add-menu {
+    margin: 20px;
+    list-style-type: none;
+    padding: 0;
+}
+
+#add-card #add-menu li {
+    /* background:  var(--dark-blue); */
+    background: transparent linear-gradient(99deg, #09497E 0%, #053358 100%) 0% 0% no-repeat padding-box;
+    color: #FFF;
+    box-shadow: 0px 3px 6px #00000029;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 10px 20px;
+}
+
+#add-card #add-menu li:hover {
+    cursor: pointer;
+}
+
+#add-card .add-card-plus {
+    background: var(--green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0px 6px 12px #00000026;
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+}
+
+#add-card .fi-plus {
+    font-size: 11px;
+    line-height: 11px;    
+}
+
+/* Seeker Path Progress */
+#dash-card--DT_Dashboard_Plugin_Seeker_Path_Progress .amcharts-Container{
+    display: flex;
+}
+/* chart */
+#dash-card--DT_Dashboard_Plugin_Seeker_Path_Progress .amcharts-Sprite-group .amcharts-Container-group {
+    flex-basis: 50%;
+ }
+/* keys */
+#dash-card--DT_Dashboard_Plugin_Seeker_Path_Progress .amcharts-Sprite-group .amcharts-Container-group .amcharts-Component-group .amcharts-Legend-group{
+    flex-basis: 50%;
+}
+
+
+
+/* mobile - phone */
+@media only screen and (max-width: 700px) {
+    #content {
+        max-width: 300px;
+    }
+
+    .dashboard-page .dash-cards {
+        display: block;
+    }
+
+    .card-body {
+        padding: 20px 20px 50px;
+    }
+
+    .amchart-container{
+        flex-direction: column;
+    }
+
+    .benchmarks-chart-keys,
+    .benchmark-chart-container {
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    #dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals #milestones {
+        grid-template-columns: 1fr 1fr;
+        margin: 0;
+    }
+
+    #dash-card--DT_Dashboard_Plugin_Active_Contact .card-body {
+        height: auto;
+    }
+}
+
+/* mobile - ipad */
+@media only screen and (max-width: 972px) {
+
+    .card-body {
+        padding: 10px;
+    }
+
+    .dashboard-page .card-header {
+        font-size: 1rem;
+    }
+
+    .update-needed-info a, 
+    .pending-contacts-info a {
+        font-size: 12px;
+    }
+    .pending-contacts-btns button {
+        padding: 10px;
+    }
+
+    /* seeker */
+    #dash-card--DT_Dashboard_Plugin_Seeker_Path_Progress {
+        --dashboard-card-column: span 4 !important;
+    }
+
+    /* personal benchmarks  */
+    .amchart-container{
+        flex-direction: column;
+    }
+
+    .benchmarks-chart-keys,
+    .benchmark-chart-container {
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    /* Active_Contact */
+    #dash-card--DT_Dashboard_Plugin_Active_Contact .card-body {
+        height: auto;
+    }
+    
+}
+
+@media only screen and (max-width: 1348px) {
+    #content {
+        max-width: 760px;
+    }
+    
+    .dashboard-page .dash-cards {
+        grid-template-columns: 2fr 2fr;
+    }
 }

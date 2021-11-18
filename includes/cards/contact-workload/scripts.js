@@ -11,6 +11,7 @@
         selected.blur()
       }
     }
+
     color_workload_buttons(context.wpApiDashboard.workload_status )
     status_buttons.on( 'click', function () {
       $(context.element).find("#workload-spinner").addClass("active")
@@ -28,6 +29,3 @@
     })
   })
 })(window.jQuery)
-
-
-

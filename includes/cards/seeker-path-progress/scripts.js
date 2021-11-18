@@ -22,6 +22,7 @@
     })
 
     function seeker_path_chart() {
+      am4core.options.autoSetClassName = true;
       am4core.useTheme(am4themes_animated);
 
       let chart = am4core.create("seeker_path_chart", am4charts.PieChart);
@@ -73,8 +74,7 @@
 
       chart.legend = new am4charts.Legend();
       chart.legend.valueLabels.template.text = "";
-      chart.legend.labels.template.text = "[font-size: 10px]{category}: {value}[/]";
-
+      chart.legend.labels.template.text = "[font-size: 10px]{category}: {value}[/]"
     }
   })
 })(window.jQuery)

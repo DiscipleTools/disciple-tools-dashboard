@@ -46,10 +46,12 @@ class DT_Dashboard_Plugin_Functions
 
     public function scripts() {
         wp_enqueue_style( 'dashboard-css', plugin_dir_url( __FILE__ ) . '/style.css', array(), filemtime( plugin_dir_path( __FILE__ ) . 'style.css' ) );
+        wp_enqueue_style( 'font-poppins', 'https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         wp_register_script( 'amcharts-core', 'https://www.amcharts.com/lib/4/core.js', false, '4' );
         wp_register_script( 'amcharts-charts', 'https://www.amcharts.com/lib/4/charts.js', false, '4' );
         wp_register_script( 'amcharts-animated', 'https://www.amcharts.com/lib/4/themes/animated.js', false, '4' );
         wp_enqueue_script( 'dt-dashboard-plugin', plugin_dir_url( __FILE__ ) . 'plugin.js', filemtime( plugin_dir_path( __FILE__ ) . '/plugin.js' ), false);
+        wp_register_script( 'smooth-scrollbar', 'https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.6.3/smooth-scrollbar.js', false, '4' );
         wp_localize_script(
             'dt-dashboard-plugin', 'wpApiDashboard', array(
                 'root'                  => esc_url_raw( rest_url() ),
@@ -73,7 +75,8 @@ class DT_Dashboard_Plugin_Functions
             'amcharts-core',
             'amcharts-charts',
             'amcharts-animated',
-            'moment'
+            'moment',
+            'smooth-scrollbar'
         ], filemtime( plugin_dir_path( __FILE__ ) . '/dashboard.js' ), true );
     }
 

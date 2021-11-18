@@ -22,8 +22,8 @@
     function milestones() {
       let milestones = ``
       data.milestones.forEach( m=>{
-        milestones += `<div class="group-progress-button-wrapper" style="flex-basis: 33%">
-        <button style="color: white" class="group-progress-button"> ${window.lodash.escape( m.value )} </button>
+        milestones += `<div class="group-progress-button-wrapper">
+        <button class="group-progress-button"> ${window.lodash.escape( m.value )} </button>
         <p>${window.lodash.escape( m.milestones )}</p>
       </div>`
       })

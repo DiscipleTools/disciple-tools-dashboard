@@ -16,7 +16,9 @@ if ( ! current_user_can( 'access_contacts' ) ) {
 get_header();
 
 ?>
+<div id="blank"></div>
     <div id="dashboard">
+    
         <div id="content" class="dashboard-page">
             <div id="inner-content">
                 <div class="dash-cards" id="dash-cards">

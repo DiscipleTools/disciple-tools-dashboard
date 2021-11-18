@@ -28,9 +28,11 @@
       $(context.element).find('#benchmarks_current').html(`${formatDate(thirty_days_ago.unix())} to ${formatDate(moment().unix())}`)
       $(context.element).find('#benchmarks_previous').html(`${formatDate(sixty_days_ago.unix())} to ${formatDate(thirty_days_ago.unix())}`)
 
+      am4core.options.autoSetClassName = true;
       am4core.useTheme(am4themes_animated);
       let chart = am4core.create("benchmark_chart", am4charts.XYChart);
 
+      console.log(data.benchmarks.contacts.current)
       chart.data = [ {
         "year": window.lodash.escape(wpApiDashboard.translations.number_contacts_assigned),
         "previous": data.benchmarks.contacts.previous,
@@ -77,11 +79,22 @@
         valueLabel.label.dy = -10;
         valueLabel.label.hideOversized = false;
         valueLabel.label.truncate = false;
+        series.columns.template.column.cornerRadiusTopLeft = 10;
+        series.columns.template.column.cornerRadiusTopRight = 10;
+
+        series.columns.template.adapter.add('fill', function(fill, column, key) {
+          var gradient = new am4core.LinearGradient();
+          if (field === 'previous') {
+            gradient.addColor(am4core.color('#99CEF8'));
+            gradient.addColor(am4core.color('#6EB1E8'));
+          } else {
+            gradient.addColor(am4core.color('#277CBF'));
+            gradient.addColor(am4core.color('#1464A5'));
+          }
+          gradient.rotation = 90;
+          return gradient;
+        });
       }
-      chart.colors.list = [
-        am4core.color("#C7E3FF"),
-        am4core.color("#3f729b"),
-      ];
 
       createSeries("previous", "Previous", false);
       createSeries("current", "Current", false);
