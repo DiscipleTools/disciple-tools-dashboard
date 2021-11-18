@@ -102,6 +102,10 @@ DT_Dashboard_Plugin_Cards::instance()->register(
     ));
 ```
 
+### Hooks
+
+The `dt_dashboard_cards` filter can be used to deregister cards, or to add new cards without using `DT_Dashboard_Plugin_Cards::instance()->register`.
+
 ## Contribution
 
 Contributions welcome. You can report issues and bugs in the

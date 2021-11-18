@@ -1,5 +1,7 @@
 (function($) {
   window.dt_dashboard.onAdd('DT_Dashboard_Plugin_Seeker_Path_Progress', function (context) {
+    am4core.options.autoSetClassName = true;
+
     let data = context.wpApiDashboard.data
     let wpApiDashboard = context.wpApiDashboard
 

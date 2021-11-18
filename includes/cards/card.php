@@ -5,6 +5,7 @@ abstract class DT_Dashboard_Card
     public $handle;
     public $label;
     public $span = 1;
+    public $priority = 0;
 
     public function __construct($handle, $label, $params = [])
     {
@@ -20,6 +21,9 @@ abstract class DT_Dashboard_Card
             $this->span = $params['span'];
         }
 
+        if (isset($params['priority'])) {
+            $this->priority = $params['priority'];
+        }
 
         $this->handle = $handle;
         $this->label = $label;

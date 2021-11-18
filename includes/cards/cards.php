@@ -1,8 +1,12 @@
 <?php
 
-
+/**
+ * Service class for working with dashboard cards.
+ * Class DT_Dashboard_Plugin_Cards
+ */
 class DT_Dashboard_Plugin_Cards
 {
+    const CARDS_FILTER = 'dt_dashboard_cards';
     const CARD_SORT_OPTION = 'dt_dashboard_card_sort';
     const CARD_VISIBLE_OPTION_PREFIX = 'dt_dashboard_card_';
     private static $_instance = null;
@@ -22,13 +26,21 @@ class DT_Dashboard_Plugin_Cards
      */
     public function all()
     {
-        return static::$cards;
+        return apply_filters( static::CARDS_FILTER, static::$cards );
     }
 
+    /**
+     * @param $handle
+     * @return bool
+     */
     public function is_card_visible($handle) {
         return get_option(static::CARD_VISIBLE_OPTION_PREFIX . $handle) !== '0';
     }
 
+    /**
+     * Get all hidden cards
+     * @return array
+     */
     public function hidden()
     {
         return array_filter($this->all(), function ($card, $handle) {
@@ -36,6 +48,10 @@ class DT_Dashboard_Plugin_Cards
         }, ARRAY_FILTER_USE_BOTH);
     }
 
+    /**
+     * Get all shown cards
+     * @return array
+     */
     public function shown()
     {
         $cards = array_filter($this->all(), function ($card, $handle) {
@@ -82,6 +98,11 @@ class DT_Dashboard_Plugin_Cards
         unset(static::$cards[$handle]);
     }
 
+    /**
+     * Set a cards's visibility option.
+     * @param $handle
+     * @param $visibility
+     */
     public function set_card_visibility($handle, $visibility)
     {
         update_option(static::CARD_VISIBLE_OPTION_PREFIX . $handle, $visibility ? '1' : '0');
@@ -97,6 +118,10 @@ class DT_Dashboard_Plugin_Cards
         $this->set_card_visibility($handle, false);
     }
 
+    /**
+     * Toggle a cards visibility option
+     * @param $handle
+     */
     public function toggle($handle)
     {
         $this->set_card_visibility($handle, !$this->shown());
@@ -136,11 +161,19 @@ class DT_Dashboard_Plugin_Cards
         }
     }
 
+    /**
+     * Get a card's sort option
+     * @return mixed
+     */
     protected function get_card_sort_option()
     {
         return get_option(static::CARD_SORT_OPTION);
     }
 
+    /**
+     * Get the sort order of all cards
+     * @return mixed
+     */
     protected function get_sort()
     {
         $sort = $this->get_card_sort_option();
@@ -150,6 +183,10 @@ class DT_Dashboard_Plugin_Cards
         return json_decode($sort, true);
     }
 
+    /**
+     * Sort the cards by their stored sort order
+     * @param $cards
+     */
     protected function sort_cards(&$cards)
     {
         $sort = $this->get_sort();
@@ -159,10 +196,10 @@ class DT_Dashboard_Plugin_Cards
             $sort_a = array_search($handle_a, $sort);
             $sort_b = array_search($handle_b, $sort);
             if (!$sort_a) {
-                $sort_a = -1;
+                $sort_a = $a->priority;
             }
             if (!$sort_b) {
-                $sort_b = -1;
+                $sort_b = $b->priority;
             }
 
             return ($sort_a + 1 < $sort_b + 1) ? -1 : 1;
