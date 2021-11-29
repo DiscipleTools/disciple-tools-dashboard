@@ -31,6 +31,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     background-color: #FFF;
+    height: 350px;
 }
 
 .dashboard-page .count-square {
@@ -61,7 +62,6 @@
 .card-body {
     padding: 20px 40px 50px;
     flex-grow: 1;
-    height: 250px;
 }
 
 .scrollbar-track.scrollbar-track-y {
@@ -74,8 +74,8 @@
     border-radius: 25px;
 }
 
-/* .dashboard-page .card-title, */
 .dashboard-page .card-header {
+    line-height: 56px;
     height: 56px;
     width: 100%;
     background: var(--dark-blue);
@@ -320,7 +320,11 @@
     align-items: flex-start;
     justify-content: center;
     padding-top: 20px;
+    padding-bottom: 40px;
 }
+#dash-card--DT_Dashboard_Plugin_Active_Contact .card-body {
+    padding: 0;
+} 
 
 #dash-card--DT_Dashboard_Plugin_Active_Contact .numberCircle {
     margin-top: -100px;
@@ -343,7 +347,6 @@
 
 #dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .card-body {
     padding-top: 10px;
-    height: auto;
 }
 
 #dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .group-progress-button-wrapper {
@@ -381,12 +384,10 @@
 
 /* Personal Benchmarks */
 #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .card-body {
-    height: auto;
 }
 #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .card-body .amchart-container{
     width: 100%;
     display: flex;
-    height: auto;
 }
 
 #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-chart-keys {
@@ -579,7 +580,7 @@
         padding: 20px 20px 50px;
     }
 
-    .amchart-container{
+    .amchart-container{ 
         flex-direction: column;
     }
 
