@@ -1,9 +1,6 @@
 /**
  * Dashboard
  */
- body {
-    font-family: 'Poppins', sans-serif !important;
- }
 
 :root {
     --green: transparent linear-gradient(180deg, #4caf50 0%, #3aa03e 100%) 0% 0% no-repeat padding-box;
@@ -14,6 +11,7 @@
 }
 
 .dashboard-page .dash-cards {
+    font-family: 'Poppins', sans-serif !important;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-items: stretch;
