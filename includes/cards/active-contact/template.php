@@ -2,7 +2,7 @@
     <?php echo $card->label ?>
 </div>
 <div class="card-body">
-    <div style="text-align: center; flex-grow: 1; margin-top: 20px">
+    <div style="text-align: center; flex-grow: 1; margin-top: 40px">
         <span class="numberCircle">&nbsp;<span id="active_contacts">-</span>&nbsp;</span>
     </div>
     <div class="view-all">

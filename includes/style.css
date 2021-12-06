@@ -90,14 +90,9 @@
 
 .dashboard-page .view-all {
     text-align: center;
-    margin-top: -40px;
 }
 
-.dashboard-page .view-all button {
-    margin-bottom: 0;
-}
-
-#dash-card--DT_Dashboard_Plugin_Active_Contact .card-body{
+#dash-card--DT_Dashboard_Plugin_Active_Contact .card-body {
     overflow: visible;
 }
 
@@ -334,7 +329,7 @@
     border-radius: 26px;
     color: #FFF;
     font-weight: 800;
-    margin: 40px 0;
+    /* margin: 40px 0; */
 }
 
 /* Faith Milestone Totals */
