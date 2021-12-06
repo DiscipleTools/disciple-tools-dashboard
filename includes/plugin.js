@@ -163,7 +163,7 @@ window.dt_dashboard = {
    * @param handle
    */
   isActive(handle) {
-    !!this.find(handle).element
+    return !!this.find(handle).element
   },
 
   /**
@@ -269,7 +269,7 @@ window.dt_dashboard = {
     this.renderAddMenu()
     this.storeSort()
   },
-  
+
   registerScrollbar:function(handle) {
     const cardEl = this.findEl(handle)
     const cardBody = cardEl.querySelector('.card-body--scroll')
@@ -340,11 +340,18 @@ window.dt_dashboard = {
     addMenu.setAttribute('id', 'add-menu')
     addCardEl.appendChild(addMenu)
 
-    this.inactiveCards().forEach(function(card) {
+    this.cards.forEach(function(card) {
       const menuItem = document.createElement('li')
-      menuItem.innerHTML = card.label + '<span class="add-card-plus"><i class="fi-plus"></i></span>'
-      menuItem.addEventListener('click', function() {
-        this.add(card.handle)
+      const lightSwitch = document.createElement('input')
+      lightSwitch.type = 'checkbox'
+      lightSwitch.checked = this.isActive(card.handle)
+      menuItem.innerHTML = card.label
+      menuItem.appendChild(lightSwitch)
+      new Switchery(lightSwitch, {
+        color: '#4BAF50',
+      });
+      lightSwitch.addEventListener('change', function() {
+        setTimeout(() => lightSwitch.checked ? this.add(card.handle) : this.remove(card.handle), 500)
       }.bind(this))
       addMenu.appendChild(menuItem)
     }.bind(this))
