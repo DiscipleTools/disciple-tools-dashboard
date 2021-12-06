@@ -307,13 +307,6 @@ window.dt_dashboard = {
   renderAddMenu() {
     let addCardContainer = this.addCardEl()
 
-    if (!this.inactiveCards().length) {
-      if (addCardContainer) {
-        addCardContainer.remove()
-      }
-      return
-    }
-
     let addCardEl
     if (!addCardContainer) {
       addCardContainer = document.createElement('div')
