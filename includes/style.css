@@ -255,7 +255,6 @@
     justify-content: center;
     align-items: center;
     padding: 0;
-    /* padding-left: 5px; */
 }
 
 .pending-contacts-btns button {
@@ -377,8 +376,6 @@
 }
 
 /* Personal Benchmarks */
-#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .card-body {
-}
 #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .card-body .amchart-container{
     width: 100%;
     display: flex;
@@ -511,7 +508,6 @@
 }
 
 #add-card #add-menu li {
-    /* background:  var(--dark-blue); */
     background: transparent linear-gradient(99deg, #09497E 0%, #053358 100%) 0% 0% no-repeat padding-box;
     color: #FFF;
     box-shadow: 0px 3px 6px #00000029;
@@ -528,7 +524,11 @@
     cursor: pointer;
 }
 
-#add-card .add-card-plus {
+#add-card #add-menu .switchery {
+    background-color: #B4B4B4;
+}
+
+/* #add-card .add-card-plus {
     background: var(--green);
     display: flex;
     justify-content: center;
@@ -538,12 +538,12 @@
     width: 24px;
     height: 24px;
     margin-left: 10px;
-}
+} */
 
-#add-card .fi-plus {
+/* #add-card .fi-plus {
     font-size: 11px;
     line-height: 11px;    
-}
+} */
 
 /* Seeker Path Progress */
 #dash-card--DT_Dashboard_Plugin_Seeker_Path_Progress .amcharts-Container{

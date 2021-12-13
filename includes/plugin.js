@@ -342,6 +342,7 @@ window.dt_dashboard = {
       menuItem.appendChild(lightSwitch)
       new Switchery(lightSwitch, {
         color: '#4BAF50',
+        secondaryColor: '#B4B4B4',
       });
       lightSwitch.addEventListener('change', function() {
         setTimeout(() => lightSwitch.checked ? this.add(card.handle) : this.remove(card.handle), 500)
