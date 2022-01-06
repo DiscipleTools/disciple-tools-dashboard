@@ -3,12 +3,19 @@
  */
 
 :root {
-    --green: transparent linear-gradient(180deg, #4caf50 0%, #3aa03e 100%) 0% 0% no-repeat padding-box;
+    
+    /* --green: transparent linear-gradient(180deg, #4caf50 0%, #3aa03e 100%) 0% 0% no-repeat padding-box; */
     --yellow: transparent linear-gradient(180deg, #ffce00 0%, #f5c600 100%) 0% 0% no-repeat padding-box;
     --red: transparent linear-gradient(180deg, #c7002e 0%, #b10029 100%) 0% 0% no-repeat padding-box;
     --dark-blue: transparent linear-gradient(180deg, #09497e 0%, #053358 100%) 0% 0% no-repeat padding-box;
     --light-blue: transparent linear-gradient(149deg, #277cbf 0%, #1464a5 100%) 0% 0% no-repeat padding-box;
+    
+    --primary-color: #000000CC;
+    --secondary-color: #000000dd;
+    --white: #ffffff;
+    --green: #2DA800;
 }
+
 #content, .container-width {
     width: fit-content !important;
 }
@@ -33,7 +40,7 @@
     border: 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
-    background-color: #FFF;
+    background-color: var(--white);
     height: 624px;
 }
 
@@ -63,13 +70,13 @@
 
 /* #add-card #add-menu, */
 .card-body {
-    padding: 20px 40px 50px;
+    padding: 20px;
     flex-grow: 1;
 }
 
 .scrollbar-track.scrollbar-track-y {
     width: 4px;
-    background-color: #fff;
+    background-color: var(--white);
 }
 
 .button.status-button {
@@ -78,17 +85,16 @@
 }
 
 .dashboard-page .card-header {
-    line-height: 56px;
-    height: 56px;
-    width: 100%;
-    background: var(--dark-blue);
-    color: #FFF;
     display: flex;
     justify-content: left;
     align-items: center;
+    height: 65px;
+    width: 100%;
+    background: var(--primary-color);
+    color: var(--white);
     font-weight: 800;
-    font-size: 1.3rem;
-    padding: 0 20px;
+    font-size: 1rem;
+    padding: 20px;
     box-shadow: 0px 6px 12px #00000029;
 }
 
@@ -103,7 +109,7 @@
 .dashboard-page .numberCircle {
     background: var(--light-blue);
     box-shadow: 0px 6px 12px #00000026;
-    color: #FFF;
+    color: var(--white);
     font-weight: 900;
     display: inline-block;
     border-radius: 50%;
@@ -147,7 +153,7 @@
 
 /* card footer */
 .card-footer {
-    background: #FFFFFF 0% 0% no-repeat padding-box;
+    background: var(--white) 0% 0% no-repeat padding-box;
     box-shadow: 0px -3px 6px #00000029;
     border-radius: 0px 0px 16px 16px;
     padding-top: 5px;
@@ -194,7 +200,7 @@
 
 .card-move-right,
 .card-move-left {
-    background: #FFFFFF 0% 0% no-repeat padding-box;
+    background: var(--white) 0% 0% no-repeat padding-box;
     border: 1px solid #dbdbdb;
     color: #626262;
     font-weight: 800;
@@ -205,7 +211,7 @@
     background: var(--red);
     box-shadow: 0px 3px 3px #00000029;
     border-radius: 0px 0px 8px 8px;
-    color: #FFF;
+    color: var(--white);
     font-weight: 800;
     padding: 5px 10px;
 }
@@ -213,7 +219,7 @@
 /* need update card */
 .update-needed-container,
 .pending-contacts-container {
-    background: #FFFFFF 0% 0% no-repeat padding-box;
+    background: var(--white) 0% 0% no-repeat padding-box;
     box-shadow: 0px 6px 12px #00000029;
     border: 1px solid #d6d6d6;
     margin-top: 20px;
@@ -227,7 +233,7 @@
 .pending-contacts-icon {
     background: #1c6fb0 0% 0% no-repeat padding-box;
     border-radius: 16px 0px 0px 16px;
-    color: #FFF;
+    color: var(--white);
     padding: 20px;
     margin: 0px;
 }
@@ -242,7 +248,6 @@
 
 .update-needed-info a,
 .pending-contacts-info a {
-    font-size: 18px;
     letter-spacing: -0.36px;
     color: #313133;
     font-weight: 800;
@@ -267,7 +272,6 @@
     margin: 0;
     border-radius: 8px;
     font-weight: 800;
-    padding: 10px 20px;
 }
 
 .accept-button {
@@ -279,10 +283,34 @@
 }
 
 /* contact workload */
+#dash-card--DT_Dashboard_Plugin_Contact_Workload {
+    font-size: 12px;
+    letter-spacing: -0.24px;
+    line-height: 16px;
+    text-align: center;
+}
+
+#dash-card--DT_Dashboard_Plugin_Contact_Workload a {
+    color: #00000080;
+}
+
+#dash-card--DT_Dashboard_Plugin_Contact_Workload a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#dash-card--DT_Dashboard_Plugin_Contact_Workload .button.status-button i {
+    padding-right: 20px;
+}
+
 .button.status-button {
-    border-radius: 26px;
-    color: #FFF;
+    border-radius: 8px;
+    color: var(--white);
     border: 0;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: bold;
+    padding: 15px;
 }
 
 .button.status-button.active-btn {
@@ -307,8 +335,7 @@
 .button.hollow.status-button[disabled]:hover {
     border: 1px solid #363636 !important;
     color: #363636 !important;
-    background: #FFF !important;
-    border-radius: 26px;
+    background: var(--white) !important;
 }
 
 /* Active Contacts  */
@@ -330,21 +357,16 @@
 #dash-card--DT_Dashboard_Plugin_Active_Contact .view-all a.button {
     background: var(--dark-blue);
     border-radius: 26px;
-    color: #FFF;
+    color: var(--white);
     font-weight: 800;
-    /* margin: 40px 0; */
 }
 
 /* Faith Milestone Totals */
-/* #dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals {
-    max-width: 628px;
-    width: 100%;
-} */
+
 #dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals #milestones {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin: 20px 60px;
-   
 }
 
 #dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .card-body {
@@ -359,7 +381,7 @@
 #dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .group-progress-button {
     background: var(--light-blue);
     box-shadow: 0px 6px 12px #00000026;
-    color: #FFF;
+    color: var(--white);
     border-radius: 50% !important;
     font-weight: 800;
 }
@@ -374,9 +396,10 @@
 }
 
 #dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .card-body > .scroll-content > p {
-    background: #1c6fb0 0% 0% no-repeat padding-box;
+    /* background: #1c6fb0 0% 0% no-repeat padding-box; */
+    background: var(--primary-color);
     text-align: center;
-    color: #FFFFFF;
+    color: var(--white);
     margin-top: -10px;
     margin-left: -40px;
     margin-right: -40px;
@@ -456,7 +479,7 @@
 
 #dash-card--DT_Dashboard_Plugin_Tasks .existing-tasks .task-contact {
     background: var(--dark-blue);
-    color: #FFF;
+    color: var(--white);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -469,7 +492,7 @@
 
 #dash-card--DT_Dashboard_Plugin_Tasks .existing-tasks .task-date {
     background: #1c6fb0 0% 0% no-repeat padding-box;
-    color: #FFF;
+    color: var(--white);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -491,7 +514,7 @@
 #dash-card--DT_Dashboard_Plugin_Tasks button.existing-task-action {
     padding: 10px 20px;
     margin-bottom: 10px;
-    color: #FFF;
+    color: var(--white);
     border-radius: 8px;
     font-weight: 800;
     width: 100%;
@@ -514,19 +537,23 @@
     margin: 20px;
     list-style-type: none;
     padding: 0;
+    height: fit-content;
 }
 
 #add-card #add-menu li {
-    background: transparent linear-gradient(99deg, #09497E 0%, #053358 100%) 0% 0% no-repeat padding-box;
-    color: #FFF;
-    box-shadow: 0px 3px 6px #00000029;
+    font-size: 16px;
+    font-weight: 600;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 16px;
-    font-weight: bold;
-    margin: 10px 0;
-    padding: 10px 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #00000099;
+    color: #00000099;
+}
+#add-card #add-menu li:last-child {
+    border-bottom: 1px solid #00000099;
+    
 }
 
 #add-card #add-menu li:hover {
@@ -541,6 +568,7 @@
 .switchery > small{
     width: 20px !important;
     height: 20px !important;
+    right: 0;
 }
 
 /* Seeker Path Progress */
@@ -556,21 +584,16 @@
     flex-basis: 50%;
 }
 
+
+
 /* mobile - phone */
 @media only screen and (max-width: 700px) {
-    #content {
-        max-width: 300px;
-    }
-
     .dashboard-page .dash-cards {
         display: block;
+        width: 314px;
     }
-
-    .card-body {
-        padding: 20px 20px 50px;
-    }
-
-    .amchart-container{ 
+    
+    .amchart-container { 
         flex-direction: column;
     }
 
@@ -593,10 +616,6 @@
 /* mobile - ipad */
 @media only screen and (max-width: 972px) {
 
-    .card-body {
-        padding: 10px;
-    }
-
     .dashboard-page .card-header {
         font-size: 1rem;
     }
@@ -605,6 +624,7 @@
     .pending-contacts-info a {
         font-size: 12px;
     }
+
     .pending-contacts-btns button {
         padding: 10px;
     }
@@ -632,10 +652,7 @@
     
 }
 
-@media only screen and (max-width: 1348px) {
-    #content {
-        max-width: 760px;
-    }
+@media only screen and (max-width: 1440px) {
     
     .dashboard-page .dash-cards {
         grid-template-columns: repeat(2, 314px);
