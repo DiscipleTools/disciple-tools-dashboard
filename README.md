@@ -98,7 +98,10 @@ DT_Dashboard_Plugin_Cards::instance()->register(
     new Your_Custom_Card(
         'Your_Custom_Card',                     //handle
         __('Custom Card Label', 'your-plugin'), //label
-         4                                      //span (culumns to span, 1-4)
+         [
+            'priority' => 1,
+            'span' => 1
+         ]
     ));
 ```
 

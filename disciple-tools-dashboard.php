@@ -15,6 +15,7 @@
  * @license GPL-2.0 or later
  *          https://www.gnu.org/licenses/gpl-2.0.html
  */
+require_once('includes/cards/card.php');
 require_once('includes/cards/cards.php');
 require_once('includes/cards/cards-user.php');
 
