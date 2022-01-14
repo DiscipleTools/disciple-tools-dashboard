@@ -234,17 +234,8 @@
 }
 
 /* need update card */
-/* , */
-.pending-contacts-container {
-    background: var(--white) 0% 0% no-repeat padding-box;
-    border: 1px solid #d6d6d6;
-    margin-top: 20px;
-    border-radius: 16px 16px 16px 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
+.pending-contacts-container,
 .update-needed-container {
     border-bottom: 1px solid #d6d6d6;
     padding: 20px 0;
@@ -254,19 +245,10 @@
     display: block;
 }
 
-.pending-contacts-icon {
-    background: #1c6fb0 0% 0% no-repeat padding-box;
-    border-radius: 16px 0px 0px 16px;
-    color: var(--white);
-    padding: 20px;
-    margin: 0px;
-}
-
 /* .update-needed-info, */
 .pending-contacts-info {
     display: flex;
     flex-direction: column;
-    padding-left: 10px;
     flex-grow: 1;
 }
 
@@ -284,26 +266,29 @@
 }
 
 /* pending contacts */
-.pending-contacts-info {
-    justify-content: center;
-    align-items: center;
-    padding: 0;
+.pending-contacts-info a {
+    margin-bottom: 10px;
 }
 
+.pending-contacts-btns {
+    display: flex;
+    width: 100%;
+}
 .pending-contacts-btns button {
-    justify-content: center;
-    align-items: center;
+    width: 100%;
     margin: 0;
-    border-radius: 8px;
+    border-radius: 4px;
     font-weight: 800;
 }
 
-.accept-button {
+.pending-contacts-btns .accept-button {
     background: var(--green);
+    margin-right: 5px;
 }
 
-.decline-button {
+.pending-contacts-btns .decline-button {
     background: var(--red);
+    margin-left: 5px;
 }
 
 /* contact workload */
