@@ -234,7 +234,7 @@
 }
 
 /* need update card */
-.update-needed-container,
+/* , */
 .pending-contacts-container {
     background: var(--white) 0% 0% no-repeat padding-box;
     border: 1px solid #d6d6d6;
@@ -245,7 +245,15 @@
     align-items: center;
 }
 
-.update-needed-icon,
+.update-needed-container {
+    border-bottom: 1px solid #d6d6d6;
+    padding: 20px 0;
+}
+.update-needed-container a,
+.update-needed-container span {
+    display: block;
+}
+
 .pending-contacts-icon {
     background: #1c6fb0 0% 0% no-repeat padding-box;
     border-radius: 16px 0px 0px 16px;
@@ -254,7 +262,7 @@
     margin: 0px;
 }
 
-.update-needed-info,
+/* .update-needed-info, */
 .pending-contacts-info {
     display: flex;
     flex-direction: column;
