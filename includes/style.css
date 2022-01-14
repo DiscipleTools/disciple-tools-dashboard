@@ -3,25 +3,32 @@
  */
 
 :root {
-    
     /* --green: transparent linear-gradient(180deg, #4caf50 0%, #3aa03e 100%) 0% 0% no-repeat padding-box; */
-    --yellow: transparent linear-gradient(180deg, #ffce00 0%, #f5c600 100%) 0% 0% no-repeat padding-box;
-    --red: transparent linear-gradient(180deg, #c7002e 0%, #b10029 100%) 0% 0% no-repeat padding-box;
-    --dark-blue: transparent linear-gradient(180deg, #09497e 0%, #053358 100%) 0% 0% no-repeat padding-box;
-    --light-blue: transparent linear-gradient(149deg, #277cbf 0%, #1464a5 100%) 0% 0% no-repeat padding-box;
-    
-    --primary-color: #000000CC;
-    --secondary-color: #000000dd;
+    --yellow: transparent linear-gradient(180deg, #ffce00 0%, #f5c600 100%) 0%
+        0% no-repeat padding-box;
+    --red: transparent linear-gradient(180deg, #c7002e 0%, #b10029 100%) 0% 0%
+        no-repeat padding-box;
+    --dark-blue: transparent linear-gradient(180deg, #09497e 0%, #053358 100%)
+        0% 0% no-repeat padding-box;
+    --light-blue: transparent linear-gradient(149deg, #277cbf 0%, #1464a5 100%)
+        0% 0% no-repeat padding-box;
+
+    --primary-color: #2c2c2c;
+    --secondary-color: #666666;
+    --gray3: #e5e5e5;
     --white: #ffffff;
-    --green: #2DA800;
+    --green: #2da800;
+
+    --shadow: 0px 6px 12px #00000026;
 }
 
-#content, .container-width {
+#content,
+.container-width {
     width: fit-content !important;
 }
 
 .dashboard-page .dash-cards {
-    font-family: 'Poppins', sans-serif !important;
+    font-family: "Poppins", sans-serif !important;
     display: grid;
     grid-template-columns: repeat(4, 278px);
     justify-items: stretch;
@@ -86,7 +93,7 @@
 
 .dashboard-page .card-header {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     height: 65px;
     width: 100%;
@@ -98,17 +105,26 @@
     box-shadow: 0px 6px 12px #00000029;
 }
 
-.dashboard-page .view-all {
-    text-align: center;
+#dash-card--DT_Dashboard_Plugin_Active_Contact .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-#dash-card--DT_Dashboard_Plugin_Active_Contact .card-body {
-    overflow: visible;
+#dash-card--DT_Dashboard_Plugin_Active_Contact .view-all {
+    text-align: center;
+    background: var(--green);
+    color: var(--white);
+    box-shadow: var(--shadow);
+    border-radius: 8px;
+    font-weight: 800;
+    text-transform: uppercase;
+    width: 80%;
 }
 
 .dashboard-page .numberCircle {
-    background: var(--light-blue);
-    box-shadow: 0px 6px 12px #00000026;
+    background: var(--primary-color);
     color: var(--white);
     font-weight: 900;
     display: inline-block;
@@ -154,7 +170,7 @@
 /* card footer */
 .card-footer {
     background: var(--white) 0% 0% no-repeat padding-box;
-    box-shadow: 0px -3px 6px #00000029;
+    border-top: 1px solid #5c5c5c;
     border-radius: 0px 0px 16px 16px;
     padding-top: 5px;
     position: relative;
@@ -166,6 +182,7 @@
     justify-content: center;
     margin: 10px 5px;
 }
+
 .card-footer .card-nav-btn svg {
     fill: #626262;
 }
@@ -175,8 +192,8 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     z-index: 99;
 }
 
@@ -220,7 +237,6 @@
 .update-needed-container,
 .pending-contacts-container {
     background: var(--white) 0% 0% no-repeat padding-box;
-    box-shadow: 0px 6px 12px #00000029;
     border: 1px solid #d6d6d6;
     margin-top: 20px;
     border-radius: 16px 16px 16px 16px;
@@ -340,7 +356,7 @@
 
 /* Active Contacts  */
 #dash-card--DT_Dashboard_Plugin_Active_Contact .card-header {
-    height: 120px;
+    /* height: 120px; */
     align-items: flex-start;
     justify-content: center;
     padding-top: 20px;
@@ -348,21 +364,9 @@
 }
 #dash-card--DT_Dashboard_Plugin_Active_Contact .card-body {
     padding: 0;
-} 
-
-#dash-card--DT_Dashboard_Plugin_Active_Contact .numberCircle {
-    margin-top: -100px;
-}
-
-#dash-card--DT_Dashboard_Plugin_Active_Contact .view-all a.button {
-    background: var(--dark-blue);
-    border-radius: 26px;
-    color: var(--white);
-    font-weight: 800;
 }
 
 /* Faith Milestone Totals */
-
 #dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals #milestones {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -373,7 +377,8 @@
     padding-top: 10px;
 }
 
-#dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .group-progress-button-wrapper {
+#dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals
+    .group-progress-button-wrapper {
     margin: 20px 0;
     flex-basis: 33% !important;
 }
@@ -395,11 +400,14 @@
     margin: 10px 0;
 }
 
-#dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .card-body > .scroll-content > p {
+#dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals
+    .card-body
+    > .scroll-content
+    > p {
     /* background: #1c6fb0 0% 0% no-repeat padding-box; */
-    background: var(--primary-color);
+    background: var(--gray3);
     text-align: center;
-    color: var(--white);
+    color: #5c5c5c;
     margin-top: -10px;
     margin-left: -40px;
     margin-right: -40px;
@@ -408,7 +416,9 @@
 }
 
 /* Personal Benchmarks */
-#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .card-body .amchart-container{
+#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks
+    .card-body
+    .amchart-container {
     width: 100%;
     display: flex;
 }
@@ -497,7 +507,7 @@
     justify-content: center;
     align-items: center;
     font-weight: 800;
-    font-size: .8rem;
+    font-size: 0.8rem;
     line-height: 2.5rem;
     margin-bottom: 10px;
 }
@@ -507,7 +517,7 @@
     margin-top: 100px !important;
 }
 
-#dash-card--DT_Dashboard_Plugin_Tasks .action-buttons{
+#dash-card--DT_Dashboard_Plugin_Tasks .action-buttons {
     margin: 10px;
 }
 
@@ -553,7 +563,6 @@
 }
 #add-card #add-menu li:last-child {
     border-bottom: 1px solid #00000099;
-    
 }
 
 #add-card #add-menu li:hover {
@@ -565,26 +574,30 @@
     height: 20px;
 }
 
-.switchery > small{
+.switchery > small {
     width: 20px !important;
     height: 20px !important;
     right: 0;
 }
 
 /* Seeker Path Progress */
-#dash-card--DT_Dashboard_Plugin_Seeker_Path_Progress .amcharts-Container{
+#dash-card--DT_Dashboard_Plugin_Seeker_Path_Progress .amcharts-Container {
     display: flex;
 }
 /* chart */
-#dash-card--DT_Dashboard_Plugin_Seeker_Path_Progress .amcharts-Sprite-group .amcharts-Container-group {
-    flex-basis: 50%;
- }
-/* keys */
-#dash-card--DT_Dashboard_Plugin_Seeker_Path_Progress .amcharts-Sprite-group .amcharts-Container-group .amcharts-Component-group .amcharts-Legend-group{
+#dash-card--DT_Dashboard_Plugin_Seeker_Path_Progress
+    .amcharts-Sprite-group
+    .amcharts-Container-group {
     flex-basis: 50%;
 }
-
-
+/* keys */
+#dash-card--DT_Dashboard_Plugin_Seeker_Path_Progress
+    .amcharts-Sprite-group
+    .amcharts-Container-group
+    .amcharts-Component-group
+    .amcharts-Legend-group {
+    flex-basis: 50%;
+}
 
 /* mobile - phone */
 @media only screen and (max-width: 700px) {
@@ -592,8 +605,8 @@
         display: block;
         width: 314px;
     }
-    
-    .amchart-container { 
+
+    .amchart-container {
         flex-direction: column;
     }
 
@@ -615,12 +628,11 @@
 
 /* mobile - ipad */
 @media only screen and (max-width: 972px) {
-
     .dashboard-page .card-header {
         font-size: 1rem;
     }
 
-    .update-needed-info a, 
+    .update-needed-info a,
     .pending-contacts-info a {
         font-size: 12px;
     }
@@ -635,7 +647,7 @@
     }
 
     /* personal benchmarks  */
-    .amchart-container{
+    .amchart-container {
         flex-direction: column;
     }
 
@@ -649,12 +661,19 @@
     #dash-card--DT_Dashboard_Plugin_Active_Contact .card-body {
         height: auto;
     }
-    
 }
 
 @media only screen and (max-width: 1440px) {
-    
     .dashboard-page .dash-cards {
         grid-template-columns: repeat(2, 314px);
     }
 }
+
+/* top nav bar  */
+
+/* .top-bar,
+.top-bar ul,
+#top-bar-menu .dropdown.menu a {
+    background: var(--white) !important;
+    color: #000000b3 !important;
+} */
