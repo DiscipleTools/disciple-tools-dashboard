@@ -12,7 +12,7 @@
         $icon = $option_key === "active" ? "play" : ($option_key === "existing" ? "pause" : "stop"); ?>
         <button class="button hollow status-button <?php echo esc_html($option_key) ?>-btn" name="<?php echo esc_html($option_key) ?>">
             <i class="fi-<?php echo esc_html($icon) ?>"></i> 
-            <?php echo esc_html($option_val["label"]) ?>
+            <span class="btn-label"><?php echo esc_html($option_val["label"]) ?></span>
         </button>
     <?php endforeach; ?>
     
