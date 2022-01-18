@@ -186,6 +186,11 @@ body {
     justify-content: center;
     margin: 10px 5px;
 }
+.fi-x,
+.fi-arrow-right,
+.fi-arrow-left {
+    margin-right: 10px;
+}
 
 .card-footer .card-nav-btn svg {
     fill: #626262;
