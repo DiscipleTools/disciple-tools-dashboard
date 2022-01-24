@@ -310,16 +310,16 @@ body {
     text-align: center;
 }
 
-#dash-card--DT_Dashboard_Plugin_Contact_Workload a {
+#dash-card--DT_Dashboard_Plugin_Contact_Workload .card-body a {
     color: #00000080;
 }
 
-#dash-card--DT_Dashboard_Plugin_Contact_Workload a:hover {
+#dash-card--DT_Dashboard_Plugin_Contact_Workload .card-body a:hover {
     text-decoration: underline;
     cursor: pointer;
 }
 
-#dash-card--DT_Dashboard_Plugin_Contact_Workload .button {
+#dash-card--DT_Dashboard_Plugin_Contact_Workload .card-body .button {
     display: flex;
     justify-content: left;
     align-items: center;
@@ -329,7 +329,7 @@ body {
     border: 0;
 }
 
-#dash-card--DT_Dashboard_Plugin_Contact_Workload .btn-label {
+#dash-card--DT_Dashboard_Plugin_Contact_Workload .card-body .btn-label {
     flex-grow: 1;
     font-weight: bold;
     margin-left: 10px;
@@ -530,7 +530,6 @@ body {
 
 #dash-card--DT_Dashboard_Plugin_Tasks .existing-tasks .task-description {
     margin: 10px;
-    /* margin-top: 100px !important; */
 }
 
 #dash-card--DT_Dashboard_Plugin_Tasks .action-buttons {
