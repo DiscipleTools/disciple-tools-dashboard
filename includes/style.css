@@ -387,7 +387,10 @@ body {
 }
 
 #dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .group-progress-button {
-    background: var(--light-blue);
+    /* background: var(--light-blue); */
+    background-color: transparent
+        linear-gradient(149deg, #277cbf 0%, #1464a5 100%) 0% 0% no-repeat
+        padding-box;
     box-shadow: 0px 6px 12px #00000026;
     color: var(--white);
     border-radius: 50% !important;
