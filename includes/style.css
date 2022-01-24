@@ -128,6 +128,7 @@ body {
 }
 
 .dashboard-page .numberCircle {
+    text-align: center;
     background: var(--primary-color);
     color: var(--white);
     font-weight: 900;
@@ -372,12 +373,6 @@ body {
 }
 
 /* Faith Milestone Totals */
-#dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals #milestones {
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: 20px 60px; */
-}
-
 #dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .card-body {
     padding-top: 10px;
 }
@@ -416,7 +411,6 @@ body {
     .card-body
     > .scroll-content
     > p {
-    /* background: #1c6fb0 0% 0% no-repeat padding-box; */
     background: var(--gray3);
     text-align: center;
     color: #5c5c5c;
@@ -494,7 +488,7 @@ body {
 #dash-card--DT_Dashboard_Plugin_Tasks .existing-tasks li {
     margin: 20px 0;
     border-radius: 16px;
-    box-shadow: 0px 6px 12px #00000029;
+    /* box-shadow: 0px 6px 12px #00000029; */
     display: flex;
     flex-direction: column;
 }
@@ -541,10 +535,6 @@ body {
     border-radius: 8px;
     font-weight: 800;
     width: 100%;
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 12px; */
 }
 
 #dash-card--DT_Dashboard_Plugin_Tasks .complete-task {
@@ -683,7 +673,6 @@ body {
 }
 
 /* top nav bar  */
-
 /* .top-bar,
 .top-bar ul,
 #top-bar-menu .dropdown.menu a {
