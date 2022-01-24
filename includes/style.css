@@ -385,7 +385,10 @@ body {
     padding: 20px 0;
     border-top: 1px solid #cccccc;
 }
-
+#dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals
+    .scrollbar-track.scrollbar-track-x {
+    display: none;
+}
 #dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .group-progress-button {
     background-color: #1464a5;
     /* background: rgb(39, 124, 191); */
@@ -491,7 +494,7 @@ body {
     margin: 0;
 }
 
-#dash-card--DT_Dashboard_Plugin_Tasks .existing-tasks li {
+#dash-card--DT_Dashboard_Plugin_Tasks .existing-tasks .task {
     margin: 20px 0;
     border-radius: 16px;
     box-shadow: 0px 6px 12px #00000029;
@@ -527,7 +530,7 @@ body {
 
 #dash-card--DT_Dashboard_Plugin_Tasks .existing-tasks .task-description {
     margin: 10px;
-    margin-top: 100px !important;
+    /* margin-top: 100px !important; */
 }
 
 #dash-card--DT_Dashboard_Plugin_Tasks .action-buttons {

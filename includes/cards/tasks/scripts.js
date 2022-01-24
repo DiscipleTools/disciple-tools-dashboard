@@ -42,7 +42,7 @@
         `;
         if (task.category === "reminder") {
           task_row += window.lodash.escape(
-            wpApiDashboard.translations.reminder 
+            wpApiDashboard.translations.reminder
           );
           task_row += " - ";
           if (task.value.note) {
@@ -50,13 +50,16 @@
           }
         } else {
           task_row +=
-          '<span class="task-description">' + 
+            '<span class="task-description">' +
             window.lodash.escape(
               task.value.note || wpApiDashboard.translations.no_note
-            ) + '</span>';
+            ) +
+            "</span>";
         }
         html += `<li>
-        <span style="${task_done ? "text-decoration:line-through" : ""}">
+        <span class="task" style="${
+          task_done ? "text-decoration:line-through" : ""
+        }">
         ${task_row}
         <div class="action-buttons">
         ${
@@ -117,6 +120,5 @@
           });
         });
     }
-
   });
 })(window.jQuery);
