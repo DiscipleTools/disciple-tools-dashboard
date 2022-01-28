@@ -355,14 +355,13 @@ body {
 .button.hollow.status-button[disabled],
 .button.hollow.status-button[disabled]:focus,
 .button.hollow.status-button[disabled]:hover {
-    border: 1px solid #363636 !important;
-    color: #363636 !important;
+    border: 1px solid #666666 !important;
+    color: #666666 !important;
     background: var(--white) !important;
 }
 
 /* Active Contacts  */
 #dash-card--DT_Dashboard_Plugin_Active_Contact .card-header {
-    /* height: 120px; */
     align-items: flex-start;
     justify-content: center;
     padding-top: 20px;
