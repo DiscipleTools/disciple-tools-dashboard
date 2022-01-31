@@ -20,6 +20,8 @@
     --green: #2da800;
 
     --shadow: 0px 6px 12px #00000026;
+
+    --brightness: brightness(85%);
 }
 
 body {
@@ -125,6 +127,9 @@ body {
     font-weight: 800;
     text-transform: uppercase;
     width: 80%;
+}
+#dash-card--DT_Dashboard_Plugin_Active_Contact .view-all:hover {
+    filter: var(--brightness);
 }
 
 .dashboard-page .numberCircle {
@@ -297,9 +302,18 @@ body {
     margin-right: 5px;
 }
 
+.pending-contacts-btns .accept-button:hover {
+    background: var(--green);
+    filter: var(--brightness);
+}
+
 .pending-contacts-btns .decline-button {
     background: var(--red);
     margin-left: 5px;
+}
+.pending-contacts-btns .decline-button:hover {
+    /* background: var(--red); */
+    filter: var(--brightness);
 }
 
 /* contact workload */
@@ -552,6 +566,10 @@ body {
 
 #dash-card--DT_Dashboard_Plugin_Tasks .remove-task {
     background: var(--red);
+}
+#dash-card--DT_Dashboard_Plugin_Tasks .complete-task:hover,
+#dash-card--DT_Dashboard_Plugin_Tasks .remove-task:hover {
+    filter: var(--brightness);
 }
 
 /* add cards card */
