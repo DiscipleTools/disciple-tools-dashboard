@@ -402,6 +402,7 @@ body {
     border-radius: 50% !important;
     font-weight: 800;
     margin-right: 20px;
+    opacity: 1 !important;
 
     height: 40px;
     width: 40px;
