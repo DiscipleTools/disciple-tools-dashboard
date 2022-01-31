@@ -386,8 +386,9 @@ body {
 }
 #dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals
     .scrollbar-track.scrollbar-track-x {
-    display: none;
+    display: none !important;
 }
+
 #dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .group-progress-button {
     background-color: #1464a5;
     /* background: rgb(39, 124, 191); */
