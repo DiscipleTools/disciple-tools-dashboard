@@ -73,15 +73,15 @@ class DT_Dashboard_Plugin_Endpoints
                 },
             ]
         );
-         register_rest_route(
-             $this->namespace, '/tasks', [
+        register_rest_route(
+            $this->namespace, '/tasks', [
                  'methods'  => 'GET',
                  'callback' => [ $this, 'get_tasks' ],
                  'permission_callback' => function( WP_REST_Request $request ) {
                      return $this->has_permission();
                  },
              ]
-         );
+        );
         register_rest_route(
             $this->namespace, '/user', [
                 'methods'  => 'POST',
@@ -551,7 +551,7 @@ class DT_Dashboard_Plugin_Endpoints
         $get_params = $request->get_params();
         $body = $request->get_body_params();
         $cards = new DT_Dashboard_Plugin_Cards();
-        $cards->sort($body["card_sort"]);
+        $cards->sort( $body["card_sort"] );
         return true;
     }
 
@@ -559,7 +559,7 @@ class DT_Dashboard_Plugin_Endpoints
         $get_params = $request->get_params();
         $body = $request->get_body_params();
         $cards = new DT_Dashboard_Plugin_User_Cards();
-        $cards->toggle($body["card_handle"]);
+        $cards->toggle( $body["card_handle"] );
         return true;
     }
 
@@ -567,7 +567,7 @@ class DT_Dashboard_Plugin_Endpoints
         $get_params = $request->get_params();
         $body = $request->get_body_params();
         $cards = new DT_Dashboard_Plugin_User_Cards();
-        $cards->sort(json_decode($body["card_sort"], 1));
+        $cards->sort( json_decode( $body["card_sort"], 1 ) );
         return true;
     }
 
@@ -575,7 +575,7 @@ class DT_Dashboard_Plugin_Endpoints
         $get_params = $request->get_params();
         $body = $request->get_body_params();
         $cards = new DT_Dashboard_Plugin_User_Cards();
-        $cards->show($body["card_handle"]);
+        $cards->show( $body["card_handle"] );
         return true;
     }
 
@@ -583,13 +583,13 @@ class DT_Dashboard_Plugin_Endpoints
         $get_params = $request->get_params();
         $body = $request->get_body_params();
         $cards = new DT_Dashboard_Plugin_User_Cards();
-        $cards->hide($body["card_handle"]);
+        $cards->hide( $body["card_handle"] );
         return true;
     }
 
     public function get_card( WP_REST_Request $request ){
         $cards = new DT_Dashboard_Plugin_Cards();
         $params = $request->get_query_params();
-        return $cards->find($params["card_handle"])->toJson();
+        return $cards->find( $params["card_handle"] )->toJson();
     }
 }

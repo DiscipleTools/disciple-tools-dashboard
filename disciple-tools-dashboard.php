@@ -15,9 +15,9 @@
  * @license GPL-2.0 or later
  *          https://www.gnu.org/licenses/gpl-2.0.html
  */
-require_once('includes/cards/card.php');
-require_once('includes/cards/cards.php');
-require_once('includes/cards/cards-user.php');
+require_once( 'includes/cards/card.php' );
+require_once( 'includes/cards/cards.php' );
+require_once( 'includes/cards/cards-user.php' );
 
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
@@ -114,7 +114,7 @@ class DT_Dashboard_Plugin {
      * @since 0.3.3
      * @return string
      */
-    static function dir() {
+    public static function dir() {
         return __DIR__ . '/';
     }
 
@@ -124,7 +124,7 @@ class DT_Dashboard_Plugin {
      * @since 0.3.3
      * @return string
      */
-    static function includes_dir() {
+    public static function includes_dir() {
         return self::dir() . 'includes/';
     }
 
@@ -134,7 +134,7 @@ class DT_Dashboard_Plugin {
      * @since 0.3.3
      * @return string
      */
-    static function path() {
+    public static function path() {
         return plugin_dir_url( __FILE__ );
     }
 
@@ -202,14 +202,23 @@ class DT_Dashboard_Plugin {
      */
     private function register_cards() {
         $cards = DT_Dashboard_Plugin_Cards::instance();
-        $cards->register(new DT_Dashboard_Plugin_Card('DT_Dashboard_Plugin_Active_Contact', __('Active Contacts', 'disciple-tools-dashboard'), ['priority' => 0]));
-        $cards->register(new DT_Dashboard_Plugin_Card('DT_Dashboard_Plugin_Update_Needed', __('Update Needed',  'disciple-tools-dashboard'), ['priority' => 1]));
-        $cards->register(new DT_Dashboard_Plugin_Card('DT_Dashboard_Plugin_Pending_Contacts', __('Pending Contacts', 'disciple-tools-dashboard'), ['priority' => 2]));
-        $cards->register(new DT_Dashboard_Plugin_Card('DT_Dashboard_Plugin_Contact_Workload', __('Contact Workload', 'disciple-tools-dashboard'), ['priority' => 3]));
-        $cards->register(new DT_Dashboard_Plugin_Card('DT_Dashboard_Plugin_Personal_Benchmarks', __('Personal Benchmarks', 'disciple-tools-dashboard'), ['span' => 4, 'priority' => 4]));
-        $cards->register(new DT_Dashboard_Plugin_Card('DT_Dashboard_Plugin_Seeker_Path_Progress', __('Seeker Path Progress', 'disciple-tools-dashboard'), ['span' => 2, 'priority' => 5]));
-        $cards->register(new DT_Dashboard_Plugin_Card('DT_Dashboard_Plugin_Faith_Milestone_Totals', __('Faith Milestone Totals', 'disciple-tools-dashboard'), ['span' => 2, 'priority' => 6]));
-        $cards->register(new DT_Dashboard_Plugin_Card('DT_Dashboard_Plugin_Tasks', __('Tasks', 'disciple-tools-dashboard')));
+        $cards->register( new DT_Dashboard_Plugin_Card( 'DT_Dashboard_Plugin_Active_Contact', __( 'Active Contacts', 'disciple-tools-dashboard' ), [ 'priority' => 0 ] ) );
+        $cards->register( new DT_Dashboard_Plugin_Card( 'DT_Dashboard_Plugin_Update_Needed', __( 'Update Needed', 'disciple-tools-dashboard' ), [ 'priority' => 1 ] ) );
+        $cards->register( new DT_Dashboard_Plugin_Card( 'DT_Dashboard_Plugin_Pending_Contacts', __( 'Pending Contacts', 'disciple-tools-dashboard' ), [ 'priority' => 2 ] ) );
+        $cards->register( new DT_Dashboard_Plugin_Card( 'DT_Dashboard_Plugin_Contact_Workload', __( 'Contact Workload', 'disciple-tools-dashboard' ), [ 'priority' => 3 ] ) );
+        $cards->register( new DT_Dashboard_Plugin_Card( 'DT_Dashboard_Plugin_Personal_Benchmarks', __( 'Personal Benchmarks', 'disciple-tools-dashboard' ), [
+            'span' => 4,
+            'priority' => 4
+        ] ) );
+        $cards->register( new DT_Dashboard_Plugin_Card( 'DT_Dashboard_Plugin_Seeker_Path_Progress', __( 'Seeker Path Progress', 'disciple-tools-dashboard' ), [
+            'span' => 2,
+            'priority' => 5
+        ] ) );
+        $cards->register( new DT_Dashboard_Plugin_Card( 'DT_Dashboard_Plugin_Faith_Milestone_Totals', __( 'Faith Milestone Totals', 'disciple-tools-dashboard' ), [
+            'span' => 2,
+            'priority' => 6
+        ] ) );
+        $cards->register( new DT_Dashboard_Plugin_Card( 'DT_Dashboard_Plugin_Tasks', __( 'Tasks', 'disciple-tools-dashboard' ) ) );
     }
 
     /**

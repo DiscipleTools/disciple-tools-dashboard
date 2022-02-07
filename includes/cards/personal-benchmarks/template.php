@@ -1,9 +1,9 @@
 <div class="card-header">
-    <?php echo $card->label ?>
+    <?php echo esc_html( $card->label ) ?>
     <div style="display: inline-block"
         class="stats-spinner loading-spinner active"></div>
 </div>
-<div class="card-body card-body--scroll">
+<div class="card-body card-body--center">
     <div class="amchart-container">
         <div class="benchmarks-chart-keys">
             <ul>

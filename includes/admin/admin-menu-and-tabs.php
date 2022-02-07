@@ -8,7 +8,8 @@
  */
 
 
-if ( ! defined( 'ABSPATH' ) ) { exit; // Exit if accessed directly
+if ( !defined( 'ABSPATH' ) ) {
+    exit; // Exit if accessed directly
 }
 
 /**
@@ -30,9 +31,9 @@ class DT_Dashboard_Plugin_Menu {
      *
      * Ensures only one instance of DT_Dashboard_Plugin_Menu is loaded or can be loaded.
      *
+     * @return DT_Dashboard_Plugin_Menu instance
      * @since 0.1.0
      * @static
-     * @return DT_Dashboard_Plugin_Menu instance
      */
     public static function instance() {
         if ( is_null( self::$_instance ) ) {
@@ -49,8 +50,8 @@ class DT_Dashboard_Plugin_Menu {
      */
     public function __construct() {
 
-        add_action( "admin_menu", array( $this, "register_menu" ) );
-        add_action( 'admin_enqueue_scripts', function() {
+        add_action( "admin_menu", [ $this, "register_menu" ] );
+        add_action( 'admin_enqueue_scripts', function () {
             $this->scripts();
         }, 1 );
     } // End __construct()
@@ -67,16 +68,17 @@ class DT_Dashboard_Plugin_Menu {
     /**
      * Menu stub. Replaced when Disciple Tools Theme fully loads.
      */
-    public function extensions_menu() {}
+    public function extensions_menu() {
+    }
 
     public function scripts() {
-        wp_localize_script( 'wp-api', 'dashboardWPApiShare', array(
+        wp_localize_script( 'wp-api', 'dashboardWPApiShare', [
             'nonce' => wp_create_nonce( 'wp_rest' ),
-            'root' => esc_url_raw( rest_url() ) . 'dt-dashboard'
-        ));
-        wp_enqueue_script('jquery');
-        wp_register_script('jquery-ui','https://code.jquery.com/ui/1.12.1/jquery-ui.min.js',array('jquery'));
-        wp_enqueue_script('jquery-ui');
+            'root'  => esc_url_raw( rest_url() ) . 'dt-dashboard'
+        ] );
+        wp_enqueue_script( 'jquery' );
+        wp_register_script( 'jquery-ui', 'https://code.jquery.com/ui/1.12.1/jquery-ui.min.js', [ 'jquery' ], '1.12.1' );
+        wp_enqueue_script( 'jquery-ui' );
         wp_enqueue_script( 'dt-admin', DT_Dashboard_Plugin::path() . 'includes/admin.js', [
             'wp-api',
             'jquery',
@@ -95,10 +97,9 @@ class DT_Dashboard_Plugin_Menu {
             wp_die( esc_attr__( 'You do not have sufficient permissions to access this page.' ) );
         }
 
-        status_header(200);
+        status_header( 200 );
 
         $this->update();
-
 
         include DT_Dashboard_Plugin::includes_dir() . 'template-admin.php';
     }
@@ -108,17 +109,22 @@ class DT_Dashboard_Plugin_Menu {
      */
     public function update() {
         $cards = new DT_Dashboard_Plugin_Cards();
+        $nonce = isset( $_REQUEST['X-WP-Nonce'] ) ? sanitize_key( $_REQUEST['X-WP-Nonce'] ) : null;
+
+        if ( !wp_verify_nonce( $nonce, 'wp_rest' ) ) {
+            return;
+        }
 
         if ( isset( $_POST["show_card"] ) ) {
-            $cards->show($_POST["show_card"]);
+            $cards->show( sanitize_key( $_POST["show_card"] ) );
         }
 
         if ( isset( $_POST["hide_card"] ) ) {
-            $cards->hide($_POST["hide_card"]);
+            $cards->hide( sanitize_key( $_POST["hide_card"] ) );
         }
 
         if ( isset( $_POST["card_sort"] ) ) {
-            $cards->sort($_POST["card_sort"]);
+            $cards->sort( sanitize_key( $_POST["card_sort"] ) );
         }
     }
 }

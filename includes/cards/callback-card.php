@@ -1,15 +1,13 @@
 <?php
 
-class DT_Dashboard_Callback_Card extends DT_Dashboard_Card
-{
-    private $setupCallback;
-    private $renderCallback;
+class DT_Dashboard_Callback_Card extends DT_Dashboard_Card {
+    private $setup_callback;
+    private $render_callback;
 
-    public function __construct($handle, $label, $params = [])
-    {
-        $this->setupCallback = $params['setup'];
-        $this->renderCallback = $params['render'];
-        parent::__construct($handle, $label, $params);
+    public function __construct( $handle, $label, $params = [] ) {
+        $this->setup_callback = $params['setup'];
+        $this->render_callback = $params['render'];
+        parent::__construct( $handle, $label, $params );
     }
 
     /**
@@ -17,8 +15,8 @@ class DT_Dashboard_Callback_Card extends DT_Dashboard_Card
      * @return mixed
      */
     public function setup() {
-        $callback = $this->setupCallback;
-        if ($callback) {
+        $callback = $this->setup_callback;
+        if ( $callback ) {
             $callback();
         }
     }
@@ -27,8 +25,8 @@ class DT_Dashboard_Callback_Card extends DT_Dashboard_Card
      * Render the card
      */
     public function render() {
-        $callback = $this->renderCallback;
-        if ($callback) {
+        $callback = $this->render_callback;
+        if ( $callback ) {
             $callback();
         }
     }

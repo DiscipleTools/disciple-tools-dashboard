@@ -1,6 +1,6 @@
 <div class="card-header">
     <span class="card-title">
-        <?php echo $card->label ?>
+    <?php echo esc_html( $card->label ) ?>
     </span>
 </div>
 <div class="card-body card-body--scroll">

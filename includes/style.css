@@ -3,18 +3,21 @@
  */
 
 :root {
+    --blue: #1464a5;
+    --light-blue: #c7e3ff;
     /* --green: transparent linear-gradient(180deg, #4caf50 0%, #3aa03e 100%) 0% 0% no-repeat padding-box; */
-    --yellow: transparent linear-gradient(180deg, #ffce00 0%, #f5c600 100%) 0%
+    --yellow-gradient: transparent linear-gradient(180deg, #ffce00 0%, #f5c600 100%) 0%
         0% no-repeat padding-box;
-    --red: transparent linear-gradient(180deg, #c7002e 0%, #b10029 100%) 0% 0%
+    --red-gradient: transparent linear-gradient(180deg, #c7002e 0%, #b10029 100%) 0% 0%
         no-repeat padding-box;
-    --dark-blue: transparent linear-gradient(180deg, #09497e 0%, #053358 100%)
+    --dark-blue-gradient: transparent linear-gradient(180deg, #09497e 0%, #053358 100%)
         0% 0% no-repeat padding-box;
-    --light-blue: transparent linear-gradient(149deg, #277cbf 0%, #1464a5 100%)
+    --light-blue-gradient: transparent linear-gradient(149deg, #277cbf 0%, #1464a5 100%)
         0% 0% no-repeat padding-box;
 
     --primary-color: #2c2c2c;
     --secondary-color: #666666;
+    --gray: #D6D6D6;
     --gray3: #e5e5e5;
     --white: #ffffff;
     --green: #2da800;
@@ -62,7 +65,7 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background: var(--light-blue);
+    background: var(--light-blue-gradient);
     box-shadow: 0px 6px 12px #00000026;
     width: 55px;
     height: 55px;
@@ -75,24 +78,32 @@ body {
     font-size: 1.5em;
 }
 
-.card-container {
+.dashboard-page .card-container {
     display: flex;
-    flex-direction: column;
     height: 100%;
 }
 
 /* #add-card #add-menu, */
-.card-body {
+.dashboard-page .card-body {
     padding: 20px;
     flex-grow: 1;
 }
 
-.scrollbar-track.scrollbar-track-y {
+.dashboard-page .card-body--center {
+    display: flex;
+    align-items: center;
+}
+
+.dashboard-page .card-body--center > div {
+    width: 100%;
+}
+
+.dashboard-page .scrollbar-track.scrollbar-track-y {
     width: 4px;
     background-color: var(--white);
 }
 
-.button.status-button {
+.dashboard-page .button.status-button {
     width: 100%;
     border-radius: 25px;
 }
@@ -103,6 +114,7 @@ body {
     align-items: center;
     height: 65px;
     width: 100%;
+    position: relative;
     background: var(--primary-color);
     color: var(--white);
     font-weight: 800;
@@ -111,14 +123,23 @@ body {
     box-shadow: 0px 6px 12px #00000029;
 }
 
-#dash-card--DT_Dashboard_Plugin_Active_Contact .card-body {
+
+.dashboard-page .card-subheader {
+    background: var(--gray3);
+    text-align: center;
+    color: var(--secondary-color);
+    padding: 10px;
+    font-weight: 800;
+}
+
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Active_Contact .card-body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-#dash-card--DT_Dashboard_Plugin_Active_Contact .view-all {
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Active_Contact .view-all {
     text-align: center;
     background: var(--green);
     color: var(--white);
@@ -128,7 +149,7 @@ body {
     text-transform: uppercase;
     width: 80%;
 }
-#dash-card--DT_Dashboard_Plugin_Active_Contact .view-all:hover {
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Active_Contact .view-all:hover {
     filter: var(--brightness);
 }
 
@@ -137,23 +158,17 @@ body {
     background: var(--primary-color);
     color: var(--white);
     font-weight: 900;
-    display: inline-block;
     border-radius: 50%;
     line-height: 0px;
     font-size: 5rem;
     margin-bottom: 20px;
     height: 150px;
     width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.dashboard-page .numberCircle:before,
-.dashboard-page .numberCircle:after {
-    content: "\200B";
-    display: inline-block;
-    line-height: 0px;
-    padding-top: 50%;
-    padding-bottom: 50%;
-}
 
 .dashboard-page .numberCircle:before {
     padding-left: 8px;
@@ -172,37 +187,41 @@ body {
     }
 }
 
-.existing-task-action {
+.dashboard-page .existing-task-action {
     font-size: 10px;
-    color: #1779ba;
+    color: var(--blue);
 }
 
 /* card footer */
-.card-footer {
+.dashboard-page .card-footer {
     background: var(--white) 0% 0% no-repeat padding-box;
-    border-top: 1px solid #e6e6e6;
+    border-top: 1px solid var(--gray);
     border-radius: 0px 0px 16px 16px;
     padding-top: 5px;
     position: relative;
     display: flex;
 }
-.card-footer .card-nav-btn {
+.dashboard-page .card-footer .card-nav-btn {
     cursor: pointer;
     align-items: center;
     justify-content: center;
     margin: 10px 5px;
+    font-size: 12px;
 }
-.fi-x,
-.fi-arrow-right,
-.fi-arrow-left {
+.dashboard-page .card-footer .card-nav {
+    font-size: 12px;
+}
+.dashboard-page .fi-x,
+.dashboard-page .fi-arrow-right,
+.dashboard-page .fi-arrow-left {
     margin-right: 10px;
 }
 
-.card-footer .card-nav-btn svg {
-    fill: #626262;
+.dashboard-page .card-footer .card-nav-btn svg {
+    fill: var(--secondary-color);
 }
 
-#blank {
+.dashboard-page #blank {
     display: none;
     width: 100%;
     height: 100%;
@@ -212,11 +231,11 @@ body {
     z-index: 99;
 }
 
-.show {
+.dashboard-page .show {
     display: block !important;
 }
 
-.card-nav {
+.dashboard-page .card-nav {
     display: none;
     cursor: pointer;
     width: 150px;
@@ -226,21 +245,21 @@ body {
     z-index: 100;
 }
 
-.card-move-left {
+.dashboard-page .card-move-left {
     border-radius: 8px 8px 0px 0px;
 }
 
-.card-move-right,
-.card-move-left {
+.dashboard-page .card-move-right,
+.dashboard-page .card-move-left {
     background: var(--white) 0% 0% no-repeat padding-box;
-    border: 1px solid #dbdbdb;
-    color: #626262;
+    border: 1px solid var(--gray);
+    color: var(--secondary-color);
     font-weight: 800;
     padding: 5px 10px;
 }
 
-.card-remove {
-    background: var(--red);
+.dashboard-page .card-remove {
+    background: var(--red-gradient);
     box-shadow: 0px 3px 3px #00000029;
     border-radius: 0px 0px 8px 8px;
     color: var(--white);
@@ -250,90 +269,93 @@ body {
 
 /* need update card */
 
-.pending-contacts-container,
-.update-needed-container {
-    border-bottom: 1px solid #d6d6d6;
-    padding: 20px 0;
+.dashboard-page .update-needed-container {
+    padding: 10px 0;
 }
-.update-needed-container a,
-.update-needed-container span {
+
+.dashboard-page .update-needed-container:not(:last-child) {
+    border-bottom: 1px solid var(--gray);
+}
+
+.dashboard-page .update-needed-container a,
+.dashboard-page .update-needed-container span {
     display: block;
 }
 
 /* .update-needed-info, */
-.pending-contacts-info {
+.dashboard-page .pending-contacts-info {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
 
-.update-needed-info a,
-.pending-contacts-info a {
+.dashboard-page .update-needed-info a,
+.dashboard-page .pending-contacts-info a {
     letter-spacing: -0.36px;
-    color: #313133;
+    color: var(--primary-color);
     font-weight: 800;
 }
 
-.update-needed-info span {
+.dashboard-page .update-needed-info span {
     letter-spacing: -0.2px;
-    color: #848484;
+    color: var(--secondary-color);
     font-size: 12px;
 }
 
 /* pending contacts */
-.pending-contacts-info a {
+.dashboard-page .pending-contacts-info a {
     margin-bottom: 10px;
 }
 
-.pending-contacts-btns {
+.dashboard-page .pending-contacts-btns {
     display: flex;
     width: 100%;
 }
 
-.pending-contacts-btns button {
+.dashboard-page .pending-contacts-btns button {
     width: 100%;
     margin: 0;
     border-radius: 4px;
     font-weight: 800;
 }
 
-.pending-contacts-btns .accept-button {
+.dashboard-page .pending-contacts-btns .accept-button {
     background: var(--green);
     margin-right: 5px;
 }
 
-.pending-contacts-btns .accept-button:hover {
+.dashboard-page .pending-contacts-btns .accept-button:hover {
     background: var(--green);
     filter: var(--brightness);
 }
 
-.pending-contacts-btns .decline-button {
-    background: var(--red);
+.dashboard-page .pending-contacts-btns .decline-button {
+    background: var(--red-gradient);
     margin-left: 5px;
 }
-.pending-contacts-btns .decline-button:hover {
+.dashboard-page .pending-contacts-btns .decline-button:hover {
     /* background: var(--red); */
     filter: var(--brightness);
 }
 
 /* contact workload */
-#dash-card--DT_Dashboard_Plugin_Contact_Workload {
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Contact_Workload .card-body {
     font-size: 12px;
     letter-spacing: -0.24px;
     line-height: 16px;
     text-align: center;
 }
 
-#dash-card--DT_Dashboard_Plugin_Contact_Workload .card-body a {
-    color: #00000080;
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Contact_Workload .card-body a {
+    color: var(--primary-color);
 }
 
-#dash-card--DT_Dashboard_Plugin_Contact_Workload .card-body a:hover {
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Contact_Workload .card-body a:hover {
     text-decoration: underline;
     cursor: pointer;
 }
 
-#dash-card--DT_Dashboard_Plugin_Contact_Workload .card-body .button {
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Contact_Workload .card-body .button {
     display: flex;
     justify-content: left;
     align-items: center;
@@ -343,68 +365,74 @@ body {
     border: 0;
 }
 
-#dash-card--DT_Dashboard_Plugin_Contact_Workload .card-body .btn-label {
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Contact_Workload .card-body .btn-label {
     flex-grow: 1;
     font-weight: bold;
     margin-left: 10px;
 }
 
-.button.status-button.active-btn {
+.dashboard-page .button.status-button.active-btn {
     background: var(--green);
 }
 
-.button.status-button.existing-btn {
-    background: var(--yellow);
+.dashboard-page .button.status-button.existing-btn {
+    background: var(--yellow-gradient);
     color: #363636;
 }
 
-.button.status-button.too_many-btn {
-    background: var(--red);
+.dashboard-page .button.status-button.too_many-btn {
+    background: var(--red-gradient);
 }
 
-.button.hollow.status-button,
-.button.hollow.status-button.disabled,
-.button.hollow.status-button.disabled:focus,
-.button.hollow.status-button.disabled:hover,
-.button.hollow.status-button[disabled],
-.button.hollow.status-button[disabled]:focus,
-.button.hollow.status-button[disabled]:hover {
-    border: 1px solid #666666 !important;
-    color: #666666 !important;
+.dashboard-page .button.hollow.status-button,
+.dashboard-page .button.hollow.status-button.disabled,
+.dashboard-page .button.hollow.status-button.disabled:focus,
+.dashboard-page .button.hollow.status-button.disabled:hover,
+.dashboard-page .button.hollow.status-button[disabled],
+.dashboard-page .button.hollow.status-button[disabled]:focus,
+.dashboard-page .button.hollow.status-button[disabled]:hover {
+    border: 1px solid var(--secondary-color) !important;
+    color: var(--secondary-color) !important;
     background: var(--white) !important;
 }
 
+.dashboard-page .dash-card .scroll-content {
+   height: 100%;
+}
+
 /* Active Contacts  */
-#dash-card--DT_Dashboard_Plugin_Active_Contact .card-header {
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Active_Contact .card-header {
     align-items: flex-start;
     justify-content: center;
     padding-top: 20px;
     padding-bottom: 40px;
 }
-#dash-card--DT_Dashboard_Plugin_Active_Contact .card-body {
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Active_Contact .card-body {
     padding: 0;
 }
 
 /* Faith Milestone Totals */
-#dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .card-body {
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .card-body {
     padding-top: 10px;
 }
 
-#dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals
-    .group-progress-button-wrapper {
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .group-progress-button-wrapper {
     display: flex;
     justify-content: left;
     align-items: center;
-    padding: 20px 0;
-    border-top: 1px solid #cccccc;
+    padding: 10px 0;
 }
-#dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals
-    .scrollbar-track.scrollbar-track-x {
+
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .group-progress-button-wrapper:not(:first-child) {
+    border-top: 1px solid rgb(214,214,214);
+}
+
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .scrollbar-track.scrollbar-track-x {
     display: none !important;
 }
 
-#dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .group-progress-button {
-    background-color: #1464a5;
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .group-progress-button {
+    background-color: var(--blue);
     /* background: rgb(39, 124, 191); */
     background: linear-gradient(
         122deg,
@@ -422,58 +450,43 @@ body {
     width: 40px;
 }
 
-#dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals
-    .group-progress-button-wrapper
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .group-progress-button-wrapper
     p {
-    color: #484848;
+    color: var(--secondary-color);
     font-weight: 800;
     font-size: 12px;
     margin: 10px 0;
 }
 
-#dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals
-    .card-body
-    > .scroll-content
-    > p {
-    background: var(--gray3);
-    text-align: center;
-    color: #5c5c5c;
-    margin-top: -10px;
-    margin-left: -40px;
-    margin-right: -40px;
-    padding: 5px 10px;
-    font-weight: 800;
-}
-
 /* Personal Benchmarks */
-#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks
     .card-body
     .amchart-container {
     width: 100%;
     display: flex;
 }
 
-#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-chart-keys {
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-chart-keys {
     flex-basis: 25%;
     margin-top: 20px;
 }
 
-#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-chart-keys li {
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-chart-keys li {
     padding: 10px 0px;
     display: flex;
     align-items: center;
 }
 
-#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks #benchmarks_current,
-#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks #benchmarks_previous {
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks #benchmarks_current,
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks #benchmarks_previous {
     padding: 0 10px;
-    color: #313133;
+    color: var(--primary-color)
     font-size: 12px;
     font-weight: 500;
 }
 
-#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-previous-block,
-#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-current-block {
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-previous-block,
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-current-block {
     border-radius: 5px;
     height: 30px;
     width: 30px;
@@ -481,35 +494,35 @@ body {
     display: inline-block;
 }
 
-#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-previous-block {
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-previous-block {
     background-color: #c7e3ff;
 }
 
-#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-current-block {
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-current-block {
     background-color: #3f729b;
 }
 
-#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .card-body div ul {
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .card-body div ul {
     list-style: none;
     margin-left: 50px;
 }
 
-#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmark-chart-container {
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmark-chart-container {
     flex-basis: 75%;
 }
 
-#dash-card--DT_Dashboard_Plugin_Personal_Benchmarks #benchmark_chart {
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks #benchmark_chart {
     height: 300px;
 }
 
 /* tasks */
-#dash-card--DT_Dashboard_Plugin_Tasks .existing-tasks {
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Tasks .existing-tasks {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-#dash-card--DT_Dashboard_Plugin_Tasks .existing-tasks .task {
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Tasks .existing-tasks .task {
     margin: 20px 0;
     border-radius: 16px;
     box-shadow: 0px 6px 12px #00000029;
@@ -517,7 +530,7 @@ body {
     flex-direction: column;
 }
 
-#dash-card--DT_Dashboard_Plugin_Tasks .existing-tasks .task-contact {
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Tasks .existing-tasks .task-contact {
     background: var(--primary-color);
     color: var(--white);
     display: flex;
@@ -530,7 +543,7 @@ body {
     border-top-right-radius: 16px;
 }
 
-#dash-card--DT_Dashboard_Plugin_Tasks .existing-tasks .task-date {
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Tasks .existing-tasks .task-date {
     background: var(--secondary-color);
     color: var(--white);
     display: flex;
@@ -543,15 +556,15 @@ body {
     text-transform: uppercase;
 }
 
-#dash-card--DT_Dashboard_Plugin_Tasks .existing-tasks .task-description {
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Tasks .existing-tasks .task-description {
     margin: 10px;
 }
 
-#dash-card--DT_Dashboard_Plugin_Tasks .action-buttons {
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Tasks .action-buttons {
     margin: 10px;
 }
 
-#dash-card--DT_Dashboard_Plugin_Tasks button.existing-task-action {
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Tasks button.existing-task-action {
     padding: 15px 30px;
     margin-bottom: 10px;
     color: var(--white);
@@ -560,27 +573,27 @@ body {
     width: 100%;
 }
 
-#dash-card--DT_Dashboard_Plugin_Tasks .complete-task {
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Tasks .complete-task {
     background: var(--green);
 }
 
-#dash-card--DT_Dashboard_Plugin_Tasks .remove-task {
-    background: var(--red);
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Tasks .remove-task {
+    background: var(--red-gradient);
 }
-#dash-card--DT_Dashboard_Plugin_Tasks .complete-task:hover,
-#dash-card--DT_Dashboard_Plugin_Tasks .remove-task:hover {
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Tasks .complete-task:hover,
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Tasks .remove-task:hover {
     filter: var(--brightness);
 }
 
 /* add cards card */
-#add-card #add-menu {
+.dashboard-page #add-card #add-menu {
     margin: 20px;
     list-style-type: none;
     padding: 0;
     height: fit-content;
 }
 
-#add-card #add-menu li {
+.dashboard-page #add-card #add-menu li {
     font-size: 16px;
     font-weight: 600;
     display: flex;
@@ -588,40 +601,51 @@ body {
     align-items: center;
     padding-top: 10px;
     padding-bottom: 10px;
-    border-top: 1px solid #e6e6e6;
     color: #00000099;
 }
-#add-card #add-menu li:last-child {
-    border-bottom: 1px solid #e6e6e6;
+
+.dashboard-page #add-card #add-menu li:not(:first-child) {
+    border-top: 1px solid var(--gray);
 }
 
-#add-card #add-menu li:hover {
+.dashboard-page #add-card #add-menu li:hover {
     cursor: pointer;
 }
 
-#add-card #add-menu .switchery {
+.dashboard-page #add-card #add-menu .switchery {
     width: 40px;
     height: 20px;
 }
 
-.switchery > small {
+.dashboard-page #dashboard .loading-spinner {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+}
+
+.dashboard-page #dashboard .loading-spinner.active {
+    border: 0.25rem solid white;
+    border-top-color: transparent;
+}
+
+.dashboard-page .switchery > small {
     width: 20px !important;
     height: 20px !important;
     right: 0;
 }
 
 /* Seeker Path Progress */
-#dash-card--DT_Dashboard_Plugin_Seeker_Path_Progress .amcharts-Container {
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Seeker_Path_Progress .amcharts-Container {
     display: flex;
 }
 /* chart */
-#dash-card--DT_Dashboard_Plugin_Seeker_Path_Progress
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Seeker_Path_Progress
     .amcharts-Sprite-group
     .amcharts-Container-group {
     flex-basis: 50%;
 }
 /* keys */
-#dash-card--DT_Dashboard_Plugin_Seeker_Path_Progress
+.dashboard-page #dash-card--DT_Dashboard_Plugin_Seeker_Path_Progress
     .amcharts-Sprite-group
     .amcharts-Container-group
     .amcharts-Component-group
@@ -636,12 +660,12 @@ body {
         width: 314px;
     }
 
-    .amchart-container {
+    .dashboard-page .amchart-container {
         flex-direction: column;
     }
 
-    .benchmarks-chart-keys,
-    .benchmark-chart-container {
+    .dashboard-page .benchmarks-chart-keys,
+    .dashboard-page .benchmark-chart-container {
         flex-basis: 100%;
         width: 100%;
     }
@@ -658,37 +682,37 @@ body {
 
 /* mobile - ipad */
 @media only screen and (max-width: 972px) {
-    .dashboard-page .card-header {
+    .dashboard-page .dashboard-page .card-header {
         font-size: 1rem;
     }
 
-    .update-needed-info a,
-    .pending-contacts-info a {
+    .dashboard-page .update-needed-info a,
+    .dashboard-page .pending-contacts-info a {
         font-size: 12px;
     }
 
-    .pending-contacts-btns button {
+    .dashboard-page .pending-contacts-btns button {
         padding: 10px;
     }
 
     /* seeker */
-    #dash-card--DT_Dashboard_Plugin_Seeker_Path_Progress {
+    .dashboard-page #dash-card--DT_Dashboard_Plugin_Seeker_Path_Progress {
         --dashboard-card-column: span 4 !important;
     }
 
     /* personal benchmarks  */
-    .amchart-container {
+    .dashboard-page .amchart-container {
         flex-direction: column;
     }
 
-    .benchmarks-chart-keys,
-    .benchmark-chart-container {
+    .dashboard-page  .benchmarks-chart-keys,
+    .dashboard-page .benchmark-chart-container {
         flex-basis: 100%;
         width: 100%;
     }
 
     /* Active_Contact */
-    #dash-card--DT_Dashboard_Plugin_Active_Contact .card-body {
+    .dashboard-page #dash-card--DT_Dashboard_Plugin_Active_Contact .card-body {
         height: auto;
     }
 }

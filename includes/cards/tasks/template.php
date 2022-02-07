@@ -1,5 +1,5 @@
 <div class="card-header">
-     <?php echo $card->label ?>
+    <?php echo esc_html( $card->label ) ?>
      <div id="tasks-spinner"
           style="display: inline-block"
           class="stats-spinner loading-spinner active">

@@ -6,7 +6,8 @@ $hidden_cards = $dt_cards->hidden();
 <div class="wrap">
     <h2><?php esc_attr_e( 'DISCIPLE TOOLS - DASHBOARD', 'disciple-tools-dashboard' ) ?></h2>
     <div id="poststuff">
-        <div id="post-body" class="metabox-holder columns-2">
+        <div id="post-body"
+             class="metabox-holder columns-2">
             <div id="post-body-content">
                 <p><?php echo esc_html_e( "Choose the default dashboard layout for new users.", 'disciple-tools-dashboard' ); ?></p>
                 <table class="widefat striped">
@@ -17,14 +18,19 @@ $hidden_cards = $dt_cards->hidden();
                     </tr>
                     </thead>
                     <tbody id="sort-classes">
-                    <?php foreach($shown_cards as $handle => $card): ?>
-                        <tr class="card" data-card-handle="<?php echo $handle; ?>">
-                            <td class="handle" width="20"><span class="dashicons dashicons-move"></span></td>
-                            <td><?php echo $card->label; ?></td>
+                    <?php foreach ( $shown_cards as $handle => $card ): ?>
+                        <tr class="card"
+                            data-card-handle="<?php echo esc_attr( $handle ); ?>">
+                            <td class="handle"
+                                width="20"><span class="dashicons dashicons-move"></span></td>
+                            <td><?php echo esc_html( $card->label ); ?></td>
                             <td align="right">
                                 <form method="POST">
-                                    <input type="hidden" name="hide_card" value="<?php echo $handle; ?>">
-                                    <button class="button" type="submit">Hide</button>
+                                    <input type="hidden"
+                                           name="hide_card"
+                                           value="<?php echo esc_attr( $handle ); ?>">
+                                    <button class="button"
+                                            type="submit"><?php echo esc_html_e( "Hide", 'disciple-tools-dashboard' ); ?></button>
                                 </form>
                             </td>
                         </tr>
@@ -40,13 +46,16 @@ $hidden_cards = $dt_cards->hidden();
                     </tr>
                     </thead>
                     <tbody>
-                    <?php foreach($hidden_cards as $handle => $card): ?>
+                    <?php foreach ( $hidden_cards as $handle => $card ): ?>
                         <tr>
-                            <td><?php echo $card->label; ?></td>
+                            <td><?php echo esc_html( $card->label ); ?></td>
                             <td align="right">
                                 <form method="POST">
-                                    <input type="hidden" name="show_card" value="<?php echo $handle; ?>">
-                                    <button class="button" type="submit">Show</button>
+                                    <input type="hidden"
+                                           name="show_card"
+                                           value="<?php echo esc_attr( $handle ); ?>">
+                                    <button class="button"
+                                            type="submit"><?php echo esc_html_e( "Show", 'disciple-tools-dashboard' ); ?></button>
                                 </form>
                             </td>
                         </tr>

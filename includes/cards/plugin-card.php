@@ -5,10 +5,9 @@ class DT_Dashboard_Plugin_Card extends DT_Dashboard_Card
 {
     private $template_folder = '';
 
-    public function __construct($handle, $label, $span = 1)
-    {
-        $this->template_folder = strtolower(str_replace('_', '-', str_replace('DT_Dashboard_Plugin_', '', $handle)));
-        parent::__construct($handle, $label, $span);
+    public function __construct( $handle, $label, $span = 1) {
+        $this->template_folder = strtolower( str_replace( '_', '-', str_replace( 'DT_Dashboard_Plugin_', '', $handle ) ) );
+        parent::__construct( $handle, $label, $span );
     }
 
     /**
@@ -16,9 +15,9 @@ class DT_Dashboard_Plugin_Card extends DT_Dashboard_Card
      * @return mixed
      */
     public function setup() {
-        $script =  "includes/cards/" . $this->template_folder . "/scripts.js";
+        $script = "includes/cards/" . $this->template_folder . "/scripts.js";
 
-        if (file_exists(DT_Dashboard_Plugin::dir() . $script)) {
+        if (file_exists( DT_Dashboard_Plugin::dir() . $script )) {
             wp_enqueue_script( $this->handle, DT_Dashboard_Plugin::path() . $script, [
                 'dt-dashboard-plugin',
                 'jquery',
@@ -39,6 +38,6 @@ class DT_Dashboard_Plugin_Card extends DT_Dashboard_Card
         $handle = $this->handle;
         $label = $this->label;
         $card = $this;
-        include (DT_Dashboard_Plugin::includes_dir() . "cards/" . $this->template_folder . "/template.php");
+        include( DT_Dashboard_Plugin::includes_dir() . "cards/" . $this->template_folder . "/template.php" );
     }
 }
