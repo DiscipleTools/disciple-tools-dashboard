@@ -26,9 +26,10 @@ $hidden_cards = $dt_cards->hidden();
                             <td><?php echo esc_html( $card->label ); ?></td>
                             <td align="right">
                                 <form method="POST">
+                                    <?php wp_nonce_field( 'hide_' .  sanitize_key( $handle ) ); ?>
                                     <input type="hidden"
                                            name="hide_card"
-                                           value="<?php echo esc_attr( $handle ); ?>">
+                                           value="<?php echo esc_attr( sanitize_key( $handle ) ); ?>">
                                     <button class="button"
                                             type="submit"><?php echo esc_html_e( "Hide", 'disciple-tools-dashboard' ); ?></button>
                                 </form>
@@ -51,9 +52,10 @@ $hidden_cards = $dt_cards->hidden();
                             <td><?php echo esc_html( $card->label ); ?></td>
                             <td align="right">
                                 <form method="POST">
+                                    <?php wp_nonce_field( 'show_' .  sanitize_key( $handle ) ); ?>
                                     <input type="hidden"
                                            name="show_card"
-                                           value="<?php echo esc_attr( $handle ); ?>">
+                                           value="<?php echo esc_attr( sanitize_key( $handle ) ); ?>">
                                     <button class="button"
                                             type="submit"><?php echo esc_html_e( "Show", 'disciple-tools-dashboard' ); ?></button>
                                 </form>

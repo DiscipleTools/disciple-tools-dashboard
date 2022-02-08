@@ -109,17 +109,20 @@ class DT_Dashboard_Plugin_Menu {
      */
     public function update() {
         $cards = new DT_Dashboard_Plugin_Cards();
-        $nonce = isset( $_REQUEST['X-WP-Nonce'] ) ? sanitize_key( $_REQUEST['X-WP-Nonce'] ) : null;
+        $nonce = isset( $_POST['_wpnonce'] ) ? sanitize_key( $_POST['_wpnonce'] ) : null;
 
-        if ( !wp_verify_nonce( $nonce, 'wp_rest' ) ) {
-            return;
-        }
 
         if ( isset( $_POST["show_card"] ) ) {
+            if ( !wp_verify_nonce( $nonce, 'show_' . sanitize_key( $_POST["show_card"] ) ) ) {
+                return;
+            }
             $cards->show( sanitize_key( $_POST["show_card"] ) );
         }
 
         if ( isset( $_POST["hide_card"] ) ) {
+            if ( !wp_verify_nonce( $nonce, 'hide_' . sanitize_key( $_POST["hide_card"] ) ) ) {
+                return;
+            }
             $cards->hide( sanitize_key( $_POST["hide_card"] ) );
         }
 
