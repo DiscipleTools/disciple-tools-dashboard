@@ -206,10 +206,22 @@ class DT_Dashboard_Plugin {
         $cards->register( new DT_Dashboard_Plugin_Card( 'DT_Dashboard_Plugin_Update_Needed', __( 'Update Needed', 'disciple-tools-dashboard' ), [ 'priority' => 1 ] ) );
         $cards->register( new DT_Dashboard_Plugin_Card( 'DT_Dashboard_Plugin_Pending_Contacts', __( 'Pending Contacts', 'disciple-tools-dashboard' ), [ 'priority' => 2 ] ) );
         $cards->register( new DT_Dashboard_Plugin_Card( 'DT_Dashboard_Plugin_Contact_Workload', __( 'Contact Workload', 'disciple-tools-dashboard' ), [ 'priority' => 3 ] ) );
-        $cards->register( new DT_Dashboard_Plugin_Card( 'DT_Dashboard_Plugin_Faith_Milestone_Totals', __( 'Faith Milestone Totals', 'disciple-tools-dashboard' ), [ 'span' => 2, 'priority' => 4 ] ) );
-        $cards->register( new DT_Dashboard_Plugin_Card( 'DT_Dashboard_Plugin_Seeker_Path_Progress', __( 'Seeker Path Progress', 'disciple-tools-dashboard' ), [ 'span' => 2, 'priority' => 5 ] ) );
-        $cards->register( new DT_Dashboard_Plugin_Card( 'DT_Dashboard_Plugin_Personal_Benchmarks', __( 'Personal Benchmarks', 'disciple-tools-dashboard' ), [ 'span' => 4, 'priority' => 6 ] ) );
-        $cards->register( new DT_Dashboard_Plugin_Card( 'DT_Dashboard_Plugin_Tasks', __( 'Tasks', 'disciple-tools-dashboard' ) , [ 'span' => 2, 'priority' => 7 ] ) );
+        $cards->register( new DT_Dashboard_Plugin_Card( 'DT_Dashboard_Plugin_Faith_Milestone_Totals', __( 'Faith Milestone Totals', 'disciple-tools-dashboard' ), [
+            'span' => 2,
+            'priority' => 4
+        ] ) );
+        $cards->register( new DT_Dashboard_Plugin_Card( 'DT_Dashboard_Plugin_Seeker_Path_Progress', __( 'Seeker Path Progress', 'disciple-tools-dashboard' ), [
+            'span' => 2,
+            'priority' => 5
+        ] ) );
+        $cards->register( new DT_Dashboard_Plugin_Card( 'DT_Dashboard_Plugin_Personal_Benchmarks', __( 'Personal Benchmarks', 'disciple-tools-dashboard' ), [
+            'span' => 4,
+            'priority' => 6
+        ] ) );
+        $cards->register( new DT_Dashboard_Plugin_Card( 'DT_Dashboard_Plugin_Tasks', __( 'Tasks', 'disciple-tools-dashboard' ), [
+            'span' => 2,
+            'priority' => 7
+        ] ) );
     }
 
     /**

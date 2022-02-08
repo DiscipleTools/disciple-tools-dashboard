@@ -590,6 +590,6 @@ class DT_Dashboard_Plugin_Endpoints
     public function get_card( WP_REST_Request $request ){
         $cards = new DT_Dashboard_Plugin_Cards();
         $params = $request->get_query_params();
-        return $cards->find( $params["card_handle"] )->toJson();
+        return $cards->find( $params["card_handle"] )->to_json();
     }
 }
