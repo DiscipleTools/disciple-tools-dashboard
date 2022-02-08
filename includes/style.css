@@ -618,13 +618,13 @@ body {
     margin-left: 20px;
 }
 
-.dashboard-page #dashboard .loading-spinner {
+.dashboard-page .loading-spinner {
     position: absolute;
     right: 10px;
     top: 20px;
 }
 
-.dashboard-page #dashboard .loading-spinner.active {
+.dashboard-page .loading-spinner.active {
     border: 0.25rem solid white;
     border-top-color: transparent;
 }
