@@ -18,7 +18,7 @@ get_header();
 ?>
 <div id="blank"></div>
     <div id="dashboard">
-    
+
         <div id="content" class="dashboard-page">
             <div id="inner-content">
                 <div class="dash-cards" id="dash-cards">
@@ -31,5 +31,25 @@ get_header();
         </div>
     </div>
 
+    <script>
+        function closeCardNav($id) {
+            var element = document.getElementById("card-nav-" + $id);
+            element.classList.remove("show");
+        }
+
+        function toggleCardNav($id) {
+            var element = document.getElementById("card-nav-" + $id);
+            element.classList.toggle("show");
+
+            var blank = document.getElementById("blank");
+            blank.classList.toggle("show");
+
+            blank.onclick = function () {
+                element.classList.toggle("show");
+                blank.classList.toggle("show");
+            };
+
+        }
+    </script>
 <?php
 get_footer();

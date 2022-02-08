@@ -22,7 +22,7 @@
                </span>
 
             <div class="card-nav"
-                 id="card-nav-<?php echo esc_attr( $card->handle ); ?>">
+                 id="card-nav-<?php echo esc_attr( $card->handle ); ?>" onmouseleave="closeCardNav('<?php echo esc_attr( $card->handle ); ?>')">
                 <div class="card-move-left"
                      onclick="dt_dashboard.moveBack('<?php echo esc_attr( $card->handle ); ?>')">
                     <i class="fi-arrow-left"></i> Move Back
@@ -39,19 +39,3 @@
         </div>
     </div>
 </div>
-
-<script>
-    function toggleCardNav($id) {
-        var element = document.getElementById("card-nav-" + $id);
-        element.classList.toggle("show");
-
-        var blank = document.getElementById("blank");
-        blank.classList.toggle("show");
-
-        blank.onclick = function () {
-            element.classList.toggle("show");
-            blank.classList.toggle("show");
-        };
-
-    }
-</script>
