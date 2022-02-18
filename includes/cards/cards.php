@@ -175,10 +175,11 @@ class DT_Dashboard_Plugin_Cards
             $handle_b = array_search( $b, $cards );
             $sort_a = array_search( $handle_a, $sort );
             $sort_b = array_search( $handle_b, $sort );
-            if ( !$sort_a) {
+
+            if ( ! is_numeric($sort_a) ) {
                 $sort_a = $a->priority;
             }
-            if ( !$sort_b) {
+            if ( ! is_numeric($sort_b))  {
                 $sort_b = $b->priority;
             }
 
