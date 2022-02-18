@@ -25,10 +25,11 @@ class DT_Dashboard_Plugin_Endpoints
     }
 
     public function has_permission(){
-        $pass = false;
+        $pass = true;
+
         foreach ( $this->permissions as $permission ){
-            if ( current_user_can( $permission ) ){
-                $pass = true;
+            if ( ! current_user_can( $permission ) ){
+                $pass = false;
             }
         }
         return $pass;
