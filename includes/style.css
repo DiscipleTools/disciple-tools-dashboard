@@ -18,7 +18,8 @@
     --primary-color: #2c2c2c;
     --secondary-color: #666666;
     --gray: #D6D6D6;
-    --gray3: #e5e5e5;
+    --gray-2: #e5e5e5;
+    --gray-3: #f3f3f3;
     --white: #ffffff;
     --green: #2da800;
 
@@ -31,6 +32,9 @@ body {
     background: var(--white) !important;
 }
 
+#dashboard {
+    background: var(--gray-3);
+}
 #content,
 .container-width {
     width: fit-content !important;
@@ -125,7 +129,7 @@ body {
 
 
 .dashboard-page .card-subheader {
-    background: var(--gray3);
+    background: var(--gray-2);
     text-align: center;
     color: var(--secondary-color);
     padding: 10px;
