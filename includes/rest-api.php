@@ -4,7 +4,8 @@
  */
 
 
-class DT_Dashboard_Plugin_Endpoints {
+class DT_Dashboard_Plugin_Endpoints
+{
     public $permissions = [ 'access_disciple_tools' ];
 
     private static $_instance = null;
