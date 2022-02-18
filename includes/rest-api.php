@@ -4,11 +4,11 @@
  */
 
 
-class DT_Dashboard_Plugin_Endpoints
-{
+class DT_Dashboard_Plugin_Endpoints {
     public $permissions = [ 'access_contacts' ];
 
     private static $_instance = null;
+
     public static function instance() {
         if ( is_null( self::$_instance ) ) {
             self::$_instance = new self();
@@ -19,16 +19,17 @@ class DT_Dashboard_Plugin_Endpoints
     private $version = 1;
     private $context = "dt-dashboard";
     private $namespace;
+
     public function __construct() {
         $this->namespace = $this->context . "/v" . intval( $this->version );
         add_action( 'rest_api_init', [ $this, 'add_api_routes' ] );
     }
 
-    public function has_permission(){
+    public function has_permission() {
         $pass = true;
 
-        foreach ( $this->permissions as $permission ){
-            if ( ! current_user_can( $permission ) ){
+        foreach ( $this->permissions as $permission ) {
+            if ( !current_user_can( $permission ) ) {
                 $pass = false;
             }
         }
@@ -40,108 +41,108 @@ class DT_Dashboard_Plugin_Endpoints
     public function add_api_routes() {
         register_rest_route(
             $this->namespace, '/stats', [
-                'methods'  => 'GET',
-                'callback' => [ $this, 'get_other_stats' ],
-                'permission_callback' => function( WP_REST_Request $request ) {
+                'methods'             => 'GET',
+                'callback'            => [ $this, 'get_other_stats' ],
+                'permission_callback' => function ( WP_REST_Request $request ) {
                     return $this->has_permission();
                 },
             ]
         );
         register_rest_route(
             $this->namespace, '/benchmarks', [
-                'methods'  => 'GET',
-                'callback' => [ $this, 'get_benchmarks' ],
-                'permission_callback' => function( WP_REST_Request $request ) {
+                'methods'             => 'GET',
+                'callback'            => [ $this, 'get_benchmarks' ],
+                'permission_callback' => function ( WP_REST_Request $request ) {
                     return $this->has_permission();
                 },
             ]
         );
         register_rest_route(
             $this->namespace, '/seeker_path_personal', [
-                'methods'  => 'GET',
-                'callback' => [ $this, 'get_seeker_path_personal' ],
-                'permission_callback' => function( WP_REST_Request $request ) {
+                'methods'             => 'GET',
+                'callback'            => [ $this, 'get_seeker_path_personal' ],
+                'permission_callback' => function ( WP_REST_Request $request ) {
                     return $this->has_permission();
                 },
             ]
         );
         register_rest_route(
             $this->namespace, '/milestones', [
-                'methods'  => 'GET',
-                'callback' => [ $this, 'get_milestones' ],
-                'permission_callback' => function( WP_REST_Request $request ) {
+                'methods'             => 'GET',
+                'callback'            => [ $this, 'get_milestones' ],
+                'permission_callback' => function ( WP_REST_Request $request ) {
                     return $this->has_permission();
                 },
             ]
         );
         register_rest_route(
             $this->namespace, '/tasks', [
-                 'methods'  => 'GET',
-                 'callback' => [ $this, 'get_tasks' ],
-                 'permission_callback' => function( WP_REST_Request $request ) {
-                     return $this->has_permission();
-                 },
-             ]
+                'methods'             => 'GET',
+                'callback'            => [ $this, 'get_tasks' ],
+                'permission_callback' => function ( WP_REST_Request $request ) {
+                    return $this->has_permission();
+                },
+            ]
         );
         register_rest_route(
             $this->namespace, '/user', [
-                'methods'  => 'POST',
-                'callback' => [ $this, 'update_user' ],
-                'permission_callback' => function( WP_REST_Request $request ) {
+                'methods'             => 'POST',
+                'callback'            => [ $this, 'update_user' ],
+                'permission_callback' => function ( WP_REST_Request $request ) {
                     return $this->has_permission();
                 },
             ]
         );
         register_rest_route(
             $this->namespace, '/cards/sort', [
-                'methods'  => 'PUT',
-                'callback' => [ $this, 'update_card_sort' ],
-                'permission_callback' => function( WP_REST_Request $request ) {
+                'methods'             => 'PUT',
+                'callback'            => [ $this, 'update_card_sort' ],
+                'permission_callback' => function ( WP_REST_Request $request ) {
                     return $this->has_permission();
                 },
             ]
         );
         register_rest_route(
             $this->namespace, '/user/cards/sort', [
-                'methods'  => 'PUT',
-                'callback' => [ $this, 'update_user_card_sort' ],
-                'permission_callback' => function( WP_REST_Request $request ) {
+                'methods'             => 'PUT',
+                'callback'            => [ $this, 'update_user_card_sort' ],
+                'permission_callback' => function ( WP_REST_Request $request ) {
                     return $this->has_permission();
                 },
             ]
         );
         register_rest_route(
             $this->namespace, '/user/cards/toggle', [
-                'methods'  => 'POST',
-                'callback' => [ $this, 'user_cards_toggle' ],
-                'permission_callback' => function( WP_REST_Request $request ) {
+                'methods'             => 'POST',
+                'callback'            => [ $this, 'user_cards_toggle' ],
+                'permission_callback' => function ( WP_REST_Request $request ) {
                     return $this->has_permission();
                 },
             ]
         );
         register_rest_route(
             $this->namespace, '/card', [
-                'methods'  => 'GET',
-                'callback' => [ $this, 'get_card' ],
-                'permission_callback' => function( WP_REST_Request $request ) {
+                'methods'             => 'GET',
+                'callback'            => [ $this, 'get_card' ],
+                'permission_callback' => function ( WP_REST_Request $request ) {
                     return $this->has_permission();
                 },
             ]
         );
         register_rest_route(
             $this->namespace, '/user/cards/show', [
-                'methods'  => 'POST',
-                'callback' => [ $this, 'user_cards_show' ],
-                'permission_callback' => function( WP_REST_Request $request ) {
+                'methods'             => 'POST',
+                'callback'            => [ $this, 'user_cards_show' ],
+                'permission_callback' => function ( WP_REST_Request $request ) {
                     return $this->has_permission();
                 },
             ]
         );
         register_rest_route(
             $this->namespace, '/user/cards/hide', [
-                'methods'  => 'POST',
-                'callback' => [ $this, 'user_cards_hide' ],
-                'permission_callback' => function( WP_REST_Request $request ) {
+                'methods'             => 'POST',
+                'callback'            => [ $this, 'user_cards_hide' ],
+                'permission_callback' => function ( WP_REST_Request $request ) {
                     return $this->has_permission();
                 },
             ]
@@ -149,19 +150,19 @@ class DT_Dashboard_Plugin_Endpoints
     }
 
 
-    public static function get_data(){
+    public static function get_data() {
 
         $to_accept = DT_Posts::search_viewable_post( "contacts", [
             'overall_status' => [ 'assigned' ],
             'assigned_to'    => [ 'me' ],
-            'type' => [ "access" ]
+            'type'           => [ "access" ]
         ] );
         $update_needed = DT_Posts::search_viewable_post( "contacts", [
             'requires_update' => [ "true" ],
             'assigned_to'     => [ 'me' ],
-            'overall_status' => [ '-closed' ]
+            'overall_status'  => [ '-closed' ]
         ] );
-        if ( is_wp_error( $update_needed ) ){
+        if ( is_wp_error( $update_needed ) ) {
             return $update_needed; // @todo handle potential wp error response
         }
         if ( sizeof( $update_needed["posts"] ) > 5 ) {
@@ -170,18 +171,18 @@ class DT_Dashboard_Plugin_Endpoints
         if ( sizeof( $to_accept["posts"] ) > 5 ) {
             $to_accept["posts"] = array_slice( $to_accept["posts"], 0, 5 );
         }
-        foreach ( $update_needed["posts"] as &$contact ){
+        foreach ( $update_needed["posts"] as &$contact ) {
             $now = time();
             $last_modified = get_post_meta( $contact->ID, "last_modified", true );
-            $days_different = (int) round( ( $now - (int) $last_modified ) / ( 60 * 60 * 24 ) );
+            $days_different = (int)round( ( $now - (int)$last_modified ) / ( 60 * 60 * 24 ) );
             $contact->last_modified_msg = esc_attr( sprintf( __( '%s days since last update', 'disciple-tools-dashboard' ), $days_different ), 'disciple_tools' );
         }
         $my_active_contacts = self::get_active_contacts();
 
         return [
             "active_contacts" => $my_active_contacts,
-            "accept_needed" => $to_accept,
-            "update_needed" => $update_needed,
+            "accept_needed"   => $to_accept,
+            "update_needed"   => $update_needed,
         ];
     }
 
@@ -190,10 +191,10 @@ class DT_Dashboard_Plugin_Endpoints
         $milestones = self::milestones();
         $personal_benchmarks = self::get_personal_benchmarks();
         return [
-            "benchmarks" => $personal_benchmarks,
+            "benchmarks"           => $personal_benchmarks,
             "seeker_path_personal" => $seeker_path_personal,
-            "milestones" => $milestones,
-            "tasks" => self::query_tasks(),
+            "milestones"           => $milestones,
+            "tasks"                => self::query_tasks(),
         ];
     }
 
@@ -213,7 +214,7 @@ class DT_Dashboard_Plugin_Endpoints
         return self::query_tasks();
     }
 
-    private static function get_active_contacts(){
+    private static function get_active_contacts() {
         global $wpdb;
         $my_active_contacts = $wpdb->get_var( $wpdb->prepare( "
             SELECT count(a.ID)
@@ -237,7 +238,7 @@ class DT_Dashboard_Plugin_Endpoints
         return $my_active_contacts;
     }
 
-    private static function get_personal_benchmarks(){
+    private static function get_personal_benchmarks() {
         global $wpdb;
         $thirty_days_ago = time() - 30 * 24 * 60 * 60;
         $sixty_days_ago = $thirty_days_ago - 30 * 24 * 60 * 60;
@@ -316,17 +317,17 @@ class DT_Dashboard_Plugin_Endpoints
         );
 
         return [
-            "contacts" => [
+            "contacts"   => [
                 "previous" => $contacts_previous,
-                "current" => $contacts_current,
+                "current"  => $contacts_current,
             ],
-            "meetings" => [
+            "meetings"   => [
                 "previous" => $met_previous,
-                "current" => $met_current
+                "current"  => $met_current
             ],
             "milestones" => [
                 "previous" => $milestones_previous,
-                "current" => $milestones_current
+                "current"  => $milestones_current
             ]
         ];
     }
@@ -341,7 +342,7 @@ class DT_Dashboard_Plugin_Endpoints
         $contact_fields = DT_Posts::get_post_field_settings( "contacts" );
         $seeker_path_options = $contact_fields["seeker_path"]["default"];
         foreach ( $seeker_path_options as $key => $option ) {
-            $defaults[$key] = [
+            $defaults[ $key ] = [
                 'label' => $option["label"],
                 'count' => 0,
             ];
@@ -370,15 +371,15 @@ class DT_Dashboard_Plugin_Endpoints
             )
              GROUP BY b.meta_value
         ",
-        'user-'. $user_id ), ARRAY_A );
+            'user-' . $user_id ), ARRAY_A );
 
         $query_results = [];
 
-        if ( ! empty( $results ) ) {
+        if ( !empty( $results ) ) {
             foreach ( $results as $result ) {
-                if ( isset( $defaults[$result['seeker_path']] ) ) {
-                    $query_results[$result['seeker_path']] = [
-                        'label' => $defaults[$result['seeker_path']]['label'],
+                if ( isset( $defaults[ $result['seeker_path'] ] ) ) {
+                    $query_results[ $result['seeker_path'] ] = [
+                        'label' => $defaults[ $result['seeker_path'] ]['label'],
                         'count' => intval( $result['count'] ),
                     ];
                 }
@@ -386,7 +387,7 @@ class DT_Dashboard_Plugin_Endpoints
         }
         $query_results = wp_parse_args( $query_results, $defaults );
         $res = [];
-        foreach ( $query_results as $r ){
+        foreach ( $query_results as $r ) {
             $res[] = [
                 "label" => $r['label'],
                 "value" => $r["count"]
@@ -426,21 +427,21 @@ class DT_Dashboard_Plugin_Endpoints
         $contact_fields = DT_Posts::get_post_field_settings( "contacts" );
         $seeker_path_options = $contact_fields["seeker_path"]["default"];
 
-        foreach ( $seeker_path_options as $seeker_path_key => $seeker_path_option ){
+        foreach ( $seeker_path_options as $seeker_path_key => $seeker_path_option ) {
             $added = false;
             foreach ( $results as $result ) {
-                if ( $result["seeker_path"] == $seeker_path_key ){
+                if ( $result["seeker_path"] == $seeker_path_key ) {
                     $query_results[] = [
-                        'key' => $seeker_path_key,
+                        'key'   => $seeker_path_key,
                         'label' => $seeker_path_option['label'],
                         'value' => intval( $result['count'] )
                     ];
                     $added = true;
                 }
             }
-            if ( !$added ){
+            if ( !$added ) {
                 $query_results[] = [
-                    'key' => $seeker_path_key,
+                    'key'   => $seeker_path_key,
                     'label' => $seeker_path_option['label'],
                     'value' => 0
                 ];
@@ -450,7 +451,7 @@ class DT_Dashboard_Plugin_Endpoints
         return $query_results;
     }
 
-    public static function milestones(){
+    public static function milestones() {
         global $wpdb;
 
         $user_id = get_current_user_id();
@@ -476,35 +477,35 @@ class DT_Dashboard_Plugin_Endpoints
                 )
              GROUP BY b.meta_value
         ",
-        'user-'. $user_id ), ARRAY_A );
+            'user-' . $user_id ), ARRAY_A );
 
         $field_settings = DT_Posts::get_post_field_settings( "contacts" );
         $milestones_options = $field_settings["milestones"]["default"];
         $milestones_data = [];
 
-        foreach ( $milestones_options as $option_key => $option_value ){
-            $milestones_data[$option_value["label"]] = 0;
-            foreach ( $res as $r ){
-                if ( $r["milestones"] === $option_key ){
-                    $milestones_data[$option_value["label"]] = $r["value"];
+        foreach ( $milestones_options as $option_key => $option_value ) {
+            $milestones_data[ $option_value["label"] ] = 0;
+            foreach ( $res as $r ) {
+                if ( $r["milestones"] === $option_key ) {
+                    $milestones_data[ $option_value["label"] ] = $r["value"];
                 }
             }
         }
         $return = [];
-        foreach ( $milestones_data as $k => $v ){
+        foreach ( $milestones_data as $k => $v ) {
             $return[] = [
                 "milestones" => $k,
-                "value" => (int) $v
+                "value"      => (int)$v
             ];
         }
 
         return $return;
     }
 
-    private function query_tasks(){
+    private function query_tasks() {
         global $wpdb;
         $user_id = get_current_user_id();
-        $task_results = $wpdb->get_results($wpdb->prepare( "
+        $task_results = $wpdb->get_results( $wpdb->prepare( "
             SELECT pum.*, p.post_title, p.post_type
             FROM $wpdb->dt_post_user_meta pum
             INNER JOIN $wpdb->posts p ON p.ID = pum.post_id
@@ -515,29 +516,29 @@ class DT_Dashboard_Plugin_Endpoints
             ORDER BY pum.date ASC
             LIMIT 30
         ", $user_id, '%notification_sent%', '%task_complete%' ), ARRAY_A );
-        foreach ( $task_results as &$task ){
+        foreach ( $task_results as &$task ) {
             $task["value"] = maybe_unserialize( $task["meta_value"] );
         }
         return $task_results;
     }
 
-    public static function translations(){
+    public static function translations() {
         return [
-            "accept" => __( "Accept", 'disciple-tools-dashboard' ),
-            "decline" => __( "Decline", 'disciple-tools-dashboard' ),
+            "accept"                   => __( "Accept", 'disciple-tools-dashboard' ),
+            "decline"                  => __( "Decline", 'disciple-tools-dashboard' ),
             "number_contacts_assigned" => __( "# Contacts Assigned", 'disciple-tools-dashboard' ),
-            "number_meetings" => __( "# First Meetings", 'disciple-tools-dashboard' ),
-            "number_milestones" => __( "# Faith milestones", 'disciple-tools-dashboard' ),
-            "caught_up" => __( "Hurray! You are caught up.", 'disciple-tools-dashboard' ),
-            'remove' => __( 'remove', 'disciple-tools-dashboard' ),
-            'complete' => __( 'mark as complete', 'disciple-tools-dashboard' ),
-            'no_tasks' => __( 'No task created', 'disciple-tools-dashboard' ),
-            'reminder' => __( 'Reminder', 'disciple-tools-dashboard' ),
-            'no_note' => __( 'No note set', 'disciple-tools-dashboard' ),
+            "number_meetings"          => __( "# First Meetings", 'disciple-tools-dashboard' ),
+            "number_milestones"        => __( "# Faith milestones", 'disciple-tools-dashboard' ),
+            "caught_up"                => __( "Hurray! You are caught up.", 'disciple-tools-dashboard' ),
+            'remove'                   => __( 'remove', 'disciple-tools-dashboard' ),
+            'complete'                 => __( 'mark as complete', 'disciple-tools-dashboard' ),
+            'no_tasks'                 => __( 'No task created', 'disciple-tools-dashboard' ),
+            'reminder'                 => __( 'Reminder', 'disciple-tools-dashboard' ),
+            'no_note'                  => __( 'No note set', 'disciple-tools-dashboard' ),
         ];
     }
 
-    public function update_user( WP_REST_Request $request ){
+    public function update_user( WP_REST_Request $request ) {
         $get_params = $request->get_params();
         $body = $request->get_json_params();
         $user = wp_get_current_user();
@@ -548,7 +549,7 @@ class DT_Dashboard_Plugin_Endpoints
         return true;
     }
 
-    public function update_card_sort( WP_REST_Request $request ){
+    public function update_card_sort( WP_REST_Request $request ) {
         $get_params = $request->get_params();
         $body = $request->get_body_params();
         $cards = new DT_Dashboard_Plugin_Cards();
@@ -556,7 +557,7 @@ class DT_Dashboard_Plugin_Endpoints
         return true;
     }
 
-    public function user_cards_toggle( WP_REST_Request $request ){
+    public function user_cards_toggle( WP_REST_Request $request ) {
         $get_params = $request->get_params();
         $body = $request->get_body_params();
         $cards = new DT_Dashboard_Plugin_User_Cards();
@@ -564,7 +565,7 @@ class DT_Dashboard_Plugin_Endpoints
         return true;
     }
 
-    public function update_user_card_sort( WP_REST_Request $request ){
+    public function update_user_card_sort( WP_REST_Request $request ) {
         $get_params = $request->get_params();
         $body = $request->get_body_params();
         $cards = new DT_Dashboard_Plugin_User_Cards();
@@ -572,7 +573,7 @@ class DT_Dashboard_Plugin_Endpoints
         return true;
     }
 
-    public function user_cards_show( WP_REST_Request $request ){
+    public function user_cards_show( WP_REST_Request $request ) {
         $get_params = $request->get_params();
         $body = $request->get_body_params();
         $cards = new DT_Dashboard_Plugin_User_Cards();
@@ -580,7 +581,7 @@ class DT_Dashboard_Plugin_Endpoints
         return true;
     }
 
-    public function user_cards_hide( WP_REST_Request $request ){
+    public function user_cards_hide( WP_REST_Request $request ) {
         $get_params = $request->get_params();
         $body = $request->get_body_params();
         $cards = new DT_Dashboard_Plugin_User_Cards();
@@ -588,7 +589,7 @@ class DT_Dashboard_Plugin_Endpoints
         return true;
     }
 
-    public function get_card( WP_REST_Request $request ){
+    public function get_card( WP_REST_Request $request ) {
         $cards = new DT_Dashboard_Plugin_Cards();
         $params = $request->get_query_params();
         return $cards->find( $params["card_handle"] )->to_json();
