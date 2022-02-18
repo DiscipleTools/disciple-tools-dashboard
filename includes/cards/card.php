@@ -4,7 +4,7 @@ abstract class DT_Dashboard_Card
 {
     public $handle;
     public $label;
-    public $span = 1;
+    public $span = 0;
     public $priority = 0;
 
     public function __construct( $handle, $label, $params = []) {

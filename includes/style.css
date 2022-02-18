@@ -35,15 +35,16 @@ body {
 #dashboard {
     background: var(--gray-3);
 }
-#content,
-.container-width {
-    width: fit-content !important;
+.dashboard-page#content,
+.dashboard-page .container-width {
+    width: 100%;
+    max-width: unset;
 }
 
 .dashboard-page .dash-cards {
     font-family: "Poppins", sans-serif !important;
     display: grid;
-    grid-template-columns: repeat(4, 278px);
+    grid-template-columns: repeat(4, 1fr);
     justify-items: stretch;
     margin: 0 auto;
 }
@@ -723,8 +724,15 @@ body {
 }
 
 @media only screen and (max-width: 1440px) {
-    .dashboard-page .dash-cards {
-        grid-template-columns: repeat(2, 314px);
+    .dashboard-page .dash-card {
+        grid-column: var(--dashboard-card-column, span 2);
+    }
+}
+
+@media only screen and (min-width: 1441px) {
+    #dashboard {
+        padding-left: 100px;
+        padding-right: 100px;
     }
 }
 
