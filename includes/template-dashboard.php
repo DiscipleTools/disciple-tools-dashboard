@@ -22,7 +22,7 @@ get_header();
         <div id="content" class="dashboard-page">
             <div id="inner-content">
                 <div class="dash-cards" id="dash-cards">
-                    <?php foreach ($shown_cards as $card): ?>
+                    <?php foreach ( $shown_cards as $card ): ?>
                         <?php include __DIR__ . '/template-parts/card.php'; ?>
                     <?php endforeach; ?>
                 </div>

@@ -1,7 +1,7 @@
 <div class="dash-card item dash-card--<?php echo esc_attr( $card->handle ); ?>"
      data-card-handle="<?php echo esc_attr( $card->handle ); ?>"
      id="dash-card--<?php echo esc_attr( $card->handle ); ?>"
-     <?php if ($card->span): ?> style="--dashboard-card-column: span <?php echo esc_attr( $card->span ); ?> <?php endif; ?>"
+     <?php if ( $card->span ): ?> style="--dashboard-card-column: span <?php echo esc_attr( $card->span ); ?> <?php endif; ?>"
 >
 
     <div class="card">

@@ -7,20 +7,20 @@ abstract class DT_Dashboard_Card
     public $span = 0;
     public $priority = 0;
 
-    public function __construct( $handle, $label, $params = []) {
-        if (isset( $params['span'] )) {
-            if ( ! is_numeric( $params['span'] )) {
+    public function __construct( $handle, $label, $params = [] ) {
+        if ( isset( $params['span'] ) ) {
+            if ( ! is_numeric( $params['span'] ) ) {
                 throw new Exception( 'Card span must be numeric' );
             }
 
-            if ($params['span'] < 1 || $params['span'] > 4) {
+            if ( $params['span'] < 1 || $params['span'] > 4 ) {
                 throw new Exception( 'Card span must be between 1 and 4' );
             }
 
             $this->span = $params['span'];
         }
 
-        if (isset( $params['priority'] )) {
+        if ( isset( $params['priority'] ) ) {
             $this->priority = $params['priority'];
         }
 
