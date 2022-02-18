@@ -174,7 +174,7 @@ class DT_Dashboard_Plugin_Endpoints {
         foreach ( $update_needed["posts"] as &$contact ) {
             $now = time();
             $last_modified = get_post_meta( $contact->ID, "last_modified", true );
-            $days_different = (int)round( ( $now - (int)$last_modified ) / ( 60 * 60 * 24 ) );
+            $days_different = (int) round( ( $now - (int) $last_modified ) / ( 60 * 60 * 24 ) );
             $contact->last_modified_msg = esc_attr( sprintf( __( '%s days since last update', 'disciple-tools-dashboard' ), $days_different ), 'disciple_tools' );
         }
         $my_active_contacts = self::get_active_contacts();
@@ -371,7 +371,7 @@ class DT_Dashboard_Plugin_Endpoints {
             )
              GROUP BY b.meta_value
         ",
-            'user-' . $user_id ), ARRAY_A );
+        'user-' . $user_id ), ARRAY_A );
 
         $query_results = [];
 
@@ -477,7 +477,7 @@ class DT_Dashboard_Plugin_Endpoints {
                 )
              GROUP BY b.meta_value
         ",
-            'user-' . $user_id ), ARRAY_A );
+        'user-' . $user_id ), ARRAY_A );
 
         $field_settings = DT_Posts::get_post_field_settings( "contacts" );
         $milestones_options = $field_settings["milestones"]["default"];
@@ -495,7 +495,7 @@ class DT_Dashboard_Plugin_Endpoints {
         foreach ( $milestones_data as $k => $v ) {
             $return[] = [
                 "milestones" => $k,
-                "value"      => (int)$v
+                "value"      => (int) $v
             ];
         }
 
