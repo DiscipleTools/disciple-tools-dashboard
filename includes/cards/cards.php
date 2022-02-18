@@ -4,8 +4,7 @@
  * Service class for working with dashboard cards.
  * Class DT_Dashboard_Plugin_Cards
  */
-class DT_Dashboard_Plugin_Cards
-{
+class DT_Dashboard_Plugin_Cards {
     const CARDS_FILTER = 'dt_dashboard_cards';
     const CARD_SORT_OPTION = 'dt_dashboard_card_sort';
     const CARD_VISIBLE_OPTION_PREFIX = 'dt_dashboard_card_';
@@ -32,7 +31,7 @@ class DT_Dashboard_Plugin_Cards
      * @param $handle
      * @return bool
      */
-    public function is_card_visible( $handle) {
+    public function is_card_visible( $handle ) {
         return get_option( static::CARD_VISIBLE_OPTION_PREFIX . $handle ) !== '0';
     }
 
@@ -41,9 +40,9 @@ class DT_Dashboard_Plugin_Cards
      * @return array
      */
     public function hidden() {
-        return array_filter($this->all(), function ( $card, $handle) {
+        return array_filter( $this->all(), function ( $card, $handle ) {
             return !$this->is_card_visible( $handle );
-        }, ARRAY_FILTER_USE_BOTH);
+        }, ARRAY_FILTER_USE_BOTH );
     }
 
     /**
@@ -51,9 +50,9 @@ class DT_Dashboard_Plugin_Cards
      * @return array
      */
     public function shown() {
-        $cards = array_filter($this->all(), function ( $card, $handle) {
+        $cards = array_filter( $this->all(), function ( $card, $handle ) {
             return $this->is_card_visible( $handle );
-        }, ARRAY_FILTER_USE_BOTH);
+        }, ARRAY_FILTER_USE_BOTH );
         $this->sort_cards( $cards );
         return $cards;
     }
@@ -63,8 +62,8 @@ class DT_Dashboard_Plugin_Cards
      * @param $handle
      * @return mixed
      */
-    public function find( $handle) {
-        return $this->all()[$handle];
+    public function find( $handle ) {
+        return $this->all()[ $handle ];
     }
 
     /**
@@ -72,13 +71,13 @@ class DT_Dashboard_Plugin_Cards
      *
      * @param DT_Dashboard_Card $card
      */
-    public function register( DT_Dashboard_Card $card) {
-        add_action( 'wp_enqueue_scripts', function() use ( $card) {
+    public function register( DT_Dashboard_Card $card ) {
+        add_action( 'wp_enqueue_scripts', function () use ( $card ) {
             $this->setup_card( $card );
         }, 999 );
 
         //Register the card
-        static::$cards[$card->handle] = $card;
+        static::$cards[ $card->handle ] = $card;
     }
 
     /**
@@ -86,8 +85,8 @@ class DT_Dashboard_Plugin_Cards
      *
      * @param $handle
      */
-    public function deregister( $handle) {
-        unset( static::$cards[$handle] );
+    public function deregister( $handle ) {
+        unset( static::$cards[ $handle ] );
     }
 
     /**
@@ -95,7 +94,7 @@ class DT_Dashboard_Plugin_Cards
      * @param $handle
      * @param $visibility
      */
-    public function set_card_visibility( $handle, $visibility) {
+    public function set_card_visibility( $handle, $visibility ) {
         update_option( static::CARD_VISIBLE_OPTION_PREFIX . $handle, $visibility ? '1' : '0' );
     }
 
@@ -103,7 +102,7 @@ class DT_Dashboard_Plugin_Cards
      * Hide a card
      * @param $handle
      */
-    public function hide( $handle) {
+    public function hide( $handle ) {
         $this->set_card_visibility( $handle, false );
     }
 
@@ -111,7 +110,7 @@ class DT_Dashboard_Plugin_Cards
      * Toggle a cards visibility option
      * @param $handle
      */
-    public function toggle( $handle) {
+    public function toggle( $handle ) {
         $this->set_card_visibility( $handle, !$this->shown() );
     }
 
@@ -119,7 +118,7 @@ class DT_Dashboard_Plugin_Cards
      * Show a card
      * @param $handle
      */
-    public function show( $handle) {
+    public function show( $handle ) {
         $this->set_card_visibility( $handle, true );
     }
 
@@ -127,7 +126,7 @@ class DT_Dashboard_Plugin_Cards
      * Sort cards
      * @param $handle
      */
-    public function sort( $handles) {
+    public function sort( $handles ) {
         update_option( static::CARD_SORT_OPTION, json_encode( $handles ) );
     }
 
@@ -136,10 +135,10 @@ class DT_Dashboard_Plugin_Cards
      * @param $slug
      * @param $card
      */
-    public function setup_card( $card) {
+    public function setup_card( $card ) {
         $setup_action = 'dt_dashboard_setup_card_' . $card->handle;
         do_action( $setup_action, $card );
-        if ( !has_action( $setup_action )) {
+        if ( !has_action( $setup_action ) ) {
             $card->setup();
         }
     }
@@ -158,7 +157,7 @@ class DT_Dashboard_Plugin_Cards
      */
     protected function get_sort() {
         $sort = $this->get_card_sort_option();
-        if ( !$sort) {
+        if ( !$sort ) {
             $sort = json_encode( [] );
         }
         return json_decode( $sort, true );
@@ -168,22 +167,22 @@ class DT_Dashboard_Plugin_Cards
      * Sort the cards by their stored sort order
      * @param $cards
      */
-    protected function sort_cards( &$cards) {
+    protected function sort_cards( &$cards ) {
         $sort = $this->get_sort();
-        uasort($cards, function ( $a, $b) use ( $sort, $cards) {
+        uasort( $cards, function ( $a, $b ) use ( $sort, $cards ) {
             $handle_a = array_search( $a, $cards );
             $handle_b = array_search( $b, $cards );
             $sort_a = array_search( $handle_a, $sort );
             $sort_b = array_search( $handle_b, $sort );
 
-            if ( ! is_numeric($sort_a) ) {
+            if ( !is_numeric( $sort_a ) ) {
                 $sort_a = $a->priority;
             }
-            if ( ! is_numeric($sort_b))  {
+            if ( !is_numeric( $sort_b ) ) {
                 $sort_b = $b->priority;
             }
 
             return ( $sort_a + 1 < $sort_b + 1 ) ? -1 : 1;
-        });
+        } );
     }
 }
