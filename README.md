@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.com/DiscipleTools/disciple-tools-dashboard.svg?branch=master)](https://travis-ci.com/DiscipleTools/disciple-tools-dashboard)
 
-# Disciple Tools - Dashboard
+![Plugin Banner](https://raw.githubusercontent.com/DiscipleTools/disciple-tools-dashboard/master/dashboard-banner.png)
+# Disciple.Tools - Dashboard
 
 This plugin adds a beautiful start page to assist disciple makers in knowing what are the most important actions to
 take (New Contacts, Contacts Needing Update, etc).
@@ -32,7 +33,7 @@ It quickly helps you answer:
 
 ## Requirements
 
-- Disciple Tools Theme installed on a Wordpress Server
+- Disciple.Tools Theme installed on a Wordpress Server
 
 ## Installing
 
