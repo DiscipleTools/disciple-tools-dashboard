@@ -178,7 +178,7 @@ window.dt_dashboard = {
     //Tell the server that the card is now active for the user
     let body = new URLSearchParams()
     body.append('card_handle', handle)
-    fetch('/wp-json/dt-dashboard/v1/user/cards/show', {
+    fetch(window.wpApiShare.site_url + '/wp-json/dt-dashboard/v1/user/cards/show', {
       method: 'POST',
       headers: {
         'X-WP-Nonce': window.wpApiShare.nonce
@@ -187,7 +187,7 @@ window.dt_dashboard = {
     })
 
     //Fetch the card HTML
-    fetch('/wp-json/dt-dashboard/v1/card?' + body.toString(), {
+    fetch(window.wpApiShare.site_url + '/wp-json/dt-dashboard/v1/card?' + body.toString(), {
       method: 'GET',
       headers: {
         'X-WP-Nonce': window.wpApiShare.nonce
@@ -258,7 +258,7 @@ window.dt_dashboard = {
     body.append('card_handle', handle)
 
     //Tell the server about it
-    fetch('/wp-json/dt-dashboard/v1/user/cards/hide', {
+    fetch(window.wpApiShare.site_url + '/wp-json/dt-dashboard/v1/user/cards/hide', {
       method: 'POST',
       headers: {
         'X-WP-Nonce': window.wpApiShare.nonce
@@ -392,7 +392,7 @@ window.dt_dashboard = {
     let body = new URLSearchParams()
     body.append('card_sort', JSON.stringify(sort))
 
-    fetch('/wp-json/dt-dashboard/v1/user/cards/sort', {
+    fetch(window.wpApiShare.site_url + '/wp-json/dt-dashboard/v1/user/cards/sort', {
       method: 'PUT',
       headers: {
         'X-WP-Nonce': window.wpApiShare.nonce
