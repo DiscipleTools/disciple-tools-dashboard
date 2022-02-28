@@ -32,7 +32,6 @@
       am4core.useTheme(am4themes_animated);
       let chart = am4core.create("benchmark_chart", am4charts.XYChart);
 
-      console.log(data.benchmarks.contacts.current)
       chart.data = [ {
         "year": window.lodash.escape(wpApiDashboard.translations.number_contacts_assigned),
         "previous": data.benchmarks.contacts.previous,

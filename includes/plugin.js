@@ -251,6 +251,9 @@ window.dt_dashboard = {
    */
   remove: function(handle) {
     const card = this.find(handle)
+    if (!card) {
+      return
+    }
     card.element.remove()
     card.element = null
     this.fireOnRemove(handle)

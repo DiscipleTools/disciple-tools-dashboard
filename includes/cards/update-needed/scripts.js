@@ -37,10 +37,6 @@
         .on("click", function () {
           document.location = `${context.wpApiDashboard.site_url}/contacts?list-tab=needs_accepted`;
         });
-
-      // smooth scrollbar
-      let Scrollbar = window.Scrollbar;
-      Scrollbar.init(document.querySelector("#update-needed_scrollbar"));
     }
   );
 })(window.jQuery);

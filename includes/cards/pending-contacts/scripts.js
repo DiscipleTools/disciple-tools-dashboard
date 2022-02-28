@@ -2,7 +2,6 @@
   window.dt_dashboard.onAdd(
     "DT_Dashboard_Plugin_Pending_Contacts",
     function (context) {
-      console.log("here");
       let data = context.wpApiDashboard.data;
       $(context.element)
         .find("#needs_accepting")
