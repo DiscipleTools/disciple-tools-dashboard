@@ -23,7 +23,7 @@ jobs:
     - name: Build project
       run: |
         mkdir disciple-tools-dashboard
-        cp -r disciple-tools-dashboard.php spinner.svg LICENSE includes languages version-control.json disciple-tools-dashboard/
+        cp -r disciple-tools-dashboard.php LICENSE includes languages version-control.json disciple-tools-dashboard/
         zip -r disciple-tools-dashboard.zip disciple-tools-dashboard
     - name: Create Release
       id: create_release
