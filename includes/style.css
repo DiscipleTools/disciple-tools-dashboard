@@ -3,7 +3,7 @@
  */
 
 :root {
-    --blue: #1464a5;
+    --blue: #3F729B;
     --light-blue: #c7e3ff;
     /* --green: transparent linear-gradient(180deg, #4caf50 0%, #3aa03e 100%) 0% 0% no-repeat padding-box; */
     --yellow-gradient: transparent linear-gradient(180deg, #ffce00 0%, #f5c600 100%) 0%
@@ -120,7 +120,7 @@ body {
     height: 65px;
     width: 100%;
     position: relative;
-    background: var(--primary-color);
+    background: var(--blue);
     color: var(--white);
     font-weight: 800;
     font-size: 1.4rem;
