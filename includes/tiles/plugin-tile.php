@@ -1,7 +1,7 @@
 <?php
 
 
-class DT_Dashboard_Plugin_Card extends DT_Dashboard_Card
+class DT_Dashboard_Plugin_Tile extends DT_Dashboard_Tile
 {
     private $template_folder = '';
 
@@ -11,11 +11,11 @@ class DT_Dashboard_Plugin_Card extends DT_Dashboard_Card
     }
 
     /**
-     * Register any assets the card needs or do anything else needed on registration.
+     * Register any assets the tile needs or do anything else needed on registration.
      * @return mixed
      */
     public function setup() {
-        $script = "includes/cards/" . $this->template_folder . "/scripts.js";
+        $script = "includes/tiles/" . $this->template_folder . "/scripts.js";
 
         if ( file_exists( DT_Dashboard_Plugin::dir() . $script ) ) {
             wp_enqueue_script( $this->handle, DT_Dashboard_Plugin::path() . $script, [
@@ -32,12 +32,12 @@ class DT_Dashboard_Plugin_Card extends DT_Dashboard_Card
     }
 
     /**
-     * Return the card html.
+     * Return the tile html.
      */
     public function render() {
         $handle = $this->handle;
         $label = $this->label;
-        $card = $this;
-        include( DT_Dashboard_Plugin::includes_dir() . "cards/" . $this->template_folder . "/template.php" );
+        $tile = $this;
+        include( DT_Dashboard_Plugin::includes_dir() . "tiles/" . $this->template_folder . "/template.php" );
     }
 }

@@ -41,7 +41,7 @@ body {
     max-width: unset;
 }
 
-.dashboard-page .dash-cards {
+.dashboard-page .dash-tiles {
     font-family: "Poppins", sans-serif !important;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -49,15 +49,15 @@ body {
     margin: 0 auto;
 }
 
-.dashboard-page .dash-card {
-    grid-column: var(--dashboard-card-column, span 1);
+.dashboard-page .dash-tile {
+    grid-column: var(--dashboard-tile-column, span 1);
 }
 
-.dashboard-page .dash-cards .item {
+.dashboard-page .dash-tiles .item {
     padding: 10px;
 }
 
-.dashboard-page .dash-cards .item .card {
+.dashboard-page .dash-tiles .item .tile {
     border: 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
@@ -83,23 +83,23 @@ body {
     font-size: 1.5em;
 }
 
-.dashboard-page .card-container {
+.dashboard-page .tile-container {
     display: flex;
     height: 100%;
 }
 
-/* #add-card #add-menu, */
-.dashboard-page .card-body {
+/* #add-tile #add-menu, */
+.dashboard-page .tile-body {
     padding: 20px;
     flex-grow: 1;
 }
 
-.dashboard-page .card-body--center {
+.dashboard-page .tile-body--center {
     display: flex;
     align-items: center;
 }
 
-.dashboard-page .card-body--center > div {
+.dashboard-page .tile-body--center > div {
     width: 100%;
 }
 
@@ -113,7 +113,7 @@ body {
     border-radius: 25px;
 }
 
-.dashboard-page .card-header {
+.dashboard-page .tile-header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -129,7 +129,7 @@ body {
 }
 
 
-.dashboard-page .card-subheader {
+.dashboard-page .tile-subheader {
     background: var(--gray-2);
     text-align: center;
     color: var(--secondary-color);
@@ -137,14 +137,14 @@ body {
     font-weight: 800;
 }
 
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Active_Contact .card-body {
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Active_Contact .tile-body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Active_Contact .view-all {
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Active_Contact .view-all {
     text-align: center;
     background: var(--green);
     color: var(--white);
@@ -154,7 +154,7 @@ body {
     text-transform: uppercase;
     width: 80%;
 }
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Active_Contact .view-all:hover {
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Active_Contact .view-all:hover {
     filter: var(--brightness);
 }
 
@@ -184,10 +184,10 @@ body {
 }
 
 @media screen and (max-width: 640px) {
-    .dashboard-page .dash-cards .item {
+    .dashboard-page .dash-tiles .item {
         flex-basis: 100% !important;
     }
-    .dashboard-page #benchmarks .card div {
+    .dashboard-page #benchmarks .tile div {
         flex-basis: 100% !important;
     }
 }
@@ -197,8 +197,8 @@ body {
     color: var(--blue);
 }
 
-/* card footer */
-.dashboard-page .card-footer {
+/* tile footer */
+.dashboard-page .tile-footer {
     background: var(--white) 0% 0% no-repeat padding-box;
     border-top: 1px solid var(--gray);
     border-radius: 0px 0px 16px 16px;
@@ -206,14 +206,14 @@ body {
     position: relative;
     display: flex;
 }
-.dashboard-page .card-footer .card-nav-btn {
+.dashboard-page .tile-footer .tile-nav-btn {
     cursor: pointer;
     align-items: center;
     justify-content: center;
     margin: 10px 5px;
     font-size: 12px;
 }
-.dashboard-page .card-footer .card-nav {
+.dashboard-page .tile-footer .tile-nav {
     font-size: 12px;
 }
 .dashboard-page .fi-x,
@@ -222,7 +222,7 @@ body {
     margin-right: 10px;
 }
 
-.dashboard-page .card-footer .card-nav-btn svg {
+.dashboard-page .tile-footer .tile-nav-btn svg {
     fill: var(--secondary-color);
 }
 
@@ -240,7 +240,7 @@ body {
     display: block !important;
 }
 
-.dashboard-page .card-nav {
+.dashboard-page .tile-nav {
     display: none;
     cursor: pointer;
     width: 150px;
@@ -250,12 +250,12 @@ body {
     z-index: 100;
 }
 
-.dashboard-page .card-move-left {
+.dashboard-page .tile-move-left {
     border-radius: 8px 8px 0px 0px;
 }
 
-.dashboard-page .card-move-right,
-.dashboard-page .card-move-left {
+.dashboard-page .tile-move-right,
+.dashboard-page .tile-move-left {
     background: var(--white) 0% 0% no-repeat padding-box;
     border: 1px solid var(--gray);
     color: var(--secondary-color);
@@ -263,7 +263,7 @@ body {
     padding: 5px 10px;
 }
 
-.dashboard-page .card-remove {
+.dashboard-page .tile-remove {
     background: var(--red-gradient);
     box-shadow: 0px 3px 3px #00000029;
     border-radius: 0px 0px 8px 8px;
@@ -272,7 +272,7 @@ body {
     padding: 5px 10px;
 }
 
-/* need update card */
+/* need update tile */
 
 .dashboard-page .update-needed-container {
     padding: 10px 0;
@@ -344,23 +344,23 @@ body {
 }
 
 /* contact workload */
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Contact_Workload .card-body {
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Contact_Workload .tile-body {
     font-size: 12px;
     letter-spacing: -0.24px;
     line-height: 16px;
     text-align: center;
 }
 
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Contact_Workload .card-body a {
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Contact_Workload .tile-body a {
     color: var(--primary-color);
 }
 
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Contact_Workload .card-body a:hover {
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Contact_Workload .tile-body a:hover {
     text-decoration: underline;
     cursor: pointer;
 }
 
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Contact_Workload .card-body .button {
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Contact_Workload .tile-body .button {
     display: flex;
     justify-content: left;
     align-items: center;
@@ -370,7 +370,7 @@ body {
     border: 0;
 }
 
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Contact_Workload .card-body .btn-label {
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Contact_Workload .tile-body .btn-label {
     flex-grow: 1;
     font-weight: bold;
     margin-left: 10px;
@@ -401,42 +401,42 @@ body {
     background: var(--white) !important;
 }
 
-.dashboard-page .dash-card .scroll-content {
+.dashboard-page .dash-tile .scroll-content {
    height: 100%;
 }
 
 /* Active Contacts  */
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Active_Contact .card-header {
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Active_Contact .tile-header {
     align-items: flex-start;
     justify-content: center;
     padding-top: 20px;
     padding-bottom: 40px;
 }
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Active_Contact .card-body {
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Active_Contact .tile-body {
     padding: 0;
 }
 
 /* Faith Milestone Totals */
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .card-body {
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Faith_Milestone_Totals .tile-body {
     padding-top: 10px;
 }
 
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .group-progress-button-wrapper {
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Faith_Milestone_Totals .group-progress-button-wrapper {
     display: flex;
     justify-content: left;
     align-items: center;
     padding: 10px 0;
 }
 
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .group-progress-button-wrapper:not(:first-child) {
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Faith_Milestone_Totals .group-progress-button-wrapper:not(:first-child) {
     border-top: 1px solid rgb(214,214,214);
 }
 
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .scrollbar-track.scrollbar-track-x {
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Faith_Milestone_Totals .scrollbar-track.scrollbar-track-x {
     display: none !important;
 }
 
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .group-progress-button {
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Faith_Milestone_Totals .group-progress-button {
     background-color: var(--blue);
     /* background: rgb(39, 124, 191); */
     background: linear-gradient(
@@ -455,7 +455,7 @@ body {
     width: 40px;
 }
 
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals .group-progress-button-wrapper
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Faith_Milestone_Totals .group-progress-button-wrapper
     p {
     color: var(--secondary-color);
     font-weight: 800;
@@ -464,34 +464,34 @@ body {
 }
 
 /* Personal Benchmarks */
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks
-    .card-body
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Personal_Benchmarks
+    .tile-body
     .amchart-container {
     width: 100%;
     display: flex;
 }
 
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-chart-keys {
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-chart-keys {
     flex-basis: 25%;
     margin-top: 20px;
 }
 
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-chart-keys li {
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-chart-keys li {
     padding: 10px 0px;
     display: flex;
     align-items: center;
 }
 
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks #benchmarks_current,
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks #benchmarks_previous {
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Personal_Benchmarks #benchmarks_current,
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Personal_Benchmarks #benchmarks_previous {
     padding: 0 10px;
     color: var(--primary-color)
     font-size: 12px;
     font-weight: 500;
 }
 
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-previous-block,
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-current-block {
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-previous-block,
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-current-block {
     border-radius: 5px;
     height: 30px;
     width: 30px;
@@ -499,35 +499,35 @@ body {
     display: inline-block;
 }
 
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-previous-block {
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-previous-block {
     background-color: #c7e3ff;
 }
 
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-current-block {
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Personal_Benchmarks .benchmarks-current-block {
     background-color: #3f729b;
 }
 
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .card-body div ul {
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Personal_Benchmarks .tile-body div ul {
     list-style: none;
     margin-left: 50px;
 }
 
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks .benchmark-chart-container {
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Personal_Benchmarks .benchmark-chart-container {
     flex-basis: 75%;
 }
 
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Personal_Benchmarks #benchmark_chart {
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Personal_Benchmarks #benchmark_chart {
     height: 300px;
 }
 
 /* tasks */
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Tasks .existing-tasks {
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Tasks .existing-tasks {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Tasks .existing-tasks .task {
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Tasks .existing-tasks .task {
     margin: 20px 0;
     border-radius: 16px;
     box-shadow: 0px 6px 12px #00000029;
@@ -535,7 +535,7 @@ body {
     flex-direction: column;
 }
 
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Tasks .existing-tasks .task-contact {
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Tasks .existing-tasks .task-contact {
     background: var(--primary-color);
     color: var(--white);
     display: flex;
@@ -548,7 +548,7 @@ body {
     border-top-right-radius: 16px;
 }
 
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Tasks .existing-tasks .task-date {
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Tasks .existing-tasks .task-date {
     background: var(--secondary-color);
     color: var(--white);
     display: flex;
@@ -561,15 +561,15 @@ body {
     text-transform: uppercase;
 }
 
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Tasks .existing-tasks .task-description {
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Tasks .existing-tasks .task-description {
     margin: 10px;
 }
 
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Tasks .action-buttons {
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Tasks .action-buttons {
     margin: 10px;
 }
 
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Tasks button.existing-task-action {
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Tasks button.existing-task-action {
     padding: 15px 30px;
     margin-bottom: 10px;
     color: var(--white);
@@ -578,27 +578,27 @@ body {
     width: 100%;
 }
 
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Tasks .complete-task {
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Tasks .complete-task {
     background: var(--green);
 }
 
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Tasks .remove-task {
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Tasks .remove-task {
     background: var(--red-gradient);
 }
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Tasks .complete-task:hover,
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Tasks .remove-task:hover {
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Tasks .complete-task:hover,
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Tasks .remove-task:hover {
     filter: var(--brightness);
 }
 
-/* add cards card */
-.dashboard-page #add-card #add-menu {
+/* add tiles tile */
+.dashboard-page #add-tile #add-menu {
     margin: 20px;
     list-style-type: none;
     padding: 0;
     height: fit-content;
 }
 
-.dashboard-page #add-card #add-menu li {
+.dashboard-page #add-tile #add-menu li {
     font-size: 16px;
     font-weight: 600;
     display: flex;
@@ -609,15 +609,15 @@ body {
     color: #00000099;
 }
 
-.dashboard-page #add-card #add-menu li:not(:first-child) {
+.dashboard-page #add-tile #add-menu li:not(:first-child) {
     border-top: 1px solid var(--gray);
 }
 
-.dashboard-page #add-card #add-menu li:hover {
+.dashboard-page #add-tile #add-menu li:hover {
     cursor: pointer;
 }
 
-.dashboard-page #add-card #add-menu .switchery {
+.dashboard-page #add-tile #add-menu .switchery {
     width: 40px;
     height: 20px;
     margin-left: 20px;
@@ -641,17 +641,17 @@ body {
 }
 
 /* Seeker Path Progress */
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Seeker_Path_Progress .amcharts-Container {
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Seeker_Path_Progress .amcharts-Container {
     display: flex;
 }
 /* chart */
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Seeker_Path_Progress
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Seeker_Path_Progress
     .amcharts-Sprite-group
     .amcharts-Container-group {
     flex-basis: 50%;
 }
 /* keys */
-.dashboard-page #dash-card--DT_Dashboard_Plugin_Seeker_Path_Progress
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Seeker_Path_Progress
     .amcharts-Sprite-group
     .amcharts-Container-group
     .amcharts-Component-group
@@ -661,7 +661,7 @@ body {
 
 /* mobile - phone */
 @media only screen and (max-width: 700px) {
-    .dashboard-page .dash-cards {
+    .dashboard-page .dash-tiles {
         display: flex;
         flex-direction: column;
     }
@@ -676,19 +676,19 @@ body {
         width: 100%;
     }
 
-    #dash-card--DT_Dashboard_Plugin_Faith_Milestone_Totals #milestones {
+    #dash-tile--DT_Dashboard_Plugin_Faith_Milestone_Totals #milestones {
         grid-template-columns: 1fr 1fr;
         margin: 0;
     }
 
-    #dash-card--DT_Dashboard_Plugin_Active_Contact .card-body {
+    #dash-tile--DT_Dashboard_Plugin_Active_Contact .tile-body {
         height: auto;
     }
 }
 
 /* mobile - ipad */
 @media only screen and (max-width: 972px) {
-    .dashboard-page .dashboard-page .card-header {
+    .dashboard-page .dashboard-page .tile-header {
         font-size: 1rem;
     }
 
@@ -702,8 +702,8 @@ body {
     }
 
     /* seeker */
-    .dashboard-page #dash-card--DT_Dashboard_Plugin_Seeker_Path_Progress {
-        --dashboard-card-column: span 4 !important;
+    .dashboard-page #dash-tile--DT_Dashboard_Plugin_Seeker_Path_Progress {
+        --dashboard-tile-column: span 4 !important;
     }
 
     /* personal benchmarks  */
@@ -718,14 +718,14 @@ body {
     }
 
     /* Active_Contact */
-    .dashboard-page #dash-card--DT_Dashboard_Plugin_Active_Contact .card-body {
+    .dashboard-page #dash-tile--DT_Dashboard_Plugin_Active_Contact .tile-body {
         height: auto;
     }
 }
 
 @media only screen and (max-width: 1440px) {
-    .dashboard-page .dash-card {
-        grid-column: var(--dashboard-card-column, span 2);
+    .dashboard-page .dash-tile {
+        grid-column: var(--dashboard-tile-column, span 2);
     }
 }
 

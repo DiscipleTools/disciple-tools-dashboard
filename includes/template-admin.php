@@ -1,7 +1,7 @@
 <?php
-$dt_cards = new DT_Dashboard_Plugin_Cards();
-$shown_cards = $dt_cards->shown();
-$hidden_cards = $dt_cards->hidden();
+$dt_tiles = new DT_Dashboard_Plugin_Tiles();
+$shown_tiles = $dt_tiles->shown();
+$hidden_tiles = $dt_tiles->hidden();
 ?>
 <div class="wrap">
     <h2><?php esc_attr_e( 'DISCIPLE TOOLS - DASHBOARD', 'disciple-tools-dashboard' ) ?></h2>
@@ -18,17 +18,17 @@ $hidden_cards = $dt_cards->hidden();
                     </tr>
                     </thead>
                     <tbody id="sort-classes">
-                    <?php foreach ( $shown_cards as $handle => $card ): ?>
-                        <tr class="card"
-                            data-card-handle="<?php echo esc_attr( $handle ); ?>">
+                    <?php foreach ( $shown_tiles as $handle => $tile ): ?>
+                        <tr class="tile"
+                            data-tile-handle="<?php echo esc_attr( $handle ); ?>">
                             <td class="handle"
                                 width="20"><span class="dashicons dashicons-move"></span></td>
-                            <td><?php echo esc_html( $card->label ); ?></td>
+                            <td><?php echo esc_html( $tile->label ); ?></td>
                             <td align="right">
                                 <form method="POST">
                                     <?php wp_nonce_field( 'hide_' .  sanitize_key( $handle ) ); ?>
                                     <input type="hidden"
-                                           name="hide_card"
+                                           name="hide_tile"
                                            value="<?php echo esc_attr( sanitize_key( $handle ) ); ?>">
                                     <button class="button"
                                             type="submit"><?php echo esc_html_e( "Hide", 'disciple-tools-dashboard' ); ?></button>
@@ -47,14 +47,14 @@ $hidden_cards = $dt_cards->hidden();
                     </tr>
                     </thead>
                     <tbody>
-                    <?php foreach ( $hidden_cards as $handle => $card ): ?>
+                    <?php foreach ( $hidden_tiles as $handle => $tile ): ?>
                         <tr>
-                            <td><?php echo esc_html( $card->label ); ?></td>
+                            <td><?php echo esc_html( $tile->label ); ?></td>
                             <td align="right">
                                 <form method="POST">
                                     <?php wp_nonce_field( 'show_' .  sanitize_key( $handle ) ); ?>
                                     <input type="hidden"
-                                           name="show_card"
+                                           name="show_tile"
                                            value="<?php echo esc_attr( sanitize_key( $handle ) ); ?>">
                                     <button class="button"
                                             type="submit"><?php echo esc_html_e( "Show", 'disciple-tools-dashboard' ); ?></button>

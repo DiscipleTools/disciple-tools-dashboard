@@ -67,7 +67,7 @@ class DT_Dashboard_Plugin_Functions {
                 'data'                    => DT_Dashboard_Plugin_Endpoints::instance()->get_data(),
                 'workload_status'         => get_user_option( 'workload_status', get_current_user_id() ),
                 'workload_status_options' => dt_get_site_custom_lists()["user_workload_status"] ?? [],
-                'cards'                   => DT_Dashboard_Plugin_Cards::instance()->all()
+                'tiles'                   => DT_Dashboard_Plugin_Tiles::instance()->all()
             ]
         );
         wp_enqueue_script( 'dt-dashboard', plugin_dir_url( __FILE__ ) . 'dashboard.js', [

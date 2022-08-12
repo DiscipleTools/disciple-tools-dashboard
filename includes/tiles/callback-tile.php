@@ -1,6 +1,6 @@
 <?php
 
-class DT_Dashboard_Callback_Card extends DT_Dashboard_Card {
+class DT_Dashboard_Callback_Tile extends DT_Dashboard_Tile {
     private $setup_callback;
     private $render_callback;
 
@@ -11,7 +11,7 @@ class DT_Dashboard_Callback_Card extends DT_Dashboard_Card {
     }
 
     /**
-     * Register any assets the card needs or do anything else needed on registration.
+     * Register any assets the tile needs or do anything else needed on registration.
      * @return mixed
      */
     public function setup() {
@@ -22,7 +22,7 @@ class DT_Dashboard_Callback_Card extends DT_Dashboard_Card {
     }
 
     /**
-     * Render the card
+     * Render the tile
      */
     public function render() {
         $callback = $this->render_callback;

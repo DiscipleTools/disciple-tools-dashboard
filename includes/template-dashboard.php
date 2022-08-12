@@ -3,10 +3,10 @@ declare(strict_types=1);
 
 $url = dt_get_url_path();
 $dt_post_type = explode( "/", $url )[0];
-$dt_cards = new DT_Dashboard_Plugin_User_Cards();
-$cards = $dt_cards->all();
-$shown_cards = $dt_cards->shown();
-$hidden_cards = $dt_cards->hidden();
+$dt_tiles = new DT_Dashboard_Plugin_User_Tiles();
+$tiles = $dt_tiles->all();
+$shown_tiles = $dt_tiles->shown();
+$hidden_tiles = $dt_tiles->hidden();
 dt_please_log_in();
 
 if ( ! current_user_can( 'access_disciple_tools' ) ) {
@@ -21,9 +21,9 @@ get_header();
 
         <div id="content" class="dashboard-page">
             <div id="inner-content">
-                <div class="dash-cards" id="dash-cards">
-                    <?php foreach ( $shown_cards as $card ): ?>
-                        <?php include __DIR__ . '/template-parts/card.php'; ?>
+                <div class="dash-tiles" id="dash-tiles">
+                    <?php foreach ( $shown_tiles as $tile ): ?>
+                        <?php include __DIR__ . '/template-parts/tile.php'; ?>
                     <?php endforeach; ?>
                 </div>
             </div>
@@ -32,13 +32,13 @@ get_header();
     </div>
 
     <script>
-        function closeCardNav($id) {
-            var element = document.getElementById("card-nav-" + $id);
+        function closeTileNav($id) {
+            var element = document.getElementById("tile-nav-" + $id);
             element.classList.remove("show");
         }
 
-        function toggleCardNav($id) {
-            var element = document.getElementById("card-nav-" + $id);
+        function toggleTileNav($id) {
+            var element = document.getElementById("tile-nav-" + $id);
             element.classList.toggle("show");
 
             var blank = document.getElementById("blank");
