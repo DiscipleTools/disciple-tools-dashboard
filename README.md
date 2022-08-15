@@ -40,54 +40,54 @@ It quickly helps you answer:
 - Install as a standard Disciple.Tools/Wordpress plugin in the system Admin/Plugins area.
 - Requires the user role of Administrator.
 
-## Custom cards
+## Custom tiles
 
-Cards can be registered by using the `dt_dashboard_register_card` function.
+Tiles can be registered by using the `dt_dashboard_register_tile` function.
 
 ```php
-dt_dashboard_register_card(
-    'Your_Custom_Card',                     //handle
-    __('Custom Card Label', 'your-plugin'), //label
-    function() {                            //Register any assets the card needs or do anything else needed on registration.
-        wp_enqueue_script( $this->handle, 'path-to-your-cards-script.js', [], null, true);
+dt_dashboard_register_tile(
+    'Your_Custom_Tile',                     //handle
+    __('Custom Tile Label', 'your-plugin'), //label
+    function() {                            //Register any assets the tile needs or do anything else needed on registration.
+        wp_enqueue_script( $this->handle, 'path-to-your-tiles-script.js', [], null, true);
     },
-    function() {                            //Render the card
+    function() {                            //Render the tile
         get_template_part( 'whatever-slug', 'whatever-file', [
             'handle' => $this->handle,
             'label' => $this->label,
-            'card' => $this
+            'tile' => $this
         ]);
     }
 );
 
 ```
-More complex custom cards can be creating by extending `DT_Dashboard_Plugin_Card`.
+More complex custom tiles can be creating by extending `DT_Dashboard_Plugin_Tile`.
 
 Here's an example:
 
 ```php
 /**
-* Your custom card class
+* Your custom tile class
  */
-class Your_Custom_Card extends DT_Dashboard_Card
+class Your_Custom_Tile extends DT_Dashboard_Tile
 {
 
     /**
-     * Register any assets the card needs or do anything else needed on registration.
+     * Register any assets the tile needs or do anything else needed on registration.
      * @return mixed
      */
     public function setup() {
-        wp_enqueue_script( $this->handle, 'path-t0-your-cards-script.js', [], null, true);
+        wp_enqueue_script( $this->handle, 'path-t0-your-tiles-script.js', [], null, true);
     }
 
     /**
-     * Render the card
+     * Render the tile
      */
     public function render() {
         get_template_part( 'whatever-slug', 'whatever-file', [
             'handle' => $this->handle,
             'label' => $this->label,
-            'card' => $this
+            'tile' => $this
         ]);
     }
 }
@@ -95,10 +95,10 @@ class Your_Custom_Card extends DT_Dashboard_Card
 /**
 * Next, register our class. This can be done in the after_setup_theme hook.
 */
-DT_Dashboard_Plugin_Cards::instance()->register(
-    new Your_Custom_Card(
-        'Your_Custom_Card',                     //handle
-        __('Custom Card Label', 'your-plugin'), //label
+DT_Dashboard_Plugin_Tiles::instance()->register(
+    new Your_Custom_Tile(
+        'Your_Custom_Tile',                     //handle
+        __('Custom Tile Label', 'your-plugin'), //label
          [
             'priority' => 1,
             'span' => 1
@@ -108,7 +108,7 @@ DT_Dashboard_Plugin_Cards::instance()->register(
 
 ### Hooks
 
-The `dt_dashboard_cards` filter can be used to deregister cards, or to add new cards without using `DT_Dashboard_Plugin_Cards::instance()->register`.
+The `dt_dashboard_tiles` filter can be used to deregister tiles, or to add new tiles without using `DT_Dashboard_Plugin_Tiles::instance()->register`.
 
 ## Contribution
 

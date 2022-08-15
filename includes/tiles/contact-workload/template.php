@@ -1,10 +1,10 @@
-<div class="card-header">
-    <?php echo esc_html( $card->label ) ?>
+<div class="tile-header">
+    <?php echo esc_html( $tile->label ) ?>
     <div id="workload-spinner"
         style="display: inline-block"
         class="loading-spinner"></div>
 </div>
-<div class="card-body card-body--scroll">
+<div class="tile-body tile-body--scroll">
     <p><?php esc_html_e( "Choose an option to let the dispatcher(s) know if you are ready for new contacts", 'disciple-tools-dashboard' ) ?></p>
 
     <?php $options = dt_get_site_custom_lists()["user_workload_status"] ?? [];

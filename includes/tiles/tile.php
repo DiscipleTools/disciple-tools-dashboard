@@ -1,6 +1,6 @@
 <?php
 
-abstract class DT_Dashboard_Card
+abstract class DT_Dashboard_Tile
 {
     public $handle;
     public $label;
@@ -10,11 +10,11 @@ abstract class DT_Dashboard_Card
     public function __construct( $handle, $label, $params = [] ) {
         if ( isset( $params['span'] ) ) {
             if ( ! is_numeric( $params['span'] ) ) {
-                throw new Exception( 'Card span must be numeric' );
+                throw new Exception( 'Tile span must be numeric' );
             }
 
             if ( $params['span'] < 1 || $params['span'] > 4 ) {
-                throw new Exception( 'Card span must be between 1 and 4' );
+                throw new Exception( 'Tile span must be between 1 and 4' );
             }
 
             $this->span = $params['span'];
@@ -29,7 +29,7 @@ abstract class DT_Dashboard_Card
     }
 
     /**
-     * Register any assets the card needs or do anything else needed on registration.
+     * Register any assets the tile needs or do anything else needed on registration.
      * @return mixed
      */
     public function setup() {
@@ -37,14 +37,14 @@ abstract class DT_Dashboard_Card
     }
 
     /**
-     * Return the card html.
+     * Return the tile html.
      */
     abstract public function render();
 
     public function as_html() {
         ob_start();
-        $card = $this;
-        include DT_Dashboard_Plugin::includes_dir() . 'template-parts/card.php';
+        $tile = $this;
+        include DT_Dashboard_Plugin::includes_dir() . 'template-parts/tile.php';
         $html = ob_get_contents();
         ob_end_clean();
         return $html;

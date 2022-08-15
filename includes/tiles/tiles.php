@@ -1,13 +1,13 @@
 <?php
 
 /**
- * Service class for working with dashboard cards.
- * Class DT_Dashboard_Plugin_Cards
+ * Service class for working with dashboard tiles.
+ * Class DT_Dashboard_Plugin_Tiles
  */
-class DT_Dashboard_Plugin_Cards {
-    const CARDS_FILTER = 'dt_dashboard_cards';
-    const CARD_SORT_OPTION = 'dt_dashboard_card_sort';
-    const CARD_VISIBLE_OPTION_PREFIX = 'dt_dashboard_card_';
+class DT_Dashboard_Plugin_Tiles {
+    const CARDS_FILTER = 'dt_dashboard_tiles';
+    const CARD_SORT_OPTION = 'dt_dashboard_tile_sort';
+    const CARD_VISIBLE_OPTION_PREFIX = 'dt_dashboard_tile_';
     private static $_instance = null;
 
     public static function instance() {
@@ -17,48 +17,48 @@ class DT_Dashboard_Plugin_Cards {
         return self::$_instance;
     }
 
-    public static $cards = [];
+    public static $tiles = [];
 
     /**
-     * Get cards as an array
+     * Get tiles as an array
      * @return array
      */
     public function all() {
-        return apply_filters( static::CARDS_FILTER, static::$cards );
+        return apply_filters( static::CARDS_FILTER, static::$tiles );
     }
 
     /**
      * @param $handle
      * @return bool
      */
-    public function is_card_visible( $handle ) {
+    public function is_tile_visible( $handle ) {
         return get_option( static::CARD_VISIBLE_OPTION_PREFIX . $handle ) !== '0';
     }
 
     /**
-     * Get all hidden cards
+     * Get all hidden tiles
      * @return array
      */
     public function hidden() {
-        return array_filter( $this->all(), function ( $card, $handle ) {
-            return !$this->is_card_visible( $handle );
+        return array_filter( $this->all(), function ( $tile, $handle ) {
+            return !$this->is_tile_visible( $handle );
         }, ARRAY_FILTER_USE_BOTH );
     }
 
     /**
-     * Get all shown cards
+     * Get all shown tiles
      * @return array
      */
     public function shown() {
-        $cards = array_filter( $this->all(), function ( $card, $handle ) {
-            return $this->is_card_visible( $handle );
+        $tiles = array_filter( $this->all(), function ( $tile, $handle ) {
+            return $this->is_tile_visible( $handle );
         }, ARRAY_FILTER_USE_BOTH );
-        $this->sort_cards( $cards );
-        return $cards;
+        $this->sort_tiles( $tiles );
+        return $tiles;
     }
 
     /**
-     * Find a card by handle.
+     * Find a tile by handle.
      * @param $handle
      * @return mixed
      */
@@ -67,63 +67,63 @@ class DT_Dashboard_Plugin_Cards {
     }
 
     /**
-     * Register a card.
+     * Register a tile.
      *
-     * @param DT_Dashboard_Card $card
+     * @param DT_Dashboard_Tile $tile
      */
-    public function register( DT_Dashboard_Card $card ) {
-        add_action( 'wp_enqueue_scripts', function () use ( $card ) {
-            $this->setup_card( $card );
+    public function register( DT_Dashboard_Tile $tile ) {
+        add_action( 'wp_enqueue_scripts', function () use ( $tile ) {
+            $this->setup_tile( $tile );
         }, 999 );
 
-        //Register the card
-        static::$cards[ $card->handle ] = $card;
+        //Register the tile
+        static::$tiles[ $tile->handle ] = $tile;
     }
 
     /**
-     * Deregister a card.
+     * Deregister a tile.
      *
      * @param $handle
      */
     public function deregister( $handle ) {
-        unset( static::$cards[ $handle ] );
+        unset( static::$tiles[ $handle ] );
     }
 
     /**
-     * Set a cards's visibility option.
+     * Set a tiles's visibility option.
      * @param $handle
      * @param $visibility
      */
-    public function set_card_visibility( $handle, $visibility ) {
+    public function set_tile_visibility( $handle, $visibility ) {
         update_option( static::CARD_VISIBLE_OPTION_PREFIX . $handle, $visibility ? '1' : '0' );
     }
 
     /**
-     * Hide a card
+     * Hide a tile
      * @param $handle
      */
     public function hide( $handle ) {
-        $this->set_card_visibility( $handle, false );
+        $this->set_tile_visibility( $handle, false );
     }
 
     /**
-     * Toggle a cards visibility option
+     * Toggle a tiles visibility option
      * @param $handle
      */
     public function toggle( $handle ) {
-        $this->set_card_visibility( $handle, !$this->shown() );
+        $this->set_tile_visibility( $handle, !$this->shown() );
     }
 
     /**
-     * Show a card
+     * Show a tile
      * @param $handle
      */
     public function show( $handle ) {
-        $this->set_card_visibility( $handle, true );
+        $this->set_tile_visibility( $handle, true );
     }
 
     /**
-     * Sort cards
+     * Sort tiles
      * @param $handle
      */
     public function sort( $handles ) {
@@ -131,32 +131,32 @@ class DT_Dashboard_Plugin_Cards {
     }
 
     /**
-     * Setup a card. First check if there is a custom setup action.
+     * Setup a tile. First check if there is a custom setup action.
      * @param $slug
-     * @param $card
+     * @param $tile
      */
-    public function setup_card( $card ) {
-        $setup_action = 'dt_dashboard_setup_card_' . $card->handle;
-        do_action( $setup_action, $card );
+    public function setup_tile( $tile ) {
+        $setup_action = 'dt_dashboard_setup_tile_' . $tile->handle;
+        do_action( $setup_action, $tile );
         if ( !has_action( $setup_action ) ) {
-            $card->setup();
+            $tile->setup();
         }
     }
 
     /**
-     * Get a card's sort option
+     * Get a tile's sort option
      * @return mixed
      */
-    protected function get_card_sort_option() {
+    protected function get_tile_sort_option() {
         return get_option( static::CARD_SORT_OPTION );
     }
 
     /**
-     * Get the sort order of all cards
+     * Get the sort order of all tiles
      * @return mixed
      */
     protected function get_sort() {
-        $sort = $this->get_card_sort_option();
+        $sort = $this->get_tile_sort_option();
         if ( !$sort ) {
             $sort = json_encode( [] );
         }
@@ -164,14 +164,14 @@ class DT_Dashboard_Plugin_Cards {
     }
 
     /**
-     * Sort the cards by their stored sort order
-     * @param $cards
+     * Sort the tiles by their stored sort order
+     * @param $tiles
      */
-    protected function sort_cards( &$cards ) {
+    protected function sort_tiles( &$tiles ) {
         $sort = $this->get_sort();
-        uasort( $cards, function ( $a, $b ) use ( $sort, $cards ) {
-            $handle_a = array_search( $a, $cards );
-            $handle_b = array_search( $b, $cards );
+        uasort( $tiles, function ( $a, $b ) use ( $sort, $tiles ) {
+            $handle_a = array_search( $a, $tiles );
+            $handle_b = array_search( $b, $tiles );
             $sort_a = array_search( $handle_a, $sort );
             $sort_b = array_search( $handle_b, $sort );
 

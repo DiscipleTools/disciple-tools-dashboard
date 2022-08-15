@@ -1,7 +1,7 @@
 /**
  * The dashboard js plugin. Loads in the head so it's available for other scripts.
  *
- * @type {{container(): Element | null, moveForward: (function(*=): undefined), cards: [], renderAddMenu(): undefined, cardsEls(): NodeListOf<Element>, storeSort(): void, findEl: (function(*): Element), isActive(*=): void, onAdd: Window.dt_dashboard.onAdd, remove: Window.dt_dashboard.remove, find: (function(*): *), root(): Element | null, initialized: boolean, cardContext: (function(*=): {wpApiDashboard: *, element: *}), add: (function(*=): undefined), init(): void, initCards(): void, moveBack: (function(*=): undefined), fireOnAdd(*=): void, addCardEl(): Element | null, inactiveCards(): *, addCardHtml(*=, *=): undefined, fireOnRemove(*=): void, onRemove: Window.dt_dashboard.onRemove, activeCards(): *}}
+ * @type {{container(): Element | null, moveForward: (function(*=): undefined), tiles: [], renderAddMenu(): undefined, tilesEls(): NodeListOf<Element>, storeSort(): void, findEl: (function(*): Element), isActive(*=): void, onAdd: Window.dt_dashboard.onAdd, remove: Window.dt_dashboard.remove, find: (function(*): *), root(): Element | null, initialized: boolean, tileContext: (function(*=): {wpApiDashboard: *, element: *}), add: (function(*=): undefined), init(): void, initTiles(): void, moveBack: (function(*=): undefined), fireOnAdd(*=): void, addTileEl(): Element | null, inactiveTiles(): *, addTileHtml(*=, *=): undefined, fireOnRemove(*=): void, onRemove: Window.dt_dashboard.onRemove, activeTiles(): *}}
  */
 window.dt_dashboard = {
   /**
@@ -10,28 +10,28 @@ window.dt_dashboard = {
   initialized: false,
 
   /**
-   * An array of card objects
+   * An array of tile objects
    *
    * [{
-   *    element, //The DOM element for the card
-   *    onAdd, //An array of callbacks for after cards are added to the dashboard
-   *    onRemove, //An array of callbacks for after cards are removed from the dashboard
+   *    element, //The DOM element for the tile
+   *    onAdd, //An array of callbacks for after tiles are added to the dashboard
+   *    onRemove, //An array of callbacks for after tiles are removed from the dashboard
    *  }]
    */
-  cards: [],
+  tiles: [],
 
   /**
    * Init the plugin. Should be called after the dom is ready
    */
   init() {
-    //Build up the cards array
-    this.cards = Object.values(wpApiDashboard.cards).map(function(card) {
-      card.element = this.findEl(card.handle);
-      card.onAdd = []
-      card.onRemove = []
-      return card
+    //Build up the tiles array
+    this.tiles = Object.values(wpApiDashboard.tiles).map(function(tile) {
+      tile.element = this.findEl(tile.handle);
+      tile.onAdd = []
+      tile.onRemove = []
+      return tile
     }.bind(this))
-    this.initCards()
+    this.initTiles()
     this.renderAddMenu()
     this.refreshClasses()
     this.initalized = true
@@ -46,58 +46,58 @@ window.dt_dashboard = {
   },
 
   /**
-   * The card container element
+   * The tile container element
    * @returns {Element}
    */
   container() {
-    return document.querySelector('.dash-cards')
+    return document.querySelector('.dash-tiles')
   },
 
   /**
-   * All the card elements (excluding the dynamically  generated add card should it exist)
+   * All the tile elements (excluding the dynamically  generated add tile should it exist)
    * @returns {NodeListOf<Element>}
    */
-  cardEls() {
-    return document.querySelectorAll('.dash-card:not(.add-card)')
+  tileEls() {
+    return document.querySelectorAll('.dash-tile:not(.add-tile)')
   },
 
   /**
-   * The add card element. May not exist in the case that there are no hidden cards
+   * The add tile element. May not exist in the case that there are no hidden tiles
    * @returns {Element}
    */
-  addCardEl() {
-    return document.querySelector('#add-card')
+  addTileEl() {
+    return document.querySelector('#add-tile')
   },
 
   /**
-   * Find a card object by handle
+   * Find a tile object by handle
    * @param handle
    * @returns {*}
    */
   find: function(handle) {
-    return this.cards.find(function(card) {
-      return card.handle === handle
+    return this.tiles.find(function(tile) {
+      return tile.handle === handle
     })
   },
 
   /**
-   * Query for a card element by handle
+   * Query for a tile element by handle
    * @param handle
    * @returns {Element}
    */
   findEl: function(handle) {
-    return document.querySelector('#dash-card--' + handle)
+    return document.querySelector('#dash-tile--' + handle)
   },
 
   canMoveBack: function(handle) {
-    const cardEl = this.findEl(handle)
-    if (!cardEl) {
+    const tileEl = this.findEl(handle)
+    if (!tileEl) {
       return false
     }
-    const prevEl = cardEl.previousElementSibling
+    const prevEl = tileEl.previousElementSibling
 
-    //The add card is also in the container, so we need to ignore it.
-    if (!prevEl || prevEl === this.addCardEl()) {
+    //The add tile is also in the container, so we need to ignore it.
+    if (!prevEl || prevEl === this.addTileEl()) {
       return false
     }
 
@@ -105,15 +105,15 @@ window.dt_dashboard = {
   },
 
   canMoveForward: function(handle) {
-    const cardEl = this.findEl(handle)
-    if (!cardEl) {
+    const tileEl = this.findEl(handle)
+    if (!tileEl) {
       return false
     }
-    return !!cardEl.nextElementSibling
+    return !!tileEl.nextElementSibling
   },
 
   /**
-   * The context object passed to card events
+   * The context object passed to tile events
    * {
    *   wpApiDashboard,
    *   element
@@ -121,45 +121,45 @@ window.dt_dashboard = {
    * @param handle
    * @returns {{wpApiDashboard, element}}
    */
-  cardContext: function(handle) {
-    const card = this.find(handle)
+  tileContext: function(handle) {
+    const tile = this.find(handle)
     return {
       wpApiDashboard: window.wpApiDashboard,
-      element: card.element
+      element: tile.element
     }
   },
 
   /**
-   * Get all the active cards
+   * Get all the active tiles
    * @returns {*[]}
    */
-  activeCards() {
-    return this.cards.filter(function(card) {
-      return !!card.element
+  activeTiles() {
+    return this.tiles.filter(function(tile) {
+      return !!tile.element
     })
   },
 
   /**
-   * Get all the inactive cards
+   * Get all the inactive tiles
    * @returns {*[]}
    */
-  inactiveCards() {
-    return this.cards.filter(function(card) {
-      return !card.element
+  inactiveTiles() {
+    return this.tiles.filter(function(tile) {
+      return !tile.element
     })
   },
 
   /**
-   * Fire the add events for all cards. This will cause the javascript for individual cards to execute.
+   * Fire the add events for all tiles. This will cause the javascript for individual tiles to execute.
    */
-  initCards() {
-    this.activeCards().forEach(function(card) {
-      this.fireOnAdd(card.handle)
+  initTiles() {
+    this.activeTiles().forEach(function(tile) {
+      this.fireOnAdd(tile.handle)
     }.bind(this))
   },
 
   /**
-   * Is a card active?
+   * Is a tile active?
    * @param handle
    */
   isActive(handle) {
@@ -167,7 +167,7 @@ window.dt_dashboard = {
   },
 
   /**
-   * Add a card to the dashboard
+   * Add a tile to the dashboard
    * @param handle
    */
   add: function(handle) {
@@ -175,10 +175,10 @@ window.dt_dashboard = {
       return
     }
 
-    //Tell the server that the card is now active for the user
+    //Tell the server that the tile is now active for the user
     let body = new URLSearchParams()
-    body.append('card_handle', handle)
-    fetch(window.wpApiShare.site_url + '/wp-json/dt-dashboard/v1/user/cards/show', {
+    body.append('tile_handle', handle)
+    fetch(window.wpApiShare.site_url + '/wp-json/dt-dashboard/v1/user/tiles/show', {
       method: 'POST',
       headers: {
         'X-WP-Nonce': window.wpApiShare.nonce
@@ -186,8 +186,8 @@ window.dt_dashboard = {
       body: body,
     })
 
-    //Fetch the card HTML
-    fetch(window.wpApiShare.site_url + '/wp-json/dt-dashboard/v1/card?' + body.toString(), {
+    //Fetch the tile HTML
+    fetch(window.wpApiShare.site_url + '/wp-json/dt-dashboard/v1/tile?' + body.toString(), {
       method: 'GET',
       headers: {
         'X-WP-Nonce': window.wpApiShare.nonce
@@ -196,7 +196,7 @@ window.dt_dashboard = {
       .then(response => response.json())
       .then(function(data) {
         let response = JSON.parse(data)
-        this.addCardHtml(handle, response.template)
+        this.addTileHtml(handle, response.template)
         this.renderAddMenu()
         this.storeSort()
         this.refreshClasses()
@@ -204,64 +204,64 @@ window.dt_dashboard = {
   },
 
   /**
-   * Fire any add callbacks for a card
+   * Fire any add callbacks for a tile
    * @param handle
    */
   fireOnAdd(handle) {
     window.setTimeout(function() {
       this.registerScrollbar(handle)
-      const card = this.find(handle)
-      card.onAdd.forEach(function (callback) {
-        callback(this.cardContext(card.handle))
+      const tile = this.find(handle)
+      tile.onAdd.forEach(function (callback) {
+        callback(this.tileContext(tile.handle))
       }.bind(this))
     }.bind(this), 1)
   },
 
   /**
-   * Fire any remove callbacks for a card
+   * Fire any remove callbacks for a tile
    * @param handle
    */
   fireOnRemove(handle) {
     window.setTimeout(function() {
-      const card = this.find(handle)
-      card.onRemove.forEach(function (callback) {
-        callback(this.cardContext(card.handle))
+      const tile = this.find(handle)
+      tile.onRemove.forEach(function (callback) {
+        callback(this.tileContext(tile.handle))
       }.bind(this))
     }.bind(this), 1)
   },
 
   /**
-   * Add card HTML to the dashboard
+   * Add tile HTML to the dashboard
    * @param handle
    * @param html
    */
-  addCardHtml(handle, html = null) {
+  addTileHtml(handle, html = null) {
     if (this.findEl(handle)) {
       return
     }
-    const card = this.find(handle)
+    const tile = this.find(handle)
     this.container().insertAdjacentHTML('beforeend', html)
-    card.element = this.findEl(handle)
+    tile.element = this.findEl(handle)
     this.fireOnAdd(handle)
   },
 
   /**
-   * Remove a card from the dashboard
+   * Remove a tile from the dashboard
    * @param handle
    */
   remove: function(handle) {
-    const card = this.find(handle)
-    if (!card) {
+    const tile = this.find(handle)
+    if (!tile) {
       return
     }
-    card.element.remove()
-    card.element = null
+    tile.element.remove()
+    tile.element = null
     this.fireOnRemove(handle)
     let body = new URLSearchParams()
-    body.append('card_handle', handle)
+    body.append('tile_handle', handle)
 
     //Tell the server about it
-    fetch(window.wpApiShare.site_url + '/wp-json/dt-dashboard/v1/user/cards/hide', {
+    fetch(window.wpApiShare.site_url + '/wp-json/dt-dashboard/v1/user/tiles/hide', {
       method: 'POST',
       headers: {
         'X-WP-Nonce': window.wpApiShare.nonce
@@ -274,29 +274,29 @@ window.dt_dashboard = {
   },
 
   registerScrollbar:function(handle) {
-    const cardEl = this.findEl(handle)
-    const cardBody = cardEl.querySelector('.card-body--scroll')
-    if (!cardBody) {
+    const tileEl = this.findEl(handle)
+    const tileBody = tileEl.querySelector('.tile-body--scroll')
+    if (!tileBody) {
       return
      }
     let Scrollbar = window.Scrollbar
-    Scrollbar.init(cardBody)
+    Scrollbar.init(tileBody)
   },
   /**
-   * Add an add callback to a card
+   * Add an add callback to a tile
    * @param handle
    * @param callback
    */
   onAdd: function(handle, callback) {
-    const card = this.find(handle)
-    card.onAdd.push(callback)
+    const tile = this.find(handle)
+    tile.onAdd.push(callback)
     if (this.initalized) {
-      callback(this.cardContext(card.handle))
+      callback(this.tileContext(tile.handle))
     }
   },
 
   /**
-   * Add a remove callback to a card
+   * Add a remove callback to a tile
    * @param handle
    * @param callback
    */
@@ -305,81 +305,81 @@ window.dt_dashboard = {
   },
 
   /**
-   * Render the add menu. If there are no active cards, it will remove it.
+   * Render the add menu. If there are no active tiles, it will remove it.
    */
   renderAddMenu() {
-    let addCardContainer = this.addCardEl()
+    let addTileContainer = this.addTileEl()
 
-    let addCardEl
-    if (!addCardContainer) {
-      addCardContainer = document.createElement('div')
-      addCardContainer.classList.add('dash-card', 'add-card', 'item')
-      addCardContainer.setAttribute('id', 'add-card')
-      addCardContainer.style.order = this.cards.length + 1
-      this.container().prepend(addCardContainer)
+    let addTileEl
+    if (!addTileContainer) {
+      addTileContainer = document.createElement('div')
+      addTileContainer.classList.add('dash-tile', 'add-tile', 'item')
+      addTileContainer.setAttribute('id', 'add-tile')
+      addTileContainer.style.order = this.tiles.length + 1
+      this.container().prepend(addTileContainer)
 
-      addCardEl = document.createElement('div')
-      addCardEl.classList.add('card')
-      addCardContainer.appendChild(addCardEl)
+      addTileEl = document.createElement('div')
+      addTileEl.classList.add('tile')
+      addTileContainer.appendChild(addTileEl)
     } else {
-      addCardEl = addCardContainer.querySelector('.card')
+      addTileEl = addTileContainer.querySelector('.tile')
     }
 
-    addCardEl.innerHTML = ''
+    addTileEl.innerHTML = ''
 
     let heading = document.createElement('span')
-    heading.innerText = 'Add cards'
-    heading.classList.add('card-header')
-    addCardEl.appendChild(heading)
+    heading.innerText = 'Add tiles'
+    heading.classList.add('tile-header')
+    addTileEl.appendChild(heading)
 
     let addMenu = document.createElement('ul')
     addMenu.setAttribute('id', 'add-menu')
-    addCardEl.appendChild(addMenu)
+    addTileEl.appendChild(addMenu)
 
-    this.cards.forEach(function(card) {
+    this.tiles.forEach(function(tile) {
       const menuItem = document.createElement('li')
       const lightSwitch = document.createElement('input')
       lightSwitch.type = 'checkbox'
-      lightSwitch.checked = this.isActive(card.handle)
-      menuItem.innerHTML = card.label
+      lightSwitch.checked = this.isActive(tile.handle)
+      menuItem.innerHTML = tile.label
       menuItem.appendChild(lightSwitch)
       new Switchery(lightSwitch, {
         color: '#4BAF50',
         secondaryColor: '#B4B4B4',
       });
       lightSwitch.addEventListener('change', function() {
-        setTimeout(() => lightSwitch.checked ? this.add(card.handle) : this.remove(card.handle), 500)
+        setTimeout(() => lightSwitch.checked ? this.add(tile.handle) : this.remove(tile.handle), 500)
       }.bind(this))
       addMenu.appendChild(menuItem)
     }.bind(this))
   },
 
   /**
-   * Move a card forward in the DOM
+   * Move a tile forward in the DOM
    * @param handle
    */
   moveForward: function(handle) {
     if (!this.canMoveForward(handle)) {
       return
     }
-    const cardEl = this.findEl(handle)
-    const nextEl = cardEl.nextElementSibling
-    nextEl.after(cardEl)
+    const tileEl = this.findEl(handle)
+    const nextEl = tileEl.nextElementSibling
+    nextEl.after(tileEl)
     this.storeSort()
     this.refreshClasses()
   },
 
   /**
-   * Move a card back in the DOM
+   * Move a tile back in the DOM
    * @param handle
    */
   moveBack: function(handle) {
     if (!this.canMoveBack(handle)) {
       return
     }
-    const cardEl = this.findEl(handle)
-    const prevEl = cardEl.previousElementSibling
-    prevEl.before(cardEl)
+    const tileEl = this.findEl(handle)
+    const prevEl = tileEl.previousElementSibling
+    prevEl.before(tileEl)
     this.storeSort()
     this.refreshClasses()
   },
@@ -388,14 +388,14 @@ window.dt_dashboard = {
    * Store the sort on the server
    */
   storeSort() {
-    const sort = Array.from(this.cardEls()).map(function(el) {
-      return el.dataset.cardHandle
+    const sort = Array.from(this.tileEls()).map(function(el) {
+      return el.dataset.tileHandle
     })
 
     let body = new URLSearchParams()
-    body.append('card_sort', JSON.stringify(sort))
+    body.append('tile_sort', JSON.stringify(sort))
 
-    fetch(window.wpApiShare.site_url + '/wp-json/dt-dashboard/v1/user/cards/sort', {
+    fetch(window.wpApiShare.site_url + '/wp-json/dt-dashboard/v1/user/tiles/sort', {
       method: 'PUT',
       headers: {
         'X-WP-Nonce': window.wpApiShare.nonce
@@ -408,23 +408,23 @@ window.dt_dashboard = {
    * Add css classes depending on state
    */
   refreshClasses() {
-    if (this.inactiveCards().length) {
-      this.root().classList.add('dash-cards--has-inactive')
+    if (this.inactiveTiles().length) {
+      this.root().classList.add('dash-tiles--has-inactive')
     } else {
-      this.root().classList.remove('dash-cards--has-inactive')
+      this.root().classList.remove('dash-tiles--has-inactive')
     }
 
-    Array.from(this.cardEls()).forEach(function(cardEl) {
-      if (this.canMoveBack(cardEl.dataset.cardHandle)) {
-        cardEl.classList.remove('data-card--first')
+    Array.from(this.tileEls()).forEach(function(tileEl) {
+      if (this.canMoveBack(tileEl.dataset.tileHandle)) {
+        tileEl.classList.remove('data-tile--first')
       } else {
-        cardEl.classList.add('data-card--first')
+        tileEl.classList.add('data-tile--first')
       }
 
-      if (this.canMoveForward(cardEl.dataset.cardHandle)) {
-        cardEl.classList.remove('data-card--last')
+      if (this.canMoveForward(tileEl.dataset.tileHandle)) {
+        tileEl.classList.remove('data-tile--last')
       } else {
-        cardEl.classList.add('data-card--last')
+        tileEl.classList.add('data-tile--last')
       }
     }.bind(this))
   }

@@ -21,7 +21,6 @@ DT_Dashboard_Plugin_Menu::instance();
  * Class DT_Dashboard_Plugin_Menu
  */
 class DT_Dashboard_Plugin_Menu {
-
     public $token = 'dt_dashboard_plugin';
 
     private static $_instance = null;
@@ -108,26 +107,26 @@ class DT_Dashboard_Plugin_Menu {
      * Make updates before displaing.
      */
     public function update() {
-        $cards = new DT_Dashboard_Plugin_Cards();
+        $tiles = new DT_Dashboard_Plugin_Tiles();
         $nonce = isset( $_POST['_wpnonce'] ) ? sanitize_key( $_POST['_wpnonce'] ) : null;
 
 
-        if ( isset( $_POST["show_card"] ) ) {
-            if ( !wp_verify_nonce( $nonce, 'show_' . sanitize_key( $_POST["show_card"] ) ) ) {
+        if ( isset( $_POST["show_tile"] ) ) {
+            if ( !wp_verify_nonce( $nonce, 'show_' . sanitize_key( $_POST["show_tile"] ) ) ) {
                 return;
             }
-            $cards->show( sanitize_key( $_POST["show_card"] ) );
+            $tiles->show( sanitize_key( $_POST["show_tile"] ) );
         }
 
-        if ( isset( $_POST["hide_card"] ) ) {
-            if ( !wp_verify_nonce( $nonce, 'hide_' . sanitize_key( $_POST["hide_card"] ) ) ) {
+        if ( isset( $_POST["hide_tile"] ) ) {
+            if ( !wp_verify_nonce( $nonce, 'hide_' . sanitize_key( $_POST["hide_tile"] ) ) ) {
                 return;
             }
-            $cards->hide( sanitize_key( $_POST["hide_card"] ) );
+            $tiles->hide( sanitize_key( $_POST["hide_tile"] ) );
         }
 
-        if ( isset( $_POST["card_sort"] ) ) {
-            $cards->sort( sanitize_key( $_POST["card_sort"] ) );
+        if ( isset( $_POST["tile_sort"] ) ) {
+            $tiles->sort( sanitize_key( $_POST["tile_sort"] ) );
         }
     }
 }

@@ -95,54 +95,54 @@ class DT_Dashboard_Plugin_Endpoints
             ]
         );
         register_rest_route(
-            $this->namespace, '/cards/sort', [
+            $this->namespace, '/tiles/sort', [
                 'methods'             => 'PUT',
-                'callback'            => [ $this, 'update_card_sort' ],
+                'callback'            => [ $this, 'update_tile_sort' ],
                 'permission_callback' => function ( WP_REST_Request $request ) {
                     return $this->has_permission();
                 },
             ]
         );
         register_rest_route(
-            $this->namespace, '/user/cards/sort', [
+            $this->namespace, '/user/tiles/sort', [
                 'methods'             => 'PUT',
-                'callback'            => [ $this, 'update_user_card_sort' ],
+                'callback'            => [ $this, 'update_user_tile_sort' ],
                 'permission_callback' => function ( WP_REST_Request $request ) {
                     return $this->has_permission();
                 },
             ]
         );
         register_rest_route(
-            $this->namespace, '/user/cards/toggle', [
+            $this->namespace, '/user/tiles/toggle', [
                 'methods'             => 'POST',
-                'callback'            => [ $this, 'user_cards_toggle' ],
+                'callback'            => [ $this, 'user_tiles_toggle' ],
                 'permission_callback' => function ( WP_REST_Request $request ) {
                     return $this->has_permission();
                 },
             ]
         );
         register_rest_route(
-            $this->namespace, '/card', [
+            $this->namespace, '/tile', [
                 'methods'             => 'GET',
-                'callback'            => [ $this, 'get_card' ],
+                'callback'            => [ $this, 'get_tile' ],
                 'permission_callback' => function ( WP_REST_Request $request ) {
                     return $this->has_permission();
                 },
             ]
         );
         register_rest_route(
-            $this->namespace, '/user/cards/show', [
+            $this->namespace, '/user/tiles/show', [
                 'methods'             => 'POST',
-                'callback'            => [ $this, 'user_cards_show' ],
+                'callback'            => [ $this, 'user_tiles_show' ],
                 'permission_callback' => function ( WP_REST_Request $request ) {
                     return $this->has_permission();
                 },
             ]
         );
         register_rest_route(
-            $this->namespace, '/user/cards/hide', [
+            $this->namespace, '/user/tiles/hide', [
                 'methods'             => 'POST',
-                'callback'            => [ $this, 'user_cards_hide' ],
+                'callback'            => [ $this, 'user_tiles_hide' ],
                 'permission_callback' => function ( WP_REST_Request $request ) {
                     return $this->has_permission();
                 },
@@ -550,49 +550,49 @@ class DT_Dashboard_Plugin_Endpoints
         return true;
     }
 
-    public function update_card_sort( WP_REST_Request $request ) {
+    public function update_tile_sort( WP_REST_Request $request ) {
         $get_params = $request->get_params();
         $body = $request->get_body_params();
-        $cards = new DT_Dashboard_Plugin_Cards();
-        $cards->sort( $body["card_sort"] );
+        $tiles = new DT_Dashboard_Plugin_Tiles();
+        $tiles->sort( $body["tile_sort"] );
         return true;
     }
 
-    public function user_cards_toggle( WP_REST_Request $request ) {
+    public function user_tiles_toggle( WP_REST_Request $request ) {
         $get_params = $request->get_params();
         $body = $request->get_body_params();
-        $cards = new DT_Dashboard_Plugin_User_Cards();
-        $cards->toggle( $body["card_handle"] );
+        $tiles = new DT_Dashboard_Plugin_User_Tiles();
+        $tiles->toggle( $body["tile_handle"] );
         return true;
     }
 
-    public function update_user_card_sort( WP_REST_Request $request ) {
+    public function update_user_tile_sort( WP_REST_Request $request ) {
         $get_params = $request->get_params();
         $body = $request->get_body_params();
-        $cards = new DT_Dashboard_Plugin_User_Cards();
-        $cards->sort( json_decode( $body["card_sort"], 1 ) );
+        $tiles = new DT_Dashboard_Plugin_User_Tiles();
+        $tiles->sort( json_decode( $body["tile_sort"], 1 ) );
         return true;
     }
 
-    public function user_cards_show( WP_REST_Request $request ) {
+    public function user_tiles_show( WP_REST_Request $request ) {
         $get_params = $request->get_params();
         $body = $request->get_body_params();
-        $cards = new DT_Dashboard_Plugin_User_Cards();
-        $cards->show( $body["card_handle"] );
+        $tiles = new DT_Dashboard_Plugin_User_Tiles();
+        $tiles->show( $body["tile_handle"] );
         return true;
     }
 
-    public function user_cards_hide( WP_REST_Request $request ) {
+    public function user_tiles_hide( WP_REST_Request $request ) {
         $get_params = $request->get_params();
         $body = $request->get_body_params();
-        $cards = new DT_Dashboard_Plugin_User_Cards();
-        $cards->hide( $body["card_handle"] );
+        $tiles = new DT_Dashboard_Plugin_User_Tiles();
+        $tiles->hide( $body["tile_handle"] );
         return true;
     }
 
-    public function get_card( WP_REST_Request $request ) {
-        $cards = new DT_Dashboard_Plugin_Cards();
+    public function get_tile( WP_REST_Request $request ) {
+        $tiles = new DT_Dashboard_Plugin_Tiles();
         $params = $request->get_query_params();
-        return $cards->find( $params["card_handle"] )->to_json();
+        return $tiles->find( $params["tile_handle"] )->to_json();
     }
 }
