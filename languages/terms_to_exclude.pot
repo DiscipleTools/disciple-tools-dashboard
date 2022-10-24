@@ -13,3 +13,7 @@ msgstr ""
 #. Author URI of the plugin
 msgid "https://github.com/DiscipleTools"
 msgstr ""
+
+#: includes/template-admin.php:7
+msgid "DISCIPLE TOOLS - DASHBOARD"
+msgstr ""
