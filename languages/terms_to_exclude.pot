@@ -1,0 +1,11 @@
+#. Plugin Name of the plugin
+msgid "Disciple.Tools - Dashboard"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://github.com/DiscipleTools/disciple-tools-dashboard"
+msgstr ""
+
+#. Description of the plugin
+msgid "The multiplier dashboard upgrades the multipliers experience as soon as they log into the system giving them a landing page with stats."
+msgstr ""
