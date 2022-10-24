@@ -13,7 +13,7 @@ $hidden_tiles = $dt_tiles->hidden();
                 <table class="widefat striped">
                     <thead>
                     <tr>
-                        <th colspan="2"><?php esc_html_e( "ACTIVE CARDS", 'disciple-tools-dashboard' ) ?></th>
+                        <th colspan="2"><?php esc_html_e( "ACTIVE TILES", 'disciple-tools-dashboard' ) ?></th>
                         <th></th>
                     </tr>
                     </thead>
@@ -42,7 +42,7 @@ $hidden_tiles = $dt_tiles->hidden();
                 <table class="widefat striped">
                     <thead>
                     <tr>
-                        <th><?php esc_html_e( "HIDDEN CARDS", 'disciple-tools-dashboard' ) ?></th>
+                        <th><?php esc_html_e( "HIDDEN TILES", 'disciple-tools-dashboard' ) ?></th>
                         <th></th>
                     </tr>
                     </thead>
