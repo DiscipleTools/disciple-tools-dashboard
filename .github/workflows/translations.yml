@@ -40,7 +40,6 @@ jobs:
       - name: Generate new pot file
         run: >
               wp i18n make-pot . languages/default.pot  --skip-audit --subtract="languages/terms_to_exclude.pot"
-              --domain="disciple-tools-plugin-starter-template"
               --exclude="admin"
       #######################
 
@@ -63,7 +62,7 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           push-branch: master
-          commit-message: 'update pot translation file'
+          commit-message: 'Update pot translation file'
           name: ${{ github.actor }}
           email: ${{github.actor}}@users.noreply.github.com
       #######################
