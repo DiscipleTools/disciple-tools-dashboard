@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2022-10-24T17:07:22+00:00\n"
+"POT-Creation-Date: 2022-10-24T17:10:26+00:00\n"
 "PO-Revision-Date: 2022-10-24 17:06+0000\n"
 "Last-Translator: Corsacca <corsacca@gmail.com>\n"
 "Language-Team: French <https://translate.disciple.tools/projects/disciple-"
@@ -107,27 +107,6 @@ msgstr "Rappel"
 msgid "No note set"
 msgstr "Aucun jeu de notes"
 
-#: includes/template-admin.php:12
-msgid "Choose the default dashboard layout for new users."
-msgstr ""
-"Choisissez le tableau de bord par défaut pour les nouveaux utilisateurs."
-
-#: includes/template-admin.php:16
-msgid "ACTIVE TILES"
-msgstr ""
-
-#: includes/template-admin.php:34
-msgid "Hide"
-msgstr "Cacher"
-
-#: includes/template-admin.php:45
-msgid "HIDDEN TILES"
-msgstr ""
-
-#: includes/template-admin.php:60
-msgid "Show"
-msgstr "Montrer"
-
 #: includes/template-parts/tile.php:28
 msgid "Back"
 msgstr "Retour"
@@ -164,6 +143,16 @@ msgstr "Jalons sur vos contacts actifs"
 msgid "No data to show yet. You have no active contacts"
 msgstr ""
 "Aucune donnée à afficher pour le moment. Vous n'avez aucun contact actif"
+
+#~ msgid "Choose the default dashboard layout for new users."
+#~ msgstr ""
+#~ "Choisissez le tableau de bord par défaut pour les nouveaux utilisateurs."
+
+#~ msgid "Hide"
+#~ msgstr "Cacher"
+
+#~ msgid "Show"
+#~ msgstr "Montrer"
 
 #~ msgid "Training Maps"
 #~ msgstr "Cartes d'entraînement"

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2022-10-24T17:07:22+00:00\n"
+"POT-Creation-Date: 2022-10-24T17:10:26+00:00\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -102,28 +102,6 @@ msgstr "リマインダー"
 msgid "No note set"
 msgstr "ノートセットなし"
 
-#: includes/template-admin.php:12
-msgid "Choose the default dashboard layout for new users."
-msgstr ""
-
-#: includes/template-admin.php:16
-msgid "ACTIVE TILES"
-msgstr ""
-
-#: includes/template-admin.php:34
-msgid "Hide"
-msgstr ""
-
-#: includes/template-admin.php:45
-msgid "HIDDEN TILES"
-msgstr ""
-
-#: includes/template-admin.php:60
-#, fuzzy
-#| msgid "No-Show"
-msgid "Show"
-msgstr "全く見せない"
-
 #: includes/template-parts/tile.php:28
 msgid "Back"
 msgstr ""
@@ -161,6 +139,11 @@ msgstr "アクティブな連絡先のマイルストーン"
 #: includes/tiles/seeker-path-progress/template.php:7
 msgid "No data to show yet. You have no active contacts"
 msgstr "表示するデータはまだありません。アクティブな連絡先がありません"
+
+#, fuzzy
+#~| msgid "No-Show"
+#~ msgid "Show"
+#~ msgstr "全く見せない"
 
 #~ msgid "Training Maps"
 #~ msgstr "トレーニングマップ"

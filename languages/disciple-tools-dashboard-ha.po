@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2022-10-24T17:07:22+00:00\n"
+"POT-Creation-Date: 2022-10-24T17:10:26+00:00\n"
 "Language: ha\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -102,28 +102,6 @@ msgstr "Tunatarwa"
 msgid "No note set"
 msgstr "Babu saitin bayanin kula"
 
-#: includes/template-admin.php:12
-msgid "Choose the default dashboard layout for new users."
-msgstr ""
-
-#: includes/template-admin.php:16
-msgid "ACTIVE TILES"
-msgstr ""
-
-#: includes/template-admin.php:34
-msgid "Hide"
-msgstr ""
-
-#: includes/template-admin.php:45
-msgid "HIDDEN TILES"
-msgstr ""
-
-#: includes/template-admin.php:60
-#, fuzzy
-#| msgid "No-Show"
-msgid "Show"
-msgstr "Ba-Nuni"
-
 #: includes/template-parts/tile.php:28
 msgid "Back"
 msgstr ""
@@ -161,6 +139,11 @@ msgstr "Milestones a kan m lambobinka"
 #: includes/tiles/seeker-path-progress/template.php:7
 msgid "No data to show yet. You have no active contacts"
 msgstr "Babu bayanai da za a nuna tukuna. Ba ku da abokan hulɗa da ke aiki"
+
+#, fuzzy
+#~| msgid "No-Show"
+#~ msgid "Show"
+#~ msgstr "Ba-Nuni"
 
 #~ msgid "Training Maps"
 #~ msgstr "Taswirar Horarwa"
