@@ -4,10 +4,10 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
 "POT-Creation-Date: 2022-10-24T17:16:04+00:00\n"
-"PO-Revision-Date: 2022-10-24 17:13+0000\n"
+"PO-Revision-Date: 2022-10-25 10:12+0000\n"
 "Last-Translator: Corsacca <corsacca@gmail.com>\n"
-"Language-Team: French <https://translate.disciple.tools/projects/disciple-"
-"tools/disciple-tools-dashboard/fr/>\n"
+"Language-Team: French <https://translate.disciple.tools/projects/"
+"disciple-tools/disciple-tools-dashboard/fr/>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,7 +33,7 @@ msgstr "Charge de travail de contact"
 
 #: disciple-tools-dashboard.php:220
 msgid "Faith Milestone Totals"
-msgstr "Totaux des jalons de foi"
+msgstr "Totaux des étapes de la foi"
 
 #: disciple-tools-dashboard.php:224
 msgid "Seeker Path Progress"
