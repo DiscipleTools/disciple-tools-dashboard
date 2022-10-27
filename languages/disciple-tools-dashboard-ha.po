@@ -3,50 +3,50 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2022-10-24T17:16:04+00:00\n"
+"POT-Creation-Date: 2022-10-27T15:48:43+00:00\n"
 "Language: ha\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: POEditor.com\n"
 
-#: disciple-tools-dashboard.php:216
+#: disciple-tools-dashboard.php:217
 msgid "Active Contacts"
 msgstr "Lambobin aiki"
 
-#: disciple-tools-dashboard.php:217
+#: disciple-tools-dashboard.php:218
 msgid "Update Needed"
 msgstr "Ana Bukatar Sabuntawa"
 
-#: disciple-tools-dashboard.php:218
+#: disciple-tools-dashboard.php:219
 msgid "Pending Contacts"
 msgstr "Masu jiran aiki"
 
-#: disciple-tools-dashboard.php:219
+#: disciple-tools-dashboard.php:220
 msgid "Contact Workload"
 msgstr "Tuntuɓi Aiki"
 
-#: disciple-tools-dashboard.php:220
+#: disciple-tools-dashboard.php:221
 msgid "Faith Milestone Totals"
 msgstr "Mididdigar Faithmãni Totarshe"
 
-#: disciple-tools-dashboard.php:224
+#: disciple-tools-dashboard.php:225
 msgid "Seeker Path Progress"
 msgstr "Ci gaban Tafiya Mai Neman"
 
-#: disciple-tools-dashboard.php:228
+#: disciple-tools-dashboard.php:229
 msgid "Personal Benchmarks"
 msgstr "Alamar sirri"
 
-#: disciple-tools-dashboard.php:232
+#: disciple-tools-dashboard.php:233
 msgid "Tasks"
 msgstr "Ksawainiya"
 
-#: disciple-tools-dashboard.php:309 disciple-tools-dashboard.php:320
+#: disciple-tools-dashboard.php:310 disciple-tools-dashboard.php:321
 msgid "Whoah, partner!"
 msgstr "Kai, abokin tarayya!"
 
-#: disciple-tools-dashboard.php:332
+#: disciple-tools-dashboard.php:333
 msgid "Method does not exist."
 msgstr "Hanyar babu."
 

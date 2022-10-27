@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2022-10-24T17:16:04+00:00\n"
+"POT-Creation-Date: 2022-10-27T15:48:43+00:00\n"
 "PO-Revision-Date: 2022-10-27 14:49+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Indonesian <https://translate.disciple.tools/projects/"
@@ -15,43 +15,43 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.14.1\n"
 
-#: disciple-tools-dashboard.php:216
+#: disciple-tools-dashboard.php:217
 msgid "Active Contacts"
 msgstr "Kontak Aktif"
 
-#: disciple-tools-dashboard.php:217
+#: disciple-tools-dashboard.php:218
 msgid "Update Needed"
 msgstr "Pembaruan Diperlukan"
 
-#: disciple-tools-dashboard.php:218
+#: disciple-tools-dashboard.php:219
 msgid "Pending Contacts"
 msgstr "Kontak yang Menunggu Keputusan"
 
-#: disciple-tools-dashboard.php:219
+#: disciple-tools-dashboard.php:220
 msgid "Contact Workload"
 msgstr "Hubungi Beban Kerja"
 
-#: disciple-tools-dashboard.php:220
+#: disciple-tools-dashboard.php:221
 msgid "Faith Milestone Totals"
 msgstr "Total Milestone Keyakinan"
 
-#: disciple-tools-dashboard.php:224
+#: disciple-tools-dashboard.php:225
 msgid "Seeker Path Progress"
 msgstr "Kemajuan Jalur Pencari"
 
-#: disciple-tools-dashboard.php:228
+#: disciple-tools-dashboard.php:229
 msgid "Personal Benchmarks"
 msgstr "Tolok Ukur Pribadi"
 
-#: disciple-tools-dashboard.php:232
+#: disciple-tools-dashboard.php:233
 msgid "Tasks"
 msgstr "Tugas"
 
-#: disciple-tools-dashboard.php:309 disciple-tools-dashboard.php:320
+#: disciple-tools-dashboard.php:310 disciple-tools-dashboard.php:321
 msgid "Whoah, partner!"
 msgstr "Wah, kawan!"
 
-#: disciple-tools-dashboard.php:332
+#: disciple-tools-dashboard.php:333
 msgid "Method does not exist."
 msgstr "Metode tidak ada."
 

@@ -3,11 +3,11 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2022-10-24T17:16:04+00:00\n"
+"POT-Creation-Date: 2022-10-27T15:48:43+00:00\n"
 "PO-Revision-Date: 2022-10-27 14:49+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Malayalam <https://translate.disciple.tools/projects/"
-"disciple-tools/disciple-tools-dashboard/ml/>\n"
+"Language-Team: Malayalam <https://translate.disciple.tools/projects/disciple-"
+"tools/disciple-tools-dashboard/ml/>\n"
 "Language: ml\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -15,43 +15,43 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.14.1\n"
 
-#: disciple-tools-dashboard.php:216
+#: disciple-tools-dashboard.php:217
 msgid "Active Contacts"
 msgstr "സജീവ കോൺടാക്റ്റുകൾ"
 
-#: disciple-tools-dashboard.php:217
+#: disciple-tools-dashboard.php:218
 msgid "Update Needed"
 msgstr "അപ്‌ഡേറ്റ് ആവശ്യമാണ്"
 
-#: disciple-tools-dashboard.php:218
+#: disciple-tools-dashboard.php:219
 msgid "Pending Contacts"
 msgstr "കോൺ‌ടാക്റ്റുകൾ തീർപ്പുകൽപ്പിച്ചിട്ടില്ല"
 
-#: disciple-tools-dashboard.php:219
+#: disciple-tools-dashboard.php:220
 msgid "Contact Workload"
 msgstr "ജോലിഭാരവുമായി ബന്ധപ്പെടുക"
 
-#: disciple-tools-dashboard.php:220
+#: disciple-tools-dashboard.php:221
 msgid "Faith Milestone Totals"
 msgstr "വിശ്വാസം നാഴികക്കല്ലുകൾ ആകെ"
 
-#: disciple-tools-dashboard.php:224
+#: disciple-tools-dashboard.php:225
 msgid "Seeker Path Progress"
 msgstr "അന്വേഷകന്റെ പാത പുരോഗതി"
 
-#: disciple-tools-dashboard.php:228
+#: disciple-tools-dashboard.php:229
 msgid "Personal Benchmarks"
 msgstr "വ്യക്തിഗത ബെഞ്ച്മാർക്കുകൾ"
 
-#: disciple-tools-dashboard.php:232
+#: disciple-tools-dashboard.php:233
 msgid "Tasks"
 msgstr "ചുമതലകൾ"
 
-#: disciple-tools-dashboard.php:309 disciple-tools-dashboard.php:320
+#: disciple-tools-dashboard.php:310 disciple-tools-dashboard.php:321
 msgid "Whoah, partner!"
 msgstr "ഓ, പങ്കാളി!"
 
-#: disciple-tools-dashboard.php:332
+#: disciple-tools-dashboard.php:333
 msgid "Method does not exist."
 msgstr "രീതി നിലവിലില്ല."
 
