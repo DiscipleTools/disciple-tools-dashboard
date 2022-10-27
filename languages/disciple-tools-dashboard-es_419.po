@@ -4,11 +4,16 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
 "POT-Creation-Date: 2022-10-24T17:16:04+00:00\n"
-"Language: es-419\n"
+"PO-Revision-Date: 2022-10-27 15:27+0000\n"
+"Last-Translator: Prykon <dario@gospelambition.org>\n"
+"Language-Team: Spanish (Latin America) <https://translate.disciple.tools/"
+"projects/disciple-tools/disciple-tools-dashboard/es_419/>\n"
+"Language: es_419\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: POEditor.com\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #: disciple-tools-dashboard.php:216
 msgid "Active Contacts"
@@ -84,7 +89,7 @@ msgstr "¡Viva! Estás atrapado."
 
 #: includes/rest-api.php:534
 msgid "remove"
-msgstr "eliminar"
+msgstr "quitar"
 
 #: includes/rest-api.php:535
 msgid "mark as complete"
@@ -104,17 +109,15 @@ msgstr "No se asignó una nota"
 
 #: includes/template-parts/tile.php:28
 msgid "Back"
-msgstr ""
+msgstr "Volver"
 
 #: includes/template-parts/tile.php:32
 msgid "Forward"
-msgstr ""
+msgstr "Adelante"
 
 #: includes/template-parts/tile.php:36
-#, fuzzy
-#| msgid "remove"
 msgid "Remove"
-msgstr "eliminar"
+msgstr "Quitar"
 
 #: includes/tiles/active-contact/template.php:7
 msgid "Add a contact"

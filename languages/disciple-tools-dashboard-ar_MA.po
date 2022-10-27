@@ -4,11 +4,17 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
 "POT-Creation-Date: 2022-10-24T17:16:04+00:00\n"
-"Language: ar-ma\n"
+"PO-Revision-Date: 2022-10-27 14:49+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Arabic (Morocco) <https://translate.disciple.tools/projects/"
+"disciple-tools/disciple-tools-dashboard/ar_MA/>\n"
+"Language: ar_MA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: POEditor.com\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #: disciple-tools-dashboard.php:216
 #, fuzzy
@@ -105,7 +111,7 @@ msgstr "‫‫‫لم يتم تحديد أي معلومة"
 
 #: includes/template-parts/tile.php:28
 msgid "Back"
-msgstr ""
+msgstr "رجع"
 
 #: includes/template-parts/tile.php:32
 msgid "Forward"
