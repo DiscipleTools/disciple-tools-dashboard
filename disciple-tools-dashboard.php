@@ -114,7 +114,7 @@ class DT_Dashboard_Plugin {
             $instance->setup();
             $instance->includes();
             $instance->setup_actions();
-            $instance->register_tiles();
+
         }
         return $instance;
     }
@@ -202,6 +202,7 @@ class DT_Dashboard_Plugin {
     private function setup_actions() {
         // Internationalize the text strings used.
         add_action( 'after_setup_theme', array( $this, 'i18n' ), 51 );
+        add_action( 'after_setup_theme', [ $this, 'register_tiles' ], 100 );
     }
 
     /**
@@ -211,7 +212,7 @@ class DT_Dashboard_Plugin {
      * @access private
      * @return void
      */
-    private function register_tiles() {
+    public function register_tiles() {
         $tiles = DT_Dashboard_Plugin_Tiles::instance();
         $tiles->register( new DT_Dashboard_Plugin_Tile( 'DT_Dashboard_Plugin_Active_Contact', __( 'Active Contacts', 'disciple-tools-dashboard' ), [ 'priority' => 0 ] ) );
         $tiles->register( new DT_Dashboard_Plugin_Tile( 'DT_Dashboard_Plugin_Update_Needed', __( 'Update Needed', 'disciple-tools-dashboard' ), [ 'priority' => 1 ] ) );
