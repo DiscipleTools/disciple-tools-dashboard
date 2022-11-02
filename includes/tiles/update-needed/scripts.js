@@ -27,7 +27,7 @@
       if (data.update_needed.total > 7) {
         console.log(context.wpApiDashboard.site_url);
         console.log(`${context.wpApiDashboard.site_url}/contacts/?filter_id=my_update_needed`)
-        up_list += `<a class="button view-all" href="${context.wpApiDashboard.site_url}/contacts/?filter_id=my_update_needed">${window.lodash.escape( context.wpApiDashboard.translations.see_all )}</a>`;
+        up_list += `<a class="button view-all" href="${context.wpApiDashboard.site_url}/contacts/?filter_id=my_update_needed">${window.lodash.escape( context.wpApiDashboard.translations.see_all )} - ${window.lodash.escape( data.update_needed.total )}</a>`;
       }
       $(context.element).find("#update_needed_list").html(up_list);
 
