@@ -161,7 +161,8 @@ class DT_Dashboard_Plugin_Endpoints
         $update_needed = DT_Posts::search_viewable_post( "contacts", [
             'requires_update' => [ "true" ],
             'assigned_to'     => [ 'me' ],
-            'overall_status'  => [ '-closed' ]
+            'overall_status'  => [ '-closed' ],
+            'sort'            => 'last_modified'
         ] );
         if ( is_wp_error( $update_needed ) ) {
             return $update_needed; // @todo handle potential wp error response
