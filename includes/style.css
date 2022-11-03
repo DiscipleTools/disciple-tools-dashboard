@@ -144,7 +144,7 @@ body {
     align-items: center;
 }
 
-.dashboard-page #dash-tile--DT_Dashboard_Plugin_Active_Contact .view-all {
+.dashboard-page .dash-tile .view-all {
     text-align: center;
     background: var(--green);
     color: var(--white);
@@ -154,8 +154,12 @@ body {
     text-transform: uppercase;
     width: 80%;
 }
-.dashboard-page #dash-tile--DT_Dashboard_Plugin_Active_Contact .view-all:hover {
+.dashboard-page .dash-tile .view-all:hover {
     filter: var(--brightness);
+}
+
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Update_Needed .view-all {
+    margin: 1em 10% 1em 10%
 }
 
 .dashboard-page .numberCircle {

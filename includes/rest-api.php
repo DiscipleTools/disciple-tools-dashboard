@@ -161,16 +161,17 @@ class DT_Dashboard_Plugin_Endpoints
         $update_needed = DT_Posts::search_viewable_post( "contacts", [
             'requires_update' => [ "true" ],
             'assigned_to'     => [ 'me' ],
-            'overall_status'  => [ '-closed' ]
+            'overall_status'  => [ '-closed' ],
+            'sort'            => 'last_modified'
         ] );
         if ( is_wp_error( $update_needed ) ) {
             return $update_needed; // @todo handle potential wp error response
         }
-        if ( sizeof( $update_needed["posts"] ) > 5 ) {
-            $update_needed["posts"] = array_slice( $update_needed["posts"], 0, 5 );
+        if ( sizeof( $update_needed["posts"] ) > 7 ) {
+            $update_needed["posts"] = array_slice( $update_needed["posts"], 0, 7 );
         }
-        if ( sizeof( $to_accept["posts"] ) > 5 ) {
-            $to_accept["posts"] = array_slice( $to_accept["posts"], 0, 5 );
+        if ( sizeof( $to_accept["posts"] ) > 7 ) {
+            $to_accept["posts"] = array_slice( $to_accept["posts"], 0, 7 );
         }
         foreach ( $update_needed["posts"] as &$contact ) {
             $now = time();
@@ -536,6 +537,7 @@ class DT_Dashboard_Plugin_Endpoints
             'no_tasks'                 => __( 'No task created', 'disciple-tools-dashboard' ),
             'reminder'                 => __( 'Reminder', 'disciple-tools-dashboard' ),
             'no_note'                  => __( 'No note set', 'disciple-tools-dashboard' ),
+            'see_all'                  => __( 'See all', 'disciple-tools-dashboard' ),
         ];
     }
 
