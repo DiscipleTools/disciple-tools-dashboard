@@ -63,6 +63,7 @@ body {
     border-radius: 10px;
     background-color: var(--white);
     height: 624px;
+    overflow: visible;
 }
 
 .dashboard-page .count-square {
@@ -126,6 +127,7 @@ body {
     font-size: 1.4rem;
     padding: 20px;
     box-shadow: 0px 6px 12px #00000029;
+    border-radius: 10px 10px 0 0;
 }
 
 
@@ -159,7 +161,7 @@ body {
 }
 
 .dashboard-page #dash-tile--DT_Dashboard_Plugin_Update_Needed .view-all {
-    margin: 1em 10% 1em 10%
+    margin: 1em 10% 0em 10%;
 }
 
 .dashboard-page .numberCircle {
@@ -187,6 +189,29 @@ body {
     padding-right: 8px;
 }
 
+.dashboard-page .update_needed_badge {
+    background: var(--red-gradient);
+    color: var(--white);
+    font-weight: 800;
+    font-size: 1.2rem;
+    padding: 0 0.25em;
+    height: 2.25em;
+    min-width: 2.25em;
+    text-align: center;
+    line-height: 1.9em;
+    border-radius: 2.25em;
+    border-style: solid;
+    border-color: var(--white);
+    border-width: 0.2em;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+.dashboard-page .update_needed_badge a {
+    text-decoration: none;
+    color: inherit;
+}
 @media screen and (max-width: 640px) {
     .dashboard-page .dash-tiles .item {
         flex-basis: 100% !important;

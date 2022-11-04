@@ -4,7 +4,7 @@
     function (context) {
       let data = context.wpApiDashboard.data;
       $(context.element).find("#active_contacts").html(data.active_contacts);
-      $(context.element).find("#update_needed").html(data.update_needed.total);
+      $(context.element).find("#update_needed").html(`<a href="${context.wpApiDashboard.site_url}/contacts/?filter_id=my_update_needed">${data.update_needed.total}</a>`);
       let up_list = ``;
       data.update_needed.posts.slice(0, 7).forEach((contact) => {
         let row = `<div class="update-needed-container">
@@ -25,9 +25,7 @@
         )}</p>`;
       }
       if (data.update_needed.total > 7) {
-        console.log(context.wpApiDashboard.site_url);
-        console.log(`${context.wpApiDashboard.site_url}/contacts/?filter_id=my_update_needed`)
-        up_list += `<a class="button view-all" href="${context.wpApiDashboard.site_url}/contacts/?filter_id=my_update_needed">${window.lodash.escape( context.wpApiDashboard.translations.see_all )} - ${window.lodash.escape( data.update_needed.total )}</a>`;
+        up_list += `<a class="button view-all" href="${context.wpApiDashboard.site_url}/contacts/?filter_id=my_update_needed">${window.lodash.escape( context.wpApiDashboard.translations.see_all )}</a>`;
       }
       $(context.element).find("#update_needed_list").html(up_list);
 
