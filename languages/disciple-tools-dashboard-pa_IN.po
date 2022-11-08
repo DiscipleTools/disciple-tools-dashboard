@@ -59,51 +59,51 @@ msgstr "Existੰਗ ਮੌਜੂਦ ਨਹੀਂ ਹੈ."
 msgid "Dashboard"
 msgstr "ਡੈਸ਼ਬੋਰਡ"
 
-#: includes/rest-api.php:179
+#: includes/rest-api.php:179 includes/rest-api.php:180
 msgid "%s days since last update"
 msgstr "ਆਖਰੀ ਅਪਡੇਟ ਤੋਂ% s ਦਿਨ"
 
-#: includes/rest-api.php:528
+#: includes/rest-api.php:528 includes/rest-api.php:529
 msgid "Accept"
 msgstr "ਸਵੀਕਾਰ ਕਰੋ"
 
-#: includes/rest-api.php:529
+#: includes/rest-api.php:529 includes/rest-api.php:530
 msgid "Decline"
 msgstr "ਅਸਵੀਕਾਰ"
 
-#: includes/rest-api.php:530
+#: includes/rest-api.php:530 includes/rest-api.php:531
 msgid "# Contacts Assigned"
 msgstr "# ਸੰਪਰਕ ਨਿਰਧਾਰਤ"
 
-#: includes/rest-api.php:531
+#: includes/rest-api.php:531 includes/rest-api.php:532
 msgid "# First Meetings"
 msgstr "# ਪਹਿਲੀ ਮੁਲਾਕਾਤ"
 
-#: includes/rest-api.php:532
+#: includes/rest-api.php:532 includes/rest-api.php:533
 msgid "# Faith milestones"
 msgstr "# ਵਿਸ਼ਵਾਸ ਮੀਲ ਪੱਥਰ"
 
-#: includes/rest-api.php:533
+#: includes/rest-api.php:533 includes/rest-api.php:534
 msgid "Hurray! You are caught up."
 msgstr "ਹੁਰੈ! ਤੁਸੀਂ ਫੜੇ ਗਏ ਹੋ."
 
-#: includes/rest-api.php:534
+#: includes/rest-api.php:534 includes/rest-api.php:535
 msgid "remove"
 msgstr "ਹਟਾਓ"
 
-#: includes/rest-api.php:535
+#: includes/rest-api.php:535 includes/rest-api.php:536
 msgid "mark as complete"
 msgstr "ਮੁਕੰਮਲ ਹੋਣ ਦੇ ਤੌਰ ਤੇ ਮਾਰਕ ਕਰੋ"
 
-#: includes/rest-api.php:536
+#: includes/rest-api.php:536 includes/rest-api.php:537
 msgid "No task created"
 msgstr "ਕੋਈ ਕੰਮ ਨਹੀਂ ਬਣਾਇਆ"
 
-#: includes/rest-api.php:537
+#: includes/rest-api.php:537 includes/rest-api.php:538
 msgid "Reminder"
 msgstr "ਰੀਮਾਈਂਡਰ"
 
-#: includes/rest-api.php:538
+#: includes/rest-api.php:538 includes/rest-api.php:539
 msgid "No note set"
 msgstr "ਕੋਈ ਨੋਟ ਸੈਟ ਨਹੀਂ"
 
@@ -117,7 +117,6 @@ msgstr ""
 
 #: includes/template-parts/tile.php:36
 #, fuzzy
-#| msgid "remove"
 msgid "Remove"
 msgstr "ਹਟਾਓ"
 
@@ -143,8 +142,11 @@ msgstr "ਤੁਹਾਡੇ ਸਰਗਰਮ ਸੰਪਰਕਾਂ 'ਤੇ ਮੀ�
 msgid "No data to show yet. You have no active contacts"
 msgstr "ਅਜੇ ਦਿਖਾਉਣ ਲਈ ਕੋਈ ਡਾਟਾ ਨਹੀਂ ਹੈ. ਤੁਹਾਡੇ ਕੋਈ ਸਰਗਰਮ ਸੰਪਰਕ ਨਹੀਂ ਹਨ"
 
+#: includes/rest-api.php:540
+msgid "See all"
+msgstr ""
+
 #, fuzzy
-#~| msgid "No-Show"
 #~ msgid "Show"
 #~ msgstr "ਨੋ-ਸ਼ੋਅ"
 

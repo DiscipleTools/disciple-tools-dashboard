@@ -60,51 +60,51 @@ msgstr "Metoda ne postoji."
 msgid "Dashboard"
 msgstr "Nadzorna ploča"
 
-#: includes/rest-api.php:179
+#: includes/rest-api.php:179 includes/rest-api.php:180
 msgid "%s days since last update"
 msgstr "% s dana od zadnjeg ažuriranja"
 
-#: includes/rest-api.php:528
+#: includes/rest-api.php:528 includes/rest-api.php:529
 msgid "Accept"
 msgstr "Prihvatiti"
 
-#: includes/rest-api.php:529
+#: includes/rest-api.php:529 includes/rest-api.php:530
 msgid "Decline"
 msgstr "Odbiti"
 
-#: includes/rest-api.php:530
+#: includes/rest-api.php:530 includes/rest-api.php:531
 msgid "# Contacts Assigned"
 msgstr "# Dodijeljeni kontakti"
 
-#: includes/rest-api.php:531
+#: includes/rest-api.php:531 includes/rest-api.php:532
 msgid "# First Meetings"
 msgstr "# Prvi sastanci"
 
-#: includes/rest-api.php:532
+#: includes/rest-api.php:532 includes/rest-api.php:533
 msgid "# Faith milestones"
 msgstr "# Vjera prekretnice"
 
-#: includes/rest-api.php:533
+#: includes/rest-api.php:533 includes/rest-api.php:534
 msgid "Hurray! You are caught up."
 msgstr "Ura! Uhvaćeni ste."
 
-#: includes/rest-api.php:534
+#: includes/rest-api.php:534 includes/rest-api.php:535
 msgid "remove"
 msgstr "ukloniti"
 
-#: includes/rest-api.php:535
+#: includes/rest-api.php:535 includes/rest-api.php:536
 msgid "mark as complete"
 msgstr "označiti kao dovršeno"
 
-#: includes/rest-api.php:536
+#: includes/rest-api.php:536 includes/rest-api.php:537
 msgid "No task created"
 msgstr "Nije stvoren nijedan zadatak"
 
-#: includes/rest-api.php:537
+#: includes/rest-api.php:537 includes/rest-api.php:538
 msgid "Reminder"
 msgstr "Podsjetnik"
 
-#: includes/rest-api.php:538
+#: includes/rest-api.php:538 includes/rest-api.php:539
 msgid "No note set"
 msgstr "Nije postavljena nota"
 
@@ -118,7 +118,6 @@ msgstr ""
 
 #: includes/template-parts/tile.php:36
 #, fuzzy
-#| msgid "remove"
 msgid "Remove"
 msgstr "ukloniti"
 
@@ -145,8 +144,11 @@ msgstr "Prekretnice na vašim aktivnim kontaktima"
 msgid "No data to show yet. You have no active contacts"
 msgstr "Još nema podataka za prikaz. Nemate aktivnih kontakata"
 
+#: includes/rest-api.php:540
+msgid "See all"
+msgstr ""
+
 #, fuzzy
-#~| msgid "No-Show"
 #~ msgid "Show"
 #~ msgstr "Ne pojavljivanje"
 

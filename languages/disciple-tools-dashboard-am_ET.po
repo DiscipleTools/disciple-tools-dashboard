@@ -59,51 +59,51 @@ msgstr "ዘዴው የለም።"
 msgid "Dashboard"
 msgstr "ዳሽቦርድ"
 
-#: includes/rest-api.php:179
+#: includes/rest-api.php:179 includes/rest-api.php:180
 msgid "%s days since last update"
 msgstr "ካለፈው ዝመና ጀምሮ% s ቀናት"
 
-#: includes/rest-api.php:528
+#: includes/rest-api.php:528 includes/rest-api.php:529
 msgid "Accept"
 msgstr "ተቀበል"
 
-#: includes/rest-api.php:529
+#: includes/rest-api.php:529 includes/rest-api.php:530
 msgid "Decline"
 msgstr "ውድቅ አድርግ"
 
-#: includes/rest-api.php:530
+#: includes/rest-api.php:530 includes/rest-api.php:531
 msgid "# Contacts Assigned"
 msgstr "# እውቂያዎች ተመድበዋል"
 
-#: includes/rest-api.php:531
+#: includes/rest-api.php:531 includes/rest-api.php:532
 msgid "# First Meetings"
 msgstr "# የመጀመሪያ ስብሰባዎች"
 
-#: includes/rest-api.php:532
+#: includes/rest-api.php:532 includes/rest-api.php:533
 msgid "# Faith milestones"
 msgstr "# የእምነት ችልታዎች"
 
-#: includes/rest-api.php:533
+#: includes/rest-api.php:533 includes/rest-api.php:534
 msgid "Hurray! You are caught up."
 msgstr "በፍጥነት! ተይዘዋል ፡፡"
 
-#: includes/rest-api.php:534
+#: includes/rest-api.php:534 includes/rest-api.php:535
 msgid "remove"
 msgstr "አስወግድ"
 
-#: includes/rest-api.php:535
+#: includes/rest-api.php:535 includes/rest-api.php:536
 msgid "mark as complete"
 msgstr "እንደ ተጠናቀቀ ምልክት ያድርጉ"
 
-#: includes/rest-api.php:536
+#: includes/rest-api.php:536 includes/rest-api.php:537
 msgid "No task created"
 msgstr "ምንም ተግባር አልተፈጠረም"
 
-#: includes/rest-api.php:537
+#: includes/rest-api.php:537 includes/rest-api.php:538
 msgid "Reminder"
 msgstr "አስታዋሽ"
 
-#: includes/rest-api.php:538
+#: includes/rest-api.php:538 includes/rest-api.php:539
 msgid "No note set"
 msgstr "ማስታወሻ አልተዘጋጀም"
 
@@ -117,7 +117,6 @@ msgstr ""
 
 #: includes/template-parts/tile.php:36
 #, fuzzy
-#| msgid "remove"
 msgid "Remove"
 msgstr "አስወግድ"
 
@@ -143,8 +142,11 @@ msgstr "በንቁ እውቂያዎችዎ ላይ ትናንሽ ድንጋዮች"
 msgid "No data to show yet. You have no active contacts"
 msgstr "ገና ለማሳየት ምንም ውሂብ የለም። ምንም ንቁ እውቂያዎች የሉዎትም"
 
+#: includes/rest-api.php:540
+msgid "See all"
+msgstr ""
+
 #, fuzzy
-#~| msgid "No-Show"
 #~ msgid "Show"
 #~ msgstr "አልመጣም"
 

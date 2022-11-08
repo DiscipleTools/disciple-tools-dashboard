@@ -59,51 +59,51 @@ msgstr "နည်းလမ်းမရှိပါ။"
 msgid "Dashboard"
 msgstr "ဒိုင်ခွက်"
 
-#: includes/rest-api.php:179
+#: includes/rest-api.php:179 includes/rest-api.php:180
 msgid "%s days since last update"
 msgstr "% s ရက်နောက်ဆုံးပြင်ဆင်မှု မှစ၍"
 
-#: includes/rest-api.php:528
+#: includes/rest-api.php:528 includes/rest-api.php:529
 msgid "Accept"
 msgstr "လက်ခံသည်"
 
-#: includes/rest-api.php:529
+#: includes/rest-api.php:529 includes/rest-api.php:530
 msgid "Decline"
 msgstr "ငြင်း"
 
-#: includes/rest-api.php:530
+#: includes/rest-api.php:530 includes/rest-api.php:531
 msgid "# Contacts Assigned"
 msgstr "ဆက်သွယ်ရန်ဆက်သွယ်ရန်"
 
-#: includes/rest-api.php:531
+#: includes/rest-api.php:531 includes/rest-api.php:532
 msgid "# First Meetings"
 msgstr "# ပထမ ဦး ဆုံးအစည်းအဝေးများ"
 
-#: includes/rest-api.php:532
+#: includes/rest-api.php:532 includes/rest-api.php:533
 msgid "# Faith milestones"
 msgstr "# ယုံကြည်ခြင်းသမိုင်းမှတ်တိုင်များ"
 
-#: includes/rest-api.php:533
+#: includes/rest-api.php:533 includes/rest-api.php:534
 msgid "Hurray! You are caught up."
 msgstr "ဟားဟား! မင်းဖမ်းမိပြီ"
 
-#: includes/rest-api.php:534
+#: includes/rest-api.php:534 includes/rest-api.php:535
 msgid "remove"
 msgstr "ဖယ်ရှားလိုက်ပါ"
 
-#: includes/rest-api.php:535
+#: includes/rest-api.php:535 includes/rest-api.php:536
 msgid "mark as complete"
 msgstr "ပြီးပြည့်စုံသောအဖြစ်မှတ်သားပါ"
 
-#: includes/rest-api.php:536
+#: includes/rest-api.php:536 includes/rest-api.php:537
 msgid "No task created"
 msgstr "အလုပ်တစ်ခုမျှမဖန်တီးပါ"
 
-#: includes/rest-api.php:537
+#: includes/rest-api.php:537 includes/rest-api.php:538
 msgid "Reminder"
 msgstr "သတိပေးချက်"
 
-#: includes/rest-api.php:538
+#: includes/rest-api.php:538 includes/rest-api.php:539
 msgid "No note set"
 msgstr "မှတ်စုသတ်မှတ်မထားပါ"
 
@@ -117,7 +117,6 @@ msgstr ""
 
 #: includes/template-parts/tile.php:36
 #, fuzzy
-#| msgid "remove"
 msgid "Remove"
 msgstr "ဖယ်ရှားလိုက်ပါ"
 
@@ -143,8 +142,11 @@ msgstr "သင်၏တက်ကြွသောအဆက်အသွယ်မျ
 msgid "No data to show yet. You have no active contacts"
 msgstr "ပြသရန်အချက်အလက်မရှိပါ သင့်တွင်တက်ကြွသောအဆက်အသွယ်များမရှိပါ"
 
+#: includes/rest-api.php:540
+msgid "See all"
+msgstr ""
+
 #, fuzzy
-#~| msgid "No-Show"
 #~ msgid "Show"
 #~ msgstr "မပြပါ"
 
