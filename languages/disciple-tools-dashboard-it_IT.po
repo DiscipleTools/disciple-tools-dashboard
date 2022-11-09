@@ -4,10 +4,10 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
 "POT-Creation-Date: 2022-10-27T15:48:43+00:00\n"
-"PO-Revision-Date: 2022-10-27 14:49+0000\n"
+"PO-Revision-Date: 2022-11-09 08:32+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Italian <https://translate.disciple.tools/projects/disciple-"
-"tools/disciple-tools-dashboard/it_IT/>\n"
+"Language-Team: Italian <https://translate.disciple.tools/projects/"
+"disciple-tools/disciple-tools-dashboard/it_IT/>\n"
 "Language: it_IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -59,51 +59,51 @@ msgstr "Il metodo non esiste."
 msgid "Dashboard"
 msgstr "Pannello di controllo"
 
-#: includes/rest-api.php:179
+#: includes/rest-api.php:179 includes/rest-api.php:180
 msgid "%s days since last update"
 msgstr "% s giorni dall'ultimo aggiornamento"
 
-#: includes/rest-api.php:528
+#: includes/rest-api.php:528 includes/rest-api.php:529
 msgid "Accept"
 msgstr "Accettare"
 
-#: includes/rest-api.php:529
+#: includes/rest-api.php:529 includes/rest-api.php:530
 msgid "Decline"
 msgstr "Declino"
 
-#: includes/rest-api.php:530
+#: includes/rest-api.php:530 includes/rest-api.php:531
 msgid "# Contacts Assigned"
 msgstr "# Contatti assegnati"
 
-#: includes/rest-api.php:531
+#: includes/rest-api.php:531 includes/rest-api.php:532
 msgid "# First Meetings"
 msgstr "# Primi incontri"
 
-#: includes/rest-api.php:532
+#: includes/rest-api.php:532 includes/rest-api.php:533
 msgid "# Faith milestones"
 msgstr "# Pietre miliari della fede"
 
-#: includes/rest-api.php:533
+#: includes/rest-api.php:533 includes/rest-api.php:534
 msgid "Hurray! You are caught up."
 msgstr "Evviva! Sei preso."
 
-#: includes/rest-api.php:534
+#: includes/rest-api.php:534 includes/rest-api.php:535
 msgid "remove"
 msgstr "rimuovere"
 
-#: includes/rest-api.php:535
+#: includes/rest-api.php:535 includes/rest-api.php:536
 msgid "mark as complete"
 msgstr "contrassegna come completo"
 
-#: includes/rest-api.php:536
+#: includes/rest-api.php:536 includes/rest-api.php:537
 msgid "No task created"
 msgstr "Nessuna attività creata"
 
-#: includes/rest-api.php:537
+#: includes/rest-api.php:537 includes/rest-api.php:538
 msgid "Reminder"
 msgstr "Promemoria"
 
-#: includes/rest-api.php:538
+#: includes/rest-api.php:538 includes/rest-api.php:539
 msgid "No note set"
 msgstr "Nessuna nota impostata"
 
@@ -117,7 +117,6 @@ msgstr ""
 
 #: includes/template-parts/tile.php:36
 #, fuzzy
-#| msgid "remove"
 msgid "Remove"
 msgstr "rimuovere"
 
@@ -145,8 +144,11 @@ msgstr "Pietre miliari sui tuoi contatti attivi"
 msgid "No data to show yet. You have no active contacts"
 msgstr "Nessun dato da mostrare ancora. Non hai contatti attivi"
 
+#: includes/rest-api.php:540
+msgid "See all"
+msgstr "Vedi Tutto"
+
 #, fuzzy
-#~| msgid "No-Show"
 #~ msgid "Show"
 #~ msgstr "Niente spettacolo"
 

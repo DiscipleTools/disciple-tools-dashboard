@@ -6,7 +6,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
 "POT-Creation-Date: 2022-10-27T15:48:43+00:00\n"
-"PO-Revision-Date: 2022-10-29 09:25+0000\n"
+"PO-Revision-Date: 2022-11-09 08:32+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Hungarian <https://translate.disciple.tools/projects/"
 "disciple-tools/disciple-tools-dashboard/hu_HU/>\n"
@@ -50,8 +50,7 @@ msgstr ""
 msgid "Tasks"
 msgstr "Feladatok"
 
-#: disciple-tools-dashboard.php:310
-#: disciple-tools-dashboard.php:321
+#: disciple-tools-dashboard.php:310 disciple-tools-dashboard.php:321
 msgid "Whoah, partner!"
 msgstr ""
 
@@ -63,51 +62,51 @@ msgstr ""
 msgid "Dashboard"
 msgstr ""
 
-#: includes/rest-api.php:179
+#: includes/rest-api.php:179 includes/rest-api.php:180
 msgid "%s days since last update"
 msgstr "%s nap a legutolsó frissítés óta"
 
-#: includes/rest-api.php:528
+#: includes/rest-api.php:528 includes/rest-api.php:529
 msgid "Accept"
 msgstr "Elfogad"
 
-#: includes/rest-api.php:529
+#: includes/rest-api.php:529 includes/rest-api.php:530
 msgid "Decline"
 msgstr "Elutasít"
 
-#: includes/rest-api.php:530
+#: includes/rest-api.php:530 includes/rest-api.php:531
 msgid "# Contacts Assigned"
 msgstr ""
 
-#: includes/rest-api.php:531
+#: includes/rest-api.php:531 includes/rest-api.php:532
 msgid "# First Meetings"
 msgstr "Első Találkozások"
 
-#: includes/rest-api.php:532
+#: includes/rest-api.php:532 includes/rest-api.php:533
 msgid "# Faith milestones"
 msgstr "Hitbeli Mérföldkövek"
 
-#: includes/rest-api.php:533
+#: includes/rest-api.php:533 includes/rest-api.php:534
 msgid "Hurray! You are caught up."
 msgstr ""
 
-#: includes/rest-api.php:534
+#: includes/rest-api.php:534 includes/rest-api.php:535
 msgid "remove"
 msgstr "Eltávolít"
 
-#: includes/rest-api.php:535
+#: includes/rest-api.php:535 includes/rest-api.php:536
 msgid "mark as complete"
 msgstr "Megjelölés teljesítettként"
 
-#: includes/rest-api.php:536
+#: includes/rest-api.php:536 includes/rest-api.php:537
 msgid "No task created"
 msgstr "Nincs megalkotva feladat"
 
-#: includes/rest-api.php:537
+#: includes/rest-api.php:537 includes/rest-api.php:538
 msgid "Reminder"
 msgstr "Emlékeztető"
 
-#: includes/rest-api.php:538
+#: includes/rest-api.php:538 includes/rest-api.php:539
 msgid "No note set"
 msgstr "Nincs megjegyzés"
 
@@ -128,7 +127,9 @@ msgid "Add a contact"
 msgstr ""
 
 #: includes/tiles/contact-workload/template.php:8
-msgid "Choose an option to let the dispatcher(s) know if you are ready for new contacts"
+msgid ""
+"Choose an option to let the dispatcher(s) know if you are ready for new "
+"contacts"
 msgstr ""
 
 #: includes/tiles/contact-workload/template.php:21
@@ -142,3 +143,7 @@ msgstr ""
 #: includes/tiles/seeker-path-progress/template.php:7
 msgid "No data to show yet. You have no active contacts"
 msgstr ""
+
+#: includes/rest-api.php:540
+msgid "See all"
+msgstr "Összes Mutatása"

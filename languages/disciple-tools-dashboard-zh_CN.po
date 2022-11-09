@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
 "POT-Creation-Date: 2022-10-27T15:48:43+00:00\n"
-"PO-Revision-Date: 2022-10-27 14:50+0000\n"
+"PO-Revision-Date: 2022-11-09 08:32+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://translate.disciple.tools/"
 "projects/disciple-tools/disciple-tools-dashboard/zh_Hans/>\n"
@@ -59,51 +59,51 @@ msgstr "方法不存在。"
 msgid "Dashboard"
 msgstr "仪表板"
 
-#: includes/rest-api.php:179
+#: includes/rest-api.php:179 includes/rest-api.php:180
 msgid "%s days since last update"
 msgstr "自上次更新以来的％s天"
 
-#: includes/rest-api.php:528
+#: includes/rest-api.php:528 includes/rest-api.php:529
 msgid "Accept"
 msgstr "接受"
 
-#: includes/rest-api.php:529
+#: includes/rest-api.php:529 includes/rest-api.php:530
 msgid "Decline"
 msgstr "下降"
 
-#: includes/rest-api.php:530
+#: includes/rest-api.php:530 includes/rest-api.php:531
 msgid "# Contacts Assigned"
 msgstr "＃个已分配的联系人"
 
-#: includes/rest-api.php:531
+#: includes/rest-api.php:531 includes/rest-api.php:532
 msgid "# First Meetings"
 msgstr "＃第一次会议"
 
-#: includes/rest-api.php:532
+#: includes/rest-api.php:532 includes/rest-api.php:533
 msgid "# Faith milestones"
 msgstr "＃信念里程碑"
 
-#: includes/rest-api.php:533
+#: includes/rest-api.php:533 includes/rest-api.php:534
 msgid "Hurray! You are caught up."
 msgstr "欢呼！你被抓了。"
 
-#: includes/rest-api.php:534
+#: includes/rest-api.php:534 includes/rest-api.php:535
 msgid "remove"
 msgstr "去掉"
 
-#: includes/rest-api.php:535
+#: includes/rest-api.php:535 includes/rest-api.php:536
 msgid "mark as complete"
 msgstr "标记为完成"
 
-#: includes/rest-api.php:536
+#: includes/rest-api.php:536 includes/rest-api.php:537
 msgid "No task created"
 msgstr "未创建任务"
 
-#: includes/rest-api.php:537
+#: includes/rest-api.php:537 includes/rest-api.php:538
 msgid "Reminder"
 msgstr "提醒"
 
-#: includes/rest-api.php:538
+#: includes/rest-api.php:538 includes/rest-api.php:539
 msgid "No note set"
 msgstr "没有音符集"
 
@@ -117,7 +117,6 @@ msgstr ""
 
 #: includes/template-parts/tile.php:36
 #, fuzzy
-#| msgid "remove"
 msgid "Remove"
 msgstr "去掉"
 
@@ -143,8 +142,11 @@ msgstr "活动联系人的里程碑"
 msgid "No data to show yet. You have no active contacts"
 msgstr "尚无数据显示。您没有活动的联系人"
 
+#: includes/rest-api.php:540
+msgid "See all"
+msgstr "查看全部"
+
 #, fuzzy
-#~| msgid "No-Show"
 #~ msgid "Show"
 #~ msgstr "没有出现"
 

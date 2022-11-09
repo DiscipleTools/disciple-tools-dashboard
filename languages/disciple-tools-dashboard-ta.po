@@ -4,10 +4,10 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
 "POT-Creation-Date: 2022-10-27T15:48:43+00:00\n"
-"PO-Revision-Date: 2022-10-27 14:50+0000\n"
+"PO-Revision-Date: 2022-11-09 08:32+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Tamil <https://translate.disciple.tools/projects/disciple-"
-"tools/disciple-tools-dashboard/ta/>\n"
+"Language-Team: Tamil <https://translate.disciple.tools/projects/"
+"disciple-tools/disciple-tools-dashboard/ta/>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -59,51 +59,51 @@ msgstr "முறை இல்லை."
 msgid "Dashboard"
 msgstr "டாஷ்போர்டு"
 
-#: includes/rest-api.php:179
+#: includes/rest-api.php:179 includes/rest-api.php:180
 msgid "%s days since last update"
 msgstr "கடைசி புதுப்பிப்பிலிருந்து% s நாட்கள்"
 
-#: includes/rest-api.php:528
+#: includes/rest-api.php:528 includes/rest-api.php:529
 msgid "Accept"
 msgstr "ஏற்றுக்கொள்"
 
-#: includes/rest-api.php:529
+#: includes/rest-api.php:529 includes/rest-api.php:530
 msgid "Decline"
 msgstr "சரிவு"
 
-#: includes/rest-api.php:530
+#: includes/rest-api.php:530 includes/rest-api.php:531
 msgid "# Contacts Assigned"
 msgstr "# தொடர்புகள் ஒதுக்கப்பட்டுள்ளன"
 
-#: includes/rest-api.php:531
+#: includes/rest-api.php:531 includes/rest-api.php:532
 msgid "# First Meetings"
 msgstr "# முதல் கூட்டங்கள்"
 
-#: includes/rest-api.php:532
+#: includes/rest-api.php:532 includes/rest-api.php:533
 msgid "# Faith milestones"
 msgstr "# நம்பிக்கை மைல்கற்கள்"
 
-#: includes/rest-api.php:533
+#: includes/rest-api.php:533 includes/rest-api.php:534
 msgid "Hurray! You are caught up."
 msgstr "ஹர்ரே! நீங்கள் பிடிபட்டீர்கள்."
 
-#: includes/rest-api.php:534
+#: includes/rest-api.php:534 includes/rest-api.php:535
 msgid "remove"
 msgstr "அகற்று"
 
-#: includes/rest-api.php:535
+#: includes/rest-api.php:535 includes/rest-api.php:536
 msgid "mark as complete"
 msgstr "முழுமையானது எனக் குறிக்கவும்"
 
-#: includes/rest-api.php:536
+#: includes/rest-api.php:536 includes/rest-api.php:537
 msgid "No task created"
 msgstr "எந்த பணியும் உருவாக்கப்படவில்லை"
 
-#: includes/rest-api.php:537
+#: includes/rest-api.php:537 includes/rest-api.php:538
 msgid "Reminder"
 msgstr "நினைவூட்டல்"
 
-#: includes/rest-api.php:538
+#: includes/rest-api.php:538 includes/rest-api.php:539
 msgid "No note set"
 msgstr "குறிப்பு எதுவும் அமைக்கப்படவில்லை"
 
@@ -117,7 +117,6 @@ msgstr ""
 
 #: includes/template-parts/tile.php:36
 #, fuzzy
-#| msgid "remove"
 msgid "Remove"
 msgstr "அகற்று"
 
@@ -145,8 +144,11 @@ msgstr "உங்கள் செயலில் உள்ள தொடர்ப
 msgid "No data to show yet. You have no active contacts"
 msgstr "இதுவரை காண்பிக்க தரவு இல்லை. உங்களிடம் செயலில் தொடர்புகள் எதுவும் இல்லை"
 
+#: includes/rest-api.php:540
+msgid "See all"
+msgstr "அனைத்தையும் பார்"
+
 #, fuzzy
-#~| msgid "No-Show"
 #~ msgid "Show"
 #~ msgstr "காட்சி இல்லை"
 
