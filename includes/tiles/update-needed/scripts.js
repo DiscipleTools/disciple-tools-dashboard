@@ -4,7 +4,11 @@
     function (context) {
       let data = context.wpApiDashboard.data;
       $(context.element).find("#active_contacts").html(data.active_contacts);
-      $(context.element).find("#update_needed").html(`<a href="${context.wpApiDashboard.site_url}/contacts/?filter_id=my_update_needed">${data.update_needed.total}</a>`);
+      if ( data.update_needed.total > 0 ) {
+        $(context.element).find("#update_needed").html(`<a href="${context.wpApiDashboard.site_url}/contacts/?filter_id=my_update_needed">${data.update_needed.total}</a>`);
+      } else {
+        $(context.element).find("#update_needed").addClass("hidden");
+      }
       let up_list = ``;
       data.update_needed.posts.slice(0, 7).forEach((contact) => {
         let row = `<div class="update-needed-container">

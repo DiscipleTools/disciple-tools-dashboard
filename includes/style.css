@@ -212,6 +212,11 @@ body {
     text-decoration: none;
     color: inherit;
 }
+
+.dashboard-page .update_needed_badge.hidden {
+    display: none;
+}
+
 @media screen and (max-width: 640px) {
     .dashboard-page .dash-tiles .item {
         flex-basis: 100% !important;
@@ -514,7 +519,7 @@ body {
 .dashboard-page #dash-tile--DT_Dashboard_Plugin_Personal_Benchmarks #benchmarks_current,
 .dashboard-page #dash-tile--DT_Dashboard_Plugin_Personal_Benchmarks #benchmarks_previous {
     padding: 0 10px;
-    color: var(--primary-color)
+    color: var(--primary-color);
     font-size: 12px;
     font-weight: 500;
 }
