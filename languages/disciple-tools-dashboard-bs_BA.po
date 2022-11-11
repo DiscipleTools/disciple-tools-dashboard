@@ -4,10 +4,10 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
 "POT-Creation-Date: 2022-10-27T15:48:43+00:00\n"
-"PO-Revision-Date: 2022-10-27 14:49+0000\n"
+"PO-Revision-Date: 2022-11-09 08:32+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Bosnian <https://translate.disciple.tools/projects/disciple-"
-"tools/disciple-tools-dashboard/bs_BA/>\n"
+"Language-Team: Bosnian <https://translate.disciple.tools/projects/"
+"disciple-tools/disciple-tools-dashboard/bs_BA/>\n"
 "Language: bs_BA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -60,51 +60,51 @@ msgstr "Metoda ne postoji."
 msgid "Dashboard"
 msgstr "Kontrolna ploča"
 
-#: includes/rest-api.php:179
+#: includes/rest-api.php:179 includes/rest-api.php:180
 msgid "%s days since last update"
 msgstr "% s dana od zadnjeg ažuriranja"
 
-#: includes/rest-api.php:528
+#: includes/rest-api.php:528 includes/rest-api.php:529
 msgid "Accept"
 msgstr "Prihvati"
 
-#: includes/rest-api.php:529
+#: includes/rest-api.php:529 includes/rest-api.php:530
 msgid "Decline"
 msgstr "Odbij"
 
-#: includes/rest-api.php:530
+#: includes/rest-api.php:530 includes/rest-api.php:531
 msgid "# Contacts Assigned"
 msgstr "# Dodijeljeni kontakti"
 
-#: includes/rest-api.php:531
+#: includes/rest-api.php:531 includes/rest-api.php:532
 msgid "# First Meetings"
 msgstr "# Prvi sastanci"
 
-#: includes/rest-api.php:532
+#: includes/rest-api.php:532 includes/rest-api.php:533
 msgid "# Faith milestones"
 msgstr "# Vjera prekretnice"
 
-#: includes/rest-api.php:533
+#: includes/rest-api.php:533 includes/rest-api.php:534
 msgid "Hurray! You are caught up."
 msgstr "Ura! Uhvaćeni ste."
 
-#: includes/rest-api.php:534
+#: includes/rest-api.php:534 includes/rest-api.php:535
 msgid "remove"
 msgstr "ukloniti"
 
-#: includes/rest-api.php:535
+#: includes/rest-api.php:535 includes/rest-api.php:536
 msgid "mark as complete"
 msgstr "označiti kao potpunu"
 
-#: includes/rest-api.php:536
+#: includes/rest-api.php:536 includes/rest-api.php:537
 msgid "No task created"
 msgstr "Nije kreiran nijedan zadatak"
 
-#: includes/rest-api.php:537
+#: includes/rest-api.php:537 includes/rest-api.php:538
 msgid "Reminder"
 msgstr "Podsjetnik"
 
-#: includes/rest-api.php:538
+#: includes/rest-api.php:538 includes/rest-api.php:539
 msgid "No note set"
 msgstr "Nije postavljena nota"
 
@@ -118,7 +118,6 @@ msgstr ""
 
 #: includes/template-parts/tile.php:36
 #, fuzzy
-#| msgid "remove"
 msgid "Remove"
 msgstr "ukloniti"
 
@@ -145,8 +144,11 @@ msgstr "Prekretnice u vašim aktivnim kontaktima"
 msgid "No data to show yet. You have no active contacts"
 msgstr "Još nema podataka za prikaz. Nemate aktivnih kontakata"
 
+#: includes/rest-api.php:540
+msgid "See all"
+msgstr "Vidjeti sve"
+
 #, fuzzy
-#~| msgid "No-Show"
 #~ msgid "Show"
 #~ msgstr "Ne pojavljivanje"
 
