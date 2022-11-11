@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2022-10-27T15:48:43+00:00\n"
+"POT-Creation-Date: 2022-11-11T09:25:16+00:00\n"
 "PO-Revision-Date: 2022-11-09 08:32+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Bengali (Bangladesh) <https://translate.disciple.tools/"
@@ -59,53 +59,57 @@ msgstr "পদ্ধতিটির অস্তিত্ব নেই।"
 msgid "Dashboard"
 msgstr "ড্যাশবোর্ড"
 
-#: includes/rest-api.php:179 includes/rest-api.php:180
+#: includes/rest-api.php:180
 msgid "%s days since last update"
 msgstr "শেষ আপডেটের পরে% s দিন"
 
-#: includes/rest-api.php:528 includes/rest-api.php:529
+#: includes/rest-api.php:529
 msgid "Accept"
 msgstr "গ্রহণ করুন"
 
-#: includes/rest-api.php:529 includes/rest-api.php:530
+#: includes/rest-api.php:530
 msgid "Decline"
 msgstr "অস্বীকার"
 
-#: includes/rest-api.php:530 includes/rest-api.php:531
+#: includes/rest-api.php:531
 msgid "# Contacts Assigned"
 msgstr "# পরিচিতি বরাদ্দ করা হয়েছে"
 
-#: includes/rest-api.php:531 includes/rest-api.php:532
+#: includes/rest-api.php:532
 msgid "# First Meetings"
 msgstr "# প্রথম সভা"
 
-#: includes/rest-api.php:532 includes/rest-api.php:533
+#: includes/rest-api.php:533
 msgid "# Faith milestones"
 msgstr "# বিশ্বাসের মাইলফলক"
 
-#: includes/rest-api.php:533 includes/rest-api.php:534
+#: includes/rest-api.php:534
 msgid "Hurray! You are caught up."
 msgstr "হুররে! আপনি ধরা পড়েছেন।"
 
-#: includes/rest-api.php:534 includes/rest-api.php:535
+#: includes/rest-api.php:535
 msgid "remove"
 msgstr "অপসারণ"
 
-#: includes/rest-api.php:535 includes/rest-api.php:536
+#: includes/rest-api.php:536
 msgid "mark as complete"
 msgstr "সম্পূর্ণ হিসাবে চিহ্নিত করুন"
 
-#: includes/rest-api.php:536 includes/rest-api.php:537
+#: includes/rest-api.php:537
 msgid "No task created"
 msgstr "কোনও কাজ তৈরি হয়নি"
 
-#: includes/rest-api.php:537 includes/rest-api.php:538
+#: includes/rest-api.php:538
 msgid "Reminder"
 msgstr "অনুস্মারক"
 
-#: includes/rest-api.php:538 includes/rest-api.php:539
+#: includes/rest-api.php:539
 msgid "No note set"
 msgstr "কোনও নোট সেট নেই"
+
+#: includes/rest-api.php:540
+msgid "See all"
+msgstr "সবগুলো দেখুন"
 
 #: includes/template-parts/tile.php:28
 msgid "Back"
@@ -142,10 +146,6 @@ msgstr "আপনার সক্রিয় পরিচিতিগুলি�
 #: includes/tiles/seeker-path-progress/template.php:7
 msgid "No data to show yet. You have no active contacts"
 msgstr "এখনও দেখানোর জন্য কোনও ডেটা নেই। আপনার কোনও সক্রিয় যোগাযোগ নেই"
-
-#: includes/rest-api.php:540
-msgid "See all"
-msgstr "সবগুলো দেখুন"
 
 #, fuzzy
 #~ msgid "Show"

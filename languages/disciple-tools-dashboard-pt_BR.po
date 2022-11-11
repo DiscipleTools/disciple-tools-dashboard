@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Disciple.Tools - Dashboard 1.1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2022-10-27T15:48:43+00:00\n"
+"POT-Creation-Date: 2022-11-11T09:25:16+00:00\n"
 "PO-Revision-Date: 2022-11-09 08:32+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate.disciple.tools/"
@@ -62,53 +62,57 @@ msgstr ""
 msgid "Dashboard"
 msgstr ""
 
-#: includes/rest-api.php:179 includes/rest-api.php:180
+#: includes/rest-api.php:180
 msgid "%s days since last update"
 msgstr "%s dias desde a última atualização"
 
-#: includes/rest-api.php:528 includes/rest-api.php:529
+#: includes/rest-api.php:529
 msgid "Accept"
 msgstr "Aceitar"
 
-#: includes/rest-api.php:529 includes/rest-api.php:530
+#: includes/rest-api.php:530
 msgid "Decline"
 msgstr "Declinar"
 
-#: includes/rest-api.php:530 includes/rest-api.php:531
+#: includes/rest-api.php:531
 msgid "# Contacts Assigned"
 msgstr ""
 
-#: includes/rest-api.php:531 includes/rest-api.php:532
+#: includes/rest-api.php:532
 msgid "# First Meetings"
 msgstr "Primeiras Reuniões"
 
-#: includes/rest-api.php:532 includes/rest-api.php:533
+#: includes/rest-api.php:533
 msgid "# Faith milestones"
 msgstr "Pilares de fé"
 
-#: includes/rest-api.php:533 includes/rest-api.php:534
+#: includes/rest-api.php:534
 msgid "Hurray! You are caught up."
 msgstr ""
 
-#: includes/rest-api.php:534 includes/rest-api.php:535
+#: includes/rest-api.php:535
 msgid "remove"
 msgstr "Remover"
 
-#: includes/rest-api.php:535 includes/rest-api.php:536
+#: includes/rest-api.php:536
 msgid "mark as complete"
 msgstr "marcar como concluída"
 
-#: includes/rest-api.php:536 includes/rest-api.php:537
+#: includes/rest-api.php:537
 msgid "No task created"
 msgstr "Contato Criado"
 
-#: includes/rest-api.php:537 includes/rest-api.php:538
+#: includes/rest-api.php:538
 msgid "Reminder"
 msgstr "Lembrete"
 
-#: includes/rest-api.php:538 includes/rest-api.php:539
+#: includes/rest-api.php:539
 msgid "No note set"
 msgstr "Nenhuma anotação definida"
+
+#: includes/rest-api.php:540
+msgid "See all"
+msgstr "Ver tudo"
 
 #: includes/template-parts/tile.php:28
 msgid "Back"
@@ -143,7 +147,3 @@ msgstr ""
 #: includes/tiles/seeker-path-progress/template.php:7
 msgid "No data to show yet. You have no active contacts"
 msgstr ""
-
-#: includes/rest-api.php:540
-msgid "See all"
-msgstr "Ver tudo"
