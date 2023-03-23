@@ -3,11 +3,11 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2022-10-27T15:48:43+00:00\n"
+"POT-Creation-Date: 2022-11-11T09:25:16+00:00\n"
 "PO-Revision-Date: 2022-11-09 08:32+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Burmese <https://translate.disciple.tools/projects/"
-"disciple-tools/disciple-tools-dashboard/my_MM/>\n"
+"Language-Team: Burmese <https://translate.disciple.tools/projects/disciple-"
+"tools/disciple-tools-dashboard/my_MM/>\n"
 "Language: my_MM\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -59,53 +59,57 @@ msgstr "နည်းလမ်းမရှိပါ။"
 msgid "Dashboard"
 msgstr "ဒိုင်ခွက်"
 
-#: includes/rest-api.php:179 includes/rest-api.php:180
+#: includes/rest-api.php:180
 msgid "%s days since last update"
 msgstr "% s ရက်နောက်ဆုံးပြင်ဆင်မှု မှစ၍"
 
-#: includes/rest-api.php:528 includes/rest-api.php:529
+#: includes/rest-api.php:529
 msgid "Accept"
 msgstr "လက်ခံသည်"
 
-#: includes/rest-api.php:529 includes/rest-api.php:530
+#: includes/rest-api.php:530
 msgid "Decline"
 msgstr "ငြင်း"
 
-#: includes/rest-api.php:530 includes/rest-api.php:531
+#: includes/rest-api.php:531
 msgid "# Contacts Assigned"
 msgstr "ဆက်သွယ်ရန်ဆက်သွယ်ရန်"
 
-#: includes/rest-api.php:531 includes/rest-api.php:532
+#: includes/rest-api.php:532
 msgid "# First Meetings"
 msgstr "# ပထမ ဦး ဆုံးအစည်းအဝေးများ"
 
-#: includes/rest-api.php:532 includes/rest-api.php:533
+#: includes/rest-api.php:533
 msgid "# Faith milestones"
 msgstr "# ယုံကြည်ခြင်းသမိုင်းမှတ်တိုင်များ"
 
-#: includes/rest-api.php:533 includes/rest-api.php:534
+#: includes/rest-api.php:534
 msgid "Hurray! You are caught up."
 msgstr "ဟားဟား! မင်းဖမ်းမိပြီ"
 
-#: includes/rest-api.php:534 includes/rest-api.php:535
+#: includes/rest-api.php:535
 msgid "remove"
 msgstr "ဖယ်ရှားလိုက်ပါ"
 
-#: includes/rest-api.php:535 includes/rest-api.php:536
+#: includes/rest-api.php:536
 msgid "mark as complete"
 msgstr "ပြီးပြည့်စုံသောအဖြစ်မှတ်သားပါ"
 
-#: includes/rest-api.php:536 includes/rest-api.php:537
+#: includes/rest-api.php:537
 msgid "No task created"
 msgstr "အလုပ်တစ်ခုမျှမဖန်တီးပါ"
 
-#: includes/rest-api.php:537 includes/rest-api.php:538
+#: includes/rest-api.php:538
 msgid "Reminder"
 msgstr "သတိပေးချက်"
 
-#: includes/rest-api.php:538 includes/rest-api.php:539
+#: includes/rest-api.php:539
 msgid "No note set"
 msgstr "မှတ်စုသတ်မှတ်မထားပါ"
+
+#: includes/rest-api.php:540
+msgid "See all"
+msgstr "အားလုံးကိုကြည့်ပါ"
 
 #: includes/template-parts/tile.php:28
 msgid "Back"
@@ -141,10 +145,6 @@ msgstr "သင်၏တက်ကြွသောအဆက်အသွယ်မျ
 #: includes/tiles/seeker-path-progress/template.php:7
 msgid "No data to show yet. You have no active contacts"
 msgstr "ပြသရန်အချက်အလက်မရှိပါ သင့်တွင်တက်ကြွသောအဆက်အသွယ်များမရှိပါ"
-
-#: includes/rest-api.php:540
-msgid "See all"
-msgstr "အားလုံးကိုကြည့်ပါ"
 
 #, fuzzy
 #~ msgid "Show"
