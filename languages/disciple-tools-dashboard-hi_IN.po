@@ -3,11 +3,11 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2022-10-27T15:48:43+00:00\n"
+"POT-Creation-Date: 2022-11-11T09:25:16+00:00\n"
 "PO-Revision-Date: 2022-11-09 08:32+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Hindi <https://translate.disciple.tools/projects/"
-"disciple-tools/disciple-tools-dashboard/hi_IN/>\n"
+"Language-Team: Hindi <https://translate.disciple.tools/projects/disciple-"
+"tools/disciple-tools-dashboard/hi_IN/>\n"
 "Language: hi_IN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -59,53 +59,57 @@ msgstr "विधि मौजूद नहीं है।"
 msgid "Dashboard"
 msgstr "डैशबोर्ड"
 
-#: includes/rest-api.php:179 includes/rest-api.php:180
+#: includes/rest-api.php:180
 msgid "%s days since last update"
 msgstr "अंतिम अपडेट के बाद से% s दिन"
 
-#: includes/rest-api.php:528 includes/rest-api.php:529
+#: includes/rest-api.php:529
 msgid "Accept"
 msgstr "स्वीकार करना"
 
-#: includes/rest-api.php:529 includes/rest-api.php:530
+#: includes/rest-api.php:530
 msgid "Decline"
 msgstr "पतन"
 
-#: includes/rest-api.php:530 includes/rest-api.php:531
+#: includes/rest-api.php:531
 msgid "# Contacts Assigned"
 msgstr "# संपर्क असाइन किया गया"
 
-#: includes/rest-api.php:531 includes/rest-api.php:532
+#: includes/rest-api.php:532
 msgid "# First Meetings"
 msgstr "# पहली मुलाकात"
 
-#: includes/rest-api.php:532 includes/rest-api.php:533
+#: includes/rest-api.php:533
 msgid "# Faith milestones"
 msgstr "# विश्वास मील के पत्थर"
 
-#: includes/rest-api.php:533 includes/rest-api.php:534
+#: includes/rest-api.php:534
 msgid "Hurray! You are caught up."
 msgstr "हुर्रे! तुम पकड़े जाते हो।"
 
-#: includes/rest-api.php:534 includes/rest-api.php:535
+#: includes/rest-api.php:535
 msgid "remove"
 msgstr "हटाना"
 
-#: includes/rest-api.php:535 includes/rest-api.php:536
+#: includes/rest-api.php:536
 msgid "mark as complete"
 msgstr "पूर्ण के रूप में चिह्नित करें"
 
-#: includes/rest-api.php:536 includes/rest-api.php:537
+#: includes/rest-api.php:537
 msgid "No task created"
 msgstr "कोई कार्य नहीं बनाया गया"
 
-#: includes/rest-api.php:537 includes/rest-api.php:538
+#: includes/rest-api.php:538
 msgid "Reminder"
 msgstr "अनुस्मारक"
 
-#: includes/rest-api.php:538 includes/rest-api.php:539
+#: includes/rest-api.php:539
 msgid "No note set"
 msgstr "कोई नोट सेट नहीं"
+
+#: includes/rest-api.php:540
+msgid "See all"
+msgstr "सभी देखें"
 
 #: includes/template-parts/tile.php:28
 msgid "Back"
@@ -141,10 +145,6 @@ msgstr "आपके सक्रिय संपर्कों पर मी�
 #: includes/tiles/seeker-path-progress/template.php:7
 msgid "No data to show yet. You have no active contacts"
 msgstr "अभी तक दिखाने के लिए कोई डेटा नहीं है। आपके पास कोई सक्रिय संपर्क नहीं है"
-
-#: includes/rest-api.php:540
-msgid "See all"
-msgstr "सभी देखें"
 
 #, fuzzy
 #~ msgid "Show"

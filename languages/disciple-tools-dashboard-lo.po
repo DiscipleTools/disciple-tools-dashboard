@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2022-10-27T15:48:43+00:00\n"
+"POT-Creation-Date: 2022-11-11T09:25:16+00:00\n"
 "PO-Revision-Date: 2022-11-09 08:32+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Lao <https://translate.disciple.tools/projects/disciple-tools/"
@@ -59,53 +59,57 @@ msgstr "ບໍ່ມີວິທີການ."
 msgid "Dashboard"
 msgstr "ແຜງຄວບຄຸມ"
 
-#: includes/rest-api.php:179 includes/rest-api.php:180
+#: includes/rest-api.php:180
 msgid "%s days since last update"
 msgstr "% s ມື້ນັບຕັ້ງແຕ່ການປັບປຸງຄັ້ງສຸດທ້າຍ"
 
-#: includes/rest-api.php:528 includes/rest-api.php:529
+#: includes/rest-api.php:529
 msgid "Accept"
 msgstr "ຍອມ​ຮັບ"
 
-#: includes/rest-api.php:529 includes/rest-api.php:530
+#: includes/rest-api.php:530
 msgid "Decline"
 msgstr "ຫຼຸດລົງ"
 
-#: includes/rest-api.php:530 includes/rest-api.php:531
+#: includes/rest-api.php:531
 msgid "# Contacts Assigned"
 msgstr "# ຕິດຕໍ່ໄດ້ຮັບມອບ ໝາຍ"
 
-#: includes/rest-api.php:531 includes/rest-api.php:532
+#: includes/rest-api.php:532
 msgid "# First Meetings"
 msgstr "# ການພົບປະຄັ້ງ ທຳ ອິດ"
 
-#: includes/rest-api.php:532 includes/rest-api.php:533
+#: includes/rest-api.php:533
 msgid "# Faith milestones"
 msgstr "# ຄວາມເຊື່ອທີ່ ສຳ ຄັນ"
 
-#: includes/rest-api.php:533 includes/rest-api.php:534
+#: includes/rest-api.php:534
 msgid "Hurray! You are caught up."
 msgstr "ຮືຮືຮື! ເຈົ້າຖືກຈັບ."
 
-#: includes/rest-api.php:534 includes/rest-api.php:535
+#: includes/rest-api.php:535
 msgid "remove"
 msgstr "ເອົາອອກ"
 
-#: includes/rest-api.php:535 includes/rest-api.php:536
+#: includes/rest-api.php:536
 msgid "mark as complete"
 msgstr "ໝາຍ ສຳ ເລັດ"
 
-#: includes/rest-api.php:536 includes/rest-api.php:537
+#: includes/rest-api.php:537
 msgid "No task created"
 msgstr "ບໍ່ມີ ໜ້າ ວຽກໃດໆທີ່ຖືກສ້າງຂື້ນ"
 
-#: includes/rest-api.php:537 includes/rest-api.php:538
+#: includes/rest-api.php:538
 msgid "Reminder"
 msgstr "ເຕືອນ"
 
-#: includes/rest-api.php:538 includes/rest-api.php:539
+#: includes/rest-api.php:539
 msgid "No note set"
 msgstr "ບໍ່ມີການຕັ້ງຄ່າບັນທຶກ"
+
+#: includes/rest-api.php:540
+msgid "See all"
+msgstr "ເບິ່ງທັງ ໝົດ"
 
 #: includes/template-parts/tile.php:28
 msgid "Back"
@@ -141,10 +145,6 @@ msgstr "Milestones ກ່ຽວກັບລາຍຊື່ຜູ້ຕິດຕ�
 #: includes/tiles/seeker-path-progress/template.php:7
 msgid "No data to show yet. You have no active contacts"
 msgstr "ບໍ່ມີຂໍ້ມູນທີ່ຈະສະແດງເທື່ອ. ທ່ານບໍ່ມີລາຍຊື່ຜູ້ຕິດຕໍ່ທີ່ໃຊ້ງານຢູ່"
-
-#: includes/rest-api.php:540
-msgid "See all"
-msgstr "ເບິ່ງທັງ ໝົດ"
 
 #, fuzzy
 #~ msgid "Show"
