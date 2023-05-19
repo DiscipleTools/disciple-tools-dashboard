@@ -3,7 +3,7 @@
  *Plugin Name: Disciple.Tools - Dashboard
  * Plugin URI: https://github.com/DiscipleTools/disciple-tools-dashboard
  * Description: The multiplier dashboard upgrades the multipliers experience as soon as they log into the system giving them a landing page with stats.
- * Version:  1.2.1
+ * Version:  1.2.2
  * Author URI: https://github.com/DiscipleTools
  * GitHub Plugin URI: https://github.com/DiscipleTools/disciple-tools-dashboard
  * Requires at least: 4.7.0
