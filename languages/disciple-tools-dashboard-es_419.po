@@ -4,8 +4,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
 "POT-Creation-Date: 2022-11-11T09:25:16+00:00\n"
-"PO-Revision-Date: 2022-11-09 08:32+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2023-05-19 14:46+0000\n"
+"Last-Translator: Prykon <dario@gospelambition.org>\n"
 "Language-Team: Spanish (Latin America) <https://translate.disciple.tools/"
 "projects/disciple-tools/disciple-tools-dashboard/es_419/>\n"
 "Language: es_419\n"
@@ -33,7 +33,7 @@ msgstr "Carga de trabajo de contacto"
 
 #: disciple-tools-dashboard.php:221
 msgid "Faith Milestone Totals"
-msgstr "Totales de hitos de fe"
+msgstr "Totales de Hitos de Fe"
 
 #: disciple-tools-dashboard.php:225
 msgid "Seeker Path Progress"
@@ -41,7 +41,7 @@ msgstr "Progreso de la ruta del buscador"
 
 #: disciple-tools-dashboard.php:229
 msgid "Personal Benchmarks"
-msgstr "Benchmarks personales"
+msgstr "Benchmarks Personales"
 
 #: disciple-tools-dashboard.php:233
 msgid "Tasks"
@@ -73,7 +73,7 @@ msgstr "Rechazar"
 
 #: includes/rest-api.php:531
 msgid "# Contacts Assigned"
-msgstr "N. ° de contactos asignados"
+msgstr "# Contactos Asignados"
 
 #: includes/rest-api.php:532
 msgid "# First Meetings"
@@ -81,11 +81,11 @@ msgstr "# Primeras reuniones"
 
 #: includes/rest-api.php:533
 msgid "# Faith milestones"
-msgstr "# Hitos de fe"
+msgstr "# Hitos de Fe"
 
 #: includes/rest-api.php:534
 msgid "Hurray! You are caught up."
-msgstr "¡Viva! Estás atrapado."
+msgstr "¡Viva! Estás al día."
 
 #: includes/rest-api.php:535
 msgid "remove"
@@ -125,7 +125,7 @@ msgstr "Quitar"
 
 #: includes/tiles/active-contact/template.php:7
 msgid "Add a contact"
-msgstr "Añade un contacto"
+msgstr "Agregar contacto"
 
 #: includes/tiles/contact-workload/template.php:8
 msgid ""
