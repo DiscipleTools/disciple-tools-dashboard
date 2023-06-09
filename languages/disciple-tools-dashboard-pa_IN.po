@@ -61,7 +61,7 @@ msgstr "ਡੈਸ਼ਬੋਰਡ"
 
 #: includes/rest-api.php:180
 msgid "%s days since last update"
-msgstr "ਆਖਰੀ ਅਪਡੇਟ ਤੋਂ% s ਦਿਨ"
+msgstr "ਆਖਰੀ ਅਪਡੇਟ ਤੋਂ%s ਦਿਨ"
 
 #: includes/rest-api.php:529
 msgid "Accept"
@@ -402,7 +402,7 @@ msgstr "ਅਜੇ ਦਿਖਾਉਣ ਲਈ ਕੋਈ ਡਾਟਾ ਨਹੀਂ 
 
 #~ msgctxt "Search 'something'"
 #~ msgid "Search %s"
-#~ msgstr "% S ਖੋਜੋ"
+#~ msgstr "%s ਖੋਜੋ"
 
 #~ msgid "Create"
 #~ msgstr "ਬਣਾਓ"
@@ -429,13 +429,13 @@ msgstr "ਅਜੇ ਦਿਖਾਉਣ ਲਈ ਕੋਈ ਡਾਟਾ ਨਹੀਂ 
 #~ msgstr "ਬੰਦ ਕਰੋ"
 
 #~ msgid "Removed %1$s: %2$s"
-#~ msgstr "% 1 $ s ਨੂੰ ਹਟਾ ਦਿੱਤਾ:% 2 $ s"
+#~ msgstr "%1$s ਨੂੰ ਹਟਾ ਦਿੱਤਾ: %2$s"
 
 #~ msgid "Added %1$s: %2$s"
-#~ msgstr "% 1 $ s ਜੋੜਿਆ:% 2 $ s"
+#~ msgstr "%1$s ਜੋੜਿਆ: %2$s"
 
 #~ msgid "Updated %1$s: %2$s to %3$s"
-#~ msgstr "% 1 $ s:% 2 $ s ਨੂੰ% 3 $ s ਤੇ ਅਪਡੇਟ ਕੀਤਾ ਗਿਆ"
+#~ msgstr "%1$s: %2$s ਨੂੰ %3$s ਤੇ ਅਪਡੇਟ ਕੀਤਾ ਗਿਆ"
 
 #~ msgctxt "List Filters"
 #~ msgid "Assigned to me"
@@ -962,16 +962,16 @@ msgstr "ਅਜੇ ਦਿਖਾਉਣ ਲਈ ਕੋਈ ਡਾਟਾ ਨਹੀਂ 
 #~ msgstr "ਟੀਮ ਪੀੜ੍ਹੀ"
 
 #~ msgid "%s is reporting a new pre-group generation."
-#~ msgstr "% s ਇੱਕ ਨਵੀਂ ਪ੍ਰੀ-ਗਰੁੱਪ ਪੀੜ੍ਹੀ ਦੀ ਰਿਪੋਰਟ ਕਰ ਰਿਹਾ ਹੈ."
+#~ msgstr "%s ਇੱਕ ਨਵੀਂ ਪ੍ਰੀ-ਗਰੁੱਪ ਪੀੜ੍ਹੀ ਦੀ ਰਿਪੋਰਟ ਕਰ ਰਿਹਾ ਹੈ."
 
 #~ msgid "%s is reporting a new group generation."
-#~ msgstr "% s ਇੱਕ ਨਵੀਂ ਸਮੂਹ ਪੀੜ੍ਹੀ ਦੀ ਰਿਪੋਰਟ ਕਰ ਰਿਹਾ ਹੈ."
+#~ msgstr "%s ਇੱਕ ਨਵੀਂ ਸਮੂਹ ਪੀੜ੍ਹੀ ਦੀ ਰਿਪੋਰਟ ਕਰ ਰਿਹਾ ਹੈ."
 
 #~ msgid "%s is reporting a new church generation."
-#~ msgstr "% s ਇੱਕ ਨਵੀਂ ਚਰਚ ਪੀੜ੍ਹੀ ਦੀ ਰਿਪੋਰਟ ਕਰ ਰਿਹਾ ਹੈ."
+#~ msgstr "%s ਇੱਕ ਨਵੀਂ ਚਰਚ ਪੀੜ੍ਹੀ ਦੀ ਰਿਪੋਰਟ ਕਰ ਰਿਹਾ ਹੈ."
 
 #~ msgid "%s is reporting a new leadership team generation."
-#~ msgstr "% s ਇੱਕ ਨਵੀਂ ਲੀਡਰਸ਼ਿਪ ਟੀਮ ਬਣਾਉਣ ਬਾਰੇ ਦੱਸ ਰਿਹਾ ਹੈ."
+#~ msgstr "%s ਇੱਕ ਨਵੀਂ ਲੀਡਰਸ਼ਿਪ ਟੀਮ ਬਣਾਉਣ ਬਾਰੇ ਦੱਸ ਰਿਹਾ ਹੈ."
 
 #~ msgid "New Contact"
 #~ msgstr "ਨਵਾਂ ਸੰਪਰਕ"
@@ -995,25 +995,25 @@ msgstr "ਅਜੇ ਦਿਖਾਉਣ ਲਈ ਕੋਈ ਡਾਟਾ ਨਹੀਂ 
 #~ msgstr "ਨਵੀਂ ਕੋਚਿੰਗ"
 
 #~ msgid "%s is reporting a new contact."
-#~ msgstr "% s ਇੱਕ ਨਵੇਂ ਸੰਪਰਕ ਦੀ ਰਿਪੋਰਟ ਕਰ ਰਿਹਾ ਹੈ."
+#~ msgstr "%s ਇੱਕ ਨਵੇਂ ਸੰਪਰਕ ਦੀ ਰਿਪੋਰਟ ਕਰ ਰਿਹਾ ਹੈ."
 
 #~ msgid "%s is reporting a new pre-group formed."
-#~ msgstr "% s ਇੱਕ ਨਵੇਂ ਪੂਰਵ-ਸਮੂਹ ਦੇ ਗਠਨ ਦੀ ਰਿਪੋਰਟ ਕਰ ਰਿਹਾ ਹੈ."
+#~ msgstr "%s ਇੱਕ ਨਵੇਂ ਪੂਰਵ-ਸਮੂਹ ਦੇ ਗਠਨ ਦੀ ਰਿਪੋਰਟ ਕਰ ਰਿਹਾ ਹੈ."
 
 #~ msgid "%s is reporting a new group formed."
-#~ msgstr "% s ਨਵੇਂ ਗਰੁੱਪ ਦੇ ਗਠਨ ਬਾਰੇ ਦੱਸ ਰਿਹਾ ਹੈ."
+#~ msgstr "%s ਨਵੇਂ ਗਰੁੱਪ ਦੇ ਗਠਨ ਬਾਰੇ ਦੱਸ ਰਿਹਾ ਹੈ."
 
 #~ msgid "%s is reporting a new church."
-#~ msgstr "% s ਇੱਕ ਨਵੇਂ ਚਰਚ ਦੀ ਰਿਪੋਰਟ ਕਰ ਰਿਹਾ ਹੈ."
+#~ msgstr "%s ਇੱਕ ਨਵੇਂ ਚਰਚ ਦੀ ਰਿਪੋਰਟ ਕਰ ਰਿਹਾ ਹੈ."
 
 #~ msgid "%s is reporting a new leadership team formed."
-#~ msgstr "% s ਬਣਾਈ ਗਈ ਨਵੀਂ ਲੀਡਰਸ਼ਿਪ ਟੀਮ ਦੀ ਰਿਪੋਰਟ ਕਰ ਰਿਹਾ ਹੈ."
+#~ msgstr "%s ਬਣਾਈ ਗਈ ਨਵੀਂ ਲੀਡਰਸ਼ਿਪ ਟੀਮ ਦੀ ਰਿਪੋਰਟ ਕਰ ਰਿਹਾ ਹੈ."
 
 #~ msgid "%s is reporting a new baptism."
-#~ msgstr "% s ਇੱਕ ਨਵੇਂ ਬਪਤਿਸਮੇ ਦੀ ਰਿਪੋਰਟ ਕਰ ਰਿਹਾ ਹੈ."
+#~ msgstr "%s ਇੱਕ ਨਵੇਂ ਬਪਤਿਸਮੇ ਦੀ ਰਿਪੋਰਟ ਕਰ ਰਿਹਾ ਹੈ."
 
 #~ msgid "%s is reporting an coaching relationship."
-#~ msgstr "% s ਕੋਚਿੰਗ ਰਿਸ਼ਤੇ ਦੀ ਰਿਪੋਰਟ ਕਰ ਰਿਹਾ ਹੈ."
+#~ msgstr "%s ਕੋਚਿੰਗ ਰਿਸ਼ਤੇ ਦੀ ਰਿਪੋਰਟ ਕਰ ਰਿਹਾ ਹੈ."
 
 #~ msgid "Active"
 #~ msgstr "ਕਿਰਿਆਸ਼ੀਲ"
@@ -1059,7 +1059,7 @@ msgstr "ਅਜੇ ਦਿਖਾਉਣ ਲਈ ਕੋਈ ਡਾਟਾ ਨਹੀਂ 
 #~ "'ਚੇਲੇ ਟੂਲਜ਼' ਥੀਮ ਨੂੰ ਸਰਗਰਮ ਕਰੋ ਜਾਂ ਇਹ ਨਿਸ਼ਚਤ ਕਰੋ ਕਿ ਇਹ ਨਵੀਨਤਮ ਸੰਸਕਰਣ ਹੈ."
 
 #~ msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-#~ msgstr "ਮੌਜੂਦਾ ਚੇਲੇ ਸੰਦਾਂ ਦਾ ਸੰਸਕਰਣ:% 1 $ s, ਲੋੜੀਂਦਾ ਸੰਸਕਰਣ:% 2 $ s"
+#~ msgstr "ਮੌਜੂਦਾ ਚੇਲੇ ਸੰਦਾਂ ਦਾ ਸੰਸਕਰਣ: %1$s, ਲੋੜੀਂਦਾ ਸੰਸਕਰਣ: %2$s"
 
 #~ msgid "https://github.com/DiscipleTools/disciple-tools-training"
 #~ msgstr "https://github.com/DiscipleTools/disciple-tools-training"
