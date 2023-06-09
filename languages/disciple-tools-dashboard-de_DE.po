@@ -61,7 +61,7 @@ msgstr "Instrumententafel"
 
 #: includes/rest-api.php:180
 msgid "%s days since last update"
-msgstr "% s Tage seit dem letzten Update"
+msgstr "%s Tage seit dem letzten Update"
 
 #: includes/rest-api.php:529
 msgid "Accept"
@@ -413,7 +413,7 @@ msgstr "Noch keine Daten zu zeigen. Sie haben keine aktiven Kontakte"
 
 #~ msgctxt "Search 'something'"
 #~ msgid "Search %s"
-#~ msgstr "Suche% s"
+#~ msgstr "Such %s"
 
 #~ msgid "Create"
 #~ msgstr "Erstellen"
@@ -442,13 +442,13 @@ msgstr "Noch keine Daten zu zeigen. Sie haben keine aktiven Kontakte"
 #~ msgstr "Schließen"
 
 #~ msgid "Removed %1$s: %2$s"
-#~ msgstr "% 1 $ s entfernt:% 2 $ s"
+#~ msgstr "%1$s entfernt: %2$s"
 
 #~ msgid "Added %1$s: %2$s"
-#~ msgstr "% 1 $ s hinzugefügt:% 2 $ s"
+#~ msgstr "%1$s hinzugefügt: %2$s"
 
 #~ msgid "Updated %1$s: %2$s to %3$s"
-#~ msgstr "% 1 $ s aktualisiert:% 2 $ s auf% 3 $ s"
+#~ msgstr "%1$s aktualisiert: %2$s auf %3$s"
 
 #~ msgctxt "List Filters"
 #~ msgid "Assigned to me"
@@ -985,16 +985,16 @@ msgstr "Noch keine Daten zu zeigen. Sie haben keine aktiven Kontakte"
 #~ msgstr "Teamgenerationen"
 
 #~ msgid "%s is reporting a new pre-group generation."
-#~ msgstr "% s meldet eine neue Generation vor der Gruppe."
+#~ msgstr "%s meldet eine neue Generation vor der Gruppe."
 
 #~ msgid "%s is reporting a new group generation."
-#~ msgstr "% s meldet eine neue Gruppengeneration."
+#~ msgstr "%s meldet eine neue Gruppengeneration."
 
 #~ msgid "%s is reporting a new church generation."
-#~ msgstr "% s meldet eine neue Kirchengeneration."
+#~ msgstr "%s meldet eine neue Kirchengeneration."
 
 #~ msgid "%s is reporting a new leadership team generation."
-#~ msgstr "% s meldet eine neue Generation von Führungsteams."
+#~ msgstr "%s meldet eine neue Generation von Führungsteams."
 
 #~ msgid "New Contact"
 #~ msgstr "Neuer Kontakt"
@@ -1018,25 +1018,25 @@ msgstr "Noch keine Daten zu zeigen. Sie haben keine aktiven Kontakte"
 #~ msgstr "Neues Coaching"
 
 #~ msgid "%s is reporting a new contact."
-#~ msgstr "% s meldet einen neuen Kontakt."
+#~ msgstr "%s meldet einen neuen Kontakt."
 
 #~ msgid "%s is reporting a new pre-group formed."
-#~ msgstr "% s meldet eine neu gebildete Vorgruppe."
+#~ msgstr "%s meldet eine neu gebildete Vorgruppe."
 
 #~ msgid "%s is reporting a new group formed."
-#~ msgstr "% s meldet eine neu gebildete Gruppe."
+#~ msgstr "%s meldet eine neu gebildete Gruppe."
 
 #~ msgid "%s is reporting a new church."
-#~ msgstr "% s meldet eine neue Kirche."
+#~ msgstr "%s meldet eine neue Kirche."
 
 #~ msgid "%s is reporting a new leadership team formed."
-#~ msgstr "% s meldet die Bildung eines neuen Führungsteams."
+#~ msgstr "%s meldet die Bildung eines neuen Führungsteams."
 
 #~ msgid "%s is reporting a new baptism."
-#~ msgstr "% s meldet eine neue Taufe."
+#~ msgstr "%s meldet eine neue Taufe."
 
 #~ msgid "%s is reporting an coaching relationship."
-#~ msgstr "% s meldet eine Coaching-Beziehung."
+#~ msgstr "%s meldet eine Coaching-Beziehung."
 
 #~ msgid "Active"
 #~ msgstr "Aktiv"
@@ -1085,7 +1085,7 @@ msgstr "Noch keine Daten zu zeigen. Sie haben keine aktiven Kontakte"
 
 #~ msgid "Current Disciple Tools version: %1$s, required version: %2$s"
 #~ msgstr ""
-#~ "Aktuelle Version von Disciple Tools:% 1 $ s, erforderliche Version:% 2 $ s"
+#~ "Aktuelle Version von Disciple Tools: %1$s, erforderliche Version: %2$s"
 
 #~ msgid "https://github.com/DiscipleTools/disciple-tools-training"
 #~ msgstr "https://github.com/DiscipleTools/disciple-tools-training"

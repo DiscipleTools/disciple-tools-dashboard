@@ -61,7 +61,7 @@ msgstr "Gösterge Paneli"
 
 #: includes/rest-api.php:180
 msgid "%s days since last update"
-msgstr "Son güncellemeden bu yana% s gün"
+msgstr "Son güncellemeden bu yan %s gün"
 
 #: includes/rest-api.php:529
 msgid "Accept"
@@ -405,7 +405,7 @@ msgstr "Henüz gösterilecek veri yok. Aktif kişiniz yok"
 
 #~ msgctxt "Search 'something'"
 #~ msgid "Search %s"
-#~ msgstr "% S ara"
+#~ msgstr "%s ara"
 
 #~ msgid "Create"
 #~ msgstr "Oluşturmak"
@@ -432,13 +432,13 @@ msgstr "Henüz gösterilecek veri yok. Aktif kişiniz yok"
 #~ msgstr "Kapat"
 
 #~ msgid "Removed %1$s: %2$s"
-#~ msgstr "% 1 $ s kaldırıldı:% 2 $ s"
+#~ msgstr "%1$s kaldırıldı: %2$s"
 
 #~ msgid "Added %1$s: %2$s"
-#~ msgstr "% 1 $ s eklendi:% 2 $ s"
+#~ msgstr "%1$s eklendi: %2$s"
 
 #~ msgid "Updated %1$s: %2$s to %3$s"
-#~ msgstr "% 1 $ s güncellendi:% 2 $ s,% 3 $ s olarak"
+#~ msgstr "%1$s güncellendi: %2$s, %3$s olarak"
 
 #~ msgctxt "List Filters"
 #~ msgid "Assigned to me"
@@ -966,16 +966,16 @@ msgstr "Henüz gösterilecek veri yok. Aktif kişiniz yok"
 #~ msgstr "Takım Nesilleri"
 
 #~ msgid "%s is reporting a new pre-group generation."
-#~ msgstr "% s, yeni bir ön grup nesli bildiriyor."
+#~ msgstr "%s, yeni bir ön grup nesli bildiriyor."
 
 #~ msgid "%s is reporting a new group generation."
-#~ msgstr "% s yeni bir grup nesli bildiriyor."
+#~ msgstr "%s yeni bir grup nesli bildiriyor."
 
 #~ msgid "%s is reporting a new church generation."
-#~ msgstr "% s, yeni bir kilise nesli bildiriyor."
+#~ msgstr "%s, yeni bir kilise nesli bildiriyor."
 
 #~ msgid "%s is reporting a new leadership team generation."
-#~ msgstr "% s, yeni bir liderlik ekibi nesli bildiriyor."
+#~ msgstr "%s, yeni bir liderlik ekibi nesli bildiriyor."
 
 #~ msgid "New Contact"
 #~ msgstr "Yeni bağlantı"
@@ -999,25 +999,25 @@ msgstr "Henüz gösterilecek veri yok. Aktif kişiniz yok"
 #~ msgstr "Yeni Koçluk"
 
 #~ msgid "%s is reporting a new contact."
-#~ msgstr "% s yeni bir kişi bildiriyor."
+#~ msgstr "%s yeni bir kişi bildiriyor."
 
 #~ msgid "%s is reporting a new pre-group formed."
-#~ msgstr "% s yeni bir ön grup oluşturduğunu bildiriyor."
+#~ msgstr "%s yeni bir ön grup oluşturduğunu bildiriyor."
 
 #~ msgid "%s is reporting a new group formed."
-#~ msgstr "% s yeni bir grup oluştuğunu bildiriyor."
+#~ msgstr "%s yeni bir grup oluştuğunu bildiriyor."
 
 #~ msgid "%s is reporting a new church."
-#~ msgstr "% s yeni bir kilise bildiriyor."
+#~ msgstr "%s yeni bir kilise bildiriyor."
 
 #~ msgid "%s is reporting a new leadership team formed."
-#~ msgstr "% s, yeni bir liderlik ekibinin kurulduğunu bildiriyor."
+#~ msgstr "%s, yeni bir liderlik ekibinin kurulduğunu bildiriyor."
 
 #~ msgid "%s is reporting a new baptism."
-#~ msgstr "% s yeni bir vaftiz bildiriyor."
+#~ msgstr "%s yeni bir vaftiz bildiriyor."
 
 #~ msgid "%s is reporting an coaching relationship."
-#~ msgstr "% s bir koçluk ilişkisi bildiriyor."
+#~ msgstr "%s bir koçluk ilişkisi bildiriyor."
 
 #~ msgid "Active"
 #~ msgstr "Aktif"
@@ -1064,7 +1064,7 @@ msgstr "Henüz gösterilecek veri yok. Aktif kişiniz yok"
 #~ "son sürüm olduğundan emin olun."
 
 #~ msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-#~ msgstr "Mevcut Öğrenci Araçları sürümü:% 1 $ s, gerekli sürüm:% 2 $ s"
+#~ msgstr "Mevcut Öğrenci Araçları sürümü: %1$s, gerekli sürüm: %2$s"
 
 #~ msgid "https://github.com/DiscipleTools/disciple-tools-training"
 #~ msgstr "https://github.com/DiscipleTools/disciple-tools-training"

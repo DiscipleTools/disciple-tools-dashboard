@@ -61,7 +61,7 @@ msgstr "계기반"
 
 #: includes/rest-api.php:180
 msgid "%s days since last update"
-msgstr "마지막 업데이트 이후 % s 일"
+msgstr "마지막 업데이트 이후 %s 일"
 
 #: includes/rest-api.php:529
 msgid "Accept"
@@ -401,7 +401,7 @@ msgstr "아직 표시 할 데이터가 없습니다. 활성 연락처가 없습�
 
 #~ msgctxt "Search 'something'"
 #~ msgid "Search %s"
-#~ msgstr "% s 검색"
+#~ msgstr "%s 검색"
 
 #~ msgid "Create"
 #~ msgstr "창조하다"
@@ -427,13 +427,13 @@ msgstr "아직 표시 할 데이터가 없습니다. 활성 연락처가 없습�
 #~ msgstr "닫기"
 
 #~ msgid "Removed %1$s: %2$s"
-#~ msgstr "% 1 $ s 삭제 : % 2 $ s"
+#~ msgstr "%1$s 삭제 :  %2$s"
 
 #~ msgid "Added %1$s: %2$s"
-#~ msgstr "% 1 $ s 추가 : % 2 $ s"
+#~ msgstr "%1$s 추가 :  %2$s"
 
 #~ msgid "Updated %1$s: %2$s to %3$s"
-#~ msgstr "% 1 $ s 업데이트 : % 2 $ s에서 % 3 $ s로"
+#~ msgstr "%1$s 업데이트 :  %2$s에서  %3$s로"
 
 #~ msgctxt "List Filters"
 #~ msgid "Assigned to me"
@@ -959,16 +959,16 @@ msgstr "아직 표시 할 데이터가 없습니다. 활성 연락처가 없습�
 #~ msgstr "팀 세대"
 
 #~ msgid "%s is reporting a new pre-group generation."
-#~ msgstr "% s이 (가) 새로운 사전 그룹 생성을보고합니다."
+#~ msgstr "%s이 (가) 새로운 사전 그룹 생성을보고합니다."
 
 #~ msgid "%s is reporting a new group generation."
-#~ msgstr "% s이 (가) 새 그룹 생성을보고합니다."
+#~ msgstr "%s이 (가) 새 그룹 생성을보고합니다."
 
 #~ msgid "%s is reporting a new church generation."
-#~ msgstr "% s 님이 새로운 교회 세대를보고하고 있습니다."
+#~ msgstr "%s 님이 새로운 교회 세대를보고하고 있습니다."
 
 #~ msgid "%s is reporting a new leadership team generation."
-#~ msgstr "% s 님이 새로운 리더십 팀 세대를보고하고 있습니다."
+#~ msgstr "%s 님이 새로운 리더십 팀 세대를보고하고 있습니다."
 
 #~ msgid "New Contact"
 #~ msgstr "새로운 연락처"
@@ -992,25 +992,25 @@ msgstr "아직 표시 할 데이터가 없습니다. 활성 연락처가 없습�
 #~ msgstr "새로운 코칭"
 
 #~ msgid "%s is reporting a new contact."
-#~ msgstr "% s이 (가) 새 연락처를보고합니다."
+#~ msgstr "%s이 (가) 새 연락처를보고합니다."
 
 #~ msgid "%s is reporting a new pre-group formed."
-#~ msgstr "% s이 (가) 새로운 사전 그룹 형성을보고합니다."
+#~ msgstr "%s이 (가) 새로운 사전 그룹 형성을보고합니다."
 
 #~ msgid "%s is reporting a new group formed."
-#~ msgstr "% s이 (가) 구성된 새 그룹을보고합니다."
+#~ msgstr "%s이 (가) 구성된 새 그룹을보고합니다."
 
 #~ msgid "%s is reporting a new church."
-#~ msgstr "% s 님이 새 교회를보고하고 있습니다."
+#~ msgstr "%s 님이 새 교회를보고하고 있습니다."
 
 #~ msgid "%s is reporting a new leadership team formed."
-#~ msgstr "% s이 (가) 새로운 리더십 팀이 구성되었다고보고합니다."
+#~ msgstr "%s이 (가) 새로운 리더십 팀이 구성되었다고보고합니다."
 
 #~ msgid "%s is reporting a new baptism."
-#~ msgstr "% s 님이 새로운 세례를보고하고 있습니다."
+#~ msgstr "%s 님이 새로운 세례를보고하고 있습니다."
 
 #~ msgid "%s is reporting an coaching relationship."
-#~ msgstr "% s 님이 코칭 관계를보고하고 있습니다."
+#~ msgstr "%s 님이 코칭 관계를보고하고 있습니다."
 
 #~ msgid "Active"
 #~ msgstr "유효한"
@@ -1056,7 +1056,7 @@ msgstr "아직 표시 할 데이터가 없습니다. 활성 연락처가 없습�
 #~ "합니다. '제자 도구'테마를 활성화하거나 최신 버전인지 확인하세요."
 
 #~ msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-#~ msgstr "현재 Disciple Tools 버전 : % 1 $ s, 필수 버전 : % 2 $ s"
+#~ msgstr "현재 Disciple Tools 버전 :  %1$s, 필수 버전 :  %2$s"
 
 #~ msgid "https://github.com/DiscipleTools/disciple-tools-training"
 #~ msgstr "https://github.com/DiscipleTools/disciple-tools-training"
