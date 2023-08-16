@@ -66,7 +66,7 @@ class DT_Dashboard_Plugin_Functions {
                 'translations'            => DT_Dashboard_Plugin_Endpoints::instance()->translations(),
                 'data'                    => DT_Dashboard_Plugin_Endpoints::instance()->get_data(),
                 'workload_status'         => get_user_option( 'workload_status', get_current_user_id() ),
-                'workload_status_options' => dt_get_site_custom_lists()["user_workload_status"] ?? [],
+                'workload_status_options' => Disciple_Tools_Users::get_users_fields()['workload_status']['options'] ?? [],
                 'tiles'                   => DT_Dashboard_Plugin_Tiles::instance()->all()
             ]
         );
