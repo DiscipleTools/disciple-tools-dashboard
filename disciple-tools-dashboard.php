@@ -22,7 +22,7 @@ require_once( 'includes/tiles/tiles-user.php' );
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 }
-$dt_dashboard_required_dt_theme_version = '1.0.0';
+$dt_dashboard_required_dt_theme_version = '1.46.1';
 
 /**
  * Gets the instance of the `DT_Dashboard_Plugin` class.
