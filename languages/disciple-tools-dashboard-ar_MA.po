@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
 "POT-Creation-Date: 2023-06-01T12:59:18+00:00\n"
-"PO-Revision-Date: 2022-11-09 08:32+0000\n"
+"PO-Revision-Date: 2023-11-06 13:56+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Arabic (Morocco) <https://translate.disciple.tools/projects/"
 "disciple-tools/disciple-tools-dashboard/ar_MA/>\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 5.1.1\n"
 
 #: disciple-tools-dashboard.php:217
 #, fuzzy
@@ -135,7 +135,8 @@ msgid ""
 "Choose an option to let the dispatcher(s) know if you are ready for new "
 "contacts"
 msgstr ""
-"حدد خيارًا للسماح للمرسل (المرسلين) بمعرفة ما إذا كنت جاهزًا لجهات اتصال جديدة"
+"حدد خيارًا للسماح للمرسل (المرسلين) بمعرفة ما إذا كنت جاهزًا لجهات اتصال "
+"جديدة"
 
 #: includes/tiles/contact-workload/template.php:21
 msgid "Set travel or dates unavailable"
