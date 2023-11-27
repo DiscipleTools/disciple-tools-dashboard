@@ -3,7 +3,7 @@
  *Plugin Name: Disciple.Tools - Dashboard
  * Plugin URI: https://github.com/DiscipleTools/disciple-tools-dashboard
  * Description: The multiplier dashboard upgrades the multipliers experience as soon as they log into the system giving them a landing page with stats.
- * Version:  1.2.5
+ * Version:  1.2.6
  * Author URI: https://github.com/DiscipleTools
  * GitHub Plugin URI: https://github.com/DiscipleTools/disciple-tools-dashboard
  * Requires at least: 4.7.0
@@ -38,9 +38,9 @@ add_action( 'after_setup_theme', function() {
     /*
      * Check if the Disciple.Tools theme is loaded and is the latest required version
      */
-    $is_theme_dt = class_exists( "Disciple_Tools" );
+    $is_theme_dt = class_exists( 'Disciple_Tools' );
 
-    if ( !$is_theme_dt || version_compare( $version, $dt_dashboard_required_dt_theme_version, "<" ) ) {
+    if ( !$is_theme_dt || version_compare( $version, $dt_dashboard_required_dt_theme_version, '<' ) ) {
         if ( ! is_multisite() ) {
             add_action( 'admin_notices', 'dt_dashboard_plugin_hook_admin_notice' );
             add_action( 'wp_ajax_dismissed_notice_handler', 'dt_hook_ajax_notice_handler' );
@@ -375,11 +375,11 @@ function dt_dashboard_plugin_hook_admin_notice() {
 /**
  * AJAX handler to store the state of dismissible notices.
  */
-if ( !function_exists( "dt_hook_ajax_notice_handler" ) ){
+if ( !function_exists( 'dt_hook_ajax_notice_handler' ) ){
     function dt_hook_ajax_notice_handler(){
         check_ajax_referer( 'wp_rest_dismiss', 'security' );
-        if ( isset( $_POST["type"] ) ){
-            $type = sanitize_text_field( wp_unslash( $_POST["type"] ) );
+        if ( isset( $_POST['type'] ) ){
+            $type = sanitize_text_field( wp_unslash( $_POST['type'] ) );
             update_option( 'dismissed-' . $type, true );
         }
     }
@@ -396,11 +396,11 @@ if ( !function_exists( "dt_hook_ajax_notice_handler" ) ){
  * @see https://github.com/DiscipleTools/disciple-tools-version-control/wiki/How-to-Update-the-Starter-Plugin
  */
 add_action( 'plugins_loaded', function (){
-    if ( is_admin() && !( is_multisite() && class_exists( "DT_Multisite" ) ) || wp_doing_cron() ){
+    if ( is_admin() && !( is_multisite() && class_exists( 'DT_Multisite' ) ) || wp_doing_cron() ){
         if ( ! class_exists( 'Puc_v4_Factory' ) ) {
             // find the Disciple.Tools theme and load the plugin update checker.
             foreach ( wp_get_themes() as $theme ){
-                if ( $theme->get( 'TextDomain' ) === "disciple_tools" && file_exists( $theme->get_stylesheet_directory() . '/dt-core/libraries/plugin-update-checker/plugin-update-checker.php' ) ){
+                if ( $theme->get( 'TextDomain' ) === 'disciple_tools' && file_exists( $theme->get_stylesheet_directory() . '/dt-core/libraries/plugin-update-checker/plugin-update-checker.php' ) ){
                     require( $theme->get_stylesheet_directory() . '/dt-core/libraries/plugin-update-checker/plugin-update-checker.php' );
                 }
             }

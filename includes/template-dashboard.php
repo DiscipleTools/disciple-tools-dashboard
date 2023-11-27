@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 $url = dt_get_url_path();
-$dt_post_type = explode( "/", $url )[0];
+$dt_post_type = explode( '/', $url )[0];
 $dt_tiles = new DT_Dashboard_Plugin_User_Tiles();
 $tiles = $dt_tiles->all();
 $shown_tiles = $dt_tiles->shown();
@@ -10,7 +10,7 @@ $hidden_tiles = $dt_tiles->hidden();
 dt_please_log_in();
 
 if ( ! current_user_can( 'access_disciple_tools' ) ) {
-    wp_die( esc_html( "Permission denied" ), "Permission denied", 403 );
+    wp_die( esc_html( 'Permission denied' ), 'Permission denied', 403 );
 }
 
 get_header();

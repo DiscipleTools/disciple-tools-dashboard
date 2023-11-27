@@ -49,7 +49,7 @@ class DT_Dashboard_Plugin_Menu {
      */
     public function __construct() {
 
-        add_action( "admin_menu", [ $this, "register_menu" ] );
+        add_action( 'admin_menu', [ $this, 'register_menu' ] );
         add_action( 'admin_enqueue_scripts', function () {
             $this->scripts();
         }, 1 );
@@ -111,22 +111,22 @@ class DT_Dashboard_Plugin_Menu {
         $nonce = isset( $_POST['_wpnonce'] ) ? sanitize_key( $_POST['_wpnonce'] ) : null;
 
 
-        if ( isset( $_POST["show_tile"] ) ) {
-            if ( !wp_verify_nonce( $nonce, 'show_' . sanitize_key( $_POST["show_tile"] ) ) ) {
+        if ( isset( $_POST['show_tile'] ) ) {
+            if ( !wp_verify_nonce( $nonce, 'show_' . sanitize_key( $_POST['show_tile'] ) ) ) {
                 return;
             }
-            $tiles->show( sanitize_key( $_POST["show_tile"] ) );
+            $tiles->show( sanitize_key( $_POST['show_tile'] ) );
         }
 
-        if ( isset( $_POST["hide_tile"] ) ) {
-            if ( !wp_verify_nonce( $nonce, 'hide_' . sanitize_key( $_POST["hide_tile"] ) ) ) {
+        if ( isset( $_POST['hide_tile'] ) ) {
+            if ( !wp_verify_nonce( $nonce, 'hide_' . sanitize_key( $_POST['hide_tile'] ) ) ) {
                 return;
             }
-            $tiles->hide( sanitize_key( $_POST["hide_tile"] ) );
+            $tiles->hide( sanitize_key( $_POST['hide_tile'] ) );
         }
 
-        if ( isset( $_POST["tile_sort"] ) ) {
-            $tiles->sort( sanitize_key( $_POST["tile_sort"] ) );
+        if ( isset( $_POST['tile_sort'] ) ) {
+            $tiles->sort( sanitize_key( $_POST['tile_sort'] ) );
         }
     }
 }

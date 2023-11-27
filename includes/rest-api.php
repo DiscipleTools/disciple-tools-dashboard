@@ -18,11 +18,11 @@ class DT_Dashboard_Plugin_Endpoints
     } // End instance()
 
     private $version = 1;
-    private $context = "dt-dashboard";
+    private $context = 'dt-dashboard';
     private $namespace;
 
     public function __construct() {
-        $this->namespace = $this->context . "/v" . intval( $this->version );
+        $this->namespace = $this->context . '/v' . intval( $this->version );
         add_action( 'rest_api_init', [ $this, 'add_api_routes' ] );
     }
 
@@ -153,13 +153,13 @@ class DT_Dashboard_Plugin_Endpoints
 
     public static function get_data() {
 
-        $to_accept = DT_Posts::search_viewable_post( "contacts", [
+        $to_accept = DT_Posts::search_viewable_post( 'contacts', [
             'overall_status' => [ 'assigned' ],
             'assigned_to'    => [ 'me' ],
-            'type'           => [ "access" ]
+            'type'           => [ 'access' ]
         ] );
-        $update_needed = DT_Posts::search_viewable_post( "contacts", [
-            'requires_update' => [ "true" ],
+        $update_needed = DT_Posts::search_viewable_post( 'contacts', [
+            'requires_update' => [ 'true' ],
             'assigned_to'     => [ 'me' ],
             'overall_status'  => [ '-closed' ],
             'sort'            => 'last_modified'
@@ -167,24 +167,24 @@ class DT_Dashboard_Plugin_Endpoints
         if ( is_wp_error( $update_needed ) ) {
             return $update_needed; // @todo handle potential wp error response
         }
-        if ( sizeof( $update_needed["posts"] ) > 7 ) {
-            $update_needed["posts"] = array_slice( $update_needed["posts"], 0, 7 );
+        if ( sizeof( $update_needed['posts'] ) > 7 ) {
+            $update_needed['posts'] = array_slice( $update_needed['posts'], 0, 7 );
         }
-        if ( sizeof( $to_accept["posts"] ) > 7 ) {
-            $to_accept["posts"] = array_slice( $to_accept["posts"], 0, 7 );
+        if ( sizeof( $to_accept['posts'] ) > 7 ) {
+            $to_accept['posts'] = array_slice( $to_accept['posts'], 0, 7 );
         }
-        foreach ( $update_needed["posts"] as &$contact ) {
+        foreach ( $update_needed['posts'] as &$contact ) {
             $now = time();
-            $last_modified = get_post_meta( $contact->ID, "last_modified", true );
+            $last_modified = get_post_meta( $contact->ID, 'last_modified', true );
             $days_different = (int) round( ( $now - (int) $last_modified ) / ( 60 * 60 * 24 ) );
             $contact->last_modified_msg = esc_attr( sprintf( __( '%s days since last update', 'disciple-tools-dashboard' ), $days_different ), 'disciple_tools' );
         }
         $my_active_contacts = self::get_active_contacts();
 
         return [
-            "active_contacts" => $my_active_contacts,
-            "accept_needed"   => $to_accept,
-            "update_needed"   => $update_needed,
+            'active_contacts' => $my_active_contacts,
+            'accept_needed'   => $to_accept,
+            'update_needed'   => $update_needed,
         ];
     }
 
@@ -193,10 +193,10 @@ class DT_Dashboard_Plugin_Endpoints
         $milestones = self::milestones();
         $personal_benchmarks = self::get_personal_benchmarks();
         return [
-            "benchmarks"           => $personal_benchmarks,
-            "seeker_path_personal" => $seeker_path_personal,
-            "milestones"           => $milestones,
-            "tasks"                => self::query_tasks(),
+            'benchmarks'           => $personal_benchmarks,
+            'seeker_path_personal' => $seeker_path_personal,
+            'milestones'           => $milestones,
+            'tasks'                => self::query_tasks(),
         ];
     }
 
@@ -253,7 +253,7 @@ class DT_Dashboard_Plugin_Endpoints
             AND a.meta_key = 'assigned_to'
             AND hist_time >= %s
             AND a.meta_value = %s
-        ", $thirty_days_ago, "user-" . get_current_user_id() )
+        ", $thirty_days_ago, 'user-' . get_current_user_id() )
         );
 
         $contacts_previous = $wpdb->get_var( $wpdb->prepare( "
@@ -265,7 +265,7 @@ class DT_Dashboard_Plugin_Endpoints
             AND hist_time >= %s
             AND hist_time < %s
             AND a.meta_value = %s
-        ", $sixty_days_ago, $thirty_days_ago, "user-" . get_current_user_id() )
+        ", $sixty_days_ago, $thirty_days_ago, 'user-' . get_current_user_id() )
         );
 
         $met_current = $wpdb->get_var( $wpdb->prepare( "
@@ -319,17 +319,17 @@ class DT_Dashboard_Plugin_Endpoints
         );
 
         return [
-            "contacts"   => [
-                "previous" => $contacts_previous,
-                "current"  => $contacts_current,
+            'contacts'   => [
+                'previous' => $contacts_previous,
+                'current'  => $contacts_current,
             ],
-            "meetings"   => [
-                "previous" => $met_previous,
-                "current"  => $met_current
+            'meetings'   => [
+                'previous' => $met_previous,
+                'current'  => $met_current
             ],
-            "milestones" => [
-                "previous" => $milestones_previous,
-                "current"  => $milestones_current
+            'milestones' => [
+                'previous' => $milestones_previous,
+                'current'  => $milestones_current
             ]
         ];
     }
@@ -341,11 +341,11 @@ class DT_Dashboard_Plugin_Endpoints
         }
 
         $defaults = [];
-        $contact_fields = DT_Posts::get_post_field_settings( "contacts" );
-        $seeker_path_options = $contact_fields["seeker_path"]["default"];
+        $contact_fields = DT_Posts::get_post_field_settings( 'contacts' );
+        $seeker_path_options = $contact_fields['seeker_path']['default'];
         foreach ( $seeker_path_options as $key => $option ) {
             $defaults[ $key ] = [
-                'label' => $option["label"],
+                'label' => $option['label'],
                 'count' => 0,
             ];
         }
@@ -391,8 +391,8 @@ class DT_Dashboard_Plugin_Endpoints
         $res = [];
         foreach ( $query_results as $r ) {
             $res[] = [
-                "label" => $r['label'],
-                "value" => $r["count"]
+                'label' => $r['label'],
+                'value' => $r['count']
             ];
         }
 
@@ -426,13 +426,13 @@ class DT_Dashboard_Plugin_Endpoints
 
         $query_results = [];
 
-        $contact_fields = DT_Posts::get_post_field_settings( "contacts" );
-        $seeker_path_options = $contact_fields["seeker_path"]["default"];
+        $contact_fields = DT_Posts::get_post_field_settings( 'contacts' );
+        $seeker_path_options = $contact_fields['seeker_path']['default'];
 
         foreach ( $seeker_path_options as $seeker_path_key => $seeker_path_option ) {
             $added = false;
             foreach ( $results as $result ) {
-                if ( $result["seeker_path"] == $seeker_path_key ) {
+                if ( $result['seeker_path'] == $seeker_path_key ) {
                     $query_results[] = [
                         'key'   => $seeker_path_key,
                         'label' => $seeker_path_option['label'],
@@ -481,23 +481,23 @@ class DT_Dashboard_Plugin_Endpoints
         ",
         'user-' . $user_id ), ARRAY_A );
 
-        $field_settings = DT_Posts::get_post_field_settings( "contacts" );
-        $milestones_options = $field_settings["milestones"]["default"];
+        $field_settings = DT_Posts::get_post_field_settings( 'contacts' );
+        $milestones_options = $field_settings['milestones']['default'];
         $milestones_data = [];
 
         foreach ( $milestones_options as $option_key => $option_value ) {
-            $milestones_data[ $option_value["label"] ] = 0;
+            $milestones_data[ $option_value['label'] ] = 0;
             foreach ( $res as $r ) {
-                if ( $r["milestones"] === $option_key ) {
-                    $milestones_data[ $option_value["label"] ] = $r["value"];
+                if ( $r['milestones'] === $option_key ) {
+                    $milestones_data[ $option_value['label'] ] = $r['value'];
                 }
             }
         }
         $return = [];
         foreach ( $milestones_data as $k => $v ) {
             $return[] = [
-                "milestones" => $k,
-                "value"      => (int) $v
+                'milestones' => $k,
+                'value'      => (int) $v
             ];
         }
 
@@ -519,19 +519,19 @@ class DT_Dashboard_Plugin_Endpoints
             LIMIT 30
         ", $user_id, '%notification_sent%', '%task_complete%' ), ARRAY_A );
         foreach ( $task_results as &$task ) {
-            $task["value"] = maybe_unserialize( $task["meta_value"] );
+            $task['value'] = maybe_unserialize( $task['meta_value'] );
         }
         return $task_results;
     }
 
     public static function translations() {
         return [
-            "accept"                   => __( "Accept", 'disciple-tools-dashboard' ),
-            "decline"                  => __( "Decline", 'disciple-tools-dashboard' ),
-            "number_contacts_assigned" => __( "# Contacts Assigned", 'disciple-tools-dashboard' ),
-            "number_meetings"          => __( "# First Meetings", 'disciple-tools-dashboard' ),
-            "number_milestones"        => __( "# Faith milestones", 'disciple-tools-dashboard' ),
-            "caught_up"                => __( "Hurray! You are caught up.", 'disciple-tools-dashboard' ),
+            'accept'                   => __( 'Accept', 'disciple-tools-dashboard' ),
+            'decline'                  => __( 'Decline', 'disciple-tools-dashboard' ),
+            'number_contacts_assigned' => __( '# Contacts Assigned', 'disciple-tools-dashboard' ),
+            'number_meetings'          => __( '# First Meetings', 'disciple-tools-dashboard' ),
+            'number_milestones'        => __( '# Faith milestones', 'disciple-tools-dashboard' ),
+            'caught_up'                => __( 'Hurray! You are caught up.', 'disciple-tools-dashboard' ),
             'remove'                   => __( 'remove', 'disciple-tools-dashboard' ),
             'complete'                 => __( 'mark as complete', 'disciple-tools-dashboard' ),
             'no_tasks'                 => __( 'No task created', 'disciple-tools-dashboard' ),
@@ -545,8 +545,8 @@ class DT_Dashboard_Plugin_Endpoints
         $get_params = $request->get_params();
         $body = $request->get_json_params();
         $user = wp_get_current_user();
-        if ( !empty( $body["workload_status"] ) ) {
-            update_user_option( $user->ID, 'workload_status', $body["workload_status"] );
+        if ( !empty( $body['workload_status'] ) ) {
+            update_user_option( $user->ID, 'workload_status', $body['workload_status'] );
         }
 
         return true;
@@ -556,7 +556,7 @@ class DT_Dashboard_Plugin_Endpoints
         $get_params = $request->get_params();
         $body = $request->get_body_params();
         $tiles = new DT_Dashboard_Plugin_Tiles();
-        $tiles->sort( $body["tile_sort"] );
+        $tiles->sort( $body['tile_sort'] );
         return true;
     }
 
@@ -564,7 +564,7 @@ class DT_Dashboard_Plugin_Endpoints
         $get_params = $request->get_params();
         $body = $request->get_body_params();
         $tiles = new DT_Dashboard_Plugin_User_Tiles();
-        $tiles->toggle( $body["tile_handle"] );
+        $tiles->toggle( $body['tile_handle'] );
         return true;
     }
 
@@ -572,7 +572,7 @@ class DT_Dashboard_Plugin_Endpoints
         $get_params = $request->get_params();
         $body = $request->get_body_params();
         $tiles = new DT_Dashboard_Plugin_User_Tiles();
-        $tiles->sort( json_decode( $body["tile_sort"], 1 ) );
+        $tiles->sort( json_decode( $body['tile_sort'], 1 ) );
         return true;
     }
 
@@ -580,7 +580,7 @@ class DT_Dashboard_Plugin_Endpoints
         $get_params = $request->get_params();
         $body = $request->get_body_params();
         $tiles = new DT_Dashboard_Plugin_User_Tiles();
-        $tiles->show( $body["tile_handle"] );
+        $tiles->show( $body['tile_handle'] );
         return true;
     }
 
@@ -588,13 +588,13 @@ class DT_Dashboard_Plugin_Endpoints
         $get_params = $request->get_params();
         $body = $request->get_body_params();
         $tiles = new DT_Dashboard_Plugin_User_Tiles();
-        $tiles->hide( $body["tile_handle"] );
+        $tiles->hide( $body['tile_handle'] );
         return true;
     }
 
     public function get_tile( WP_REST_Request $request ) {
         $tiles = new DT_Dashboard_Plugin_Tiles();
         $params = $request->get_query_params();
-        return $tiles->find( $params["tile_handle"] )->to_json();
+        return $tiles->find( $params['tile_handle'] )->to_json();
     }
 }

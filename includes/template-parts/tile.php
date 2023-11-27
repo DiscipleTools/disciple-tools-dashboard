@@ -25,15 +25,15 @@
                  id="tile-nav-<?php echo esc_attr( $tile->handle ); ?>" onmouseleave="closeTileNav('<?php echo esc_attr( $tile->handle ); ?>')">
                 <div class="tile-move-left"
                      onclick="dt_dashboard.moveBack('<?php echo esc_attr( $tile->handle ); ?>')">
-                    <i class="fi-arrow-left"></i> <?php esc_html_e( "Back", 'disciple-tools-dashboard' ); ?>
+                    <i class="fi-arrow-left"></i> <?php esc_html_e( 'Back', 'disciple-tools-dashboard' ); ?>
                 </div>
                 <div class="tile-move-right"
                      onclick="dt_dashboard.moveForward('<?php echo esc_attr( $tile->handle ); ?>')">
-                    <i class="fi-arrow-right"></i> <?php esc_html_e( "Forward", 'disciple-tools-dashboard' ); ?>
+                    <i class="fi-arrow-right"></i> <?php esc_html_e( 'Forward', 'disciple-tools-dashboard' ); ?>
                 </div>
                 <div class="tile-remove"
                      onclick="dt_dashboard.remove('<?php echo esc_attr( $tile->handle ); ?>')">
-                    <i class="fi-x"></i> <?php esc_html_e( "Remove", 'disciple-tools-dashboard' ); ?>
+                    <i class="fi-x"></i> <?php esc_html_e( 'Remove', 'disciple-tools-dashboard' ); ?>
                 </div>
             </div>
         </div>

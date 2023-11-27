@@ -15,11 +15,11 @@ class DT_Dashboard_Plugin_Functions {
     } // End instance()
 
     private $version = 1;
-    private $context = "dt-dashboard";
+    private $context = 'dt-dashboard';
     private $namespace;
 
     public function __construct() {
-        $this->namespace = $this->context . "/v" . intval( $this->version );
+        $this->namespace = $this->context . '/v' . intval( $this->version );
         add_filter( 'dt_front_page', [ $this, 'front_page' ] );
 
         add_filter( 'desktop_navbar_menu_options', [ $this, 'nav_menu' ], 10, 1 );
@@ -27,7 +27,7 @@ class DT_Dashboard_Plugin_Functions {
 
         $url_path = dt_get_url_path();
 
-        add_action( "template_redirect", [ $this, 'my_theme_redirect' ] );
+        add_action( 'template_redirect', [ $this, 'my_theme_redirect' ] );
         if ( strpos( $url_path, 'dashboard' ) !== false ) {
             add_action( 'wp_enqueue_scripts', [ $this, 'scripts' ] );
         }
@@ -35,7 +35,7 @@ class DT_Dashboard_Plugin_Functions {
 
     public function my_theme_redirect() {
         $url = dt_get_url_path();
-        if ( strpos( $url, "dashboard" ) !== false ) {
+        if ( strpos( $url, 'dashboard' ) !== false ) {
             $plugin_dir = dirname( __FILE__ );
             $path = $plugin_dir . '/template-dashboard.php';
             status_header( 200 );
@@ -89,8 +89,8 @@ class DT_Dashboard_Plugin_Functions {
 
     public function nav_menu( $tabs ) {
         $tabs['dashboard'] = [
-            "link"  => site_url( '/dashboard/' ),
-            "label" => __( "Dashboard", "disciple-tools-dashboard" )
+            'link'  => site_url( '/dashboard/' ),
+            'label' => __( 'Dashboard', 'disciple-tools-dashboard' )
         ];
         return $tabs;
 

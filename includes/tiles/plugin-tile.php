@@ -15,7 +15,7 @@ class DT_Dashboard_Plugin_Tile extends DT_Dashboard_Tile
      * @return mixed
      */
     public function setup() {
-        $script = "includes/tiles/" . $this->template_folder . "/scripts.js";
+        $script = 'includes/tiles/' . $this->template_folder . '/scripts.js';
 
         if ( file_exists( DT_Dashboard_Plugin::dir() . $script ) ) {
             wp_enqueue_script( $this->handle, DT_Dashboard_Plugin::path() . $script, [
@@ -38,6 +38,6 @@ class DT_Dashboard_Plugin_Tile extends DT_Dashboard_Tile
         $handle = $this->handle;
         $label = $this->label;
         $tile = $this;
-        include( DT_Dashboard_Plugin::includes_dir() . "tiles/" . $this->template_folder . "/template.php" );
+        include( DT_Dashboard_Plugin::includes_dir() . 'tiles/' . $this->template_folder . '/template.php' );
     }
 }
