@@ -3,17 +3,17 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2023-06-01T12:59:18+00:00\n"
-"PO-Revision-Date: 2022-11-09 08:32+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Spanish <https://translate.disciple.tools/projects/disciple-"
-"tools/disciple-tools-dashboard/es_ES/>\n"
+"POT-Creation-Date: 2023-11-27T10:18:38+00:00\n"
+"PO-Revision-Date: 2024-01-29 23:21+0000\n"
+"Last-Translator: Mike Allbutt <mikeallbutt@gmail.com>\n"
+"Language-Team: Spanish <https://translate.disciple.tools/projects/"
+"disciple-tools/disciple-tools-dashboard/es_ES/>\n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 5.3.1\n"
 
 #: disciple-tools-dashboard.php:217
 msgid "Active Contacts"
@@ -73,11 +73,11 @@ msgstr "Rechazar"
 
 #: includes/rest-api.php:531
 msgid "# Contacts Assigned"
-msgstr "N. ° de contactos asignados"
+msgstr "N.° de contactos asignados"
 
 #: includes/rest-api.php:532
 msgid "# First Meetings"
-msgstr "# Primeras reuniones"
+msgstr "# Primeras Reuniones"
 
 #: includes/rest-api.php:533
 msgid "# Faith milestones"
@@ -121,7 +121,7 @@ msgstr "Adelante"
 
 #: includes/template-parts/tile.php:36
 msgid "Remove"
-msgstr "Quitar"
+msgstr "Eliminar"
 
 #: includes/tiles/active-contact/template.php:7
 msgid "Add a contact"

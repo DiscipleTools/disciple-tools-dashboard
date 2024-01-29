@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2023-06-01T12:59:18+00:00\n"
+"POT-Creation-Date: 2023-11-27T10:18:38+00:00\n"
 "PO-Revision-Date: 2022-11-09 08:32+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Macedonian <https://translate.disciple.tools/projects/"
@@ -1074,8 +1074,7 @@ msgstr "Сè уште нема податоци за прикажување. Н�
 #~ "најновата верзија."
 
 #~ msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-#~ msgstr ""
-#~ "Тековна верзија на Алатки за ученици: %1$s, потребна верзија: %2$s"
+#~ msgstr "Тековна верзија на Алатки за ученици: %1$s, потребна верзија: %2$s"
 
 #~ msgid "https://github.com/DiscipleTools/disciple-tools-training"
 #~ msgstr "https://github.com/DiscipleTools/disciple-tools-training"
