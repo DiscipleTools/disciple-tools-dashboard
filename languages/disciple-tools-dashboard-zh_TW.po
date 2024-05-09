@@ -3,9 +3,9 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2023-11-27T10:18:38+00:00\n"
-"PO-Revision-Date: 2022-11-09 08:32+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"POT-Creation-Date: 2024-01-31T10:07:35+00:00\n"
+"PO-Revision-Date: 2024-05-09 11:58+0000\n"
+"Last-Translator: Jack Wu <jack.wu@tast.com.tw>\n"
 "Language-Team: Chinese (Traditional) <https://translate.disciple.tools/"
 "projects/disciple-tools/disciple-tools-dashboard/zh_Hant/>\n"
 "Language: zh_TW\n"
@@ -13,11 +13,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 5.5.3\n"
 
 #: disciple-tools-dashboard.php:217
 msgid "Active Contacts"
-msgstr "活動聯繫人"
+msgstr "有效聯絡人"
 
 #: disciple-tools-dashboard.php:218
 msgid "Update Needed"
@@ -29,7 +29,7 @@ msgstr "待處理的聯絡人"
 
 #: disciple-tools-dashboard.php:220
 msgid "Contact Workload"
-msgstr "聯繫工作量"
+msgstr "聯繫人工作量"
 
 #: disciple-tools-dashboard.php:221
 msgid "Faith Milestone Totals"
@@ -37,11 +37,11 @@ msgstr "信仰里程碑總計"
 
 #: disciple-tools-dashboard.php:225
 msgid "Seeker Path Progress"
-msgstr "尋求路徑進展"
+msgstr "慕道友旅程進展"
 
 #: disciple-tools-dashboard.php:229
 msgid "Personal Benchmarks"
-msgstr "個人基準"
+msgstr "個人指數"
 
 #: disciple-tools-dashboard.php:233
 msgid "Tasks"
@@ -53,7 +53,7 @@ msgstr "哇，夥伴！"
 
 #: disciple-tools-dashboard.php:333
 msgid "Method does not exist."
-msgstr "方法不存在。"
+msgstr "此方法不存在。"
 
 #: includes/functions.php:93
 msgid "Dashboard"
@@ -69,11 +69,11 @@ msgstr "接受"
 
 #: includes/rest-api.php:530
 msgid "Decline"
-msgstr "下降"
+msgstr "拒絕"
 
 #: includes/rest-api.php:531
 msgid "# Contacts Assigned"
-msgstr "＃個已分配的聯繫人"
+msgstr "＃ 已分派聯絡人"
 
 #: includes/rest-api.php:532
 msgid "# First Meetings"
@@ -81,15 +81,15 @@ msgstr "＃第一次會議"
 
 #: includes/rest-api.php:533
 msgid "# Faith milestones"
-msgstr "＃信念里程碑"
+msgstr "＃信仰里程碑"
 
 #: includes/rest-api.php:534
 msgid "Hurray! You are caught up."
-msgstr "歡呼！你被抓了。"
+msgstr "好棒！你追上進度了。"
 
 #: includes/rest-api.php:535
 msgid "remove"
-msgstr "去掉"
+msgstr "移除"
 
 #: includes/rest-api.php:536
 msgid "mark as complete"
@@ -97,7 +97,7 @@ msgstr "標記為完成"
 
 #: includes/rest-api.php:537
 msgid "No task created"
-msgstr "未創建任務"
+msgstr "未新增任務"
 
 #: includes/rest-api.php:538
 msgid "Reminder"
@@ -105,7 +105,7 @@ msgstr "提醒"
 
 #: includes/rest-api.php:539
 msgid "No note set"
-msgstr "沒有音符集"
+msgstr "沒有筆記"
 
 #: includes/rest-api.php:540
 msgid "See all"
@@ -113,38 +113,37 @@ msgstr "查看全部"
 
 #: includes/template-parts/tile.php:28
 msgid "Back"
-msgstr "背部"
+msgstr "後退"
 
 #: includes/template-parts/tile.php:32
 msgid "Forward"
-msgstr ""
+msgstr "前進"
 
 #: includes/template-parts/tile.php:36
-#, fuzzy
 msgid "Remove"
-msgstr "去掉"
+msgstr "移除"
 
 #: includes/tiles/active-contact/template.php:7
 msgid "Add a contact"
-msgstr "添加聯繫人"
+msgstr "新增聯絡人"
 
 #: includes/tiles/contact-workload/template.php:8
 msgid ""
 "Choose an option to let the dispatcher(s) know if you are ready for new "
 "contacts"
-msgstr "選擇一個選項，讓調度員知道您是否準備好與新聯繫人聯繫"
+msgstr "選擇一個選項，讓服務人員知道您是否可以與新的聯絡人聯繫"
 
 #: includes/tiles/contact-workload/template.php:21
 msgid "Set travel or dates unavailable"
-msgstr "設置旅行或日期不可用"
+msgstr "選取的行程或日期不可用"
 
 #: includes/tiles/faith-milestone-totals/template.php:7
 msgid "Milestones on your active contacts"
-msgstr "活動聯繫人的里程碑"
+msgstr "有效聯絡人的里程碑"
 
 #: includes/tiles/seeker-path-progress/template.php:7
 msgid "No data to show yet. You have no active contacts"
-msgstr "尚無數據顯示。您沒有活動的聯繫人"
+msgstr "沒有可顯示的資料。您沒有有效的聯絡人"
 
 #, fuzzy
 #~ msgid "Show"
