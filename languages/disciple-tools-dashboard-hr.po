@@ -3,18 +3,18 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2024-01-31T10:07:35+00:00\n"
-"PO-Revision-Date: 2022-11-09 08:32+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Croatian <https://translate.disciple.tools/projects/disciple-"
-"tools/disciple-tools-dashboard/hr/>\n"
+"POT-Creation-Date: 2024-05-14T08:42:58+00:00\n"
+"PO-Revision-Date: 2024-05-27 19:59+0000\n"
+"Last-Translator: Zlatko Celik <zlatko.celik@gmail.com>\n"
+"Language-Team: Croatian <https://translate.disciple.tools/projects/"
+"disciple-tools/disciple-tools-dashboard/hr/>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 5.5.5\n"
 
 #: disciple-tools-dashboard.php:217
 msgid "Active Contacts"
@@ -118,12 +118,11 @@ msgstr "Natrag"
 
 #: includes/template-parts/tile.php:32
 msgid "Forward"
-msgstr ""
+msgstr "Naprijed"
 
 #: includes/template-parts/tile.php:36
-#, fuzzy
 msgid "Remove"
-msgstr "ukloniti"
+msgstr "Ukloni"
 
 #: includes/tiles/active-contact/template.php:7
 msgid "Add a contact"
