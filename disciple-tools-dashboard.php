@@ -214,9 +214,9 @@ class DT_Dashboard_Plugin {
      */
     public function register_tiles() {
         $tiles = DT_Dashboard_Plugin_Tiles::instance();
-        $tiles->register( new DT_Dashboard_Plugin_Tile( 'DT_Dashboard_Plugin_Active_Contact', __( 'Active Contacts', 'disciple-tools-dashboard' ), [ 'priority' => 0 ] ) );
+        $tiles->register( new DT_Dashboard_Plugin_Tile( 'DT_Dashboard_Plugin_Active_Contact', __( 'Active Contacts', 'disciple-tools-dashboard' ), [ 'priority' => 2 ] ) );
         $tiles->register( new DT_Dashboard_Plugin_Tile( 'DT_Dashboard_Plugin_Update_Needed', __( 'Update Needed', 'disciple-tools-dashboard' ), [ 'priority' => 1 ] ) );
-        $tiles->register( new DT_Dashboard_Plugin_Tile( 'DT_Dashboard_Plugin_Pending_Contacts', __( 'Pending Contacts', 'disciple-tools-dashboard' ), [ 'priority' => 2 ] ) );
+        $tiles->register( new DT_Dashboard_Plugin_Tile( 'DT_Dashboard_Plugin_Pending_Contacts', __( 'Pending Contacts', 'disciple-tools-dashboard' ), [ 'priority' => 0 ] ) );
         $tiles->register( new DT_Dashboard_Plugin_Tile( 'DT_Dashboard_Plugin_Contact_Workload', __( 'Contact Workload', 'disciple-tools-dashboard' ), [ 'priority' => 3 ] ) );
         $tiles->register( new DT_Dashboard_Plugin_Tile( 'DT_Dashboard_Plugin_Faith_Milestone_Totals', __( 'Faith Milestone Totals', 'disciple-tools-dashboard' ), [
             'span' => 2,
