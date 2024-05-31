@@ -3,18 +3,18 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2024-01-31T10:07:35+00:00\n"
-"PO-Revision-Date: 2022-11-09 08:32+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Bosnian <https://translate.disciple.tools/projects/disciple-"
-"tools/disciple-tools-dashboard/bs_BA/>\n"
+"POT-Creation-Date: 2024-05-14T08:42:58+00:00\n"
+"PO-Revision-Date: 2024-05-26 07:41+0000\n"
+"Last-Translator: Dragana <celikdragana0@gmail.com>\n"
+"Language-Team: Bosnian <https://translate.disciple.tools/projects/"
+"disciple-tools/disciple-tools-dashboard/bs_BA/>\n"
 "Language: bs_BA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 5.5.5\n"
 
 #: disciple-tools-dashboard.php:217
 msgid "Active Contacts"
@@ -30,11 +30,11 @@ msgstr "Kontakti na čekanju"
 
 #: disciple-tools-dashboard.php:220
 msgid "Contact Workload"
-msgstr "Kontaktirajte opterećenje"
+msgstr "Kontakt je opterećen poslom"
 
 #: disciple-tools-dashboard.php:221
 msgid "Faith Milestone Totals"
-msgstr "Faith Milestone Totals"
+msgstr "Ukupan napredak u vjeri"
 
 #: disciple-tools-dashboard.php:225
 msgid "Seeker Path Progress"
@@ -50,7 +50,7 @@ msgstr "Zadaci"
 
 #: disciple-tools-dashboard.php:310 disciple-tools-dashboard.php:321
 msgid "Whoah, partner!"
-msgstr "Whoah, partneru!"
+msgstr "Vau partner!"
 
 #: disciple-tools-dashboard.php:333
 msgid "Method does not exist."
@@ -70,7 +70,7 @@ msgstr "Prihvati"
 
 #: includes/rest-api.php:530
 msgid "Decline"
-msgstr "Odbij"
+msgstr "Odbijte"
 
 #: includes/rest-api.php:531
 msgid "# Contacts Assigned"
@@ -82,7 +82,7 @@ msgstr "# Prvi sastanci"
 
 #: includes/rest-api.php:533
 msgid "# Faith milestones"
-msgstr "# Vjera prekretnice"
+msgstr "# Napredak u vjeri"
 
 #: includes/rest-api.php:534
 msgid "Hurray! You are caught up."
@@ -90,11 +90,11 @@ msgstr "Ura! Uhvaćeni ste."
 
 #: includes/rest-api.php:535
 msgid "remove"
-msgstr "ukloniti"
+msgstr "Ukloniti"
 
 #: includes/rest-api.php:536
 msgid "mark as complete"
-msgstr "označiti kao potpunu"
+msgstr "Označiti kao potpun"
 
 #: includes/rest-api.php:537
 msgid "No task created"
@@ -106,11 +106,11 @@ msgstr "Podsjetnik"
 
 #: includes/rest-api.php:539
 msgid "No note set"
-msgstr "Nije postavljena nota"
+msgstr "Nije postavljena bilješka"
 
 #: includes/rest-api.php:540
 msgid "See all"
-msgstr "Vidjeti sve"
+msgstr "Pogledaj sve"
 
 #: includes/template-parts/tile.php:28
 msgid "Back"
@@ -118,12 +118,11 @@ msgstr "Nazad"
 
 #: includes/template-parts/tile.php:32
 msgid "Forward"
-msgstr ""
+msgstr "Naprijed"
 
 #: includes/template-parts/tile.php:36
-#, fuzzy
 msgid "Remove"
-msgstr "ukloniti"
+msgstr "Ukloni"
 
 #: includes/tiles/active-contact/template.php:7
 msgid "Add a contact"
@@ -142,7 +141,7 @@ msgstr "Postavljanje putovanja ili datuma nije dostupno"
 
 #: includes/tiles/faith-milestone-totals/template.php:7
 msgid "Milestones on your active contacts"
-msgstr "Prekretnice u vašim aktivnim kontaktima"
+msgstr "Napredak u vjeri u vašim aktivnim kontaktima"
 
 #: includes/tiles/seeker-path-progress/template.php:7
 msgid "No data to show yet. You have no active contacts"
