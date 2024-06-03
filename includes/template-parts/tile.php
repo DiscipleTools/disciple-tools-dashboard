@@ -1,7 +1,6 @@
-<div class="dash-tile item dash-tile--<?php echo esc_attr( $tile->handle ); ?>"
+<div class="dash-tile item dash-tile--<?php echo esc_attr( $tile->handle ); ?> span-<?php echo esc_attr( $tile->span ); ?>"
      data-tile-handle="<?php echo esc_attr( $tile->handle ); ?>"
      id="dash-tile--<?php echo esc_attr( $tile->handle ); ?>"
-     <?php if ( $tile->span ): ?> style="--dashboard-tile-column: span <?php echo esc_attr( $tile->span ); ?> <?php endif; ?>"
 >
 
     <div class="card tile">
