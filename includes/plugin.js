@@ -319,7 +319,7 @@ window.dt_dashboard = {
       this.container().prepend(addTileContainer)
 
       addTileEl = document.createElement('div')
-      addTileEl.classList.add('tile')
+      addTileEl.classList.add('tile', 'card')
       addTileContainer.appendChild(addTileEl)
     } else {
       addTileEl = addTileContainer.querySelector('.tile')
