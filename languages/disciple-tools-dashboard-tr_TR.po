@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2024-05-31T10:11:31+00:00\n"
+"POT-Creation-Date: 2024-06-03T10:55:42+00:00\n"
 "PO-Revision-Date: 2023-05-31 10:20+0000\n"
 "Last-Translator: Luke Baumgartner <baumgartner.luke@gmail.com>\n"
 "Language-Team: Turkish <https://translate.disciple.tools/projects/disciple-"
@@ -111,15 +111,15 @@ msgstr "Not ayarlanmadı"
 msgid "See all"
 msgstr "Tümünü Gör"
 
-#: includes/template-parts/tile.php:28
+#: includes/template-parts/tile.php:27
 msgid "Back"
 msgstr "Geri"
 
-#: includes/template-parts/tile.php:32
+#: includes/template-parts/tile.php:31
 msgid "Forward"
 msgstr "İleri"
 
-#: includes/template-parts/tile.php:36
+#: includes/template-parts/tile.php:35
 msgid "Remove"
 msgstr "Kaldır"
 
