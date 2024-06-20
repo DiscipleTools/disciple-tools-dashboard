@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2024-05-31T10:11:31+00:00\n"
+"POT-Creation-Date: 2024-06-03T10:55:42+00:00\n"
 "PO-Revision-Date: 2022-11-09 08:32+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Macedonian <https://translate.disciple.tools/projects/"
@@ -111,15 +111,15 @@ msgstr "Нема поставено белешка"
 msgid "See all"
 msgstr "Види ги сите"
 
-#: includes/template-parts/tile.php:28
+#: includes/template-parts/tile.php:27
 msgid "Back"
 msgstr "Назад"
 
-#: includes/template-parts/tile.php:32
+#: includes/template-parts/tile.php:31
 msgid "Forward"
 msgstr ""
 
-#: includes/template-parts/tile.php:36
+#: includes/template-parts/tile.php:35
 #, fuzzy
 msgid "Remove"
 msgstr "отстрани"

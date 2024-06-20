@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2024-05-31T10:11:31+00:00\n"
+"POT-Creation-Date: 2024-06-03T10:55:42+00:00\n"
 "PO-Revision-Date: 2023-11-25 10:48+0000\n"
 "Last-Translator: Kyle Koval <kyle.koval@gmail.com>\n"
 "Language-Team: Italian <https://translate.disciple.tools/projects/disciple-"
@@ -111,15 +111,15 @@ msgstr "Nessuna nota impostata"
 msgid "See all"
 msgstr "Vedi Tutto"
 
-#: includes/template-parts/tile.php:28
+#: includes/template-parts/tile.php:27
 msgid "Back"
 msgstr "Indietro"
 
-#: includes/template-parts/tile.php:32
+#: includes/template-parts/tile.php:31
 msgid "Forward"
 msgstr "Inoltra"
 
-#: includes/template-parts/tile.php:36
+#: includes/template-parts/tile.php:35
 msgid "Remove"
 msgstr "Rimuovere"
 
