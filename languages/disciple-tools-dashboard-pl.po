@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Disciple.Tools - Dashboard 1.1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2024-05-31T10:11:31+00:00\n"
+"POT-Creation-Date: 2024-06-03T10:55:42+00:00\n"
 "PO-Revision-Date: 2024-04-12 11:59+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
 "memory@weblate.org>\n"
@@ -116,15 +116,15 @@ msgstr "Brak utworzonych notatek"
 msgid "See all"
 msgstr "Zobacz wszystko"
 
-#: includes/template-parts/tile.php:28
+#: includes/template-parts/tile.php:27
 msgid "Back"
 msgstr "Powrót"
 
-#: includes/template-parts/tile.php:32
+#: includes/template-parts/tile.php:31
 msgid "Forward"
 msgstr ""
 
-#: includes/template-parts/tile.php:36
+#: includes/template-parts/tile.php:35
 msgid "Remove"
 msgstr "Usuń"
 
