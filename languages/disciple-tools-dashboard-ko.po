@@ -1,32 +1,28 @@
-# Copyright (C) 2022 
+# Copyright (C) 2024 
 # This file is distributed under the same license as the Disciple.Tools - Dashboard plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Disciple.Tools - Dashboard 1.1.1\n"
+"Project-Id-Version: Disciple.Tools - Dashboard 1.3.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
 "POT-Creation-Date: 2024-09-26T12:26:07+00:00\n"
-"PO-Revision-Date: 2024-04-12 11:59+0000\n"
-"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
-"memory@weblate.org>\n"
-"Language-Team: Polish <https://translate.disciple.tools/projects/disciple-"
-"tools/disciple-tools-dashboard/pl/>\n"
-"Language: pl\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.4.3\n"
+"X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: disciple-tools-dashboard\n"
 
 #: disciple-tools-dashboard.php:217
 msgid "Active Contacts"
-msgstr "Aktywne osoby"
+msgstr ""
 
 #: disciple-tools-dashboard.php:218
 msgid "Update Needed"
-msgstr "Potrzebna aktualizacja"
+msgstr ""
 
 #: disciple-tools-dashboard.php:219
 msgid "Pending Contacts"
@@ -50,9 +46,10 @@ msgstr ""
 
 #: disciple-tools-dashboard.php:233
 msgid "Tasks"
-msgstr "Zadania"
+msgstr ""
 
-#: disciple-tools-dashboard.php:310 disciple-tools-dashboard.php:321
+#: disciple-tools-dashboard.php:310
+#: disciple-tools-dashboard.php:321
 msgid "Whoah, partner!"
 msgstr ""
 
@@ -62,19 +59,19 @@ msgstr ""
 
 #: includes/functions.php:93
 msgid "Dashboard"
-msgstr "Pulpit"
+msgstr ""
 
 #: includes/rest-api.php:180
 msgid "%s days since last update"
-msgstr "%s dni od ostatniej aktualizacji"
+msgstr ""
 
 #: includes/rest-api.php:529
 msgid "Accept"
-msgstr "Akceptuj"
+msgstr ""
 
 #: includes/rest-api.php:530
 msgid "Decline"
-msgstr "Odrzuć"
+msgstr ""
 
 #: includes/rest-api.php:531
 msgid "# Contacts Assigned"
@@ -82,11 +79,11 @@ msgstr ""
 
 #: includes/rest-api.php:532
 msgid "# First Meetings"
-msgstr "Pierwsze spotkania"
+msgstr ""
 
 #: includes/rest-api.php:533
 msgid "# Faith milestones"
-msgstr "Kamienie milowe wiary"
+msgstr ""
 
 #: includes/rest-api.php:534
 msgid "Hurray! You are caught up."
@@ -94,31 +91,31 @@ msgstr ""
 
 #: includes/rest-api.php:535
 msgid "remove"
-msgstr "Usuń"
+msgstr ""
 
 #: includes/rest-api.php:536
 msgid "mark as complete"
-msgstr "Oznacz jako kompletny"
+msgstr ""
 
 #: includes/rest-api.php:537
 msgid "No task created"
-msgstr "Brak utworzonych zadań"
+msgstr ""
 
 #: includes/rest-api.php:538
 msgid "Reminder"
-msgstr "Przypomnienie"
+msgstr ""
 
 #: includes/rest-api.php:539
 msgid "No note set"
-msgstr "Brak utworzonych notatek"
+msgstr ""
 
 #: includes/rest-api.php:540
 msgid "See all"
-msgstr "Zobacz wszystko"
+msgstr ""
 
 #: includes/template-parts/tile.php:27
 msgid "Back"
-msgstr "Powrót"
+msgstr ""
 
 #: includes/template-parts/tile.php:31
 msgid "Forward"
@@ -126,16 +123,14 @@ msgstr ""
 
 #: includes/template-parts/tile.php:35
 msgid "Remove"
-msgstr "Usuń"
+msgstr ""
 
 #: includes/tiles/active-contact/template.php:7
 msgid "Add a contact"
 msgstr ""
 
 #: includes/tiles/contact-workload/template.php:8
-msgid ""
-"Choose an option to let the dispatcher(s) know if you are ready for new "
-"contacts"
+msgid "Choose an option to let the dispatcher(s) know if you are ready for new contacts"
 msgstr ""
 
 #: includes/tiles/contact-workload/template.php:21
