@@ -3,17 +3,17 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2024-06-03T10:55:42+00:00\n"
-"PO-Revision-Date: 2022-11-16 15:32+0000\n"
-"Last-Translator: John B <mercivic@pm.me>\n"
-"Language-Team: French <https://translate.disciple.tools/projects/disciple-"
-"tools/disciple-tools-dashboard/fr_FR/>\n"
+"POT-Creation-Date: 2024-09-26T12:26:07+00:00\n"
+"PO-Revision-Date: 2024-10-12 12:59+0000\n"
+"Last-Translator: Sarah <s.colpart@gmail.com>\n"
+"Language-Team: French <https://translate.disciple.tools/projects/"
+"disciple-tools/disciple-tools-dashboard/fr_FR/>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 5.7.2\n"
 
 #: disciple-tools-dashboard.php:217
 msgid "Active Contacts"
@@ -121,7 +121,7 @@ msgstr "En avant"
 
 #: includes/template-parts/tile.php:35
 msgid "Remove"
-msgstr "Supprimer"
+msgstr "Enlever"
 
 #: includes/tiles/active-contact/template.php:7
 msgid "Add a contact"
