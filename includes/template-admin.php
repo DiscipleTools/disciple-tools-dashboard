@@ -9,7 +9,7 @@ $hidden_tiles = $dt_tiles->hidden();
         <div id="post-body"
              class="metabox-holder columns-2">
             <div id="post-body-content">
-                <p><?php echo esc_html_e( 'Choose the default dashboard layout for new users.', 'disciple-tools-dashboard' ); ?></p>
+                <p><?php esc_html_e( 'Choose the default dashboard layout for new users.', 'disciple-tools-dashboard' ); ?></p>
                 <table class="widefat striped">
                     <thead>
                     <tr>
@@ -31,7 +31,7 @@ $hidden_tiles = $dt_tiles->hidden();
                                            name="hide_tile"
                                            value="<?php echo esc_attr( sanitize_key( $handle ) ); ?>">
                                     <button class="button"
-                                            type="submit"><?php echo esc_html_e( 'Hide', 'disciple-tools-dashboard' ); ?></button>
+                                            type="submit"><?php esc_html_e( 'Hide', 'disciple-tools-dashboard' ); ?></button>
                                 </form>
                             </td>
                         </tr>
@@ -57,7 +57,7 @@ $hidden_tiles = $dt_tiles->hidden();
                                            name="show_tile"
                                            value="<?php echo esc_attr( sanitize_key( $handle ) ); ?>">
                                     <button class="button"
-                                            type="submit"><?php echo esc_html_e( 'Show', 'disciple-tools-dashboard' ); ?></button>
+                                            type="submit"><?php esc_html_e( 'Show', 'disciple-tools-dashboard' ); ?></button>
                                 </form>
                             </td>
                         </tr>
