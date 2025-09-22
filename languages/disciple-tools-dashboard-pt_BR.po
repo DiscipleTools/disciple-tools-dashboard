@@ -5,9 +5,9 @@ msgstr ""
 "Project-Id-Version: Disciple.Tools - Dashboard 1.1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2024-09-26T12:26:07+00:00\n"
-"PO-Revision-Date: 2023-03-23 09:14+0000\n"
-"Last-Translator: Jaqueline Galhardo <jaqueline_galhardo@protonmail.com>\n"
+"POT-Creation-Date: 2025-04-14T16:26:13+00:00\n"
+"PO-Revision-Date: 2025-05-12 02:00+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate.disciple.tools/"
 "projects/disciple-tools/disciple-tools-dashboard/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 5.11.4\n"
 "X-Domain: disciple-tools-dashboard\n"
 
 #: disciple-tools-dashboard.php:217
@@ -36,7 +36,7 @@ msgstr ""
 
 #: disciple-tools-dashboard.php:221
 msgid "Faith Milestone Totals"
-msgstr ""
+msgstr "Pilares de fé"
 
 #: disciple-tools-dashboard.php:225
 msgid "Seeker Path Progress"
@@ -138,7 +138,7 @@ msgstr ""
 
 #: includes/tiles/contact-workload/template.php:21
 msgid "Set travel or dates unavailable"
-msgstr ""
+msgstr "Agendar viagens ou datas indisponíveis"
 
 #: includes/tiles/faith-milestone-totals/template.php:7
 msgid "Milestones on your active contacts"
