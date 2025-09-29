@@ -20,6 +20,7 @@ class DT_Dashboard_Plugin_Tile extends DT_Dashboard_Tile
         if ( file_exists( DT_Dashboard_Plugin::dir() . $script ) ) {
             wp_enqueue_script( $this->handle, DT_Dashboard_Plugin::path() . $script, [
                 'dt-dashboard-plugin',
+                'dt-activity-logs',
                 'jquery',
                 'jquery-ui',
                 'lodash',

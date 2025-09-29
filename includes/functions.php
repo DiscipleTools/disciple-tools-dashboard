@@ -81,6 +81,10 @@ class DT_Dashboard_Plugin_Functions {
             'moment',
             'smooth-scrollbar'
         ], filemtime( plugin_dir_path( __FILE__ ) . '/dashboard.js' ), true );
+        wp_enqueue_script( 'dt-activity-logs', get_template_directory_uri() . '/dt-assets/js/activity-log.js', [
+            'jquery',
+            'lodash'
+        ], filemtime( get_theme_file_path() . '/dt-assets/js/activity-log.js' ), true );
     }
 
     public function front_page( $page ) {

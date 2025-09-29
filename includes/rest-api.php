@@ -538,6 +538,8 @@ class DT_Dashboard_Plugin_Endpoints
             'reminder'                 => __( 'Reminder', 'disciple-tools-dashboard' ),
             'no_note'                  => __( 'No note set', 'disciple-tools-dashboard' ),
             'see_all'                  => __( 'See all', 'disciple-tools-dashboard' ),
+            'more'                     => __( 'more', 'disciple-tools-dashboard' ),
+            'less'                     => __( 'Less', 'disciple-tools-dashboard' ),
         ];
     }
 
