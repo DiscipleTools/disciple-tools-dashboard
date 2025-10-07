@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2025-04-14T16:26:13+00:00\n"
+"POT-Creation-Date: 2025-10-07T12:48:38+00:00\n"
 "PO-Revision-Date: 2022-11-09 08:32+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://translate.disciple.tools/"
@@ -32,34 +32,40 @@ msgid "Contact Workload"
 msgstr "联系工作量"
 
 #: disciple-tools-dashboard.php:221
+msgid "Activity"
+msgstr "活动"
+
+#: disciple-tools-dashboard.php:226
 msgid "Faith Milestone Totals"
 msgstr "信仰里程碑总计"
 
-#: disciple-tools-dashboard.php:225
+#: disciple-tools-dashboard.php:230
 msgid "Seeker Path Progress"
 msgstr "寻求路径进展"
 
-#: disciple-tools-dashboard.php:229
+#: disciple-tools-dashboard.php:234
 msgid "Personal Benchmarks"
 msgstr "个人基准"
 
-#: disciple-tools-dashboard.php:233
+#: disciple-tools-dashboard.php:238
 msgid "Tasks"
 msgstr "任务"
 
-#: disciple-tools-dashboard.php:310 disciple-tools-dashboard.php:321
+#: disciple-tools-dashboard.php:315 disciple-tools-dashboard.php:326
 msgid "Whoah, partner!"
 msgstr "哇，伙伴！"
 
-#: disciple-tools-dashboard.php:333
+#: disciple-tools-dashboard.php:338
 msgid "Method does not exist."
 msgstr "方法不存在。"
 
-#: includes/functions.php:93
+#: includes/functions.php:97
 msgid "Dashboard"
 msgstr "仪表板"
 
 #: includes/rest-api.php:180
+#, fuzzy, php-format
+#| msgid "%s days since last update"
 msgid "%s days since last update"
 msgstr "自上次更新以来的％s天"
 
@@ -110,6 +116,14 @@ msgstr "没有音符集"
 #: includes/rest-api.php:540
 msgid "See all"
 msgstr "查看全部"
+
+#: includes/rest-api.php:541
+msgid "more"
+msgstr ""
+
+#: includes/rest-api.php:542
+msgid "Less"
+msgstr ""
 
 #: includes/template-parts/tile.php:27
 msgid "Back"
@@ -765,9 +779,6 @@ msgstr "尚无数据显示。您没有活动的联系人"
 
 #~ msgid "Log"
 #~ msgstr "日志记录"
-
-#~ msgid "Activity"
-#~ msgstr "活动"
 
 #~ msgid "Area Maps"
 #~ msgstr "区域地图"

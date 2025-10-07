@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2025-04-14T16:26:13+00:00\n"
+"POT-Creation-Date: 2025-10-07T12:48:38+00:00\n"
 "PO-Revision-Date: 2022-11-09 08:32+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Slovenian <https://translate.disciple.tools/projects/disciple-"
@@ -33,34 +33,39 @@ msgid "Contact Workload"
 msgstr "Obrnite se na obremenitev"
 
 #: disciple-tools-dashboard.php:221
+msgid "Activity"
+msgstr "Dejavnost"
+
+#: disciple-tools-dashboard.php:226
 msgid "Faith Milestone Totals"
 msgstr "Faith Milestone Vsote"
 
-#: disciple-tools-dashboard.php:225
+#: disciple-tools-dashboard.php:230
 msgid "Seeker Path Progress"
 msgstr "Napredek poti iskalca"
 
-#: disciple-tools-dashboard.php:229
+#: disciple-tools-dashboard.php:234
 msgid "Personal Benchmarks"
 msgstr "Osebna merila uspešnosti"
 
-#: disciple-tools-dashboard.php:233
+#: disciple-tools-dashboard.php:238
 msgid "Tasks"
 msgstr "Naloge"
 
-#: disciple-tools-dashboard.php:310 disciple-tools-dashboard.php:321
+#: disciple-tools-dashboard.php:315 disciple-tools-dashboard.php:326
 msgid "Whoah, partner!"
 msgstr "Joj, partner!"
 
-#: disciple-tools-dashboard.php:333
+#: disciple-tools-dashboard.php:338
 msgid "Method does not exist."
 msgstr "Metoda ne obstaja."
 
-#: includes/functions.php:93
+#: includes/functions.php:97
 msgid "Dashboard"
 msgstr "Armaturna plošča"
 
 #: includes/rest-api.php:180
+#, php-format
 msgid "%s days since last update"
 msgstr "%s dni od zadnje posodobitve"
 
@@ -111,6 +116,14 @@ msgstr "Opomba ni nastavljena"
 #: includes/rest-api.php:540
 msgid "See all"
 msgstr "Poglej vse"
+
+#: includes/rest-api.php:541
+msgid "more"
+msgstr ""
+
+#: includes/rest-api.php:542
+msgid "Less"
+msgstr ""
 
 #: includes/template-parts/tile.php:27
 msgid "Back"
@@ -777,9 +790,6 @@ msgstr "Ni podatkov za prikaz. Nimate aktivnih stikov"
 
 #~ msgid "Log"
 #~ msgstr "Dnevnik"
-
-#~ msgid "Activity"
-#~ msgstr "Dejavnost"
 
 #~ msgid "Area Maps"
 #~ msgstr "Zemljevidi območja"

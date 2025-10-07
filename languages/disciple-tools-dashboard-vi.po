@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2025-04-14T16:26:13+00:00\n"
+"POT-Creation-Date: 2025-10-07T12:48:38+00:00\n"
 "PO-Revision-Date: 2024-07-20 06:59+0000\n"
 "Last-Translator: Charlie Ritchie <ritchiecharlie@gmail.com>\n"
 "Language-Team: Vietnamese <https://translate.disciple.tools/projects/"
@@ -32,34 +32,39 @@ msgid "Contact Workload"
 msgstr "Liên hệ với khối lượng công việc"
 
 #: disciple-tools-dashboard.php:221
+msgid "Activity"
+msgstr "Hoạt động"
+
+#: disciple-tools-dashboard.php:226
 msgid "Faith Milestone Totals"
 msgstr "Tổng số cột mốc niềm tin"
 
-#: disciple-tools-dashboard.php:225
+#: disciple-tools-dashboard.php:230
 msgid "Seeker Path Progress"
 msgstr "Tiến trình con đường tìm kiếm"
 
-#: disciple-tools-dashboard.php:229
+#: disciple-tools-dashboard.php:234
 msgid "Personal Benchmarks"
 msgstr "Điểm chuẩn cá nhân"
 
-#: disciple-tools-dashboard.php:233
+#: disciple-tools-dashboard.php:238
 msgid "Tasks"
 msgstr "Nhiệm vụ"
 
-#: disciple-tools-dashboard.php:310 disciple-tools-dashboard.php:321
+#: disciple-tools-dashboard.php:315 disciple-tools-dashboard.php:326
 msgid "Whoah, partner!"
 msgstr "Ôi, đối tác!"
 
-#: disciple-tools-dashboard.php:333
+#: disciple-tools-dashboard.php:338
 msgid "Method does not exist."
 msgstr "Phương pháp không tồn tại."
 
-#: includes/functions.php:93
+#: includes/functions.php:97
 msgid "Dashboard"
 msgstr "bảng điều khiển"
 
 #: includes/rest-api.php:180
+#, php-format
 msgid "%s days since last update"
 msgstr "%s ngày kể từ lần cập nhật cuối cùng"
 
@@ -110,6 +115,14 @@ msgstr "Không có ghi chú nào được đặt"
 #: includes/rest-api.php:540
 msgid "See all"
 msgstr "Xem Tất cả"
+
+#: includes/rest-api.php:541
+msgid "more"
+msgstr ""
+
+#: includes/rest-api.php:542
+msgid "Less"
+msgstr ""
 
 #: includes/template-parts/tile.php:27
 msgid "Back"
@@ -779,9 +792,6 @@ msgstr ""
 
 #~ msgid "Log"
 #~ msgstr "Nhật ký"
-
-#~ msgid "Activity"
-#~ msgstr "Hoạt động"
 
 #~ msgid "Area Maps"
 #~ msgstr "Bản đồ khu vực"

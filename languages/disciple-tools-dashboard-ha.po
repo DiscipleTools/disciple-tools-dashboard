@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2025-04-14T16:26:13+00:00\n"
+"POT-Creation-Date: 2025-10-07T12:48:38+00:00\n"
 "PO-Revision-Date: 2022-11-12 09:32+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Hausa <https://translate.disciple.tools/projects/disciple-"
@@ -32,34 +32,39 @@ msgid "Contact Workload"
 msgstr "Tuntuɓi Aiki"
 
 #: disciple-tools-dashboard.php:221
+msgid "Activity"
+msgstr "Ayyuka"
+
+#: disciple-tools-dashboard.php:226
 msgid "Faith Milestone Totals"
 msgstr "Mididdigar Faithmãni Totarshe"
 
-#: disciple-tools-dashboard.php:225
+#: disciple-tools-dashboard.php:230
 msgid "Seeker Path Progress"
 msgstr "Ci gaban Tafiya Mai Neman"
 
-#: disciple-tools-dashboard.php:229
+#: disciple-tools-dashboard.php:234
 msgid "Personal Benchmarks"
 msgstr "Alamar sirri"
 
-#: disciple-tools-dashboard.php:233
+#: disciple-tools-dashboard.php:238
 msgid "Tasks"
 msgstr "Ksawainiya"
 
-#: disciple-tools-dashboard.php:310 disciple-tools-dashboard.php:321
+#: disciple-tools-dashboard.php:315 disciple-tools-dashboard.php:326
 msgid "Whoah, partner!"
 msgstr "Kai, abokin tarayya!"
 
-#: disciple-tools-dashboard.php:333
+#: disciple-tools-dashboard.php:338
 msgid "Method does not exist."
 msgstr "Hanyar babu."
 
-#: includes/functions.php:93
+#: includes/functions.php:97
 msgid "Dashboard"
 msgstr "Dashboard"
 
 #: includes/rest-api.php:180
+#, php-format
 msgid "%s days since last update"
 msgstr "Kwanak %s tun ɗaukakawa ta ƙarshe"
 
@@ -110,6 +115,14 @@ msgstr "Babu saitin bayanin kula"
 #: includes/rest-api.php:540
 msgid "See all"
 msgstr "Duba Duk"
+
+#: includes/rest-api.php:541
+msgid "more"
+msgstr ""
+
+#: includes/rest-api.php:542
+msgid "Less"
+msgstr ""
 
 #: includes/template-parts/tile.php:27
 msgid "Back"
@@ -779,9 +792,6 @@ msgstr "Babu bayanai da za a nuna tukuna. Ba ku da abokan hulɗa da ke aiki"
 
 #~ msgid "Log"
 #~ msgstr "Shiga ciki"
-
-#~ msgid "Activity"
-#~ msgstr "Ayyuka"
 
 #~ msgid "Area Maps"
 #~ msgstr "Taswirar Yanki"

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2025-04-14T16:26:13+00:00\n"
+"POT-Creation-Date: 2025-10-07T12:48:38+00:00\n"
 "PO-Revision-Date: 2022-11-09 08:32+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Punjabi <https://translate.disciple.tools/projects/disciple-"
@@ -32,34 +32,39 @@ msgid "Contact Workload"
 msgstr "ਕੰਮ ਦਾ ਭਾਰ"
 
 #: disciple-tools-dashboard.php:221
+msgid "Activity"
+msgstr "ਸਰਗਰਮੀ"
+
+#: disciple-tools-dashboard.php:226
 msgid "Faith Milestone Totals"
 msgstr "ਵਿਸ਼ਵਾਸ ਪਥਰਾਅ"
 
-#: disciple-tools-dashboard.php:225
+#: disciple-tools-dashboard.php:230
 msgid "Seeker Path Progress"
 msgstr "ਖੋਜਕਰਤਾ ਮਾਰਗ ਦੀ ਪ੍ਰਗਤੀ"
 
-#: disciple-tools-dashboard.php:229
+#: disciple-tools-dashboard.php:234
 msgid "Personal Benchmarks"
 msgstr "ਨਿੱਜੀ ਬੈਂਚਮਾਰਕ"
 
-#: disciple-tools-dashboard.php:233
+#: disciple-tools-dashboard.php:238
 msgid "Tasks"
 msgstr "ਕੰਮ"
 
-#: disciple-tools-dashboard.php:310 disciple-tools-dashboard.php:321
+#: disciple-tools-dashboard.php:315 disciple-tools-dashboard.php:326
 msgid "Whoah, partner!"
 msgstr "ਵਾਹ, ਸਾਥੀ!"
 
-#: disciple-tools-dashboard.php:333
+#: disciple-tools-dashboard.php:338
 msgid "Method does not exist."
 msgstr "Existੰਗ ਮੌਜੂਦ ਨਹੀਂ ਹੈ."
 
-#: includes/functions.php:93
+#: includes/functions.php:97
 msgid "Dashboard"
 msgstr "ਡੈਸ਼ਬੋਰਡ"
 
 #: includes/rest-api.php:180
+#, php-format
 msgid "%s days since last update"
 msgstr "ਆਖਰੀ ਅਪਡੇਟ ਤੋਂ%s ਦਿਨ"
 
@@ -110,6 +115,14 @@ msgstr "ਕੋਈ ਨੋਟ ਸੈਟ ਨਹੀਂ"
 #: includes/rest-api.php:540
 msgid "See all"
 msgstr "ਸਾਰੇ ਵੇਖੋ"
+
+#: includes/rest-api.php:541
+msgid "more"
+msgstr ""
+
+#: includes/rest-api.php:542
+msgid "Less"
+msgstr ""
 
 #: includes/template-parts/tile.php:27
 msgid "Back"
@@ -771,9 +784,6 @@ msgstr "ਅਜੇ ਦਿਖਾਉਣ ਲਈ ਕੋਈ ਡਾਟਾ ਨਹੀਂ 
 
 #~ msgid "Log"
 #~ msgstr "ਲਾਗ"
-
-#~ msgid "Activity"
-#~ msgstr "ਸਰਗਰਮੀ"
 
 #~ msgid "Area Maps"
 #~ msgstr "ਖੇਤਰ ਦੇ ਨਕਸ਼ੇ"

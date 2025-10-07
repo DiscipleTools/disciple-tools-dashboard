@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2025-04-14T16:26:13+00:00\n"
+"POT-Creation-Date: 2025-10-07T12:48:38+00:00\n"
 "PO-Revision-Date: 2022-11-09 08:32+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Burmese <https://translate.disciple.tools/projects/disciple-"
@@ -32,34 +32,39 @@ msgid "Contact Workload"
 msgstr "Workload ကိုဆက်သွယ်ပါ"
 
 #: disciple-tools-dashboard.php:221
+msgid "Activity"
+msgstr "လှုပ်ရှားမှု"
+
+#: disciple-tools-dashboard.php:226
 msgid "Faith Milestone Totals"
 msgstr "ယုံကြည်ခြင်းမှတ်တိုင်စုစုပေါင်း"
 
-#: disciple-tools-dashboard.php:225
+#: disciple-tools-dashboard.php:230
 msgid "Seeker Path Progress"
 msgstr "ရှာဖွေသူလမ်းကြောင်းတိုးတက်မှု"
 
-#: disciple-tools-dashboard.php:229
+#: disciple-tools-dashboard.php:234
 msgid "Personal Benchmarks"
 msgstr "ကိုယ်ရေးကိုယ်တာ Benchmarks"
 
-#: disciple-tools-dashboard.php:233
+#: disciple-tools-dashboard.php:238
 msgid "Tasks"
 msgstr "လုပ်ငန်းတာဝန်များ"
 
-#: disciple-tools-dashboard.php:310 disciple-tools-dashboard.php:321
+#: disciple-tools-dashboard.php:315 disciple-tools-dashboard.php:326
 msgid "Whoah, partner!"
 msgstr "ဘယ်သူလဲ"
 
-#: disciple-tools-dashboard.php:333
+#: disciple-tools-dashboard.php:338
 msgid "Method does not exist."
 msgstr "နည်းလမ်းမရှိပါ။"
 
-#: includes/functions.php:93
+#: includes/functions.php:97
 msgid "Dashboard"
 msgstr "ဒိုင်ခွက်"
 
 #: includes/rest-api.php:180
+#, php-format
 msgid "%s days since last update"
 msgstr "%s ရက်နောက်ဆုံးပြင်ဆင်မှု မှစ၍"
 
@@ -110,6 +115,14 @@ msgstr "မှတ်စုသတ်မှတ်မထားပါ"
 #: includes/rest-api.php:540
 msgid "See all"
 msgstr "အားလုံးကိုကြည့်ပါ"
+
+#: includes/rest-api.php:541
+msgid "more"
+msgstr ""
+
+#: includes/rest-api.php:542
+msgid "Less"
+msgstr ""
 
 #: includes/template-parts/tile.php:27
 msgid "Back"
@@ -765,9 +778,6 @@ msgstr "ပြသရန်အချက်အလက်မရှိပါ သင�
 
 #~ msgid "Log"
 #~ msgstr "log"
-
-#~ msgid "Activity"
-#~ msgstr "လှုပ်ရှားမှု"
 
 #~ msgid "Area Maps"
 #~ msgstr "Mရိယာမြေပုံများ"

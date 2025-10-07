@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2025-04-14T16:26:13+00:00\n"
+"POT-Creation-Date: 2025-10-07T12:48:38+00:00\n"
 "PO-Revision-Date: 2022-11-09 08:32+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Malayalam <https://translate.disciple.tools/projects/disciple-"
@@ -32,34 +32,39 @@ msgid "Contact Workload"
 msgstr "ജോലിഭാരവുമായി ബന്ധപ്പെടുക"
 
 #: disciple-tools-dashboard.php:221
+msgid "Activity"
+msgstr "പ്രവർത്തനം"
+
+#: disciple-tools-dashboard.php:226
 msgid "Faith Milestone Totals"
 msgstr "വിശ്വാസം നാഴികക്കല്ലുകൾ ആകെ"
 
-#: disciple-tools-dashboard.php:225
+#: disciple-tools-dashboard.php:230
 msgid "Seeker Path Progress"
 msgstr "അന്വേഷകന്റെ പാത പുരോഗതി"
 
-#: disciple-tools-dashboard.php:229
+#: disciple-tools-dashboard.php:234
 msgid "Personal Benchmarks"
 msgstr "വ്യക്തിഗത ബെഞ്ച്മാർക്കുകൾ"
 
-#: disciple-tools-dashboard.php:233
+#: disciple-tools-dashboard.php:238
 msgid "Tasks"
 msgstr "ചുമതലകൾ"
 
-#: disciple-tools-dashboard.php:310 disciple-tools-dashboard.php:321
+#: disciple-tools-dashboard.php:315 disciple-tools-dashboard.php:326
 msgid "Whoah, partner!"
 msgstr "ഓ, പങ്കാളി!"
 
-#: disciple-tools-dashboard.php:333
+#: disciple-tools-dashboard.php:338
 msgid "Method does not exist."
 msgstr "രീതി നിലവിലില്ല."
 
-#: includes/functions.php:93
+#: includes/functions.php:97
 msgid "Dashboard"
 msgstr "ഡാഷ്ബോർഡ്"
 
 #: includes/rest-api.php:180
+#, php-format
 msgid "%s days since last update"
 msgstr "അവസാന അപ്‌ഡേറ്റ് മുതൽ%s ദിവസങ്ങൾ"
 
@@ -110,6 +115,14 @@ msgstr "കുറിപ്പ് സജ്ജമാക്കിയിട്ട�
 #: includes/rest-api.php:540
 msgid "See all"
 msgstr "എല്ലാം കാണൂ"
+
+#: includes/rest-api.php:541
+msgid "more"
+msgstr ""
+
+#: includes/rest-api.php:542
+msgid "Less"
+msgstr ""
 
 #: includes/template-parts/tile.php:27
 msgid "Back"
@@ -775,9 +788,6 @@ msgstr "ഇതുവരെ കാണിക്കാൻ ഡാറ്റയൊന�
 
 #~ msgid "Log"
 #~ msgstr "ലോഗ്"
-
-#~ msgid "Activity"
-#~ msgstr "പ്രവർത്തനം"
 
 #~ msgid "Area Maps"
 #~ msgstr "ഏരിയ മാപ്പുകൾ"

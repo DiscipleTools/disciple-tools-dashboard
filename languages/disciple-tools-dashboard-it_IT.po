@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2025-04-14T16:26:13+00:00\n"
+"POT-Creation-Date: 2025-10-07T12:48:38+00:00\n"
 "PO-Revision-Date: 2023-11-25 10:48+0000\n"
 "Last-Translator: Kyle Koval <kyle.koval@gmail.com>\n"
 "Language-Team: Italian <https://translate.disciple.tools/projects/disciple-"
@@ -32,34 +32,39 @@ msgid "Contact Workload"
 msgstr "Contatta il carico di lavoro"
 
 #: disciple-tools-dashboard.php:221
+msgid "Activity"
+msgstr "Attività"
+
+#: disciple-tools-dashboard.php:226
 msgid "Faith Milestone Totals"
 msgstr "Totali pietra miliare di fede"
 
-#: disciple-tools-dashboard.php:225
+#: disciple-tools-dashboard.php:230
 msgid "Seeker Path Progress"
 msgstr "Progresso del percorso del cercatore"
 
-#: disciple-tools-dashboard.php:229
+#: disciple-tools-dashboard.php:234
 msgid "Personal Benchmarks"
 msgstr "Benchmark personali"
 
-#: disciple-tools-dashboard.php:233
+#: disciple-tools-dashboard.php:238
 msgid "Tasks"
 msgstr "Compiti"
 
-#: disciple-tools-dashboard.php:310 disciple-tools-dashboard.php:321
+#: disciple-tools-dashboard.php:315 disciple-tools-dashboard.php:326
 msgid "Whoah, partner!"
 msgstr "Whoah, partner!"
 
-#: disciple-tools-dashboard.php:333
+#: disciple-tools-dashboard.php:338
 msgid "Method does not exist."
 msgstr "Il metodo non esiste."
 
-#: includes/functions.php:93
+#: includes/functions.php:97
 msgid "Dashboard"
 msgstr "Pannello di controllo"
 
 #: includes/rest-api.php:180
+#, php-format
 msgid "%s days since last update"
 msgstr "%s giorni dall'ultimo aggiornamento"
 
@@ -110,6 +115,14 @@ msgstr "Nessuna nota impostata"
 #: includes/rest-api.php:540
 msgid "See all"
 msgstr "Vedi Tutto"
+
+#: includes/rest-api.php:541
+msgid "more"
+msgstr ""
+
+#: includes/rest-api.php:542
+msgid "Less"
+msgstr ""
 
 #: includes/template-parts/tile.php:27
 msgid "Back"
@@ -782,9 +795,6 @@ msgstr "Nessun dato da mostrare ancora. Non hai contatti attivi"
 
 #~ msgid "Log"
 #~ msgstr "Log"
-
-#~ msgid "Activity"
-#~ msgstr "Attività"
 
 #~ msgid "Area Maps"
 #~ msgstr "Mappe dell'area"

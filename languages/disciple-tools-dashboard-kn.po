@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2025-04-14T16:26:13+00:00\n"
+"POT-Creation-Date: 2025-10-07T12:48:38+00:00\n"
 "PO-Revision-Date: 2022-11-09 08:32+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Kannada <https://translate.disciple.tools/projects/disciple-"
@@ -32,34 +32,39 @@ msgid "Contact Workload"
 msgstr "ಕೆಲಸದ ಹೊರೆ ಸಂಪರ್ಕಿಸಿ"
 
 #: disciple-tools-dashboard.php:221
+msgid "Activity"
+msgstr "ಚಟುವಟಿಕೆ"
+
+#: disciple-tools-dashboard.php:226
 msgid "Faith Milestone Totals"
 msgstr "ನಂಬಿಕೆ ಮೈಲಿಗಲ್ಲು ಒಟ್ಟು"
 
-#: disciple-tools-dashboard.php:225
+#: disciple-tools-dashboard.php:230
 msgid "Seeker Path Progress"
 msgstr "ಸೀಕರ್ ಹಾದಿ ಪ್ರಗತಿ"
 
-#: disciple-tools-dashboard.php:229
+#: disciple-tools-dashboard.php:234
 msgid "Personal Benchmarks"
 msgstr "ವೈಯಕ್ತಿಕ ಮಾನದಂಡಗಳು"
 
-#: disciple-tools-dashboard.php:233
+#: disciple-tools-dashboard.php:238
 msgid "Tasks"
 msgstr "ಕಾರ್ಯಗಳು"
 
-#: disciple-tools-dashboard.php:310 disciple-tools-dashboard.php:321
+#: disciple-tools-dashboard.php:315 disciple-tools-dashboard.php:326
 msgid "Whoah, partner!"
 msgstr "ಓಹ್, ಪಾಲುದಾರ!"
 
-#: disciple-tools-dashboard.php:333
+#: disciple-tools-dashboard.php:338
 msgid "Method does not exist."
 msgstr "ವಿಧಾನವು ಅಸ್ತಿತ್ವದಲ್ಲಿಲ್ಲ."
 
-#: includes/functions.php:93
+#: includes/functions.php:97
 msgid "Dashboard"
 msgstr "ಡ್ಯಾಶ್‌ಬೋರ್ಡ್"
 
 #: includes/rest-api.php:180
+#, php-format
 msgid "%s days since last update"
 msgstr "ಕೊನೆಯ ನವೀಕರಣದ ನಂತರ%s ದಿನಗಳು"
 
@@ -110,6 +115,14 @@ msgstr "ಟಿಪ್ಪಣಿ ಹೊಂದಿಸಿಲ್ಲ"
 #: includes/rest-api.php:540
 msgid "See all"
 msgstr "ಎಲ್ಲವನ್ನೂ ನೋಡು"
+
+#: includes/rest-api.php:541
+msgid "more"
+msgstr ""
+
+#: includes/rest-api.php:542
+msgid "Less"
+msgstr ""
 
 #: includes/template-parts/tile.php:27
 msgid "Back"
@@ -775,9 +788,6 @@ msgstr "ಇನ್ನೂ ತೋರಿಸಲು ಡೇಟಾ ಇಲ್ಲ. ನೀ�
 
 #~ msgid "Log"
 #~ msgstr "ಲಾಗ್"
-
-#~ msgid "Activity"
-#~ msgstr "ಚಟುವಟಿಕೆ"
 
 #~ msgid "Area Maps"
 #~ msgstr "ಪ್ರದೇಶ ನಕ್ಷೆಗಳು"
