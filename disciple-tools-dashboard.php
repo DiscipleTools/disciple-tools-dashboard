@@ -214,25 +214,29 @@ class DT_Dashboard_Plugin {
      */
     public function register_tiles() {
         $tiles = DT_Dashboard_Plugin_Tiles::instance();
-        $tiles->register( new DT_Dashboard_Plugin_Tile( 'DT_Dashboard_Plugin_User_Activity', __( 'User Activity', 'disciple-tools-dashboard' ), [ 'priority' => 0 ] ) );
-        $tiles->register( new DT_Dashboard_Plugin_Tile( 'DT_Dashboard_Plugin_Active_Contact', __( 'Active Contacts', 'disciple-tools-dashboard' ), [ 'priority' => 3 ] ) );
-        $tiles->register( new DT_Dashboard_Plugin_Tile( 'DT_Dashboard_Plugin_Update_Needed', __( 'Update Needed', 'disciple-tools-dashboard' ), [ 'priority' => 2 ] ) );
-        $tiles->register( new DT_Dashboard_Plugin_Tile( 'DT_Dashboard_Plugin_Pending_Contacts', __( 'Pending Contacts', 'disciple-tools-dashboard' ), [ 'priority' => 1 ] ) );
-        $tiles->register( new DT_Dashboard_Plugin_Tile( 'DT_Dashboard_Plugin_Contact_Workload', __( 'Contact Workload', 'disciple-tools-dashboard' ), [ 'priority' => 4 ] ) );
+        $tiles->register( new DT_Dashboard_Plugin_Tile( 'DT_Dashboard_Plugin_Active_Contact', __( 'Active Contacts', 'disciple-tools-dashboard' ), [ 'priority' => 2 ] ) );
+        $tiles->register( new DT_Dashboard_Plugin_Tile( 'DT_Dashboard_Plugin_Update_Needed', __( 'Update Needed', 'disciple-tools-dashboard' ), [ 'priority' => 1 ] ) );
+        $tiles->register( new DT_Dashboard_Plugin_Tile( 'DT_Dashboard_Plugin_Pending_Contacts', __( 'Pending Contacts', 'disciple-tools-dashboard' ), [ 'priority' => 0 ] ) );
+        $tiles->register( new DT_Dashboard_Plugin_Tile( 'DT_Dashboard_Plugin_Contact_Workload', __( 'Contact Workload', 'disciple-tools-dashboard' ), [ 'priority' => 3 ] ) );
+        $tiles->register( new DT_Dashboard_Plugin_Tile( 'DT_Dashboard_Plugin_User_Activity', __( 'Activity', 'disciple-tools-dashboard' ), [
+            'priority' => 4,
+            'span' => 2
+        ] ) );
+
         $tiles->register( new DT_Dashboard_Plugin_Tile( 'DT_Dashboard_Plugin_Faith_Milestone_Totals', __( 'Faith Milestone Totals', 'disciple-tools-dashboard' ), [
-            'span' => 3,
+            'span' => 2,
             'priority' => 5
         ] ) );
         $tiles->register( new DT_Dashboard_Plugin_Tile( 'DT_Dashboard_Plugin_Seeker_Path_Progress', __( 'Seeker Path Progress', 'disciple-tools-dashboard' ), [
-            'span' => 4,
+            'span' => 2,
             'priority' => 6
         ] ) );
         $tiles->register( new DT_Dashboard_Plugin_Tile( 'DT_Dashboard_Plugin_Personal_Benchmarks', __( 'Personal Benchmarks', 'disciple-tools-dashboard' ), [
-            'span' => 4,
+            'span' => 2,
             'priority' => 7
         ] ) );
         $tiles->register( new DT_Dashboard_Plugin_Tile( 'DT_Dashboard_Plugin_Tasks', __( 'Tasks', 'disciple-tools-dashboard' ), [
-            'span' => 3,
+            'span' => 1,
             'priority' => 8
         ] ) );
     }
