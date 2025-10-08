@@ -3,18 +3,19 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2025-04-14T16:26:13+00:00\n"
-"PO-Revision-Date: 2022-11-09 08:32+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Serbian <https://translate.disciple.tools/projects/disciple-"
-"tools/disciple-tools-dashboard/sr_BA/>\n"
+"POT-Creation-Date: 2025-10-07T12:48:38+00:00\n"
+"PO-Revision-Date: 2025-10-08 13:03+0000\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
+"memory@weblate.org>\n"
+"Language-Team: Serbian <https://translate.disciple.tools/projects/"
+"disciple-tools/disciple-tools-dashboard/sr_BA/>\n"
 "Language: sr_BA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 5.13.3\n"
 
 #: disciple-tools-dashboard.php:217
 msgid "Active Contacts"
@@ -33,34 +34,40 @@ msgid "Contact Workload"
 msgstr "Контактирајте оптерећење"
 
 #: disciple-tools-dashboard.php:221
+msgid "Activity"
+msgstr "Активност"
+
+#: disciple-tools-dashboard.php:226
 msgid "Faith Milestone Totals"
 msgstr "Фаитх Милестоне Тотал"
 
-#: disciple-tools-dashboard.php:225
+#: disciple-tools-dashboard.php:230
 msgid "Seeker Path Progress"
 msgstr "Напредак пута трагача"
 
-#: disciple-tools-dashboard.php:229
+#: disciple-tools-dashboard.php:234
 msgid "Personal Benchmarks"
 msgstr "Лична мјерила"
 
-#: disciple-tools-dashboard.php:233
+#: disciple-tools-dashboard.php:238
 msgid "Tasks"
 msgstr "Задаци"
 
-#: disciple-tools-dashboard.php:310 disciple-tools-dashboard.php:321
+#: disciple-tools-dashboard.php:315 disciple-tools-dashboard.php:326
 msgid "Whoah, partner!"
 msgstr "Вхоах, партнеру!"
 
-#: disciple-tools-dashboard.php:333
+#: disciple-tools-dashboard.php:338
 msgid "Method does not exist."
 msgstr "Метода не постоји."
 
-#: includes/functions.php:93
+#: includes/functions.php:97
 msgid "Dashboard"
 msgstr "Командна табла"
 
 #: includes/rest-api.php:180
+#, fuzzy, php-format
+#| msgid "%s days since last update"
 msgid "%s days since last update"
 msgstr "% с дана од последњег ажурирања"
 
@@ -111,6 +118,14 @@ msgstr "Није постављена ниједна белешка"
 #: includes/rest-api.php:540
 msgid "See all"
 msgstr "Vidi sve"
+
+#: includes/rest-api.php:541
+msgid "more"
+msgstr ""
+
+#: includes/rest-api.php:542
+msgid "Less"
+msgstr "Manje"
 
 #: includes/template-parts/tile.php:27
 msgid "Back"
@@ -776,9 +791,6 @@ msgstr "Још нема података за приказ. Немате акт�
 
 #~ msgid "Log"
 #~ msgstr "Пријава"
-
-#~ msgid "Activity"
-#~ msgstr "Активност"
 
 #~ msgid "Area Maps"
 #~ msgstr "Мапе подручја"
