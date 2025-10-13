@@ -5,14 +5,14 @@
     window
       .makeRequest(
         'get',
-        `user?user=${wpApiDashboard.current_user_id}&section=activity`,
+        `activity-log?user_id=${wpApiDashboard.current_user_id}`,
         null,
-        'user-management/v1/',
+        'dt-users/v1/',
       )
       .done((activity) => {
 
         const activity_html = window.dtActivityLogs.makeActivityList(
-          activity.user_activity,
+          activity,
           wpApiDashboard.translations,
         );
 
