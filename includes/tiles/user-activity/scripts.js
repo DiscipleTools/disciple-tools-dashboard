@@ -5,7 +5,7 @@
     window
       .makeRequest(
         'get',
-        `activity-log?user_id=${wpApiDashboard.current_user_id}`,
+        `activity-log`,
         null,
         'dt-users/v1/',
       )
