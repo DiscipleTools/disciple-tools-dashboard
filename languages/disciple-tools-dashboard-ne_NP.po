@@ -3,9 +3,10 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2025-04-14T16:26:13+00:00\n"
-"PO-Revision-Date: 2023-02-21 02:22+0000\n"
-"Last-Translator: Mike Allbutt <mikeallbutt@gmail.com>\n"
+"POT-Creation-Date: 2025-10-14T08:47:09+00:00\n"
+"PO-Revision-Date: 2025-10-08 13:03+0000\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
+"memory@weblate.org>\n"
 "Language-Team: Nepali <https://translate.disciple.tools/projects/disciple-"
 "tools/disciple-tools-dashboard/ne_NP/>\n"
 "Language: ne_NP\n"
@@ -13,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 5.13.3\n"
 
 #: disciple-tools-dashboard.php:217
 msgid "Active Contacts"
@@ -32,34 +33,39 @@ msgid "Contact Workload"
 msgstr "वर्कलोड सम्पर्क गर्नुहोस्"
 
 #: disciple-tools-dashboard.php:221
+msgid "Activity"
+msgstr "गतिविधि"
+
+#: disciple-tools-dashboard.php:226
 msgid "Faith Milestone Totals"
 msgstr "विश्वास माईलस्टोन टोटलहरू"
 
-#: disciple-tools-dashboard.php:225
+#: disciple-tools-dashboard.php:230
 msgid "Seeker Path Progress"
 msgstr "खोजीकर्ता मार्ग प्रगति"
 
-#: disciple-tools-dashboard.php:229
+#: disciple-tools-dashboard.php:234
 msgid "Personal Benchmarks"
 msgstr "व्यक्तिगत बेन्चमार्कहरू"
 
-#: disciple-tools-dashboard.php:233
+#: disciple-tools-dashboard.php:238
 msgid "Tasks"
 msgstr "कार्यहरू"
 
-#: disciple-tools-dashboard.php:310 disciple-tools-dashboard.php:321
+#: disciple-tools-dashboard.php:315 disciple-tools-dashboard.php:326
 msgid "Whoah, partner!"
 msgstr "ओह, साथी!"
 
-#: disciple-tools-dashboard.php:333
+#: disciple-tools-dashboard.php:338
 msgid "Method does not exist."
 msgstr "विधि अवस्थित छैन।"
 
-#: includes/functions.php:93
+#: includes/functions.php:97
 msgid "Dashboard"
 msgstr "ड्यासबोर्ड"
 
 #: includes/rest-api.php:180
+#, php-format
 msgid "%s days since last update"
 msgstr "पछिल्लो अद्यावधिक पछि%s दिनहरू"
 
@@ -110,6 +116,14 @@ msgstr "नोट बनाईयको छैन"
 #: includes/rest-api.php:540
 msgid "See all"
 msgstr "सबै हेर"
+
+#: includes/rest-api.php:541
+msgid "more"
+msgstr ""
+
+#: includes/rest-api.php:542
+msgid "Less"
+msgstr "थोरै"
 
 #: includes/template-parts/tile.php:27
 msgid "Back"
@@ -772,9 +786,6 @@ msgstr "देखाउनको लागि कुनै डाटा छै�
 
 #~ msgid "Log"
 #~ msgstr "लग"
-
-#~ msgid "Activity"
-#~ msgstr "गतिविधि"
 
 #~ msgid "Area Maps"
 #~ msgstr "क्षेत्र नक्शा"

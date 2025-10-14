@@ -3,9 +3,10 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2025-04-14T16:26:13+00:00\n"
-"PO-Revision-Date: 2022-11-09 08:32+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"POT-Creation-Date: 2025-10-14T08:47:09+00:00\n"
+"PO-Revision-Date: 2025-10-08 13:03+0000\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
+"memory@weblate.org>\n"
 "Language-Team: Persian <https://translate.disciple.tools/projects/disciple-"
 "tools/disciple-tools-dashboard/fa_IR/>\n"
 "Language: fa_IR\n"
@@ -13,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 5.13.3\n"
 
 #: disciple-tools-dashboard.php:217
 msgid "Active Contacts"
@@ -32,34 +33,40 @@ msgid "Contact Workload"
 msgstr "با حجم کار تماس بگیرید"
 
 #: disciple-tools-dashboard.php:221
+msgid "Activity"
+msgstr "فعالیت"
+
+#: disciple-tools-dashboard.php:226
 msgid "Faith Milestone Totals"
 msgstr "مجموع نقاط عطف ایمان"
 
-#: disciple-tools-dashboard.php:225
+#: disciple-tools-dashboard.php:230
 msgid "Seeker Path Progress"
 msgstr "مسیر جستجوی پیشرفت"
 
-#: disciple-tools-dashboard.php:229
+#: disciple-tools-dashboard.php:234
 msgid "Personal Benchmarks"
 msgstr "معیارهای شخصی"
 
-#: disciple-tools-dashboard.php:233
+#: disciple-tools-dashboard.php:238
 msgid "Tasks"
 msgstr "وظایف"
 
-#: disciple-tools-dashboard.php:310 disciple-tools-dashboard.php:321
+#: disciple-tools-dashboard.php:315 disciple-tools-dashboard.php:326
 msgid "Whoah, partner!"
 msgstr "وای ، شریک!"
 
-#: disciple-tools-dashboard.php:333
+#: disciple-tools-dashboard.php:338
 msgid "Method does not exist."
 msgstr "روش وجود ندارد"
 
-#: includes/functions.php:93
+#: includes/functions.php:97
 msgid "Dashboard"
 msgstr "داشبورد"
 
 #: includes/rest-api.php:180
+#, fuzzy, php-format
+#| msgid "%s days since last update"
 msgid "%s days since last update"
 msgstr "٪ s روز از آخرین به روزرسانی"
 
@@ -110,6 +117,14 @@ msgstr "هیچ یادداشتی تنظیم نشده است"
 #: includes/rest-api.php:540
 msgid "See all"
 msgstr "همه را ببینید"
+
+#: includes/rest-api.php:541
+msgid "more"
+msgstr ""
+
+#: includes/rest-api.php:542
+msgid "Less"
+msgstr "کمتر"
 
 #: includes/template-parts/tile.php:27
 msgid "Back"
@@ -776,9 +791,6 @@ msgstr "هنوز داده ای برای نمایش وجود ندارد شما ه
 
 #~ msgid "Log"
 #~ msgstr "ورود به سیستم"
-
-#~ msgid "Activity"
-#~ msgstr "فعالیت"
 
 #~ msgid "Area Maps"
 #~ msgstr "نقشه های منطقه"
