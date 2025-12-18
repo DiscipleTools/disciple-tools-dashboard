@@ -214,6 +214,13 @@ class DT_Dashboard_Plugin {
      */
     public function register_tiles() {
         $tiles = DT_Dashboard_Plugin_Tiles::instance();
+        
+        // Register Home Apps tile first (template will handle conditional display)
+        $tiles->register( new DT_Dashboard_Plugin_Tile( 'DT_Dashboard_Plugin_Home_Apps', __( 'Your Apps', 'disciple-tools-dashboard' ), [
+            'priority' => -1,
+            'span' => 4
+        ] ) );
+        
         $tiles->register( new DT_Dashboard_Plugin_Tile( 'DT_Dashboard_Plugin_Active_Contact', __( 'Active Contacts', 'disciple-tools-dashboard' ), [ 'priority' => 2 ] ) );
         $tiles->register( new DT_Dashboard_Plugin_Tile( 'DT_Dashboard_Plugin_Update_Needed', __( 'Update Needed', 'disciple-tools-dashboard' ), [ 'priority' => 1 ] ) );
         $tiles->register( new DT_Dashboard_Plugin_Tile( 'DT_Dashboard_Plugin_Pending_Contacts', __( 'Pending Contacts', 'disciple-tools-dashboard' ), [ 'priority' => 0 ] ) );
