@@ -9,6 +9,28 @@
     grid-column: 1 / -1; /* Span all columns */
 }
 
+/* Hide tile header and footer */
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Home_Apps .tile-header,
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Home_Apps .tile-footer {
+    display: none !important;
+}
+
+/* Title styling in tile body */
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Home_Apps .home-apps-title {
+    margin: 0 0 1rem 0;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    padding: 0;
+    display: inline-block;
+}
+
+/* Spinner positioning */
+.dashboard-page #dash-tile--DT_Dashboard_Plugin_Home_Apps .tile-body--home-apps .stats-spinner {
+    margin-left: 0.5rem;
+    vertical-align: middle;
+}
+
 /* Carousel wrapper - horizontal scroll container */
 .home-apps-carousel-wrapper {
     overflow-x: auto;
@@ -74,6 +96,13 @@
     align-items: center;
     justify-content: flex-start;
     width: 75px; /* Match home screen size */
+    max-width: 75px; /* Ensure it doesn't exceed width */
+    box-sizing: border-box;
+}
+
+/* Hidden app cards (for scrolling) */
+.home-apps-carousel .app-card-wrapper.hidden {
+    display: none;
 }
 
 /* App card - matches Home Screen styling */
@@ -103,6 +132,41 @@
     border-color: var(--blue);
     text-decoration: none;
     color: var(--primary-color);
+}
+
+/* Show More card - blue background with white icon */
+.home-apps-carousel .app-card.show-more-card {
+    background: var(--blue);
+    border-color: var(--blue);
+}
+
+.home-apps-carousel .app-card.show-more-card:hover {
+    background: var(--blue);
+    border-color: var(--blue);
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.home-apps-carousel .show-more-card .app-icon {
+    color: #ffffff;
+}
+
+.home-apps-carousel .show-more-card .app-icon i {
+    color: #ffffff !important;
+}
+
+/* Disabled Show More card - grayed out and non-clickable */
+.home-apps-carousel .app-card.show-more-card.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+    background: var(--blue);
+    border-color: var(--blue);
+}
+
+.home-apps-carousel .app-card.show-more-card.disabled:hover {
+    transform: none;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* App icon container */
@@ -141,13 +205,15 @@
     padding: 0;
     color: var(--primary-color);
     line-height: 1.2;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
     max-width: 75px;
     width: 100%;
     display: block;
     text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    /* Allow text to wrap to multiple lines */
+    white-space: normal;
 }
 
 /* Responsive adjustments - Mobile (max-width: 640px) */
@@ -183,14 +249,15 @@
     .home-apps-carousel .app-title {
         font-size: 0.65rem;
         max-width: 65px;
+        white-space: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
-    /* Adjust tile header for mobile */
-    .dashboard-page #dash-tile--DT_Dashboard_Plugin_Home_Apps .tile-header {
+    /* Adjust title for mobile */
+    .dashboard-page #dash-tile--DT_Dashboard_Plugin_Home_Apps .home-apps-title {
         font-size: 1rem;
-        padding: 15px;
-        height: auto;
-        min-height: 50px;
+        margin-bottom: 0.75rem;
     }
 }
 
@@ -223,15 +290,14 @@
     .home-apps-carousel .app-title {
         font-size: 0.6rem;
         max-width: 60px;
+        white-space: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
-    .dashboard-page #dash-tile--DT_Dashboard_Plugin_Home_Apps .tile-header {
+    .dashboard-page #dash-tile--DT_Dashboard_Plugin_Home_Apps .home-apps-title {
         font-size: 0.9rem;
-        padding: 12px;
-    }
-
-    .dashboard-page #dash-tile--DT_Dashboard_Plugin_Home_Apps .tile-body {
-        padding: 15px;
+        margin-bottom: 0.5rem;
     }
 }
 
@@ -241,7 +307,7 @@
         grid-column: 1 / -1; /* Ensure full width on tablet */
     }
 
-    .dashboard-page #dash-tile--DT_Dashboard_Plugin_Home_Apps .tile-header {
+    .dashboard-page #dash-tile--DT_Dashboard_Plugin_Home_Apps .home-apps-title {
         font-size: 1.2rem;
     }
 }

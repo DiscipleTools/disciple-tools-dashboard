@@ -27,20 +27,43 @@ if ( empty( $apps ) ) {
     echo '<style>#dash-tile--' . esc_attr( $tile->handle ) . ' { display: none !important; }</style>';
     return;
 }
+
+// Get Home Screen app URL for "Show More" card
+$app_key = 'apps_launcher_magic_key';
+$app_user_key = get_user_option( $app_key );
+
+// Construct URL if user has activated the Home Screen app
+$show_more_url = false;
+if ( $app_user_key && !empty( $app_user_key ) ) {
+    // Try to get URL base from apps_list filter, fallback to hardcoded value
+    $apps_list = apply_filters( 'dt_settings_apps_list', [] );
+    $url_base = 'apps/launcher'; // Default fallback
+    if ( isset( $apps_list[$app_key]['url_base'] ) ) {
+        $url_base = $apps_list[$app_key]['url_base'];
+    }
+    $show_more_url = trailingslashit( trailingslashit( site_url() ) . $url_base ) . $app_user_key;
+}
 ?>
 
-<div class="tile-header">
-    <?php echo esc_html( $tile->label ); ?>
+<style>
+/* Hide tile header and footer for Home Apps tile */
+#dash-tile--<?php echo esc_attr( $tile->handle ); ?> .tile-header,
+#dash-tile--<?php echo esc_attr( $tile->handle ); ?> .tile-footer {
+    display: none !important;
+}
+</style>
+
+<div class="tile-body tile-body--home-apps">
+    <h2 class="home-apps-title"><?php echo esc_html( $tile->label ); ?></h2>
     <div id="home-apps-spinner-<?php echo esc_attr( $tile->handle ); ?>"
          style="display: inline-block"
          class="stats-spinner loading-spinner active">
     </div>
-</div>
-<div class="tile-body tile-body--home-apps">
     <div class="home-apps-carousel-wrapper">
-        <div class="home-apps-carousel" 
+        <div class="home-apps-carousel"
              id="home-apps-carousel-<?php echo esc_attr( $tile->handle ); ?>"
-             data-apps='<?php echo esc_attr( wp_json_encode( $apps ) ); ?>'>
+             data-apps='<?php echo esc_attr( wp_json_encode( $apps ) ); ?>'
+             data-show-more-url="<?php echo esc_attr( $show_more_url ? esc_url( $show_more_url ) : '' ); ?>">
             <!-- Apps will be rendered here via JavaScript -->
         </div>
     </div>
