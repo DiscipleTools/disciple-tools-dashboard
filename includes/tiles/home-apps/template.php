@@ -13,8 +13,8 @@ if ( !class_exists( 'DT_Home_Apps' ) ) {
     }
 }
 
-// Get apps via filter hook
-$apps = apply_filters( 'dt_home_screen_apps', [] );
+// Get apps via direct method call
+$apps = DT_Home_Apps::instance()->get_apps_for_frontend( 'app' );
 
 // Ensure apps is an array
 if ( !is_array( $apps ) ) {
