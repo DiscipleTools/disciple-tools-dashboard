@@ -5,11 +5,11 @@ msgstr ""
 "Project-Id-Version: Disciple.Tools - Dashboard 1.1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2025-04-14T16:26:13+00:00\n"
+"POT-Creation-Date: 2026-01-13T14:59:20+00:00\n"
 "PO-Revision-Date: 2025-05-12 02:00+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
-"Language-Team: Polish <https://translate.disciple.tools/projects/"
-"disciple-tools/disciple-tools-dashboard/pl/>\n"
+"Language-Team: Polish <https://translate.disciple.tools/projects/disciple-"
+"tools/disciple-tools-dashboard/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,41 +29,46 @@ msgstr "Potrzebna aktualizacja"
 
 #: disciple-tools-dashboard.php:219
 msgid "Pending Contacts"
-msgstr ""
+msgstr "Oczekujące osoby"
 
 #: disciple-tools-dashboard.php:220
 msgid "Contact Workload"
-msgstr ""
+msgstr "Obciążenie kontaktami"
 
 #: disciple-tools-dashboard.php:221
+msgid "Activity"
+msgstr "Aktywność"
+
+#: disciple-tools-dashboard.php:226
 msgid "Faith Milestone Totals"
 msgstr "Kamienie milowe wiary"
 
-#: disciple-tools-dashboard.php:225
+#: disciple-tools-dashboard.php:230
 msgid "Seeker Path Progress"
-msgstr ""
+msgstr "Postęp ścieżki poszukiwacza"
 
-#: disciple-tools-dashboard.php:229
+#: disciple-tools-dashboard.php:234
 msgid "Personal Benchmarks"
-msgstr ""
+msgstr "Osobiste wzorce"
 
-#: disciple-tools-dashboard.php:233
+#: disciple-tools-dashboard.php:238
 msgid "Tasks"
 msgstr "Zadania"
 
-#: disciple-tools-dashboard.php:310 disciple-tools-dashboard.php:321
+#: disciple-tools-dashboard.php:315 disciple-tools-dashboard.php:326
 msgid "Whoah, partner!"
-msgstr ""
+msgstr "Hej, partnerze!"
 
-#: disciple-tools-dashboard.php:333
+#: disciple-tools-dashboard.php:338
 msgid "Method does not exist."
-msgstr ""
+msgstr "Metoda nie istnieje."
 
-#: includes/functions.php:93
+#: includes/functions.php:97
 msgid "Dashboard"
 msgstr "Pulpit"
 
 #: includes/rest-api.php:180
+#, php-format
 msgid "%s days since last update"
 msgstr "%s dni od ostatniej aktualizacji"
 
@@ -77,7 +82,7 @@ msgstr "Odrzuć"
 
 #: includes/rest-api.php:531
 msgid "# Contacts Assigned"
-msgstr ""
+msgstr "# Przypisane osoby"
 
 #: includes/rest-api.php:532
 msgid "# First Meetings"
@@ -89,7 +94,7 @@ msgstr "Kamienie milowe wiary"
 
 #: includes/rest-api.php:534
 msgid "Hurray! You are caught up."
-msgstr ""
+msgstr "Hurra! Wszystkie zadania ukończone."
 
 #: includes/rest-api.php:535
 msgid "remove"
@@ -115,13 +120,41 @@ msgstr "Brak utworzonych notatek"
 msgid "See all"
 msgstr "Zobacz wszystko"
 
+#: includes/rest-api.php:541
+msgid "more"
+msgstr "więcej"
+
+#: includes/rest-api.php:542
+msgid "Less"
+msgstr "Mniej"
+
+#: includes/template-admin.php:12
+msgid "Choose the default dashboard layout for new users."
+msgstr "Wybierz domyślny układ pulpitu dla nowych użytkowników."
+
+#: includes/template-admin.php:16
+msgid "ACTIVE TILES"
+msgstr "AKTYWNE KAFELKI"
+
+#: includes/template-admin.php:34
+msgid "Hide"
+msgstr "Ukryj"
+
+#: includes/template-admin.php:45
+msgid "HIDDEN TILES"
+msgstr "UKRYTE KAFELKI"
+
+#: includes/template-admin.php:60
+msgid "Show"
+msgstr "Pokaż"
+
 #: includes/template-parts/tile.php:27
 msgid "Back"
 msgstr "Powrót"
 
 #: includes/template-parts/tile.php:31
 msgid "Forward"
-msgstr ""
+msgstr "Dalej"
 
 #: includes/template-parts/tile.php:35
 msgid "Remove"
@@ -129,13 +162,13 @@ msgstr "Usuń"
 
 #: includes/tiles/active-contact/template.php:7
 msgid "Add a contact"
-msgstr ""
+msgstr "Dodaj kontakt"
 
 #: includes/tiles/contact-workload/template.php:8
 msgid ""
 "Choose an option to let the dispatcher(s) know if you are ready for new "
 "contacts"
-msgstr ""
+msgstr "Wybierz opcję, aby poinformować koordynatora, czy jesteś gotowy na nowe kontakty"
 
 #: includes/tiles/contact-workload/template.php:21
 msgid "Set travel or dates unavailable"
@@ -143,8 +176,8 @@ msgstr "Zaplanowana podróż lub daty niedostępności"
 
 #: includes/tiles/faith-milestone-totals/template.php:7
 msgid "Milestones on your active contacts"
-msgstr ""
+msgstr "Kamienie milowe na twoich aktywnych kontaktach"
 
 #: includes/tiles/seeker-path-progress/template.php:7
 msgid "No data to show yet. You have no active contacts"
-msgstr ""
+msgstr "Brak danych do wyświetlenia. Nie masz aktywnych kontaktów"
