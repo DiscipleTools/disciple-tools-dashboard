@@ -3,9 +3,10 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2025-04-14T16:26:13+00:00\n"
-"PO-Revision-Date: 2022-11-09 08:32+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"POT-Creation-Date: 2025-10-14T08:47:09+00:00\n"
+"PO-Revision-Date: 2025-10-08 13:03+0000\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
+"memory@weblate.org>\n"
 "Language-Team: Macedonian <https://translate.disciple.tools/projects/"
 "disciple-tools/disciple-tools-dashboard/mk_MK/>\n"
 "Language: mk_MK\n"
@@ -13,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 5.13.3\n"
 
 #: disciple-tools-dashboard.php:217
 msgid "Active Contacts"
@@ -32,34 +33,39 @@ msgid "Contact Workload"
 msgstr "Контакт обем на работа"
 
 #: disciple-tools-dashboard.php:221
+msgid "Activity"
+msgstr "Активност"
+
+#: disciple-tools-dashboard.php:226
 msgid "Faith Milestone Totals"
 msgstr "Вкупни пресвртници на верата"
 
-#: disciple-tools-dashboard.php:225
+#: disciple-tools-dashboard.php:230
 msgid "Seeker Path Progress"
 msgstr "Напредок на патот на трагачите"
 
-#: disciple-tools-dashboard.php:229
+#: disciple-tools-dashboard.php:234
 msgid "Personal Benchmarks"
 msgstr "Лични репери"
 
-#: disciple-tools-dashboard.php:233
+#: disciple-tools-dashboard.php:238
 msgid "Tasks"
 msgstr "Задачи"
 
-#: disciple-tools-dashboard.php:310 disciple-tools-dashboard.php:321
+#: disciple-tools-dashboard.php:315 disciple-tools-dashboard.php:326
 msgid "Whoah, partner!"
 msgstr "Ау, партнер!"
 
-#: disciple-tools-dashboard.php:333
+#: disciple-tools-dashboard.php:338
 msgid "Method does not exist."
 msgstr "Метод не постои."
 
-#: includes/functions.php:93
+#: includes/functions.php:97
 msgid "Dashboard"
 msgstr "Табла"
 
 #: includes/rest-api.php:180
+#, php-format
 msgid "%s days since last update"
 msgstr "%s дена од последното ажурирање"
 
@@ -110,6 +116,14 @@ msgstr "Нема поставено белешка"
 #: includes/rest-api.php:540
 msgid "See all"
 msgstr "Види ги сите"
+
+#: includes/rest-api.php:541
+msgid "more"
+msgstr ""
+
+#: includes/rest-api.php:542
+msgid "Less"
+msgstr "Помалку"
 
 #: includes/template-parts/tile.php:27
 msgid "Back"
@@ -779,9 +793,6 @@ msgstr "Сè уште нема податоци за прикажување. Н�
 
 #~ msgid "Log"
 #~ msgstr "Дневник"
-
-#~ msgid "Activity"
-#~ msgstr "Активност"
 
 #~ msgid "Area Maps"
 #~ msgstr "Мапи со област"
