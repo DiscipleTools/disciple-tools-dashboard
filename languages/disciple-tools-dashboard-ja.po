@@ -3,9 +3,10 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2025-04-14T16:26:13+00:00\n"
-"PO-Revision-Date: 2022-11-09 08:32+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"POT-Creation-Date: 2025-10-14T08:47:09+00:00\n"
+"PO-Revision-Date: 2025-10-08 13:03+0000\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
+"memory@weblate.org>\n"
 "Language-Team: Japanese <https://translate.disciple.tools/projects/disciple-"
 "tools/disciple-tools-dashboard/ja/>\n"
 "Language: ja\n"
@@ -13,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 5.13.3\n"
 
 #: disciple-tools-dashboard.php:217
 msgid "Active Contacts"
@@ -32,34 +33,40 @@ msgid "Contact Workload"
 msgstr "ワークロードに連絡する"
 
 #: disciple-tools-dashboard.php:221
+msgid "Activity"
+msgstr "アクティビティ"
+
+#: disciple-tools-dashboard.php:226
 msgid "Faith Milestone Totals"
 msgstr "信仰のマイルストーンの合計"
 
-#: disciple-tools-dashboard.php:225
+#: disciple-tools-dashboard.php:230
 msgid "Seeker Path Progress"
 msgstr "シーカーパスの進捗状況"
 
-#: disciple-tools-dashboard.php:229
+#: disciple-tools-dashboard.php:234
 msgid "Personal Benchmarks"
 msgstr "個人のベンチマーク"
 
-#: disciple-tools-dashboard.php:233
+#: disciple-tools-dashboard.php:238
 msgid "Tasks"
 msgstr "タスク"
 
-#: disciple-tools-dashboard.php:310 disciple-tools-dashboard.php:321
+#: disciple-tools-dashboard.php:315 disciple-tools-dashboard.php:326
 msgid "Whoah, partner!"
 msgstr "おっと、パートナー！"
 
-#: disciple-tools-dashboard.php:333
+#: disciple-tools-dashboard.php:338
 msgid "Method does not exist."
 msgstr "メソッドが存在しません。"
 
-#: includes/functions.php:93
+#: includes/functions.php:97
 msgid "Dashboard"
 msgstr "ダッシュボード"
 
 #: includes/rest-api.php:180
+#, fuzzy, php-format
+#| msgid "%s days since last update"
 msgid "%s days since last update"
 msgstr "最後の更新から％s日"
 
@@ -110,6 +117,14 @@ msgstr "ノートセットなし"
 #: includes/rest-api.php:540
 msgid "See all"
 msgstr "全てを見る"
+
+#: includes/rest-api.php:541
+msgid "more"
+msgstr ""
+
+#: includes/rest-api.php:542
+msgid "Less"
+msgstr "より少ない"
 
 #: includes/template-parts/tile.php:27
 msgid "Back"
@@ -776,9 +791,6 @@ msgstr "表示するデータはまだありません。アクティブな連絡
 
 #~ msgid "Log"
 #~ msgstr "ログ"
-
-#~ msgid "Activity"
-#~ msgstr "アクティビティ"
 
 #~ msgid "Area Maps"
 #~ msgstr "エリアマップ"

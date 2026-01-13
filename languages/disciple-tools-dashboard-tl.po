@@ -3,9 +3,10 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2025-04-14T16:26:13+00:00\n"
-"PO-Revision-Date: 2022-11-09 08:32+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"POT-Creation-Date: 2025-10-14T08:47:09+00:00\n"
+"PO-Revision-Date: 2025-10-08 13:03+0000\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
+"memory@weblate.org>\n"
 "Language-Team: Tagalog <https://translate.disciple.tools/projects/disciple-"
 "tools/disciple-tools-dashboard/tl/>\n"
 "Language: tl\n"
@@ -14,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1 && n != 2 && n != 3 && (n % 10 == 4 "
 "|| n % 10 == 6 || n % 10 == 9);\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 5.13.3\n"
 
 #: disciple-tools-dashboard.php:217
 msgid "Active Contacts"
@@ -33,34 +34,39 @@ msgid "Contact Workload"
 msgstr "Makipag-ugnay sa Workload"
 
 #: disciple-tools-dashboard.php:221
+msgid "Activity"
+msgstr "Aktibidad"
+
+#: disciple-tools-dashboard.php:226
 msgid "Faith Milestone Totals"
 msgstr "Mga kabuuan ng Faith Milestone"
 
-#: disciple-tools-dashboard.php:225
+#: disciple-tools-dashboard.php:230
 msgid "Seeker Path Progress"
 msgstr "Pag-unlad ng Path ng Naghahanap"
 
-#: disciple-tools-dashboard.php:229
+#: disciple-tools-dashboard.php:234
 msgid "Personal Benchmarks"
 msgstr "Mga Personal na Benchmark"
 
-#: disciple-tools-dashboard.php:233
+#: disciple-tools-dashboard.php:238
 msgid "Tasks"
 msgstr "Mga Gawain"
 
-#: disciple-tools-dashboard.php:310 disciple-tools-dashboard.php:321
+#: disciple-tools-dashboard.php:315 disciple-tools-dashboard.php:326
 msgid "Whoah, partner!"
 msgstr "Whoah, kapareha!"
 
-#: disciple-tools-dashboard.php:333
+#: disciple-tools-dashboard.php:338
 msgid "Method does not exist."
 msgstr "Walang pamamaraan."
 
-#: includes/functions.php:93
+#: includes/functions.php:97
 msgid "Dashboard"
 msgstr "Dashboard"
 
 #: includes/rest-api.php:180
+#, php-format
 msgid "%s days since last update"
 msgstr "%s araw mula noong huling pag-update"
 
@@ -111,6 +117,14 @@ msgstr "Walang itinakdang tala"
 #: includes/rest-api.php:540
 msgid "See all"
 msgstr "Tingnan Lahat"
+
+#: includes/rest-api.php:541
+msgid "more"
+msgstr ""
+
+#: includes/rest-api.php:542
+msgid "Less"
+msgstr "Mas Kaunti"
 
 #: includes/template-parts/tile.php:27
 msgid "Back"
@@ -784,9 +798,6 @@ msgstr "Wala pang maipakitang data. Wala kang mga aktibong contact"
 
 #~ msgid "Log"
 #~ msgstr "Mag-log"
-
-#~ msgid "Activity"
-#~ msgstr "Aktibidad"
 
 #~ msgid "Area Maps"
 #~ msgstr "Mga Mapa ng Lugar"

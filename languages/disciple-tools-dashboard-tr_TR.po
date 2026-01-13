@@ -3,9 +3,10 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2025-04-14T16:26:13+00:00\n"
-"PO-Revision-Date: 2023-05-31 10:20+0000\n"
-"Last-Translator: Luke Baumgartner <baumgartner.luke@gmail.com>\n"
+"POT-Creation-Date: 2025-10-14T08:47:09+00:00\n"
+"PO-Revision-Date: 2025-10-08 13:03+0000\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
+"memory@weblate.org>\n"
 "Language-Team: Turkish <https://translate.disciple.tools/projects/disciple-"
 "tools/disciple-tools-dashboard/tr_TR/>\n"
 "Language: tr_TR\n"
@@ -13,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 5.13.3\n"
 
 #: disciple-tools-dashboard.php:217
 msgid "Active Contacts"
@@ -32,34 +33,39 @@ msgid "Contact Workload"
 msgstr "İletişim İş Yükü"
 
 #: disciple-tools-dashboard.php:221
+msgid "Activity"
+msgstr "Aktivite"
+
+#: disciple-tools-dashboard.php:226
 msgid "Faith Milestone Totals"
 msgstr "İnanç Kilometre Taşı Toplamları"
 
-#: disciple-tools-dashboard.php:225
+#: disciple-tools-dashboard.php:230
 msgid "Seeker Path Progress"
 msgstr "Arayıcı Yol İlerlemesi"
 
-#: disciple-tools-dashboard.php:229
+#: disciple-tools-dashboard.php:234
 msgid "Personal Benchmarks"
 msgstr "Kişisel Karşılaştırmalar"
 
-#: disciple-tools-dashboard.php:233
+#: disciple-tools-dashboard.php:238
 msgid "Tasks"
 msgstr "Görevler"
 
-#: disciple-tools-dashboard.php:310 disciple-tools-dashboard.php:321
+#: disciple-tools-dashboard.php:315 disciple-tools-dashboard.php:326
 msgid "Whoah, partner!"
 msgstr "Whoah, ortak!"
 
-#: disciple-tools-dashboard.php:333
+#: disciple-tools-dashboard.php:338
 msgid "Method does not exist."
 msgstr "Yöntem mevcut değil."
 
-#: includes/functions.php:93
+#: includes/functions.php:97
 msgid "Dashboard"
 msgstr "Gösterge Paneli"
 
 #: includes/rest-api.php:180
+#, php-format
 msgid "%s days since last update"
 msgstr "Son güncellemeden bu yan %s gün"
 
@@ -110,6 +116,14 @@ msgstr "Not ayarlanmadı"
 #: includes/rest-api.php:540
 msgid "See all"
 msgstr "Tümünü Gör"
+
+#: includes/rest-api.php:541
+msgid "more"
+msgstr ""
+
+#: includes/rest-api.php:542
+msgid "Less"
+msgstr "Daha Az"
 
 #: includes/template-parts/tile.php:27
 msgid "Back"
@@ -774,9 +788,6 @@ msgstr "Henüz gösterilecek veri yok. Aktif kişiniz yok"
 
 #~ msgid "Log"
 #~ msgstr "Kayıt"
-
-#~ msgid "Activity"
-#~ msgstr "Aktivite"
 
 #~ msgid "Area Maps"
 #~ msgstr "Alan Haritaları"

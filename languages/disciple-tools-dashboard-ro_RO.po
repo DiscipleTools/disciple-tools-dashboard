@@ -3,9 +3,10 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2025-04-14T16:26:13+00:00\n"
-"PO-Revision-Date: 2022-11-09 08:32+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"POT-Creation-Date: 2025-10-14T08:47:09+00:00\n"
+"PO-Revision-Date: 2025-10-08 13:03+0000\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
+"memory@weblate.org>\n"
 "Language-Team: Romanian <https://translate.disciple.tools/projects/disciple-"
 "tools/disciple-tools-dashboard/ro_RO/>\n"
 "Language: ro_RO\n"
@@ -14,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 5.13.3\n"
 
 #: disciple-tools-dashboard.php:217
 msgid "Active Contacts"
@@ -33,34 +34,39 @@ msgid "Contact Workload"
 msgstr "Contactați volumul de lucru"
 
 #: disciple-tools-dashboard.php:221
+msgid "Activity"
+msgstr "Activitate"
+
+#: disciple-tools-dashboard.php:226
 msgid "Faith Milestone Totals"
 msgstr "Totalul etapei credinței"
 
-#: disciple-tools-dashboard.php:225
+#: disciple-tools-dashboard.php:230
 msgid "Seeker Path Progress"
 msgstr "Progresul Căii Căutătorului"
 
-#: disciple-tools-dashboard.php:229
+#: disciple-tools-dashboard.php:234
 msgid "Personal Benchmarks"
 msgstr "Repere personale"
 
-#: disciple-tools-dashboard.php:233
+#: disciple-tools-dashboard.php:238
 msgid "Tasks"
 msgstr "Sarcini"
 
-#: disciple-tools-dashboard.php:310 disciple-tools-dashboard.php:321
+#: disciple-tools-dashboard.php:315 disciple-tools-dashboard.php:326
 msgid "Whoah, partner!"
 msgstr "Whoah, partener!"
 
-#: disciple-tools-dashboard.php:333
+#: disciple-tools-dashboard.php:338
 msgid "Method does not exist."
 msgstr "Metoda nu există."
 
-#: includes/functions.php:93
+#: includes/functions.php:97
 msgid "Dashboard"
 msgstr "Bord"
 
 #: includes/rest-api.php:180
+#, php-format
 msgid "%s days since last update"
 msgstr "%s zile de la ultima actualizare"
 
@@ -111,6 +117,14 @@ msgstr "Nicio notă setată"
 #: includes/rest-api.php:540
 msgid "See all"
 msgstr "Vedeți tot"
+
+#: includes/rest-api.php:541
+msgid "more"
+msgstr ""
+
+#: includes/rest-api.php:542
+msgid "Less"
+msgstr "Mai puține"
 
 #: includes/template-parts/tile.php:27
 msgid "Back"
@@ -783,9 +797,6 @@ msgstr "Nu există date de afișat încă. Nu aveți contacte active"
 
 #~ msgid "Log"
 #~ msgstr "Buturuga"
-
-#~ msgid "Activity"
-#~ msgstr "Activitate"
 
 #~ msgid "Area Maps"
 #~ msgstr "Hărți de zonă"

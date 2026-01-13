@@ -1,16 +1,17 @@
-# Copyright (C) 2024 
+# Copyright (C) 2025 
 # This file is distributed under the same license as the Disciple.Tools - Dashboard plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Disciple.Tools - Dashboard 1.3.2\n"
+"Project-Id-Version: Disciple.Tools - Dashboard 1.4.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
 "POT-Creation-Date: 2025-10-14T08:47:09+00:00\n"
 "PO-Revision-Date: 2026-01-13 00:04+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
-"Language-Team: Bengali (India) <https://translate.disciple.tools/projects/"
-"disciple-tools/disciple-tools-dashboard/bn_IN/>\n"
-"Language: bn_IN\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
+"memory@weblate.org>\n"
+"Language-Team: Kyrgyz <https://translate.disciple.tools/projects/disciple-"
+"tools/disciple-tools-dashboard/ky/>\n"
+"Language: ky\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,11 +21,11 @@ msgstr ""
 
 #: disciple-tools-dashboard.php:217
 msgid "Active Contacts"
-msgstr "সক্রিয় পরিচিতি"
+msgstr ""
 
 #: disciple-tools-dashboard.php:218
 msgid "Update Needed"
-msgstr "আপডেট প্রয়োজন"
+msgstr ""
 
 #: disciple-tools-dashboard.php:219
 msgid "Pending Contacts"
@@ -36,7 +37,7 @@ msgstr ""
 
 #: disciple-tools-dashboard.php:221
 msgid "Activity"
-msgstr "কার্যকলাপ"
+msgstr ""
 
 #: disciple-tools-dashboard.php:226
 msgid "Faith Milestone Totals"
@@ -52,7 +53,7 @@ msgstr ""
 
 #: disciple-tools-dashboard.php:238
 msgid "Tasks"
-msgstr "কাজ"
+msgstr ""
 
 #: disciple-tools-dashboard.php:315 disciple-tools-dashboard.php:326
 msgid "Whoah, partner!"
@@ -64,20 +65,20 @@ msgstr ""
 
 #: includes/functions.php:97
 msgid "Dashboard"
-msgstr "ড্যাশবোর্ড"
+msgstr "Башкаруу панели"
 
 #: includes/rest-api.php:180
 #, php-format
 msgid "%s days since last update"
-msgstr "শেষ আপডেটের পর %s দিন"
+msgstr ""
 
 #: includes/rest-api.php:529
 msgid "Accept"
-msgstr "গ্রহণ করুন"
+msgstr ""
 
 #: includes/rest-api.php:530
 msgid "Decline"
-msgstr "প্রত্যাখ্যান করুন"
+msgstr ""
 
 #: includes/rest-api.php:531
 msgid "# Contacts Assigned"
@@ -85,11 +86,11 @@ msgstr ""
 
 #: includes/rest-api.php:532
 msgid "# First Meetings"
-msgstr "প্রথম সাক্ষাৎ"
+msgstr ""
 
 #: includes/rest-api.php:533
 msgid "# Faith milestones"
-msgstr "বিশ্বাসের মাইলফলক"
+msgstr ""
 
 #: includes/rest-api.php:534
 msgid "Hurray! You are caught up."
@@ -97,27 +98,27 @@ msgstr ""
 
 #: includes/rest-api.php:535
 msgid "remove"
-msgstr "সরান"
+msgstr ""
 
 #: includes/rest-api.php:536
 msgid "mark as complete"
-msgstr "সম্পন্ন হিসেবে চিহ্নিত করুন"
+msgstr ""
 
 #: includes/rest-api.php:537
 msgid "No task created"
-msgstr "কোনো কাজ তৈরি হয়নি"
+msgstr ""
 
 #: includes/rest-api.php:538
 msgid "Reminder"
-msgstr "স্মরণিকা"
+msgstr ""
 
 #: includes/rest-api.php:539
 msgid "No note set"
-msgstr "কোনো নোট সেট করা নেই"
+msgstr ""
 
 #: includes/rest-api.php:540
 msgid "See all"
-msgstr "সব দেখুন"
+msgstr ""
 
 #: includes/rest-api.php:541
 msgid "more"
@@ -125,11 +126,11 @@ msgstr ""
 
 #: includes/rest-api.php:542
 msgid "Less"
-msgstr "কম"
+msgstr ""
 
 #: includes/template-parts/tile.php:27
 msgid "Back"
-msgstr "ফিরে যাও"
+msgstr "Артка"
 
 #: includes/template-parts/tile.php:31
 msgid "Forward"
@@ -137,7 +138,7 @@ msgstr ""
 
 #: includes/template-parts/tile.php:35
 msgid "Remove"
-msgstr "সরান"
+msgstr ""
 
 #: includes/tiles/active-contact/template.php:7
 msgid "Add a contact"
