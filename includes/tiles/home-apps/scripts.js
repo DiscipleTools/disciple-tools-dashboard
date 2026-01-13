@@ -16,15 +16,15 @@
     const carouselElement = $(context.element).find('.home-apps-carousel');
     const carouselWrapper = $(context.element).find('.home-apps-carousel-wrapper');
     const spinnerElement = $(context.element).find('.stats-spinner');
-    
+
     // Get apps data from data attribute
     const appsData = carouselElement.data('apps');
-    
+
     // Get Show More URL from data attribute
     // Use .attr() to get the raw value, then check if it's empty
     const showMoreUrlRaw = carouselElement.attr('data-show-more-url');
     const showMoreUrl = showMoreUrlRaw && showMoreUrlRaw !== '' ? showMoreUrlRaw : null;
-    
+
     if (!appsData || !Array.isArray(appsData) || appsData.length === 0) {
       spinnerElement.removeClass('active');
       carouselElement.html('<div class="home-apps-empty">No apps available.</div>');
@@ -49,6 +49,58 @@
 
     $(window).on('resize', handleResize);
   });
+
+  /**
+   * Validate URL to prevent XSS attacks
+   * Only allows http://, https://, relative URLs, and protocol-relative URLs
+   * Blocks dangerous schemes like javascript:, data:, vbscript:, etc.
+   *
+   * @param {string} url The URL to validate
+   * @return {boolean} True if URL is safe, false otherwise
+   */
+  function isValidUrl(url) {
+    if (!url || url === '#' || url.trim() === '') {
+      return false;
+    }
+
+    const trimmedUrl = url.trim();
+    const lowerUrl = trimmedUrl.toLowerCase();
+
+    // Block dangerous URL schemes that could execute code
+    const dangerousSchemes = ['javascript:', 'data:', 'vbscript:', 'file:', 'about:'];
+    for (const scheme of dangerousSchemes) {
+      if (lowerUrl.startsWith(scheme)) {
+        return false;
+      }
+    }
+
+    // Allow http://, https://, relative URLs (starting with /), and protocol-relative URLs (starting with //)
+    const validPattern = /^(https?:\/\/|\/\/|\/|#)/i;
+    return validPattern.test(trimmedUrl);
+  }
+
+  /**
+   * Escape URL for safe use in HTML onclick attribute
+   * Validates URL scheme and properly encodes it
+   *
+   * @param {string} url The URL to escape
+   * @return {string} Escaped URL or '#' if invalid
+   */
+  function escapeUrlForOnclick(url) {
+    // Validate URL first
+    if (!isValidUrl(url)) {
+      return '#';
+    }
+
+    // Use encodeURI for proper URL encoding, then escape for JavaScript string in HTML attribute
+    try {
+      const encoded = encodeURI(url);
+      return encoded.replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/"/g, '\\"');
+    } catch (e) {
+      // If encoding fails, return safe fallback
+      return '#';
+    }
+  }
 
   /**
    * Calculate how many cards can fit in the visible area
@@ -102,46 +154,24 @@
     // Use full title - CSS will handle wrapping
     const trimmedTitle = app.title || '';
 
-    // Determine app type: if type exists use it, otherwise use fallback logic
-    let appType = app.type;
-    if (!appType || (appType !== 'app' && appType !== 'link')) {
-      // Fallback logic: if creation_type is 'coded', default to 'app', otherwise 'link'
-      appType = (app.creation_type === 'coded') ? 'app' : 'link';
-    }
-
-    // App-type apps navigate in same tab, link-type apps open in new tab
-    let onClickHandler = '';
+    // Always open apps in a new tab
     const appUrl = app.url || '#';
-    
-    if (appType === 'app') {
-      // For apps, navigate in same tab
-      // Check if app is cross-domain (different domain than current)
-      try {
-        const currentHost = window.location.hostname;
-        const appUrlObj = new URL(appUrl, window.location.origin);
-        const appHost = appUrlObj.hostname;
-        const isCrossDomain = appHost !== currentHost && appHost !== window.location.hostname;
-        
-        //if (isCrossDomain) {
-          // For cross-domain apps, open in new tab (dashboard doesn't have launcher wrapper)
-          onClickHandler = `onclick="window.open('${appUrl.replace(/'/g, "\\'")}', '_blank'); return false;"`;
-        //} else {
-          // For same-domain apps, navigate in same tab
-          //onClickHandler = `onclick="window.location.href = '${appUrl.replace(/'/g, "\\'")}'; return false;"`;
-        //}
-      } catch (e) {
-        // If URL parsing fails, default to same tab navigation
-        onClickHandler = `onclick="window.location.href = '${appUrl.replace(/'/g, "\\'")}'; return false;"`;
-      }
+
+    // Validate and escape URL to prevent XSS attacks
+    let onClickHandler = '';
+    const safeUrl = escapeUrlForOnclick(appUrl);
+    if (safeUrl === '#') {
+      // Disable click for invalid/empty URLs
+      onClickHandler = `onclick="return false;"`;
     } else {
-      // For links, open in new tab
-      onClickHandler = `onclick="window.open('${appUrl.replace(/'/g, "\\'")}', '_blank'); return false;"`;
+      // Use validated and escaped URL
+      onClickHandler = `onclick="window.open('${safeUrl}', '_blank'); return false;"`;
     }
 
     // Determine icon display: image or icon class
     let iconHtml = '';
     const isImageIcon = app.icon && (app.icon.startsWith('http') || app.icon.startsWith('/'));
-    
+
     if (isImageIcon) {
       // Render image icon
       const safeIconUrl = (app.icon || '').replace(/"/g, '&quot;');
@@ -151,7 +181,7 @@
       // Render icon class with color support
       let iconColor = null;
       const hasCustomColor = app.color && typeof app.color === 'string' && app.color.trim() !== '';
-      
+
       // Validate hex color format
       if (hasCustomColor) {
         const hexColorPattern = /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/;
@@ -165,7 +195,7 @@
         // Check for dark mode (dashboard may not have theme-dark class, so check body background)
         const bodyBg = window.getComputedStyle(document.body).backgroundColor;
         const isDarkMode = bodyBg && (
-          bodyBg.includes('rgb(26, 26, 26)') || 
+          bodyBg.includes('rgb(26, 26, 26)') ||
           bodyBg.includes('rgb(42, 42, 42)') ||
           document.body.classList.contains('theme-dark') ||
           document.documentElement.classList.contains('theme-dark')
@@ -179,7 +209,7 @@
 
     const safeTitle = (trimmedTitle || '').replace(/"/g, '&quot;');
     const hiddenClass = isHidden ? ' hidden' : '';
-    
+
     return `
       <div class="app-card-wrapper${hiddenClass}">
         <div class="app-card" ${onClickHandler} title="${safeTitle}">
@@ -196,19 +226,17 @@
    * Create "Show More" card HTML
    */
   function createShowMoreCard(url) {
-    // Check if URL is valid (not null, not undefined, not empty, not 'null' string)
-    const isEnabled = url && url !== null && url !== undefined && url !== '' && url !== 'null';
-    
+    // Validate URL and check if it's enabled
+    const isEnabled = url && url !== null && url !== undefined && url !== '' && url !== 'null' && isValidUrl(url);
+
     // Build click handler or disable card
     let onClickHandler = '';
     let disabledClass = '';
     let tooltip = 'Show More';
-    
+
     if (isEnabled) {
-      // Card is enabled - add click handler to open in new tab
-      // Properly escape URL for use in HTML onclick attribute
-      // Escape single quotes and double quotes for JavaScript string
-      const safeUrl = String(url || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/"/g, '\\"');
+      // Card is enabled - validate and escape URL to prevent XSS attacks
+      const safeUrl = escapeUrlForOnclick(url);
       onClickHandler = `onclick="window.open('${safeUrl}', '_blank'); return false;"`;
     } else {
       // Card is disabled - no click handler, add disabled class
@@ -216,10 +244,10 @@
       tooltip = 'Please Activate Home Screen';
       onClickHandler = `onclick="return false;"`;
     }
-    
-    // Use blue background and white icon
-    const iconHtml = '<i class="mdi mdi-robot" style="color: #ffffff;"></i>';
-    
+
+    // Use blue background and white icon (moved to CSS)
+    const iconHtml = '<i class="mdi mdi-apps show-more-icon"></i>';
+
     return `
       <div class="app-card-wrapper show-more-wrapper">
         <div class="app-card show-more-card${disabledClass}" ${onClickHandler} title="${tooltip}">
@@ -243,7 +271,7 @@
 
     // Render visible apps (limit - 1 to make room for "Show More")
     const appsToShow = Math.min(visibleLimit, apps.length);
-    
+
     // Render visible app cards
     for (let i = 0; i < appsToShow; i++) {
       html += createAppCard(apps[i], false);

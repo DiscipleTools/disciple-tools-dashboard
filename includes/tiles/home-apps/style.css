@@ -10,6 +10,7 @@
 }
 
 /* Hide tile header and footer */
+/* Using !important to override dashboard default styles that may have higher specificity */
 .dashboard-page #dash-tile--DT_Dashboard_Plugin_Home_Apps .tile-header,
 .dashboard-page #dash-tile--DT_Dashboard_Plugin_Home_Apps .tile-footer {
     display: none !important;
@@ -27,6 +28,7 @@
 
 /* Spinner positioning */
 .dashboard-page #dash-tile--DT_Dashboard_Plugin_Home_Apps .tile-body--home-apps .stats-spinner {
+    display: inline-block;
     margin-left: 0.5rem;
     vertical-align: middle;
 }
@@ -147,12 +149,15 @@
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
 
+/* Show More card icon styling */
 .home-apps-carousel .show-more-card .app-icon {
     color: #ffffff;
 }
 
+/* Increased specificity to override any icon color styles without !important */
+.home-apps-carousel .app-card.show-more-card .app-icon i.show-more-icon,
 .home-apps-carousel .show-more-card .app-icon i {
-    color: #ffffff !important;
+    color: #ffffff;
 }
 
 /* Disabled Show More card - grayed out and non-clickable */

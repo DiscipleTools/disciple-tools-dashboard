@@ -13,6 +13,13 @@ if ( !class_exists( 'DT_Home_Apps' ) ) {
     }
 }
 
+// Early return if class still doesn't exist to prevent fatal error
+if ( !class_exists( 'DT_Home_Apps' ) ) {
+    // Hide tile and return early to prevent fatal error
+    echo '<style>#dash-tile--' . esc_attr( $tile->handle ) . ' { display: none !important; }</style>';
+    return;
+}
+
 // Get apps via direct method call
 $apps = DT_Home_Apps::instance()->get_apps_for_frontend( 'app' );
 
@@ -23,7 +30,7 @@ if ( !is_array( $apps ) ) {
 
 // Only render if apps exist, otherwise hide the tile completely
 if ( empty( $apps ) ) {
-    // Hide the entire tile wrapper
+    // Hide the entire tile wrapper - using !important to override any conflicting styles
     echo '<style>#dash-tile--' . esc_attr( $tile->handle ) . ' { display: none !important; }</style>';
     return;
 }
@@ -45,18 +52,9 @@ if ( $app_user_key && !empty( $app_user_key ) ) {
 }
 ?>
 
-<style>
-/* Hide tile header and footer for Home Apps tile */
-#dash-tile--<?php echo esc_attr( $tile->handle ); ?> .tile-header,
-#dash-tile--<?php echo esc_attr( $tile->handle ); ?> .tile-footer {
-    display: none !important;
-}
-</style>
-
 <div class="tile-body tile-body--home-apps">
     <h2 class="home-apps-title"><?php echo esc_html( $tile->label ); ?></h2>
     <div id="home-apps-spinner-<?php echo esc_attr( $tile->handle ); ?>"
-         style="display: inline-block"
          class="stats-spinner loading-spinner active">
     </div>
     <div class="home-apps-carousel-wrapper">
