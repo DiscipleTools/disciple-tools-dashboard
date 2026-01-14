@@ -129,7 +129,9 @@ msgstr "Kevesebb"
 
 #: includes/template-admin.php:12
 msgid "Choose the default dashboard layout for new users."
-msgstr "Válassza ki az alapértelmezett irányítópult elrendezést az új felhasználók számára."
+msgstr ""
+"Válassza ki az alapértelmezett irányítópult elrendezést az új felhasználók "
+"számára."
 
 #: includes/template-admin.php:16
 msgid "ACTIVE TILES"

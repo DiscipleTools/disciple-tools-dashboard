@@ -168,7 +168,8 @@ msgstr "যোগাযোগ যোগ করুন"
 msgid ""
 "Choose an option to let the dispatcher(s) know if you are ready for new "
 "contacts"
-msgstr "আপনি নতুন পরিচিতিগুলির জন্য প্রস্তুত কিনা তা প্রেরণকারীদের জানাতে একটি বিকল্প চয়ন করুন"
+msgstr ""
+"আপনি নতুন পরিচিতিগুলির জন্য প্রস্তুত কিনা তা প্রেরণকারীদের জানাতে একটি বিকল্প চয়ন করুন"
 
 #: includes/tiles/contact-workload/template.php:21
 msgid "Set travel or dates unavailable"

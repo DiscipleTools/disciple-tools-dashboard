@@ -130,7 +130,8 @@ msgstr "Азыраак"
 
 #: includes/template-admin.php:12
 msgid "Choose the default dashboard layout for new users."
-msgstr "Жаңы колдонуучулар үчүн демейки башкаруу панелинин жайгашуусун тандаңыз."
+msgstr ""
+"Жаңы колдонуучулар үчүн демейки башкаруу панелинин жайгашуусун тандаңыз."
 
 #: includes/template-admin.php:16
 msgid "ACTIVE TILES"

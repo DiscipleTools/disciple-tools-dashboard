@@ -130,7 +130,8 @@ msgstr "Менше"
 
 #: includes/template-admin.php:12
 msgid "Choose the default dashboard layout for new users."
-msgstr "Виберіть макет панелі керування за замовчуванням для нових користувачів."
+msgstr ""
+"Виберіть макет панелі керування за замовчуванням для нових користувачів."
 
 #: includes/template-admin.php:16
 msgid "ACTIVE TILES"
