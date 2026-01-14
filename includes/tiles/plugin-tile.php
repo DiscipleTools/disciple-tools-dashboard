@@ -16,6 +16,7 @@ class DT_Dashboard_Plugin_Tile extends DT_Dashboard_Tile
      */
     public function setup() {
         $script = 'includes/tiles/' . $this->template_folder . '/scripts.js';
+        $style = 'includes/tiles/' . $this->template_folder . '/style.css';
 
         if ( file_exists( DT_Dashboard_Plugin::dir() . $script ) ) {
             wp_enqueue_script( $this->handle, DT_Dashboard_Plugin::path() . $script, [
@@ -29,6 +30,10 @@ class DT_Dashboard_Plugin_Tile extends DT_Dashboard_Tile
                 'amcharts-animated',
                 'moment'
             ], filemtime( DT_Dashboard_Plugin::dir() . $script ), true);
+        }
+
+        if ( file_exists( DT_Dashboard_Plugin::dir() . $style ) ) {
+            wp_enqueue_style( $this->handle . '-style', DT_Dashboard_Plugin::path() . $style, [], filemtime( DT_Dashboard_Plugin::dir() . $style ) );
         }
     }
 
