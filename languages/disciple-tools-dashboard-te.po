@@ -3,9 +3,10 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2026-01-13T14:59:20+00:00\n"
-"PO-Revision-Date: 2024-10-18 02:00+0000\n"
-"Last-Translator: \"Venkataramana (Wesley)\" <venkataramana.m1@gmail.com>\n"
+"POT-Creation-Date: 2026-01-14T07:46:32+00:00\n"
+"PO-Revision-Date: 2026-01-14 07:44+0000\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
+"memory@weblate.org>\n"
 "Language-Team: Telugu <https://translate.disciple.tools/projects/disciple-"
 "tools/disciple-tools-dashboard/te/>\n"
 "Language: te\n"
@@ -13,49 +14,53 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.7.2\n"
+"X-Generator: Weblate 5.15.1\n"
 
-#: disciple-tools-dashboard.php:217
+#: disciple-tools-dashboard.php:219
+msgid "Your Apps"
+msgstr "మీ అనువర్తనాలు"
+
+#: disciple-tools-dashboard.php:224
 msgid "Active Contacts"
 msgstr "క్రియాశీల పరిచయాలు"
 
-#: disciple-tools-dashboard.php:218
+#: disciple-tools-dashboard.php:225
 msgid "Update Needed"
 msgstr "నవీకరణ అవసరం"
 
-#: disciple-tools-dashboard.php:219
+#: disciple-tools-dashboard.php:226
 msgid "Pending Contacts"
 msgstr "పరిచయాలు పెండింగ్‌లో ఉన్నాయి"
 
-#: disciple-tools-dashboard.php:220
+#: disciple-tools-dashboard.php:227
 msgid "Contact Workload"
 msgstr "పనిభారాన్ని సంప్రదించండి"
 
-#: disciple-tools-dashboard.php:221
+#: disciple-tools-dashboard.php:228
 msgid "Activity"
 msgstr "కార్యాచరణ"
 
-#: disciple-tools-dashboard.php:226
+#: disciple-tools-dashboard.php:233
 msgid "Faith Milestone Totals"
 msgstr "విశ్వాసం మైలురాయి మొత్తం"
 
-#: disciple-tools-dashboard.php:230
+#: disciple-tools-dashboard.php:237
 msgid "Seeker Path Progress"
 msgstr "సీకర్ మార్గం పురోగతి"
 
-#: disciple-tools-dashboard.php:234
+#: disciple-tools-dashboard.php:241
 msgid "Personal Benchmarks"
 msgstr "వ్యక్తిగత బెంచ్‌మార్క్‌లు"
 
-#: disciple-tools-dashboard.php:238
+#: disciple-tools-dashboard.php:245
 msgid "Tasks"
 msgstr "పనులు"
 
-#: disciple-tools-dashboard.php:315 disciple-tools-dashboard.php:326
+#: disciple-tools-dashboard.php:322 disciple-tools-dashboard.php:333
 msgid "Whoah, partner!"
 msgstr "అయ్యో, భాగస్వామి!"
 
-#: disciple-tools-dashboard.php:338
+#: disciple-tools-dashboard.php:345
 msgid "Method does not exist."
 msgstr "విధానం ఉనికిలో లేదు."
 
@@ -124,26 +129,6 @@ msgstr "మరిన్ని"
 msgid "Less"
 msgstr "తక్కువ"
 
-#: includes/template-admin.php:12
-msgid "Choose the default dashboard layout for new users."
-msgstr "కొత్త వినియోగదారులకు డిఫాల్ట్ డాష్‌బోర్డ్ లేఔట్‌ను ఎంచుకోండి."
-
-#: includes/template-admin.php:16
-msgid "ACTIVE TILES"
-msgstr "యాక్టివ్ టైల్స్"
-
-#: includes/template-admin.php:34
-msgid "Hide"
-msgstr "దాచు"
-
-#: includes/template-admin.php:45
-msgid "HIDDEN TILES"
-msgstr "దాచిన టైల్స్"
-
-#: includes/template-admin.php:60
-msgid "Show"
-msgstr "చూపించు"
-
 #: includes/template-parts/tile.php:27
 msgid "Back"
 msgstr "వెనక్కి"
@@ -177,3 +162,18 @@ msgstr "మీ క్రియాశీల పరిచయాలలో మైల
 #: includes/tiles/seeker-path-progress/template.php:7
 msgid "No data to show yet. You have no active contacts"
 msgstr "ఇంకా చూపించడానికి డేటా లేదు. మీకు క్రియాశీల పరిచయాలు లేవు"
+
+#~ msgid "Choose the default dashboard layout for new users."
+#~ msgstr "కొత్త వినియోగదారులకు డిఫాల్ట్ డాష్‌బోర్డ్ లేఔట్‌ను ఎంచుకోండి."
+
+#~ msgid "ACTIVE TILES"
+#~ msgstr "యాక్టివ్ టైల్స్"
+
+#~ msgid "Hide"
+#~ msgstr "దాచు"
+
+#~ msgid "HIDDEN TILES"
+#~ msgstr "దాచిన టైల్స్"
+
+#~ msgid "Show"
+#~ msgstr "చూపించు"

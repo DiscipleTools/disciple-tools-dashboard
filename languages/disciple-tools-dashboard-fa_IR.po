@@ -3,9 +3,10 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2026-01-13T14:59:20+00:00\n"
-"PO-Revision-Date: 2022-11-09 08:32+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"POT-Creation-Date: 2026-01-14T07:46:32+00:00\n"
+"PO-Revision-Date: 2026-01-14 07:44+0000\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
+"memory@weblate.org>\n"
 "Language-Team: Persian <https://translate.disciple.tools/projects/disciple-"
 "tools/disciple-tools-dashboard/fa_IR/>\n"
 "Language: fa_IR\n"
@@ -13,49 +14,53 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 5.15.1\n"
 
-#: disciple-tools-dashboard.php:217
+#: disciple-tools-dashboard.php:219
+msgid "Your Apps"
+msgstr "اَپلیکیشنِ شما"
+
+#: disciple-tools-dashboard.php:224
 msgid "Active Contacts"
 msgstr "مخاطبین فعال"
 
-#: disciple-tools-dashboard.php:218
+#: disciple-tools-dashboard.php:225
 msgid "Update Needed"
 msgstr "به روزرسانی مورد نیاز"
 
-#: disciple-tools-dashboard.php:219
+#: disciple-tools-dashboard.php:226
 msgid "Pending Contacts"
 msgstr "مخاطبین در انتظار"
 
-#: disciple-tools-dashboard.php:220
+#: disciple-tools-dashboard.php:227
 msgid "Contact Workload"
 msgstr "با حجم کار تماس بگیرید"
 
-#: disciple-tools-dashboard.php:221
+#: disciple-tools-dashboard.php:228
 msgid "Activity"
 msgstr "فعالیت"
 
-#: disciple-tools-dashboard.php:226
+#: disciple-tools-dashboard.php:233
 msgid "Faith Milestone Totals"
 msgstr "مجموع نقاط عطف ایمان"
 
-#: disciple-tools-dashboard.php:230
+#: disciple-tools-dashboard.php:237
 msgid "Seeker Path Progress"
 msgstr "مسیر جستجوی پیشرفت"
 
-#: disciple-tools-dashboard.php:234
+#: disciple-tools-dashboard.php:241
 msgid "Personal Benchmarks"
 msgstr "معیارهای شخصی"
 
-#: disciple-tools-dashboard.php:238
+#: disciple-tools-dashboard.php:245
 msgid "Tasks"
 msgstr "وظایف"
 
-#: disciple-tools-dashboard.php:315 disciple-tools-dashboard.php:326
+#: disciple-tools-dashboard.php:322 disciple-tools-dashboard.php:333
 msgid "Whoah, partner!"
 msgstr "وای ، شریک!"
 
-#: disciple-tools-dashboard.php:338
+#: disciple-tools-dashboard.php:345
 msgid "Method does not exist."
 msgstr "روش وجود ندارد"
 
@@ -124,26 +129,6 @@ msgstr "بیشتر"
 msgid "Less"
 msgstr "کمتر"
 
-#: includes/template-admin.php:12
-msgid "Choose the default dashboard layout for new users."
-msgstr "چیدمان پیش‌فرض داشبورد را برای کاربران جدید انتخاب کنید."
-
-#: includes/template-admin.php:16
-msgid "ACTIVE TILES"
-msgstr "کاشی‌های فعال"
-
-#: includes/template-admin.php:34
-msgid "Hide"
-msgstr "پنهان کردن"
-
-#: includes/template-admin.php:45
-msgid "HIDDEN TILES"
-msgstr "کاشی‌های پنهان"
-
-#: includes/template-admin.php:60
-msgid "Show"
-msgstr "نمایش"
-
 #: includes/template-parts/tile.php:27
 msgid "Back"
 msgstr "بازگشت"
@@ -179,3 +164,18 @@ msgstr "نقاط عطف مخاطبین فعال شما"
 #: includes/tiles/seeker-path-progress/template.php:7
 msgid "No data to show yet. You have no active contacts"
 msgstr "هنوز داده ای برای نمایش وجود ندارد شما هیچ مخاطب فعالی ندارید"
+
+#~ msgid "Choose the default dashboard layout for new users."
+#~ msgstr "چیدمان پیش‌فرض داشبورد را برای کاربران جدید انتخاب کنید."
+
+#~ msgid "ACTIVE TILES"
+#~ msgstr "کاشی‌های فعال"
+
+#~ msgid "Hide"
+#~ msgstr "پنهان کردن"
+
+#~ msgid "HIDDEN TILES"
+#~ msgstr "کاشی‌های پنهان"
+
+#~ msgid "Show"
+#~ msgstr "نمایش"
