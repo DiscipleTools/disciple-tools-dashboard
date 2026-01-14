@@ -5,9 +5,10 @@ msgstr ""
 "Project-Id-Version: Disciple.Tools - Dashboard 1.1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2026-01-13T14:59:20+00:00\n"
-"PO-Revision-Date: 2025-05-12 02:00+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"POT-Creation-Date: 2026-01-14T07:46:32+00:00\n"
+"PO-Revision-Date: 2026-01-14 07:44+0000\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
+"memory@weblate.org>\n"
 "Language-Team: Sinhala <https://translate.disciple.tools/projects/disciple-"
 "tools/disciple-tools-dashboard/si/>\n"
 "Language: si\n"
@@ -15,50 +16,54 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.11.4\n"
+"X-Generator: Weblate 5.15.1\n"
 "X-Domain: disciple-tools-dashboard\n"
 
-#: disciple-tools-dashboard.php:217
+#: disciple-tools-dashboard.php:219
+msgid "Your Apps"
+msgstr "ඔබගේ යෙදුම්"
+
+#: disciple-tools-dashboard.php:224
 msgid "Active Contacts"
 msgstr "ක්රියාකාරී සම්බන්ධතා"
 
-#: disciple-tools-dashboard.php:218
+#: disciple-tools-dashboard.php:225
 msgid "Update Needed"
 msgstr "යාවත්කාලීන කිරීම අවශ්‍යයි"
 
-#: disciple-tools-dashboard.php:219
+#: disciple-tools-dashboard.php:226
 msgid "Pending Contacts"
 msgstr "පොරොත්තු සම්බන්ධතා"
 
-#: disciple-tools-dashboard.php:220
+#: disciple-tools-dashboard.php:227
 msgid "Contact Workload"
 msgstr "සම්බන්ධතා කාර්ය භාරය"
 
-#: disciple-tools-dashboard.php:221
+#: disciple-tools-dashboard.php:228
 msgid "Activity"
 msgstr "ක්‍රියාකාරකම්"
 
-#: disciple-tools-dashboard.php:226
+#: disciple-tools-dashboard.php:233
 msgid "Faith Milestone Totals"
 msgstr "ඇදහිල්ලේ සන්ධිස්ථාන"
 
-#: disciple-tools-dashboard.php:230
+#: disciple-tools-dashboard.php:237
 msgid "Seeker Path Progress"
 msgstr "සෙවුම්කරුගේ මාර්ග ප්‍රගතිය"
 
-#: disciple-tools-dashboard.php:234
+#: disciple-tools-dashboard.php:241
 msgid "Personal Benchmarks"
 msgstr "පුද්ගලික මිනුම්"
 
-#: disciple-tools-dashboard.php:238
+#: disciple-tools-dashboard.php:245
 msgid "Tasks"
 msgstr "කාර්යයන්"
 
-#: disciple-tools-dashboard.php:315 disciple-tools-dashboard.php:326
+#: disciple-tools-dashboard.php:322 disciple-tools-dashboard.php:333
 msgid "Whoah, partner!"
 msgstr "අපොයි, සගයා!"
 
-#: disciple-tools-dashboard.php:338
+#: disciple-tools-dashboard.php:345
 msgid "Method does not exist."
 msgstr "ක්‍රමය නොපවතී."
 
@@ -127,26 +132,6 @@ msgstr "තවත්"
 msgid "Less"
 msgstr "අඩුවෙන්"
 
-#: includes/template-admin.php:12
-msgid "Choose the default dashboard layout for new users."
-msgstr "නව පරිශීලකයින් සඳහා පෙරනිමි උපකරණ පුවරු පිරිසැලසුම තෝරන්න."
-
-#: includes/template-admin.php:16
-msgid "ACTIVE TILES"
-msgstr "ක්‍රියාකාරී ටයිල්"
-
-#: includes/template-admin.php:34
-msgid "Hide"
-msgstr "සඟවන්න"
-
-#: includes/template-admin.php:45
-msgid "HIDDEN TILES"
-msgstr "සැඟවුණු ටයිල්"
-
-#: includes/template-admin.php:60
-msgid "Show"
-msgstr "පෙන්වන්න"
-
 #: includes/template-parts/tile.php:27
 msgid "Back"
 msgstr "ආපසු"
@@ -180,3 +165,18 @@ msgstr "ඔබගේ ක්‍රියාකාරී සම්බන්ධත�
 #: includes/tiles/seeker-path-progress/template.php:7
 msgid "No data to show yet. You have no active contacts"
 msgstr "තවම පෙන්වීමට දත්ත නැත. ඔබට ක්‍රියාකාරී සම්බන්ධතා නැත"
+
+#~ msgid "Choose the default dashboard layout for new users."
+#~ msgstr "නව පරිශීලකයින් සඳහා පෙරනිමි උපකරණ පුවරු පිරිසැලසුම තෝරන්න."
+
+#~ msgid "ACTIVE TILES"
+#~ msgstr "ක්‍රියාකාරී ටයිල්"
+
+#~ msgid "Hide"
+#~ msgstr "සඟවන්න"
+
+#~ msgid "HIDDEN TILES"
+#~ msgstr "සැඟවුණු ටයිල්"
+
+#~ msgid "Show"
+#~ msgstr "පෙන්වන්න"
