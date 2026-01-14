@@ -5,10 +5,9 @@ msgstr ""
 "Project-Id-Version: Disciple.Tools - Dashboard 1.1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2025-10-14T08:47:09+00:00\n"
-"PO-Revision-Date: 2025-10-08 13:03+0000\n"
-"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
-"memory@weblate.org>\n"
+"POT-Creation-Date: 2026-01-13T14:59:20+00:00\n"
+"PO-Revision-Date: 2025-05-12 02:00+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Sinhala <https://translate.disciple.tools/projects/disciple-"
 "tools/disciple-tools-dashboard/si/>\n"
 "Language: si\n"
@@ -16,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.13.3\n"
+"X-Generator: Weblate 5.11.4\n"
 "X-Domain: disciple-tools-dashboard\n"
 
 #: disciple-tools-dashboard.php:217
@@ -29,15 +28,15 @@ msgstr "යාවත්කාලීන කිරීම අවශ්‍යයි"
 
 #: disciple-tools-dashboard.php:219
 msgid "Pending Contacts"
-msgstr ""
+msgstr "පොරොත්තු සම්බන්ධතා"
 
 #: disciple-tools-dashboard.php:220
 msgid "Contact Workload"
-msgstr ""
+msgstr "සම්බන්ධතා කාර්ය භාරය"
 
 #: disciple-tools-dashboard.php:221
 msgid "Activity"
-msgstr "ක්රියාකාරිත්වය"
+msgstr "ක්‍රියාකාරකම්"
 
 #: disciple-tools-dashboard.php:226
 msgid "Faith Milestone Totals"
@@ -45,11 +44,11 @@ msgstr "ඇදහිල්ලේ සන්ධිස්ථාන"
 
 #: disciple-tools-dashboard.php:230
 msgid "Seeker Path Progress"
-msgstr ""
+msgstr "සෙවුම්කරුගේ මාර්ග ප්‍රගතිය"
 
 #: disciple-tools-dashboard.php:234
 msgid "Personal Benchmarks"
-msgstr ""
+msgstr "පුද්ගලික මිනුම්"
 
 #: disciple-tools-dashboard.php:238
 msgid "Tasks"
@@ -57,15 +56,15 @@ msgstr "කාර්යයන්"
 
 #: disciple-tools-dashboard.php:315 disciple-tools-dashboard.php:326
 msgid "Whoah, partner!"
-msgstr ""
+msgstr "අපොයි, සගයා!"
 
 #: disciple-tools-dashboard.php:338
 msgid "Method does not exist."
-msgstr ""
+msgstr "ක්‍රමය නොපවතී."
 
 #: includes/functions.php:97
 msgid "Dashboard"
-msgstr ""
+msgstr "උපකරණ පුවරුව"
 
 #: includes/rest-api.php:180
 #, php-format
@@ -82,7 +81,7 @@ msgstr "ප්රතික්ෂේප කරන්න"
 
 #: includes/rest-api.php:531
 msgid "# Contacts Assigned"
-msgstr ""
+msgstr "# පැවරූ සම්බන්ධතා"
 
 #: includes/rest-api.php:532
 msgid "# First Meetings"
@@ -94,7 +93,7 @@ msgstr "ඇදහිල්ලේ සන්ධිස්ථාන"
 
 #: includes/rest-api.php:534
 msgid "Hurray! You are caught up."
-msgstr ""
+msgstr "හුරේ! සියලු කාර්යයන් සම්පූර්ණයි."
 
 #: includes/rest-api.php:535
 msgid "remove"
@@ -122,11 +121,31 @@ msgstr "ඔක්කොම බලන්න"
 
 #: includes/rest-api.php:541
 msgid "more"
-msgstr ""
+msgstr "තවත්"
 
 #: includes/rest-api.php:542
 msgid "Less"
-msgstr "අඩු"
+msgstr "අඩුවෙන්"
+
+#: includes/template-admin.php:12
+msgid "Choose the default dashboard layout for new users."
+msgstr "නව පරිශීලකයින් සඳහා පෙරනිමි උපකරණ පුවරු පිරිසැලසුම තෝරන්න."
+
+#: includes/template-admin.php:16
+msgid "ACTIVE TILES"
+msgstr "ක්‍රියාකාරී ටයිල්"
+
+#: includes/template-admin.php:34
+msgid "Hide"
+msgstr "සඟවන්න"
+
+#: includes/template-admin.php:45
+msgid "HIDDEN TILES"
+msgstr "සැඟවුණු ටයිල්"
+
+#: includes/template-admin.php:60
+msgid "Show"
+msgstr "පෙන්වන්න"
 
 #: includes/template-parts/tile.php:27
 msgid "Back"
@@ -134,7 +153,7 @@ msgstr "ආපසු"
 
 #: includes/template-parts/tile.php:31
 msgid "Forward"
-msgstr ""
+msgstr "ඉදිරියට"
 
 #: includes/template-parts/tile.php:35
 msgid "Remove"
@@ -142,13 +161,13 @@ msgstr "ඉවත් කරන්න"
 
 #: includes/tiles/active-contact/template.php:7
 msgid "Add a contact"
-msgstr ""
+msgstr "සම්බන්ධතාවක් එක් කරන්න"
 
 #: includes/tiles/contact-workload/template.php:8
 msgid ""
 "Choose an option to let the dispatcher(s) know if you are ready for new "
 "contacts"
-msgstr ""
+msgstr "ඔබ නව සම්බන්ධතා සඳහා සූදානම් නම් යවන්නන්ට දැනගැනීමට විකල්පයක් තෝරන්න"
 
 #: includes/tiles/contact-workload/template.php:21
 msgid "Set travel or dates unavailable"
@@ -156,8 +175,8 @@ msgstr "ගමන් කාලසටහන හෝ දින නොමැත"
 
 #: includes/tiles/faith-milestone-totals/template.php:7
 msgid "Milestones on your active contacts"
-msgstr ""
+msgstr "ඔබගේ ක්‍රියාකාරී සම්බන්ධතා මත සන්ධිස්ථාන"
 
 #: includes/tiles/seeker-path-progress/template.php:7
 msgid "No data to show yet. You have no active contacts"
-msgstr ""
+msgstr "තවම පෙන්වීමට දත්ත නැත. ඔබට ක්‍රියාකාරී සම්බන්ධතා නැත"

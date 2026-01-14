@@ -5,10 +5,9 @@ msgstr ""
 "Project-Id-Version: Disciple.Tools - Dashboard 1.1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2025-10-14T08:47:09+00:00\n"
-"PO-Revision-Date: 2025-10-08 13:03+0000\n"
-"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
-"memory@weblate.org>\n"
+"POT-Creation-Date: 2026-01-13T14:59:20+00:00\n"
+"PO-Revision-Date: 2025-05-12 02:00+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate.disciple.tools/"
 "projects/disciple-tools/disciple-tools-dashboard/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -16,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.13.3\n"
+"X-Generator: Weblate 5.11.4\n"
 "X-Domain: disciple-tools-dashboard\n"
 
 #: disciple-tools-dashboard.php:217
@@ -29,11 +28,11 @@ msgstr "Atualização necessária"
 
 #: disciple-tools-dashboard.php:219
 msgid "Pending Contacts"
-msgstr ""
+msgstr "Contatos pendentes"
 
 #: disciple-tools-dashboard.php:220
 msgid "Contact Workload"
-msgstr ""
+msgstr "Carga de contatos"
 
 #: disciple-tools-dashboard.php:221
 msgid "Activity"
@@ -45,11 +44,11 @@ msgstr "Pilares de fé"
 
 #: disciple-tools-dashboard.php:230
 msgid "Seeker Path Progress"
-msgstr ""
+msgstr "Progresso do caminho do buscador"
 
 #: disciple-tools-dashboard.php:234
 msgid "Personal Benchmarks"
-msgstr ""
+msgstr "Referências pessoais"
 
 #: disciple-tools-dashboard.php:238
 msgid "Tasks"
@@ -57,15 +56,15 @@ msgstr "Tarefas"
 
 #: disciple-tools-dashboard.php:315 disciple-tools-dashboard.php:326
 msgid "Whoah, partner!"
-msgstr ""
+msgstr "Opa, parceiro!"
 
 #: disciple-tools-dashboard.php:338
 msgid "Method does not exist."
-msgstr ""
+msgstr "O método não existe."
 
 #: includes/functions.php:97
 msgid "Dashboard"
-msgstr ""
+msgstr "Painel"
 
 #: includes/rest-api.php:180
 #, php-format
@@ -82,7 +81,7 @@ msgstr "Declinar"
 
 #: includes/rest-api.php:531
 msgid "# Contacts Assigned"
-msgstr ""
+msgstr "# Contatos atribuídos"
 
 #: includes/rest-api.php:532
 msgid "# First Meetings"
@@ -94,7 +93,7 @@ msgstr "Pilares de fé"
 
 #: includes/rest-api.php:534
 msgid "Hurray! You are caught up."
-msgstr ""
+msgstr "Viva! Todas as tarefas concluídas."
 
 #: includes/rest-api.php:535
 msgid "remove"
@@ -106,7 +105,7 @@ msgstr "marcar como concluída"
 
 #: includes/rest-api.php:537
 msgid "No task created"
-msgstr "Contato Criado"
+msgstr "Nenhuma tarefa criada"
 
 #: includes/rest-api.php:538
 msgid "Reminder"
@@ -122,11 +121,31 @@ msgstr "Ver tudo"
 
 #: includes/rest-api.php:541
 msgid "more"
-msgstr ""
+msgstr "mais"
 
 #: includes/rest-api.php:542
 msgid "Less"
 msgstr "Menos"
+
+#: includes/template-admin.php:12
+msgid "Choose the default dashboard layout for new users."
+msgstr "Escolha o layout padrão do painel para novos usuários."
+
+#: includes/template-admin.php:16
+msgid "ACTIVE TILES"
+msgstr "BLOCOS ATIVOS"
+
+#: includes/template-admin.php:34
+msgid "Hide"
+msgstr "Ocultar"
+
+#: includes/template-admin.php:45
+msgid "HIDDEN TILES"
+msgstr "BLOCOS OCULTOS"
+
+#: includes/template-admin.php:60
+msgid "Show"
+msgstr "Mostrar"
 
 #: includes/template-parts/tile.php:27
 msgid "Back"
@@ -134,7 +153,7 @@ msgstr "Voltar"
 
 #: includes/template-parts/tile.php:31
 msgid "Forward"
-msgstr ""
+msgstr "Avançar"
 
 #: includes/template-parts/tile.php:35
 msgid "Remove"
@@ -142,13 +161,15 @@ msgstr "Remover"
 
 #: includes/tiles/active-contact/template.php:7
 msgid "Add a contact"
-msgstr ""
+msgstr "Adicionar um contato"
 
 #: includes/tiles/contact-workload/template.php:8
 msgid ""
 "Choose an option to let the dispatcher(s) know if you are ready for new "
 "contacts"
 msgstr ""
+"Escolha uma opção para informar ao coordenador se você está pronto para "
+"novos contatos"
 
 #: includes/tiles/contact-workload/template.php:21
 msgid "Set travel or dates unavailable"
@@ -156,8 +177,8 @@ msgstr "Agendar viagens ou datas indisponíveis"
 
 #: includes/tiles/faith-milestone-totals/template.php:7
 msgid "Milestones on your active contacts"
-msgstr ""
+msgstr "Marcos nos seus contatos ativos"
 
 #: includes/tiles/seeker-path-progress/template.php:7
 msgid "No data to show yet. You have no active contacts"
-msgstr ""
+msgstr "Nenhum dado para mostrar ainda. Você não tem contatos ativos"

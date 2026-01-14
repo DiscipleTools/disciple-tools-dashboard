@@ -1,13 +1,14 @@
-# Copyright (C) 2024 
+# Copyright (C) 2024
 # This file is distributed under the same license as the Disciple.Tools - Dashboard plugin.
 msgid ""
 msgstr ""
 "Project-Id-Version: Disciple.Tools - Dashboard 1.3.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2025-10-14T08:47:09+00:00\n"
-"PO-Revision-Date: 2026-01-13 00:04+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"POT-Creation-Date: 2026-01-13T14:59:20+00:00\n"
+"PO-Revision-Date: 2025-04-12 02:10+0000\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
+"memory@weblate.org>\n"
 "Language-Team: Bengali (India) <https://translate.disciple.tools/projects/"
 "disciple-tools/disciple-tools-dashboard/bn_IN/>\n"
 "Language: bn_IN\n"
@@ -15,40 +16,40 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15.1\n"
+"X-Generator: Weblate 5.10.4\n"
 "X-Domain: disciple-tools-dashboard\n"
 
 #: disciple-tools-dashboard.php:217
 msgid "Active Contacts"
-msgstr "সক্রিয় পরিচিতি"
+msgstr "সক্রিয় যোগাযোগ"
 
 #: disciple-tools-dashboard.php:218
 msgid "Update Needed"
-msgstr "আপডেট প্রয়োজন"
+msgstr "আপডেট দরকার"
 
 #: disciple-tools-dashboard.php:219
 msgid "Pending Contacts"
-msgstr ""
+msgstr "মুলতুবি থাকা যোগাযোগ"
 
 #: disciple-tools-dashboard.php:220
 msgid "Contact Workload"
-msgstr ""
+msgstr "কাজের চাপ"
 
 #: disciple-tools-dashboard.php:221
 msgid "Activity"
-msgstr "কার্যকলাপ"
+msgstr "ক্রিয়াকলাপ"
 
 #: disciple-tools-dashboard.php:226
 msgid "Faith Milestone Totals"
-msgstr ""
+msgstr "বিশ্বাস মাইলস্টোন টোটালস"
 
 #: disciple-tools-dashboard.php:230
 msgid "Seeker Path Progress"
-msgstr ""
+msgstr "সিকার পথ অগ্রগতি"
 
 #: disciple-tools-dashboard.php:234
 msgid "Personal Benchmarks"
-msgstr ""
+msgstr "ব্যক্তিগত বেঞ্চমার্ক"
 
 #: disciple-tools-dashboard.php:238
 msgid "Tasks"
@@ -56,11 +57,11 @@ msgstr "কাজ"
 
 #: disciple-tools-dashboard.php:315 disciple-tools-dashboard.php:326
 msgid "Whoah, partner!"
-msgstr ""
+msgstr "ওহ, সঙ্গী!"
 
 #: disciple-tools-dashboard.php:338
 msgid "Method does not exist."
-msgstr ""
+msgstr "পদ্ধতিটির অস্তিত্ব নেই।"
 
 #: includes/functions.php:97
 msgid "Dashboard"
@@ -69,7 +70,7 @@ msgstr "ড্যাশবোর্ড"
 #: includes/rest-api.php:180
 #, php-format
 msgid "%s days since last update"
-msgstr "শেষ আপডেটের পর %s দিন"
+msgstr "শেষ আপডেটের পরে %s দিন"
 
 #: includes/rest-api.php:529
 msgid "Accept"
@@ -77,55 +78,75 @@ msgstr "গ্রহণ করুন"
 
 #: includes/rest-api.php:530
 msgid "Decline"
-msgstr "প্রত্যাখ্যান করুন"
+msgstr "অস্বীকার"
 
 #: includes/rest-api.php:531
 msgid "# Contacts Assigned"
-msgstr ""
+msgstr "# পরিচিতি বরাদ্দ করা হয়েছে"
 
 #: includes/rest-api.php:532
 msgid "# First Meetings"
-msgstr "প্রথম সাক্ষাৎ"
+msgstr "# প্রথম সভা"
 
 #: includes/rest-api.php:533
 msgid "# Faith milestones"
-msgstr "বিশ্বাসের মাইলফলক"
+msgstr "# বিশ্বাসের মাইলফলক"
 
 #: includes/rest-api.php:534
 msgid "Hurray! You are caught up."
-msgstr ""
+msgstr "অভিনন্দন! আপনি সব কাজ শেষ করেছেন।"
 
 #: includes/rest-api.php:535
 msgid "remove"
-msgstr "সরান"
+msgstr "অপসারণ"
 
 #: includes/rest-api.php:536
 msgid "mark as complete"
-msgstr "সম্পন্ন হিসেবে চিহ্নিত করুন"
+msgstr "সম্পূর্ণ হিসাবে চিহ্নিত করুন"
 
 #: includes/rest-api.php:537
 msgid "No task created"
-msgstr "কোনো কাজ তৈরি হয়নি"
+msgstr "কোনও কাজ তৈরি হয়নি"
 
 #: includes/rest-api.php:538
 msgid "Reminder"
-msgstr "স্মরণিকা"
+msgstr "অনুস্মারক"
 
 #: includes/rest-api.php:539
 msgid "No note set"
-msgstr "কোনো নোট সেট করা নেই"
+msgstr "কোনও নোট সেট নেই"
 
 #: includes/rest-api.php:540
 msgid "See all"
-msgstr "সব দেখুন"
+msgstr "সবগুলো দেখুন"
 
 #: includes/rest-api.php:541
 msgid "more"
-msgstr ""
+msgstr "আরো"
 
 #: includes/rest-api.php:542
 msgid "Less"
 msgstr "কম"
+
+#: includes/template-admin.php:12
+msgid "Choose the default dashboard layout for new users."
+msgstr "নতুন ব্যবহারকারীদের জন্য ডিফল্ট ড্যাশবোর্ড লেআউট নির্বাচন করুন।"
+
+#: includes/template-admin.php:16
+msgid "ACTIVE TILES"
+msgstr "সক্রিয় টাইলস"
+
+#: includes/template-admin.php:34
+msgid "Hide"
+msgstr "লুকান"
+
+#: includes/template-admin.php:45
+msgid "HIDDEN TILES"
+msgstr "লুকানো টাইলস"
+
+#: includes/template-admin.php:60
+msgid "Show"
+msgstr "দেখান"
 
 #: includes/template-parts/tile.php:27
 msgid "Back"
@@ -133,30 +154,31 @@ msgstr "ফিরে যাও"
 
 #: includes/template-parts/tile.php:31
 msgid "Forward"
-msgstr ""
+msgstr "সামনে"
 
 #: includes/template-parts/tile.php:35
 msgid "Remove"
-msgstr "সরান"
+msgstr "অপসারণ"
 
 #: includes/tiles/active-contact/template.php:7
 msgid "Add a contact"
-msgstr ""
+msgstr "যোগাযোগ যোগ করুন"
 
 #: includes/tiles/contact-workload/template.php:8
 msgid ""
 "Choose an option to let the dispatcher(s) know if you are ready for new "
 "contacts"
 msgstr ""
+"আপনি নতুন পরিচিতিগুলির জন্য প্রস্তুত কিনা তা প্রেরণকারীদের জানাতে একটি বিকল্প চয়ন করুন"
 
 #: includes/tiles/contact-workload/template.php:21
 msgid "Set travel or dates unavailable"
-msgstr ""
+msgstr "ভ্রমণ বা তারিখ অনুপলব্ধ সেট করুন"
 
 #: includes/tiles/faith-milestone-totals/template.php:7
 msgid "Milestones on your active contacts"
-msgstr ""
+msgstr "আপনার সক্রিয় পরিচিতিগুলিতে মাইলফলক"
 
 #: includes/tiles/seeker-path-progress/template.php:7
 msgid "No data to show yet. You have no active contacts"
-msgstr ""
+msgstr "এখনও দেখানোর জন্য কোনও ডেটা নেই। আপনার কোনও সক্রিয় যোগাযোগ নেই"

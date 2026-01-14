@@ -5,8 +5,8 @@ msgstr ""
 "Project-Id-Version: Disciple.Tools - Dashboard 1.3.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2025-10-14T08:47:09+00:00\n"
-"PO-Revision-Date: 2025-10-08 13:03+0000\n"
+"POT-Creation-Date: 2026-01-13T14:59:20+00:00\n"
+"PO-Revision-Date: 2024-10-10 09:59+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
 "memory@weblate.org>\n"
 "Language-Team: English (United States) <https://translate.disciple.tools/"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.13.3\n"
+"X-Generator: Weblate 5.7.2\n"
 "X-Domain: disciple-tools-dashboard\n"
 
 #: disciple-tools-dashboard.php:217
@@ -118,27 +118,47 @@ msgstr "No note set"
 
 #: includes/rest-api.php:540
 msgid "See all"
-msgstr ""
+msgstr "See all"
 
 #: includes/rest-api.php:541
 msgid "more"
-msgstr ""
+msgstr "more"
 
 #: includes/rest-api.php:542
 msgid "Less"
-msgstr ""
+msgstr "Less"
+
+#: includes/template-admin.php:12
+msgid "Choose the default dashboard layout for new users."
+msgstr "Choose the default dashboard layout for new users."
+
+#: includes/template-admin.php:16
+msgid "ACTIVE TILES"
+msgstr "ACTIVE TILES"
+
+#: includes/template-admin.php:34
+msgid "Hide"
+msgstr "Hide"
+
+#: includes/template-admin.php:45
+msgid "HIDDEN TILES"
+msgstr "HIDDEN TILES"
+
+#: includes/template-admin.php:60
+msgid "Show"
+msgstr "Show"
 
 #: includes/template-parts/tile.php:27
 msgid "Back"
-msgstr ""
+msgstr "Back"
 
 #: includes/template-parts/tile.php:31
 msgid "Forward"
-msgstr ""
+msgstr "Forward"
 
 #: includes/template-parts/tile.php:35
 msgid "Remove"
-msgstr "remove"
+msgstr "Remove"
 
 #: includes/tiles/active-contact/template.php:7
 msgid "Add a contact"
