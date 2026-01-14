@@ -3,9 +3,10 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2026-01-13T14:59:20+00:00\n"
-"PO-Revision-Date: 2022-11-09 08:32+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"POT-Creation-Date: 2026-01-14T07:46:32+00:00\n"
+"PO-Revision-Date: 2026-01-14 07:44+0000\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
+"memory@weblate.org>\n"
 "Language-Team: Burmese <https://translate.disciple.tools/projects/disciple-"
 "tools/disciple-tools-dashboard/my_MM/>\n"
 "Language: my_MM\n"
@@ -13,49 +14,53 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 5.15.1\n"
 
-#: disciple-tools-dashboard.php:217
+#: disciple-tools-dashboard.php:219
+msgid "Your Apps"
+msgstr "သင်၏အက်ပလီကေးရှင်းများ"
+
+#: disciple-tools-dashboard.php:224
 msgid "Active Contacts"
 msgstr "Active အဆက်အသွယ်များ"
 
-#: disciple-tools-dashboard.php:218
+#: disciple-tools-dashboard.php:225
 msgid "Update Needed"
 msgstr "အပ်ဒိတ်လိုအပ်သည်"
 
-#: disciple-tools-dashboard.php:219
+#: disciple-tools-dashboard.php:226
 msgid "Pending Contacts"
 msgstr "ဆိုင်းငံ့ထားအဆက်အသွယ်များ"
 
-#: disciple-tools-dashboard.php:220
+#: disciple-tools-dashboard.php:227
 msgid "Contact Workload"
 msgstr "Workload ကိုဆက်သွယ်ပါ"
 
-#: disciple-tools-dashboard.php:221
+#: disciple-tools-dashboard.php:228
 msgid "Activity"
 msgstr "လှုပ်ရှားမှု"
 
-#: disciple-tools-dashboard.php:226
+#: disciple-tools-dashboard.php:233
 msgid "Faith Milestone Totals"
 msgstr "ယုံကြည်ခြင်းမှတ်တိုင်စုစုပေါင်း"
 
-#: disciple-tools-dashboard.php:230
+#: disciple-tools-dashboard.php:237
 msgid "Seeker Path Progress"
 msgstr "ရှာဖွေသူလမ်းကြောင်းတိုးတက်မှု"
 
-#: disciple-tools-dashboard.php:234
+#: disciple-tools-dashboard.php:241
 msgid "Personal Benchmarks"
 msgstr "ကိုယ်ရေးကိုယ်တာ Benchmarks"
 
-#: disciple-tools-dashboard.php:238
+#: disciple-tools-dashboard.php:245
 msgid "Tasks"
 msgstr "လုပ်ငန်းတာဝန်များ"
 
-#: disciple-tools-dashboard.php:315 disciple-tools-dashboard.php:326
+#: disciple-tools-dashboard.php:322 disciple-tools-dashboard.php:333
 msgid "Whoah, partner!"
 msgstr "ဘယ်သူလဲ"
 
-#: disciple-tools-dashboard.php:338
+#: disciple-tools-dashboard.php:345
 msgid "Method does not exist."
 msgstr "နည်းလမ်းမရှိပါ။"
 
@@ -124,26 +129,6 @@ msgstr "ပိုမို"
 msgid "Less"
 msgstr "နည်းသည်"
 
-#: includes/template-admin.php:12
-msgid "Choose the default dashboard layout for new users."
-msgstr "အသုံးပြုသူအသစ်များအတွက် မူရင်းဒိုင်ခွက်အပြင်အဆင်ကိုရွေးချယ်ပါ။"
-
-#: includes/template-admin.php:16
-msgid "ACTIVE TILES"
-msgstr "တက်ကြွသော TILES များ"
-
-#: includes/template-admin.php:34
-msgid "Hide"
-msgstr "ဝှက်ပါ"
-
-#: includes/template-admin.php:45
-msgid "HIDDEN TILES"
-msgstr "ဝှက်ထားသော TILES များ"
-
-#: includes/template-admin.php:60
-msgid "Show"
-msgstr "ပြပါ"
-
 #: includes/template-parts/tile.php:27
 msgid "Back"
 msgstr "နောက်သို့"
@@ -177,3 +162,18 @@ msgstr "သင်၏တက်ကြွသောအဆက်အသွယ်မျ
 #: includes/tiles/seeker-path-progress/template.php:7
 msgid "No data to show yet. You have no active contacts"
 msgstr "ပြသရန်အချက်အလက်မရှိပါ သင့်တွင်တက်ကြွသောအဆက်အသွယ်များမရှိပါ"
+
+#~ msgid "Choose the default dashboard layout for new users."
+#~ msgstr "အသုံးပြုသူအသစ်များအတွက် မူရင်းဒိုင်ခွက်အပြင်အဆင်ကိုရွေးချယ်ပါ။"
+
+#~ msgid "ACTIVE TILES"
+#~ msgstr "တက်ကြွသော TILES များ"
+
+#~ msgid "Hide"
+#~ msgstr "ဝှက်ပါ"
+
+#~ msgid "HIDDEN TILES"
+#~ msgstr "ဝှက်ထားသော TILES များ"
+
+#~ msgid "Show"
+#~ msgstr "ပြပါ"

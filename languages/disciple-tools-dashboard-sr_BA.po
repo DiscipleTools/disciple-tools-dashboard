@@ -3,9 +3,10 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2026-01-13T14:59:20+00:00\n"
-"PO-Revision-Date: 2022-11-09 08:32+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"POT-Creation-Date: 2026-01-14T07:46:32+00:00\n"
+"PO-Revision-Date: 2026-01-14 07:44+0000\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
+"memory@weblate.org>\n"
 "Language-Team: Serbian <https://translate.disciple.tools/projects/disciple-"
 "tools/disciple-tools-dashboard/sr_BA/>\n"
 "Language: sr_BA\n"
@@ -14,49 +15,53 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 5.15.1\n"
 
-#: disciple-tools-dashboard.php:217
+#: disciple-tools-dashboard.php:219
+msgid "Your Apps"
+msgstr "Vaše aplikacije"
+
+#: disciple-tools-dashboard.php:224
 msgid "Active Contacts"
 msgstr "Активни контакти"
 
-#: disciple-tools-dashboard.php:218
+#: disciple-tools-dashboard.php:225
 msgid "Update Needed"
 msgstr "Потребно ажурирање"
 
-#: disciple-tools-dashboard.php:219
+#: disciple-tools-dashboard.php:226
 msgid "Pending Contacts"
 msgstr "Контакти на чекању"
 
-#: disciple-tools-dashboard.php:220
+#: disciple-tools-dashboard.php:227
 msgid "Contact Workload"
 msgstr "Контактирајте оптерећење"
 
-#: disciple-tools-dashboard.php:221
+#: disciple-tools-dashboard.php:228
 msgid "Activity"
 msgstr "Активност"
 
-#: disciple-tools-dashboard.php:226
+#: disciple-tools-dashboard.php:233
 msgid "Faith Milestone Totals"
 msgstr "Фаитх Милестоне Тотал"
 
-#: disciple-tools-dashboard.php:230
+#: disciple-tools-dashboard.php:237
 msgid "Seeker Path Progress"
 msgstr "Напредак пута трагача"
 
-#: disciple-tools-dashboard.php:234
+#: disciple-tools-dashboard.php:241
 msgid "Personal Benchmarks"
 msgstr "Лична мјерила"
 
-#: disciple-tools-dashboard.php:238
+#: disciple-tools-dashboard.php:245
 msgid "Tasks"
 msgstr "Задаци"
 
-#: disciple-tools-dashboard.php:315 disciple-tools-dashboard.php:326
+#: disciple-tools-dashboard.php:322 disciple-tools-dashboard.php:333
 msgid "Whoah, partner!"
 msgstr "Вхоах, партнеру!"
 
-#: disciple-tools-dashboard.php:338
+#: disciple-tools-dashboard.php:345
 msgid "Method does not exist."
 msgstr "Метода не постоји."
 
@@ -125,26 +130,6 @@ msgstr "више"
 msgid "Less"
 msgstr "Мање"
 
-#: includes/template-admin.php:12
-msgid "Choose the default dashboard layout for new users."
-msgstr "Изаберите подразумевани изглед командне табле за нове кориснике."
-
-#: includes/template-admin.php:16
-msgid "ACTIVE TILES"
-msgstr "АКТИВНЕ ПЛОЧИЦЕ"
-
-#: includes/template-admin.php:34
-msgid "Hide"
-msgstr "Сакриј"
-
-#: includes/template-admin.php:45
-msgid "HIDDEN TILES"
-msgstr "СКРИВЕНЕ ПЛОЧИЦЕ"
-
-#: includes/template-admin.php:60
-msgid "Show"
-msgstr "Прикажи"
-
 #: includes/template-parts/tile.php:27
 msgid "Back"
 msgstr "Nazad"
@@ -179,3 +164,18 @@ msgstr "Прекретнице у вашим активним контактим
 #: includes/tiles/seeker-path-progress/template.php:7
 msgid "No data to show yet. You have no active contacts"
 msgstr "Још нема података за приказ. Немате активних контаката"
+
+#~ msgid "Choose the default dashboard layout for new users."
+#~ msgstr "Изаберите подразумевани изглед командне табле за нове кориснике."
+
+#~ msgid "ACTIVE TILES"
+#~ msgstr "АКТИВНЕ ПЛОЧИЦЕ"
+
+#~ msgid "Hide"
+#~ msgstr "Сакриј"
+
+#~ msgid "HIDDEN TILES"
+#~ msgstr "СКРИВЕНЕ ПЛОЧИЦЕ"
+
+#~ msgid "Show"
+#~ msgstr "Прикажи"
