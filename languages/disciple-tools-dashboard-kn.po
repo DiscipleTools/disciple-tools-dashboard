@@ -3,9 +3,10 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2026-01-13T14:59:20+00:00\n"
-"PO-Revision-Date: 2022-11-09 08:32+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"POT-Creation-Date: 2026-01-14T07:46:32+00:00\n"
+"PO-Revision-Date: 2026-01-14 07:44+0000\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
+"memory@weblate.org>\n"
 "Language-Team: Kannada <https://translate.disciple.tools/projects/disciple-"
 "tools/disciple-tools-dashboard/kn/>\n"
 "Language: kn\n"
@@ -13,49 +14,53 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 5.15.1\n"
 
-#: disciple-tools-dashboard.php:217
+#: disciple-tools-dashboard.php:219
+msgid "Your Apps"
+msgstr "ನಿಮ್ಮ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು"
+
+#: disciple-tools-dashboard.php:224
 msgid "Active Contacts"
 msgstr "ಸಕ್ರಿಯ ಸಂಪರ್ಕಗಳು"
 
-#: disciple-tools-dashboard.php:218
+#: disciple-tools-dashboard.php:225
 msgid "Update Needed"
 msgstr "ನವೀಕರಣ ಅಗತ್ಯವಿದೆ"
 
-#: disciple-tools-dashboard.php:219
+#: disciple-tools-dashboard.php:226
 msgid "Pending Contacts"
 msgstr "ಸಂಪರ್ಕಗಳು ಬಾಕಿ ಉಳಿದಿವೆ"
 
-#: disciple-tools-dashboard.php:220
+#: disciple-tools-dashboard.php:227
 msgid "Contact Workload"
 msgstr "ಕೆಲಸದ ಹೊರೆ ಸಂಪರ್ಕಿಸಿ"
 
-#: disciple-tools-dashboard.php:221
+#: disciple-tools-dashboard.php:228
 msgid "Activity"
 msgstr "ಚಟುವಟಿಕೆ"
 
-#: disciple-tools-dashboard.php:226
+#: disciple-tools-dashboard.php:233
 msgid "Faith Milestone Totals"
 msgstr "ನಂಬಿಕೆ ಮೈಲಿಗಲ್ಲು ಒಟ್ಟು"
 
-#: disciple-tools-dashboard.php:230
+#: disciple-tools-dashboard.php:237
 msgid "Seeker Path Progress"
 msgstr "ಸೀಕರ್ ಹಾದಿ ಪ್ರಗತಿ"
 
-#: disciple-tools-dashboard.php:234
+#: disciple-tools-dashboard.php:241
 msgid "Personal Benchmarks"
 msgstr "ವೈಯಕ್ತಿಕ ಮಾನದಂಡಗಳು"
 
-#: disciple-tools-dashboard.php:238
+#: disciple-tools-dashboard.php:245
 msgid "Tasks"
 msgstr "ಕಾರ್ಯಗಳು"
 
-#: disciple-tools-dashboard.php:315 disciple-tools-dashboard.php:326
+#: disciple-tools-dashboard.php:322 disciple-tools-dashboard.php:333
 msgid "Whoah, partner!"
 msgstr "ಓಹ್, ಪಾಲುದಾರ!"
 
-#: disciple-tools-dashboard.php:338
+#: disciple-tools-dashboard.php:345
 msgid "Method does not exist."
 msgstr "ವಿಧಾನವು ಅಸ್ತಿತ್ವದಲ್ಲಿಲ್ಲ."
 
@@ -124,26 +129,6 @@ msgstr "ಇನ್ನಷ್ಟು"
 msgid "Less"
 msgstr "ಕಡಿಮೆ"
 
-#: includes/template-admin.php:12
-msgid "Choose the default dashboard layout for new users."
-msgstr "ಹೊಸ ಬಳಕೆದಾರರಿಗೆ ಡೀಫಾಲ್ಟ್ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್ ಲೇಔಟ್ ಆಯ್ಕೆಮಾಡಿ."
-
-#: includes/template-admin.php:16
-msgid "ACTIVE TILES"
-msgstr "ಸಕ್ರಿಯ ಟೈಲ್‌ಗಳು"
-
-#: includes/template-admin.php:34
-msgid "Hide"
-msgstr "ಮರೆಮಾಡಿ"
-
-#: includes/template-admin.php:45
-msgid "HIDDEN TILES"
-msgstr "ಮರೆಮಾಡಿದ ಟೈಲ್‌ಗಳು"
-
-#: includes/template-admin.php:60
-msgid "Show"
-msgstr "ತೋರಿಸಿ"
-
 #: includes/template-parts/tile.php:27
 msgid "Back"
 msgstr "ಹಿಂದೆ"
@@ -178,3 +163,18 @@ msgstr "ನಿಮ್ಮ ಸಕ್ರಿಯ ಸಂಪರ್ಕಗಳಲ್ಲಿ 
 #: includes/tiles/seeker-path-progress/template.php:7
 msgid "No data to show yet. You have no active contacts"
 msgstr "ಇನ್ನೂ ತೋರಿಸಲು ಡೇಟಾ ಇಲ್ಲ. ನೀವು ಯಾವುದೇ ಸಕ್ರಿಯ ಸಂಪರ್ಕಗಳನ್ನು ಹೊಂದಿಲ್ಲ"
+
+#~ msgid "Choose the default dashboard layout for new users."
+#~ msgstr "ಹೊಸ ಬಳಕೆದಾರರಿಗೆ ಡೀಫಾಲ್ಟ್ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್ ಲೇಔಟ್ ಆಯ್ಕೆಮಾಡಿ."
+
+#~ msgid "ACTIVE TILES"
+#~ msgstr "ಸಕ್ರಿಯ ಟೈಲ್‌ಗಳು"
+
+#~ msgid "Hide"
+#~ msgstr "ಮರೆಮಾಡಿ"
+
+#~ msgid "HIDDEN TILES"
+#~ msgstr "ಮರೆಮಾಡಿದ ಟೈಲ್‌ಗಳು"
+
+#~ msgid "Show"
+#~ msgstr "ತೋರಿಸಿ"

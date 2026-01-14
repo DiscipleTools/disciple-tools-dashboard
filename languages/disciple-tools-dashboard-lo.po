@@ -3,9 +3,10 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2026-01-13T14:59:20+00:00\n"
-"PO-Revision-Date: 2022-11-09 08:32+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"POT-Creation-Date: 2026-01-14T07:46:32+00:00\n"
+"PO-Revision-Date: 2026-01-14 07:44+0000\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
+"memory@weblate.org>\n"
 "Language-Team: Lao <https://translate.disciple.tools/projects/disciple-tools/"
 "disciple-tools-dashboard/lo/>\n"
 "Language: lo\n"
@@ -13,49 +14,53 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 5.15.1\n"
 
-#: disciple-tools-dashboard.php:217
+#: disciple-tools-dashboard.php:219
+msgid "Your Apps"
+msgstr "ແອັບ Apps ຂອງທ່ານ"
+
+#: disciple-tools-dashboard.php:224
 msgid "Active Contacts"
 msgstr "ລາຍຊື່ຜູ້ຕິດຕໍ່ທີ່ໃຊ້ວຽກ"
 
-#: disciple-tools-dashboard.php:218
+#: disciple-tools-dashboard.php:225
 msgid "Update Needed"
 msgstr "ຕ້ອງການການປັບປຸງ"
 
-#: disciple-tools-dashboard.php:219
+#: disciple-tools-dashboard.php:226
 msgid "Pending Contacts"
 msgstr "ຕິດຕໍ່ພົວພັນທີ່ຍັງຄ້າງ"
 
-#: disciple-tools-dashboard.php:220
+#: disciple-tools-dashboard.php:227
 msgid "Contact Workload"
 msgstr "ຕິດຕໍ່ Workload"
 
-#: disciple-tools-dashboard.php:221
+#: disciple-tools-dashboard.php:228
 msgid "Activity"
 msgstr "ກິດຈະ ກຳ"
 
-#: disciple-tools-dashboard.php:226
+#: disciple-tools-dashboard.php:233
 msgid "Faith Milestone Totals"
 msgstr "ສັດທາ Milestone Totals"
 
-#: disciple-tools-dashboard.php:230
+#: disciple-tools-dashboard.php:237
 msgid "Seeker Path Progress"
 msgstr "ຄວາມຄືບ ໜ້າ ຂອງຜູ້ຊອກຫາ"
 
-#: disciple-tools-dashboard.php:234
+#: disciple-tools-dashboard.php:241
 msgid "Personal Benchmarks"
 msgstr "ມາດຕະຖານສ່ວນຕົວ"
 
-#: disciple-tools-dashboard.php:238
+#: disciple-tools-dashboard.php:245
 msgid "Tasks"
 msgstr "ໜ້າ ວຽກ"
 
-#: disciple-tools-dashboard.php:315 disciple-tools-dashboard.php:326
+#: disciple-tools-dashboard.php:322 disciple-tools-dashboard.php:333
 msgid "Whoah, partner!"
 msgstr "Whoah, ຄູ່ຮ່ວມງານ!"
 
-#: disciple-tools-dashboard.php:338
+#: disciple-tools-dashboard.php:345
 msgid "Method does not exist."
 msgstr "ບໍ່ມີວິທີການ."
 
@@ -124,26 +129,6 @@ msgstr "ເພີ່ມເຕີມ"
 msgid "Less"
 msgstr "ໜ້ອຍລົງ"
 
-#: includes/template-admin.php:12
-msgid "Choose the default dashboard layout for new users."
-msgstr "ເລືອກການວາງຜັງແຜງຄວບຄຸມເລີ່ມຕົ້ນສຳລັບຜູ້ໃຊ້ໃໝ່."
-
-#: includes/template-admin.php:16
-msgid "ACTIVE TILES"
-msgstr "ແຜ່ນກະເບື້ອງທີ່ໃຊ້ງານ"
-
-#: includes/template-admin.php:34
-msgid "Hide"
-msgstr "ເຊື່ອງ"
-
-#: includes/template-admin.php:45
-msgid "HIDDEN TILES"
-msgstr "ແຜ່ນກະເບື້ອງທີ່ເຊື່ອງ"
-
-#: includes/template-admin.php:60
-msgid "Show"
-msgstr "ສະແດງ"
-
 #: includes/template-parts/tile.php:27
 msgid "Back"
 msgstr "ກັບໄປ"
@@ -177,3 +162,18 @@ msgstr "Milestones ກ່ຽວກັບລາຍຊື່ຜູ້ຕິດຕ�
 #: includes/tiles/seeker-path-progress/template.php:7
 msgid "No data to show yet. You have no active contacts"
 msgstr "ບໍ່ມີຂໍ້ມູນທີ່ຈະສະແດງເທື່ອ. ທ່ານບໍ່ມີລາຍຊື່ຜູ້ຕິດຕໍ່ທີ່ໃຊ້ງານຢູ່"
+
+#~ msgid "Choose the default dashboard layout for new users."
+#~ msgstr "ເລືອກການວາງຜັງແຜງຄວບຄຸມເລີ່ມຕົ້ນສຳລັບຜູ້ໃຊ້ໃໝ່."
+
+#~ msgid "ACTIVE TILES"
+#~ msgstr "ແຜ່ນກະເບື້ອງທີ່ໃຊ້ງານ"
+
+#~ msgid "Hide"
+#~ msgstr "ເຊື່ອງ"
+
+#~ msgid "HIDDEN TILES"
+#~ msgstr "ແຜ່ນກະເບື້ອງທີ່ເຊື່ອງ"
+
+#~ msgid "Show"
+#~ msgstr "ສະແດງ"

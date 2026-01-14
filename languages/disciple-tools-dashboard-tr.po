@@ -5,9 +5,9 @@ msgstr ""
 "Project-Id-Version: Disciple.Tools - Dashboard 1.3.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2026-01-13T14:59:20+00:00\n"
-"PO-Revision-Date: 2024-11-07 15:00+0000\n"
-"Last-Translator: Cody Adams <izmirdeyabanci@gmail.com>\n"
+"POT-Creation-Date: 2026-01-14T07:46:32+00:00\n"
+"PO-Revision-Date: 2026-01-14 07:53+0000\n"
+"Last-Translator: Corsacca <translator@disciple.tools>\n"
 "Language-Team: Turkish <https://translate.disciple.tools/projects/disciple-"
 "tools/disciple-tools-dashboard/tr/>\n"
 "Language: tr\n"
@@ -15,50 +15,54 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8.3\n"
+"X-Generator: Weblate 5.15.1\n"
 "X-Domain: disciple-tools-dashboard\n"
 
-#: disciple-tools-dashboard.php:217
+#: disciple-tools-dashboard.php:219
+msgid "Your Apps"
+msgstr "Uygulamalarınız"
+
+#: disciple-tools-dashboard.php:224
 msgid "Active Contacts"
 msgstr "Aktif İrtibatları"
 
-#: disciple-tools-dashboard.php:218
+#: disciple-tools-dashboard.php:225
 msgid "Update Needed"
 msgstr "Güncelleme Gerekli"
 
-#: disciple-tools-dashboard.php:219
+#: disciple-tools-dashboard.php:226
 msgid "Pending Contacts"
 msgstr "Askıda Olan İrtibatları"
 
-#: disciple-tools-dashboard.php:220
+#: disciple-tools-dashboard.php:227
 msgid "Contact Workload"
 msgstr "İrtibat İş Yükü"
 
-#: disciple-tools-dashboard.php:221
+#: disciple-tools-dashboard.php:228
 msgid "Activity"
 msgstr "Etkinlik"
 
-#: disciple-tools-dashboard.php:226
+#: disciple-tools-dashboard.php:233
 msgid "Faith Milestone Totals"
 msgstr "İman Dönüm Noktası Toplamları"
 
-#: disciple-tools-dashboard.php:230
+#: disciple-tools-dashboard.php:237
 msgid "Seeker Path Progress"
 msgstr "Arayan Yolu İlerlemesi"
 
-#: disciple-tools-dashboard.php:234
+#: disciple-tools-dashboard.php:241
 msgid "Personal Benchmarks"
 msgstr "Kişisel Ölçütler"
 
-#: disciple-tools-dashboard.php:238
+#: disciple-tools-dashboard.php:245
 msgid "Tasks"
 msgstr "Görevler"
 
-#: disciple-tools-dashboard.php:315 disciple-tools-dashboard.php:326
+#: disciple-tools-dashboard.php:322 disciple-tools-dashboard.php:333
 msgid "Whoah, partner!"
 msgstr "Hey, ortak!"
 
-#: disciple-tools-dashboard.php:338
+#: disciple-tools-dashboard.php:345
 msgid "Method does not exist."
 msgstr "Yöntem mevcut değil."
 
@@ -127,26 +131,6 @@ msgstr "daha fazla"
 msgid "Less"
 msgstr "Daha az"
 
-#: includes/template-admin.php:12
-msgid "Choose the default dashboard layout for new users."
-msgstr "Yeni kullanıcılar için varsayılan gösterge paneli düzenini seçin."
-
-#: includes/template-admin.php:16
-msgid "ACTIVE TILES"
-msgstr "AKTİF KUTUCUKLAR"
-
-#: includes/template-admin.php:34
-msgid "Hide"
-msgstr "Gizle"
-
-#: includes/template-admin.php:45
-msgid "HIDDEN TILES"
-msgstr "GİZLİ KUTUCUKLAR"
-
-#: includes/template-admin.php:60
-msgid "Show"
-msgstr "Göster"
-
 #: includes/template-parts/tile.php:27
 msgid "Back"
 msgstr "Geri"
@@ -182,3 +166,18 @@ msgstr "Aktif kişilerinizdeki dönüm noktaları"
 #: includes/tiles/seeker-path-progress/template.php:7
 msgid "No data to show yet. You have no active contacts"
 msgstr "Henüz gösterilecek veri yok. Aktif kişiniz yok"
+
+#~ msgid "Choose the default dashboard layout for new users."
+#~ msgstr "Yeni kullanıcılar için varsayılan gösterge paneli düzenini seçin."
+
+#~ msgid "ACTIVE TILES"
+#~ msgstr "AKTİF KUTUCUKLAR"
+
+#~ msgid "Hide"
+#~ msgstr "Gizle"
+
+#~ msgid "HIDDEN TILES"
+#~ msgstr "GİZLİ KUTUCUKLAR"
+
+#~ msgid "Show"
+#~ msgstr "Göster"
