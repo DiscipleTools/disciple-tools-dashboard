@@ -167,7 +167,9 @@ msgstr "Adicionar um contato"
 msgid ""
 "Choose an option to let the dispatcher(s) know if you are ready for new "
 "contacts"
-msgstr "Escolha uma opção para informar ao coordenador se você está pronto para novos contatos"
+msgstr ""
+"Escolha uma opção para informar ao coordenador se você está pronto para "
+"novos contatos"
 
 #: includes/tiles/contact-workload/template.php:21
 msgid "Set travel or dates unavailable"

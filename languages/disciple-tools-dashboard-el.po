@@ -167,7 +167,9 @@ msgstr "Προσθήκη επαφής"
 msgid ""
 "Choose an option to let the dispatcher(s) know if you are ready for new "
 "contacts"
-msgstr "Επιλέξτε μια επιλογή για να ενημερώσετε τους διαχειριστές αν είστε έτοιμοι για νέες επαφές"
+msgstr ""
+"Επιλέξτε μια επιλογή για να ενημερώσετε τους διαχειριστές αν είστε έτοιμοι "
+"για νέες επαφές"
 
 #: includes/tiles/contact-workload/template.php:21
 msgid "Set travel or dates unavailable"
