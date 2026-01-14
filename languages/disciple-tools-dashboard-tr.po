@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Disciple.Tools - Dashboard 1.3.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2025-10-14T08:47:09+00:00\n"
+"POT-Creation-Date: 2026-01-13T14:59:20+00:00\n"
 "PO-Revision-Date: 2024-11-07 15:00+0000\n"
 "Last-Translator: Cody Adams <izmirdeyabanci@gmail.com>\n"
 "Language-Team: Turkish <https://translate.disciple.tools/projects/disciple-"
@@ -32,131 +32,153 @@ msgstr "Askıda Olan İrtibatları"
 
 #: disciple-tools-dashboard.php:220
 msgid "Contact Workload"
-msgstr ""
+msgstr "İrtibat İş Yükü"
 
 #: disciple-tools-dashboard.php:221
 msgid "Activity"
-msgstr ""
+msgstr "Etkinlik"
 
 #: disciple-tools-dashboard.php:226
 msgid "Faith Milestone Totals"
-msgstr ""
+msgstr "İman Dönüm Noktası Toplamları"
 
 #: disciple-tools-dashboard.php:230
 msgid "Seeker Path Progress"
-msgstr ""
+msgstr "Arayan Yolu İlerlemesi"
 
 #: disciple-tools-dashboard.php:234
 msgid "Personal Benchmarks"
-msgstr ""
+msgstr "Kişisel Ölçütler"
 
 #: disciple-tools-dashboard.php:238
 msgid "Tasks"
-msgstr ""
+msgstr "Görevler"
 
 #: disciple-tools-dashboard.php:315 disciple-tools-dashboard.php:326
 msgid "Whoah, partner!"
-msgstr ""
+msgstr "Hey, ortak!"
 
 #: disciple-tools-dashboard.php:338
 msgid "Method does not exist."
-msgstr ""
+msgstr "Yöntem mevcut değil."
 
 #: includes/functions.php:97
 msgid "Dashboard"
-msgstr ""
+msgstr "Gösterge Paneli"
 
 #: includes/rest-api.php:180
 #, php-format
 msgid "%s days since last update"
-msgstr ""
+msgstr "Son güncellemeden bu yana %s gün"
 
 #: includes/rest-api.php:529
 msgid "Accept"
-msgstr ""
+msgstr "Kabul Et"
 
 #: includes/rest-api.php:530
 msgid "Decline"
-msgstr ""
+msgstr "Reddet"
 
 #: includes/rest-api.php:531
 msgid "# Contacts Assigned"
-msgstr ""
+msgstr "# Atanan İrtibatlar"
 
 #: includes/rest-api.php:532
 msgid "# First Meetings"
-msgstr ""
+msgstr "# İlk Toplantılar"
 
 #: includes/rest-api.php:533
 msgid "# Faith milestones"
-msgstr ""
+msgstr "# İman dönüm noktaları"
 
 #: includes/rest-api.php:534
 msgid "Hurray! You are caught up."
-msgstr ""
+msgstr "Yaşa! Tüm görevler tamamlandı."
 
 #: includes/rest-api.php:535
 msgid "remove"
-msgstr ""
+msgstr "kaldır"
 
 #: includes/rest-api.php:536
 msgid "mark as complete"
-msgstr ""
+msgstr "tamamlandı olarak işaretle"
 
 #: includes/rest-api.php:537
 msgid "No task created"
-msgstr ""
+msgstr "Hiç görev oluşturulmadı"
 
 #: includes/rest-api.php:538
 msgid "Reminder"
-msgstr ""
+msgstr "Hatırlatma"
 
 #: includes/rest-api.php:539
 msgid "No note set"
-msgstr ""
+msgstr "Not ayarlanmadı"
 
 #: includes/rest-api.php:540
 msgid "See all"
-msgstr ""
+msgstr "Tümünü gör"
 
 #: includes/rest-api.php:541
 msgid "more"
-msgstr ""
+msgstr "daha fazla"
 
 #: includes/rest-api.php:542
 msgid "Less"
-msgstr ""
+msgstr "Daha az"
+
+#: includes/template-admin.php:12
+msgid "Choose the default dashboard layout for new users."
+msgstr "Yeni kullanıcılar için varsayılan gösterge paneli düzenini seçin."
+
+#: includes/template-admin.php:16
+msgid "ACTIVE TILES"
+msgstr "AKTİF KUTUCUKLAR"
+
+#: includes/template-admin.php:34
+msgid "Hide"
+msgstr "Gizle"
+
+#: includes/template-admin.php:45
+msgid "HIDDEN TILES"
+msgstr "GİZLİ KUTUCUKLAR"
+
+#: includes/template-admin.php:60
+msgid "Show"
+msgstr "Göster"
 
 #: includes/template-parts/tile.php:27
 msgid "Back"
-msgstr "Geri gidin"
+msgstr "Geri"
 
 #: includes/template-parts/tile.php:31
 msgid "Forward"
-msgstr ""
+msgstr "İleri"
 
 #: includes/template-parts/tile.php:35
 msgid "Remove"
-msgstr ""
+msgstr "Kaldır"
 
 #: includes/tiles/active-contact/template.php:7
 msgid "Add a contact"
-msgstr ""
+msgstr "Bir kişi ekle"
 
 #: includes/tiles/contact-workload/template.php:8
 msgid ""
 "Choose an option to let the dispatcher(s) know if you are ready for new "
 "contacts"
 msgstr ""
+"Yeni kişiler için hazır olup olmadığınızı dağıtıcılara bildirmek için bir "
+"seçenek seçin"
 
 #: includes/tiles/contact-workload/template.php:21
 msgid "Set travel or dates unavailable"
-msgstr ""
+msgstr "Seyahat veya tarihleri müsait değil olarak ayarla"
 
 #: includes/tiles/faith-milestone-totals/template.php:7
 msgid "Milestones on your active contacts"
-msgstr ""
+msgstr "Aktif kişilerinizdeki dönüm noktaları"
 
 #: includes/tiles/seeker-path-progress/template.php:7
 msgid "No data to show yet. You have no active contacts"
-msgstr ""
+msgstr "Henüz gösterilecek veri yok. Aktif kişiniz yok"

@@ -1,14 +1,13 @@
-# Copyright (C) 2022 
+# Copyright (C) 2022
 # This file is distributed under the same license as the Disciple.Tools - Dashboard plugin.
 msgid ""
 msgstr ""
 "Project-Id-Version: Disciple.Tools - Dashboard 1.1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2025-10-14T08:47:09+00:00\n"
-"PO-Revision-Date: 2025-10-08 13:03+0000\n"
-"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
-"memory@weblate.org>\n"
+"POT-Creation-Date: 2026-01-13T14:59:20+00:00\n"
+"PO-Revision-Date: 2025-05-12 02:00+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Greek <https://translate.disciple.tools/projects/disciple-"
 "tools/disciple-tools-dashboard/el/>\n"
 "Language: el\n"
@@ -16,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.13.3\n"
+"X-Generator: Weblate 5.11.4\n"
 "X-Domain: disciple-tools-dashboard\n"
 
 #: disciple-tools-dashboard.php:217
@@ -29,11 +28,11 @@ msgstr "Χρειάζεται Ενημέρωση"
 
 #: disciple-tools-dashboard.php:219
 msgid "Pending Contacts"
-msgstr ""
+msgstr "Εκκρεμείς Επαφές"
 
 #: disciple-tools-dashboard.php:220
 msgid "Contact Workload"
-msgstr ""
+msgstr "Φόρτος Εργασίας Επαφών"
 
 #: disciple-tools-dashboard.php:221
 msgid "Activity"
@@ -41,31 +40,31 @@ msgstr "Δραστηριότητα"
 
 #: disciple-tools-dashboard.php:226
 msgid "Faith Milestone Totals"
-msgstr "Ορόσημα Πίστεως"
+msgstr "Σύνολα Ορόσημων Πίστεως"
 
 #: disciple-tools-dashboard.php:230
 msgid "Seeker Path Progress"
-msgstr ""
+msgstr "Πρόοδος Διαδρομής Αναζητητή"
 
 #: disciple-tools-dashboard.php:234
 msgid "Personal Benchmarks"
-msgstr ""
+msgstr "Προσωπικά Σημεία Αναφοράς"
 
 #: disciple-tools-dashboard.php:238
 msgid "Tasks"
-msgstr "Καθήκον"
+msgstr "Εργασίες"
 
 #: disciple-tools-dashboard.php:315 disciple-tools-dashboard.php:326
 msgid "Whoah, partner!"
-msgstr ""
+msgstr "Ουάου, συνεργάτη!"
 
 #: disciple-tools-dashboard.php:338
 msgid "Method does not exist."
-msgstr ""
+msgstr "Η μέθοδος δεν υπάρχει."
 
 #: includes/functions.php:97
 msgid "Dashboard"
-msgstr ""
+msgstr "Πίνακας Ελέγχου"
 
 #: includes/rest-api.php:180
 #, php-format
@@ -82,31 +81,31 @@ msgstr "Απόρριψη"
 
 #: includes/rest-api.php:531
 msgid "# Contacts Assigned"
-msgstr ""
+msgstr "# Ανατεθειμένες Επαφές"
 
 #: includes/rest-api.php:532
 msgid "# First Meetings"
-msgstr "Πρώτες Συναντήσεις"
+msgstr "# Πρώτες Συναντήσεις"
 
 #: includes/rest-api.php:533
 msgid "# Faith milestones"
-msgstr "Ορόσημα Πίστεως"
+msgstr "# Ορόσημα Πίστεως"
 
 #: includes/rest-api.php:534
 msgid "Hurray! You are caught up."
-msgstr ""
+msgstr "Μπράβο! Είστε ενημερωμένοι."
 
 #: includes/rest-api.php:535
 msgid "remove"
-msgstr "Αφαίρεση"
+msgstr "αφαίρεση"
 
 #: includes/rest-api.php:536
 msgid "mark as complete"
-msgstr "Σήμανση ως ολοκληρωμένου"
+msgstr "σήμανση ως ολοκληρωμένου"
 
 #: includes/rest-api.php:537
 msgid "No task created"
-msgstr "Δεν δημιουργήθηκαν καθήκοντα"
+msgstr "Δεν δημιουργήθηκε εργασία"
 
 #: includes/rest-api.php:538
 msgid "Reminder"
@@ -114,19 +113,39 @@ msgstr "Υπενθύμιση"
 
 #: includes/rest-api.php:539
 msgid "No note set"
-msgstr "Δεν υπάρχουν σημειώσεις"
+msgstr "Δεν υπάρχει σημείωση"
 
 #: includes/rest-api.php:540
 msgid "See all"
-msgstr "Εμφάνιση Όλων"
+msgstr "Εμφάνιση όλων"
 
 #: includes/rest-api.php:541
 msgid "more"
-msgstr ""
+msgstr "περισσότερα"
 
 #: includes/rest-api.php:542
 msgid "Less"
 msgstr "Λιγότερα"
+
+#: includes/template-admin.php:12
+msgid "Choose the default dashboard layout for new users."
+msgstr "Επιλέξτε την προεπιλεγμένη διάταξη πίνακα ελέγχου για νέους χρήστες."
+
+#: includes/template-admin.php:16
+msgid "ACTIVE TILES"
+msgstr "ΕΝΕΡΓΑ ΠΛΑΚΙΔΙΑ"
+
+#: includes/template-admin.php:34
+msgid "Hide"
+msgstr "Απόκρυψη"
+
+#: includes/template-admin.php:45
+msgid "HIDDEN TILES"
+msgstr "ΚΡΥΜΜΕΝΑ ΠΛΑΚΙΔΙΑ"
+
+#: includes/template-admin.php:60
+msgid "Show"
+msgstr "Εμφάνιση"
 
 #: includes/template-parts/tile.php:27
 msgid "Back"
@@ -134,7 +153,7 @@ msgstr "Πίσω"
 
 #: includes/template-parts/tile.php:31
 msgid "Forward"
-msgstr ""
+msgstr "Μπροστά"
 
 #: includes/template-parts/tile.php:35
 msgid "Remove"
@@ -142,22 +161,22 @@ msgstr "Αφαίρεση"
 
 #: includes/tiles/active-contact/template.php:7
 msgid "Add a contact"
-msgstr ""
+msgstr "Προσθήκη επαφής"
 
 #: includes/tiles/contact-workload/template.php:8
 msgid ""
 "Choose an option to let the dispatcher(s) know if you are ready for new "
 "contacts"
-msgstr ""
+msgstr "Επιλέξτε μια επιλογή για να ενημερώσετε τους διαχειριστές αν είστε έτοιμοι για νέες επαφές"
 
 #: includes/tiles/contact-workload/template.php:21
 msgid "Set travel or dates unavailable"
-msgstr "Προγραμματισμός Ταξιδιού ή Ημερομηνιών μη Διαθεσιμότητας"
+msgstr "Ορισμός ταξιδιού ή ημερομηνιών μη διαθεσιμότητας"
 
 #: includes/tiles/faith-milestone-totals/template.php:7
 msgid "Milestones on your active contacts"
-msgstr ""
+msgstr "Ορόσημα στις ενεργές επαφές σας"
 
 #: includes/tiles/seeker-path-progress/template.php:7
 msgid "No data to show yet. You have no active contacts"
-msgstr ""
+msgstr "Δεν υπάρχουν δεδομένα ακόμα. Δεν έχετε ενεργές επαφές"

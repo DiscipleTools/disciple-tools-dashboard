@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Disciple.Tools - Dashboard 1.4.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2025-10-14T08:47:09+00:00\n"
+"POT-Creation-Date: 2026-01-13T14:59:20+00:00\n"
 "PO-Revision-Date: 2026-01-13 00:04+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
 "memory@weblate.org>\n"
@@ -21,47 +21,47 @@ msgstr ""
 
 #: disciple-tools-dashboard.php:217
 msgid "Active Contacts"
-msgstr ""
+msgstr "Активдүү байланыштар"
 
 #: disciple-tools-dashboard.php:218
 msgid "Update Needed"
-msgstr ""
+msgstr "Жаңыртуу керек"
 
 #: disciple-tools-dashboard.php:219
 msgid "Pending Contacts"
-msgstr ""
+msgstr "Күтүүдөгү байланыштар"
 
 #: disciple-tools-dashboard.php:220
 msgid "Contact Workload"
-msgstr ""
+msgstr "Байланыш жүктөмү"
 
 #: disciple-tools-dashboard.php:221
 msgid "Activity"
-msgstr ""
+msgstr "Ишмердик"
 
 #: disciple-tools-dashboard.php:226
 msgid "Faith Milestone Totals"
-msgstr ""
+msgstr "Ишеним этаптарынын жыйындысы"
 
 #: disciple-tools-dashboard.php:230
 msgid "Seeker Path Progress"
-msgstr ""
+msgstr "Издөөчүнүн жолундагы өнүгүү"
 
 #: disciple-tools-dashboard.php:234
 msgid "Personal Benchmarks"
-msgstr ""
+msgstr "Жеке көрсөткүчтөр"
 
 #: disciple-tools-dashboard.php:238
 msgid "Tasks"
-msgstr ""
+msgstr "Тапшырмалар"
 
 #: disciple-tools-dashboard.php:315 disciple-tools-dashboard.php:326
 msgid "Whoah, partner!"
-msgstr ""
+msgstr "Ой, өнөктөш!"
 
 #: disciple-tools-dashboard.php:338
 msgid "Method does not exist."
-msgstr ""
+msgstr "Ыкма жок."
 
 #: includes/functions.php:97
 msgid "Dashboard"
@@ -70,63 +70,83 @@ msgstr "Башкаруу панели"
 #: includes/rest-api.php:180
 #, php-format
 msgid "%s days since last update"
-msgstr ""
+msgstr "Акыркы жаңыртуудан бери %s күн"
 
 #: includes/rest-api.php:529
 msgid "Accept"
-msgstr ""
+msgstr "Кабыл алуу"
 
 #: includes/rest-api.php:530
 msgid "Decline"
-msgstr ""
+msgstr "Баш тартуу"
 
 #: includes/rest-api.php:531
 msgid "# Contacts Assigned"
-msgstr ""
+msgstr "# Дайындалган байланыштар"
 
 #: includes/rest-api.php:532
 msgid "# First Meetings"
-msgstr ""
+msgstr "# Биринчи жолугушуулар"
 
 #: includes/rest-api.php:533
 msgid "# Faith milestones"
-msgstr ""
+msgstr "# Ишеним этаптары"
 
 #: includes/rest-api.php:534
 msgid "Hurray! You are caught up."
-msgstr ""
+msgstr "Ура! Бардык тапшырмалар аткарылды."
 
 #: includes/rest-api.php:535
 msgid "remove"
-msgstr ""
+msgstr "алып салуу"
 
 #: includes/rest-api.php:536
 msgid "mark as complete"
-msgstr ""
+msgstr "аткарылды деп белгилөө"
 
 #: includes/rest-api.php:537
 msgid "No task created"
-msgstr ""
+msgstr "Тапшырма түзүлгөн жок"
 
 #: includes/rest-api.php:538
 msgid "Reminder"
-msgstr ""
+msgstr "Эскертүү"
 
 #: includes/rest-api.php:539
 msgid "No note set"
-msgstr ""
+msgstr "Эскертме коюлган жок"
 
 #: includes/rest-api.php:540
 msgid "See all"
-msgstr ""
+msgstr "Баарын көрүү"
 
 #: includes/rest-api.php:541
 msgid "more"
-msgstr ""
+msgstr "дагы"
 
 #: includes/rest-api.php:542
 msgid "Less"
-msgstr ""
+msgstr "Азыраак"
+
+#: includes/template-admin.php:12
+msgid "Choose the default dashboard layout for new users."
+msgstr "Жаңы колдонуучулар үчүн демейки башкаруу панелинин жайгашуусун тандаңыз."
+
+#: includes/template-admin.php:16
+msgid "ACTIVE TILES"
+msgstr "АКТИВДҮҮ ПЛИТКАЛАР"
+
+#: includes/template-admin.php:34
+msgid "Hide"
+msgstr "Жашыруу"
+
+#: includes/template-admin.php:45
+msgid "HIDDEN TILES"
+msgstr "ЖАШЫРЫЛГАН ПЛИТКАЛАР"
+
+#: includes/template-admin.php:60
+msgid "Show"
+msgstr "Көрсөтүү"
 
 #: includes/template-parts/tile.php:27
 msgid "Back"
@@ -134,30 +154,32 @@ msgstr "Артка"
 
 #: includes/template-parts/tile.php:31
 msgid "Forward"
-msgstr ""
+msgstr "Алдыга"
 
 #: includes/template-parts/tile.php:35
 msgid "Remove"
-msgstr ""
+msgstr "Алып салуу"
 
 #: includes/tiles/active-contact/template.php:7
 msgid "Add a contact"
-msgstr ""
+msgstr "Байланыш кошуу"
 
 #: includes/tiles/contact-workload/template.php:8
 msgid ""
 "Choose an option to let the dispatcher(s) know if you are ready for new "
 "contacts"
 msgstr ""
+"Жаңы байланыштарга даяр экениңизди диспетчерге билдирүү үчүн параметрди "
+"тандаңыз"
 
 #: includes/tiles/contact-workload/template.php:21
 msgid "Set travel or dates unavailable"
-msgstr ""
+msgstr "Саякат же датаны жеткиликсиз деп белгилөө"
 
 #: includes/tiles/faith-milestone-totals/template.php:7
 msgid "Milestones on your active contacts"
-msgstr ""
+msgstr "Активдүү байланыштарыңыздагы этаптар"
 
 #: includes/tiles/seeker-path-progress/template.php:7
 msgid "No data to show yet. You have no active contacts"
-msgstr ""
+msgstr "Азырынча көрсөтө турган маалымат жок. Сизде активдүү байланыштар жок"

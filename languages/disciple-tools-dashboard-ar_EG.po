@@ -1,11 +1,11 @@
-# Copyright (C) 2024 
+# Copyright (C) 2024
 # This file is distributed under the same license as the Disciple.Tools - Dashboard plugin.
 msgid ""
 msgstr ""
 "Project-Id-Version: Disciple.Tools - Dashboard 1.3.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2025-10-14T08:47:09+00:00\n"
+"POT-Creation-Date: 2026-01-13T14:59:20+00:00\n"
 "PO-Revision-Date: 2024-10-10 09:59+0000\n"
 "Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
 "memory@weblate.org>\n"
@@ -22,112 +22,132 @@ msgstr ""
 
 #: disciple-tools-dashboard.php:217
 msgid "Active Contacts"
-msgstr ""
+msgstr "جهات الاتصال النشطة"
 
 #: disciple-tools-dashboard.php:218
 msgid "Update Needed"
-msgstr ""
+msgstr "يحتاج إلى تحديث"
 
 #: disciple-tools-dashboard.php:219
 msgid "Pending Contacts"
-msgstr ""
+msgstr "جهات الاتصال المعلقة"
 
 #: disciple-tools-dashboard.php:220
 msgid "Contact Workload"
-msgstr ""
+msgstr "حجم عمل جهات الاتصال"
 
 #: disciple-tools-dashboard.php:221
 msgid "Activity"
-msgstr ""
+msgstr "النشاط"
 
 #: disciple-tools-dashboard.php:226
 msgid "Faith Milestone Totals"
-msgstr ""
+msgstr "إجماليات معالم الإيمان"
 
 #: disciple-tools-dashboard.php:230
 msgid "Seeker Path Progress"
-msgstr ""
+msgstr "تقدم مسار الباحث"
 
 #: disciple-tools-dashboard.php:234
 msgid "Personal Benchmarks"
-msgstr ""
+msgstr "المعايير الشخصية"
 
 #: disciple-tools-dashboard.php:238
 msgid "Tasks"
-msgstr ""
+msgstr "المهام"
 
 #: disciple-tools-dashboard.php:315 disciple-tools-dashboard.php:326
 msgid "Whoah, partner!"
-msgstr ""
+msgstr "مهلاً يا شريك!"
 
 #: disciple-tools-dashboard.php:338
 msgid "Method does not exist."
-msgstr ""
+msgstr "الطريقة غير موجودة."
 
 #: includes/functions.php:97
 msgid "Dashboard"
-msgstr ""
+msgstr "لوحة القيادة"
 
 #: includes/rest-api.php:180
 #, php-format
 msgid "%s days since last update"
-msgstr ""
+msgstr "%s يوم منذ آخر تحديث"
 
 #: includes/rest-api.php:529
 msgid "Accept"
-msgstr ""
+msgstr "قبول"
 
 #: includes/rest-api.php:530
 msgid "Decline"
-msgstr ""
+msgstr "رفض"
 
 #: includes/rest-api.php:531
 msgid "# Contacts Assigned"
-msgstr ""
+msgstr "# جهات اتصال تم تعيينها"
 
 #: includes/rest-api.php:532
 msgid "# First Meetings"
-msgstr ""
+msgstr "# الاجتماعات الأولى"
 
 #: includes/rest-api.php:533
 msgid "# Faith milestones"
-msgstr ""
+msgstr "# معالم الإيمان"
 
 #: includes/rest-api.php:534
 msgid "Hurray! You are caught up."
-msgstr ""
+msgstr "مبروك! لقد أنهيت جميع المهام."
 
 #: includes/rest-api.php:535
 msgid "remove"
-msgstr ""
+msgstr "إزالة"
 
 #: includes/rest-api.php:536
 msgid "mark as complete"
-msgstr ""
+msgstr "وضع علامة مكتمل"
 
 #: includes/rest-api.php:537
 msgid "No task created"
-msgstr ""
+msgstr "لم يتم إنشاء مهمة"
 
 #: includes/rest-api.php:538
 msgid "Reminder"
-msgstr ""
+msgstr "تذكير"
 
 #: includes/rest-api.php:539
 msgid "No note set"
-msgstr ""
+msgstr "لم يتم تعيين ملاحظة"
 
 #: includes/rest-api.php:540
 msgid "See all"
-msgstr ""
+msgstr "عرض الكل"
 
 #: includes/rest-api.php:541
 msgid "more"
-msgstr ""
+msgstr "المزيد"
 
 #: includes/rest-api.php:542
 msgid "Less"
-msgstr ""
+msgstr "أقل"
+
+#: includes/template-admin.php:12
+msgid "Choose the default dashboard layout for new users."
+msgstr "اختر تخطيط لوحة القيادة الافتراضي للمستخدمين الجدد."
+
+#: includes/template-admin.php:16
+msgid "ACTIVE TILES"
+msgstr "البلاطات النشطة"
+
+#: includes/template-admin.php:34
+msgid "Hide"
+msgstr "إخفاء"
+
+#: includes/template-admin.php:45
+msgid "HIDDEN TILES"
+msgstr "البلاطات المخفية"
+
+#: includes/template-admin.php:60
+msgid "Show"
+msgstr "إظهار"
 
 #: includes/template-parts/tile.php:27
 msgid "Back"
@@ -135,30 +155,30 @@ msgstr "الرجوع"
 
 #: includes/template-parts/tile.php:31
 msgid "Forward"
-msgstr ""
+msgstr "للأمام"
 
 #: includes/template-parts/tile.php:35
 msgid "Remove"
-msgstr ""
+msgstr "إزالة"
 
 #: includes/tiles/active-contact/template.php:7
 msgid "Add a contact"
-msgstr ""
+msgstr "أضف جهة اتصال"
 
 #: includes/tiles/contact-workload/template.php:8
 msgid ""
 "Choose an option to let the dispatcher(s) know if you are ready for new "
 "contacts"
-msgstr ""
+msgstr "اختر خياراً لإعلام المرسل (المرسلين) إذا كنت مستعداً لجهات اتصال جديدة"
 
 #: includes/tiles/contact-workload/template.php:21
 msgid "Set travel or dates unavailable"
-msgstr ""
+msgstr "تعيين السفر أو التواريخ غير متاحة"
 
 #: includes/tiles/faith-milestone-totals/template.php:7
 msgid "Milestones on your active contacts"
-msgstr ""
+msgstr "معالم على جهات الاتصال النشطة الخاصة بك"
 
 #: includes/tiles/seeker-path-progress/template.php:7
 msgid "No data to show yet. You have no active contacts"
-msgstr ""
+msgstr "لا توجد بيانات لعرضها حتى الآن. ليس لديك جهات اتصال نشطة"
