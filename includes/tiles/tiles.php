@@ -73,6 +73,10 @@ class DT_Dashboard_Plugin_Tiles {
      */
     public function register( DT_Dashboard_Tile $tile ) {
         add_action( 'wp_enqueue_scripts', function () use ( $tile ) {
+            // Tile scripts depend on handles registered only on the dashboard page.
+            if ( strpos( dt_get_url_path(), 'dashboard' ) === false ) {
+                return;
+            }
             $this->setup_tile( $tile );
         }, 999 );
 
