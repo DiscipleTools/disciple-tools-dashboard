@@ -97,6 +97,5 @@ class DT_Dashboard_Plugin_Functions {
             'label' => __( 'Dashboard', 'disciple-tools-dashboard' )
         ];
         return $tabs;
-
     }
 }

@@ -33,7 +33,6 @@ abstract class DT_Dashboard_Tile
      * @return mixed
      */
     public function setup() {
-
     }
 
     /**
