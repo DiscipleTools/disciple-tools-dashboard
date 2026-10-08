@@ -3,9 +3,10 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2026-01-13T14:59:20+00:00\n"
-"PO-Revision-Date: 2022-11-09 08:32+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"POT-Creation-Date: 2026-01-14T07:46:32+00:00\n"
+"PO-Revision-Date: 2026-01-14 07:44+0000\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
+"memory@weblate.org>\n"
 "Language-Team: Punjabi <https://translate.disciple.tools/projects/disciple-"
 "tools/disciple-tools-dashboard/pa_IN/>\n"
 "Language: pa_IN\n"
@@ -13,49 +14,53 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 5.15.1\n"
 
-#: disciple-tools-dashboard.php:217
+#: disciple-tools-dashboard.php:219
+msgid "Your Apps"
+msgstr "ਤੁਹਾਡੇ ਐਪਸ"
+
+#: disciple-tools-dashboard.php:224
 msgid "Active Contacts"
 msgstr "ਐਕਟਿਵ ਸੰਪਰਕ"
 
-#: disciple-tools-dashboard.php:218
+#: disciple-tools-dashboard.php:225
 msgid "Update Needed"
 msgstr "ਅਪਡੇਟ ਦੀ ਲੋੜ ਹੈ"
 
-#: disciple-tools-dashboard.php:219
+#: disciple-tools-dashboard.php:226
 msgid "Pending Contacts"
 msgstr "ਲੰਬਤ ਸੰਪਰਕ"
 
-#: disciple-tools-dashboard.php:220
+#: disciple-tools-dashboard.php:227
 msgid "Contact Workload"
 msgstr "ਕੰਮ ਦਾ ਭਾਰ"
 
-#: disciple-tools-dashboard.php:221
+#: disciple-tools-dashboard.php:228
 msgid "Activity"
 msgstr "ਸਰਗਰਮੀ"
 
-#: disciple-tools-dashboard.php:226
+#: disciple-tools-dashboard.php:233
 msgid "Faith Milestone Totals"
 msgstr "ਵਿਸ਼ਵਾਸ ਪਥਰਾਅ"
 
-#: disciple-tools-dashboard.php:230
+#: disciple-tools-dashboard.php:237
 msgid "Seeker Path Progress"
 msgstr "ਖੋਜਕਰਤਾ ਮਾਰਗ ਦੀ ਪ੍ਰਗਤੀ"
 
-#: disciple-tools-dashboard.php:234
+#: disciple-tools-dashboard.php:241
 msgid "Personal Benchmarks"
 msgstr "ਨਿੱਜੀ ਬੈਂਚਮਾਰਕ"
 
-#: disciple-tools-dashboard.php:238
+#: disciple-tools-dashboard.php:245
 msgid "Tasks"
 msgstr "ਕੰਮ"
 
-#: disciple-tools-dashboard.php:315 disciple-tools-dashboard.php:326
+#: disciple-tools-dashboard.php:322 disciple-tools-dashboard.php:333
 msgid "Whoah, partner!"
 msgstr "ਵਾਹ, ਸਾਥੀ!"
 
-#: disciple-tools-dashboard.php:338
+#: disciple-tools-dashboard.php:345
 msgid "Method does not exist."
 msgstr "Existੰਗ ਮੌਜੂਦ ਨਹੀਂ ਹੈ."
 
@@ -124,26 +129,6 @@ msgstr "ਹੋਰ"
 msgid "Less"
 msgstr "ਘੱਟ"
 
-#: includes/template-admin.php:12
-msgid "Choose the default dashboard layout for new users."
-msgstr "ਨਵੇਂ ਉਪਭੋਗਤਾਵਾਂ ਲਈ ਡਿਫੌਲਟ ਡੈਸ਼ਬੋਰਡ ਲੇਆਉਟ ਚੁਣੋ।"
-
-#: includes/template-admin.php:16
-msgid "ACTIVE TILES"
-msgstr "ਐਕਟਿਵ ਟਾਈਲਾਂ"
-
-#: includes/template-admin.php:34
-msgid "Hide"
-msgstr "ਲੁਕਾਓ"
-
-#: includes/template-admin.php:45
-msgid "HIDDEN TILES"
-msgstr "ਲੁਕੀਆਂ ਟਾਈਲਾਂ"
-
-#: includes/template-admin.php:60
-msgid "Show"
-msgstr "ਦਿਖਾਓ"
-
 #: includes/template-parts/tile.php:27
 msgid "Back"
 msgstr "ਵਾਪਸ"
@@ -177,3 +162,18 @@ msgstr "ਤੁਹਾਡੇ ਸਰਗਰਮ ਸੰਪਰਕਾਂ 'ਤੇ ਮੀ�
 #: includes/tiles/seeker-path-progress/template.php:7
 msgid "No data to show yet. You have no active contacts"
 msgstr "ਅਜੇ ਦਿਖਾਉਣ ਲਈ ਕੋਈ ਡਾਟਾ ਨਹੀਂ ਹੈ. ਤੁਹਾਡੇ ਕੋਈ ਸਰਗਰਮ ਸੰਪਰਕ ਨਹੀਂ ਹਨ"
+
+#~ msgid "Choose the default dashboard layout for new users."
+#~ msgstr "ਨਵੇਂ ਉਪਭੋਗਤਾਵਾਂ ਲਈ ਡਿਫੌਲਟ ਡੈਸ਼ਬੋਰਡ ਲੇਆਉਟ ਚੁਣੋ।"
+
+#~ msgid "ACTIVE TILES"
+#~ msgstr "ਐਕਟਿਵ ਟਾਈਲਾਂ"
+
+#~ msgid "Hide"
+#~ msgstr "ਲੁਕਾਓ"
+
+#~ msgid "HIDDEN TILES"
+#~ msgstr "ਲੁਕੀਆਂ ਟਾਈਲਾਂ"
+
+#~ msgid "Show"
+#~ msgstr "ਦਿਖਾਓ"

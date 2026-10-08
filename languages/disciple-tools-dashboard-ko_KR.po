@@ -3,9 +3,10 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2026-01-13T14:59:20+00:00\n"
-"PO-Revision-Date: 2022-11-09 08:32+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"POT-Creation-Date: 2026-01-14T07:46:32+00:00\n"
+"PO-Revision-Date: 2026-01-14 07:44+0000\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
+"memory@weblate.org>\n"
 "Language-Team: Korean <https://translate.disciple.tools/projects/disciple-"
 "tools/disciple-tools-dashboard/ko_KR/>\n"
 "Language: ko_KR\n"
@@ -13,49 +14,53 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 5.15.1\n"
 
-#: disciple-tools-dashboard.php:217
+#: disciple-tools-dashboard.php:219
+msgid "Your Apps"
+msgstr "앱"
+
+#: disciple-tools-dashboard.php:224
 msgid "Active Contacts"
 msgstr "활성 연락처"
 
-#: disciple-tools-dashboard.php:218
+#: disciple-tools-dashboard.php:225
 msgid "Update Needed"
 msgstr "업데이트 필요"
 
-#: disciple-tools-dashboard.php:219
+#: disciple-tools-dashboard.php:226
 msgid "Pending Contacts"
 msgstr "보류중인 연락처"
 
-#: disciple-tools-dashboard.php:220
+#: disciple-tools-dashboard.php:227
 msgid "Contact Workload"
 msgstr "워크로드에 문의"
 
-#: disciple-tools-dashboard.php:221
+#: disciple-tools-dashboard.php:228
 msgid "Activity"
 msgstr "활동"
 
-#: disciple-tools-dashboard.php:226
+#: disciple-tools-dashboard.php:233
 msgid "Faith Milestone Totals"
 msgstr "믿음 이정표 합계"
 
-#: disciple-tools-dashboard.php:230
+#: disciple-tools-dashboard.php:237
 msgid "Seeker Path Progress"
 msgstr "시커 경로 진행"
 
-#: disciple-tools-dashboard.php:234
+#: disciple-tools-dashboard.php:241
 msgid "Personal Benchmarks"
 msgstr "개인 벤치 마크"
 
-#: disciple-tools-dashboard.php:238
+#: disciple-tools-dashboard.php:245
 msgid "Tasks"
 msgstr "과제"
 
-#: disciple-tools-dashboard.php:315 disciple-tools-dashboard.php:326
+#: disciple-tools-dashboard.php:322 disciple-tools-dashboard.php:333
 msgid "Whoah, partner!"
 msgstr "우와, 파트너!"
 
-#: disciple-tools-dashboard.php:338
+#: disciple-tools-dashboard.php:345
 msgid "Method does not exist."
 msgstr "방법이 없습니다."
 
@@ -124,26 +129,6 @@ msgstr "더 보기"
 msgid "Less"
 msgstr "접기"
 
-#: includes/template-admin.php:12
-msgid "Choose the default dashboard layout for new users."
-msgstr "새 사용자를 위한 기본 대시보드 레이아웃을 선택하세요."
-
-#: includes/template-admin.php:16
-msgid "ACTIVE TILES"
-msgstr "활성 타일"
-
-#: includes/template-admin.php:34
-msgid "Hide"
-msgstr "숨기기"
-
-#: includes/template-admin.php:45
-msgid "HIDDEN TILES"
-msgstr "숨겨진 타일"
-
-#: includes/template-admin.php:60
-msgid "Show"
-msgstr "표시"
-
 #: includes/template-parts/tile.php:27
 msgid "Back"
 msgstr "뒤로"
@@ -177,3 +162,18 @@ msgstr "활성 연락처에 대한 마일스톤"
 #: includes/tiles/seeker-path-progress/template.php:7
 msgid "No data to show yet. You have no active contacts"
 msgstr "아직 표시 할 데이터가 없습니다. 활성 연락처가 없습니다."
+
+#~ msgid "Choose the default dashboard layout for new users."
+#~ msgstr "새 사용자를 위한 기본 대시보드 레이아웃을 선택하세요."
+
+#~ msgid "ACTIVE TILES"
+#~ msgstr "활성 타일"
+
+#~ msgid "Hide"
+#~ msgstr "숨기기"
+
+#~ msgid "HIDDEN TILES"
+#~ msgstr "숨겨진 타일"
+
+#~ msgid "Show"
+#~ msgstr "표시"
