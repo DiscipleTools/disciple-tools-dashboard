@@ -5,9 +5,10 @@ msgstr ""
 "Project-Id-Version: Disciple.Tools - Dashboard 1.1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2026-01-13T14:59:20+00:00\n"
-"PO-Revision-Date: 2025-05-12 02:00+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"POT-Creation-Date: 2026-01-14T07:46:32+00:00\n"
+"PO-Revision-Date: 2026-01-14 07:44+0000\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
+"memory@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate.disciple.tools/"
 "projects/disciple-tools/disciple-tools-dashboard/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -15,50 +16,54 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.11.4\n"
+"X-Generator: Weblate 5.15.1\n"
 "X-Domain: disciple-tools-dashboard\n"
 
-#: disciple-tools-dashboard.php:217
+#: disciple-tools-dashboard.php:219
+msgid "Your Apps"
+msgstr "Seus aplicativos"
+
+#: disciple-tools-dashboard.php:224
 msgid "Active Contacts"
 msgstr "Contatos ativos"
 
-#: disciple-tools-dashboard.php:218
+#: disciple-tools-dashboard.php:225
 msgid "Update Needed"
 msgstr "Atualização necessária"
 
-#: disciple-tools-dashboard.php:219
+#: disciple-tools-dashboard.php:226
 msgid "Pending Contacts"
 msgstr "Contatos pendentes"
 
-#: disciple-tools-dashboard.php:220
+#: disciple-tools-dashboard.php:227
 msgid "Contact Workload"
 msgstr "Carga de contatos"
 
-#: disciple-tools-dashboard.php:221
+#: disciple-tools-dashboard.php:228
 msgid "Activity"
 msgstr "Atividade"
 
-#: disciple-tools-dashboard.php:226
+#: disciple-tools-dashboard.php:233
 msgid "Faith Milestone Totals"
 msgstr "Pilares de fé"
 
-#: disciple-tools-dashboard.php:230
+#: disciple-tools-dashboard.php:237
 msgid "Seeker Path Progress"
 msgstr "Progresso do caminho do buscador"
 
-#: disciple-tools-dashboard.php:234
+#: disciple-tools-dashboard.php:241
 msgid "Personal Benchmarks"
 msgstr "Referências pessoais"
 
-#: disciple-tools-dashboard.php:238
+#: disciple-tools-dashboard.php:245
 msgid "Tasks"
 msgstr "Tarefas"
 
-#: disciple-tools-dashboard.php:315 disciple-tools-dashboard.php:326
+#: disciple-tools-dashboard.php:322 disciple-tools-dashboard.php:333
 msgid "Whoah, partner!"
 msgstr "Opa, parceiro!"
 
-#: disciple-tools-dashboard.php:338
+#: disciple-tools-dashboard.php:345
 msgid "Method does not exist."
 msgstr "O método não existe."
 
@@ -127,26 +132,6 @@ msgstr "mais"
 msgid "Less"
 msgstr "Menos"
 
-#: includes/template-admin.php:12
-msgid "Choose the default dashboard layout for new users."
-msgstr "Escolha o layout padrão do painel para novos usuários."
-
-#: includes/template-admin.php:16
-msgid "ACTIVE TILES"
-msgstr "BLOCOS ATIVOS"
-
-#: includes/template-admin.php:34
-msgid "Hide"
-msgstr "Ocultar"
-
-#: includes/template-admin.php:45
-msgid "HIDDEN TILES"
-msgstr "BLOCOS OCULTOS"
-
-#: includes/template-admin.php:60
-msgid "Show"
-msgstr "Mostrar"
-
 #: includes/template-parts/tile.php:27
 msgid "Back"
 msgstr "Voltar"
@@ -182,3 +167,18 @@ msgstr "Marcos nos seus contatos ativos"
 #: includes/tiles/seeker-path-progress/template.php:7
 msgid "No data to show yet. You have no active contacts"
 msgstr "Nenhum dado para mostrar ainda. Você não tem contatos ativos"
+
+#~ msgid "Choose the default dashboard layout for new users."
+#~ msgstr "Escolha o layout padrão do painel para novos usuários."
+
+#~ msgid "ACTIVE TILES"
+#~ msgstr "BLOCOS ATIVOS"
+
+#~ msgid "Hide"
+#~ msgstr "Ocultar"
+
+#~ msgid "HIDDEN TILES"
+#~ msgstr "BLOCOS OCULTOS"
+
+#~ msgid "Show"
+#~ msgstr "Mostrar"

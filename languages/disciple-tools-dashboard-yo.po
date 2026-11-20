@@ -3,9 +3,10 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "dashboard\n"
-"POT-Creation-Date: 2026-01-13T14:59:20+00:00\n"
-"PO-Revision-Date: 2022-11-12 09:32+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"POT-Creation-Date: 2026-01-14T07:46:32+00:00\n"
+"PO-Revision-Date: 2026-01-14 07:44+0000\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
+"memory@weblate.org>\n"
 "Language-Team: Yoruba <https://translate.disciple.tools/projects/disciple-"
 "tools/disciple-tools-dashboard/yo/>\n"
 "Language: yo\n"
@@ -13,49 +14,53 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 5.15.1\n"
 
-#: disciple-tools-dashboard.php:217
+#: disciple-tools-dashboard.php:219
+msgid "Your Apps"
+msgstr "Awọn ohun elo Rẹ"
+
+#: disciple-tools-dashboard.php:224
 msgid "Active Contacts"
 msgstr "Awọn olubasọrọ ti nṣiṣe lọwọ"
 
-#: disciple-tools-dashboard.php:218
+#: disciple-tools-dashboard.php:225
 msgid "Update Needed"
 msgstr "Imudojuiwọn ti nilo"
 
-#: disciple-tools-dashboard.php:219
+#: disciple-tools-dashboard.php:226
 msgid "Pending Contacts"
 msgstr "Ni isunmọtosi Awọn olubasọrọ"
 
-#: disciple-tools-dashboard.php:220
+#: disciple-tools-dashboard.php:227
 msgid "Contact Workload"
 msgstr "Kan si Ṣiṣe-iṣẹ"
 
-#: disciple-tools-dashboard.php:221
+#: disciple-tools-dashboard.php:228
 msgid "Activity"
 msgstr "Iṣẹ iṣe"
 
-#: disciple-tools-dashboard.php:226
+#: disciple-tools-dashboard.php:233
 msgid "Faith Milestone Totals"
 msgstr "Awọn akopọ Igbasilẹ Igbagbọ"
 
-#: disciple-tools-dashboard.php:230
+#: disciple-tools-dashboard.php:237
 msgid "Seeker Path Progress"
 msgstr "Ilọsiwaju Ọna Oluwadi"
 
-#: disciple-tools-dashboard.php:234
+#: disciple-tools-dashboard.php:241
 msgid "Personal Benchmarks"
 msgstr "Awọn aṣepari Ti ara ẹni"
 
-#: disciple-tools-dashboard.php:238
+#: disciple-tools-dashboard.php:245
 msgid "Tasks"
 msgstr "Awọn iṣẹ-ṣiṣe"
 
-#: disciple-tools-dashboard.php:315 disciple-tools-dashboard.php:326
+#: disciple-tools-dashboard.php:322 disciple-tools-dashboard.php:333
 msgid "Whoah, partner!"
 msgstr "Whoah, alabaṣepọ!"
 
-#: disciple-tools-dashboard.php:338
+#: disciple-tools-dashboard.php:345
 msgid "Method does not exist."
 msgstr "Ọna ko si tẹlẹ."
 
@@ -124,26 +129,6 @@ msgstr "diẹ sii"
 msgid "Less"
 msgstr "Kere"
 
-#: includes/template-admin.php:12
-msgid "Choose the default dashboard layout for new users."
-msgstr "Yan eto dasibodu aiyipada fun awọn olumulo tuntun."
-
-#: includes/template-admin.php:16
-msgid "ACTIVE TILES"
-msgstr "AWỌN TILE TI ṢIṢE LỌWỌ"
-
-#: includes/template-admin.php:34
-msgid "Hide"
-msgstr "Pamọ"
-
-#: includes/template-admin.php:45
-msgid "HIDDEN TILES"
-msgstr "AWỌN TILE PAMỌ"
-
-#: includes/template-admin.php:60
-msgid "Show"
-msgstr "Fihan"
-
 #: includes/template-parts/tile.php:27
 msgid "Back"
 msgstr "Pada"
@@ -179,3 +164,18 @@ msgstr "Milestones lori awọn olubasọrọ ti nṣiṣe lọwọ rẹ"
 #: includes/tiles/seeker-path-progress/template.php:7
 msgid "No data to show yet. You have no active contacts"
 msgstr "Ko si data lati fihan sibẹsibẹ. O ko ni awọn olubasọrọ ti nṣiṣe lọwọ"
+
+#~ msgid "Choose the default dashboard layout for new users."
+#~ msgstr "Yan eto dasibodu aiyipada fun awọn olumulo tuntun."
+
+#~ msgid "ACTIVE TILES"
+#~ msgstr "AWỌN TILE TI ṢIṢE LỌWỌ"
+
+#~ msgid "Hide"
+#~ msgstr "Pamọ"
+
+#~ msgid "HIDDEN TILES"
+#~ msgstr "AWỌN TILE PAMỌ"
+
+#~ msgid "Show"
+#~ msgstr "Fihan"
